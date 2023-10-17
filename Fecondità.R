@@ -1,6 +1,9 @@
 ####Popolazione italiana####
+
+library(readr)
+
 fecondita <- read_delim("Fecondita-totale-2000-2021.csv", 
-                        delim = ";", escape_double = FALSE, trim_ws = TRUE)
+                        delim = ",", escape_double = FALSE, trim_ws = TRUE)
 years <- 2000:2021
 eta <- 17:50
 fac <- matrix(rep(0, length(years)*length(eta)), nrow = length(years), ncol = length(eta))
