@@ -1,7 +1,6 @@
 ####Popolazione italiana####
 
 library(readr)
-
 fecondita <- read_delim("Fecondita-totale-2000-2021.csv", 
                         delim = ",", escape_double = FALSE, trim_ws = TRUE)
 years <- 2000:2021
@@ -46,13 +45,19 @@ View(gcv)
 min <- min(gcv[-which(gcv==0)])
 which(gcv == min, arr.ind=TRUE)
 
-##Optimal : m = 2, nbasis = 10
+##Optimal : m = 6, nbasis = 10
 
-basis <- create.bspline.basis(rangeval=range(abscissa), nbasis=10, norder = 2)
+basis <- create.bspline.basis(rangeval=range(abscissa), nbasis=10, norder = 6)
 basismat <- eval.basis(abscissa, basis)
 est_coef = lsfit(basismat, observations, intercept=FALSE)$coef
 Xsp0 <- basismat %*% est_coef
-matplot(Xsp0, type='l')
+# Define the number of colors in your series
+n_colors <- 22
+# Create a color palette that smoothly transitions from red to blue
+color_palette <- colorRampPalette(c("black", "green"))(n_colors)
+x11()
+matplot(Xsp0, type='l', col=color_palette)
+legend('topright', fill=color_palette, legend=years)
 
 ####Derivatives####
 
@@ -60,36 +65,10 @@ functionalPar <- fdPar(fdobj=basis)
 Xss <- smooth.basis(abscissa, observations, functionalPar)
 Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
 Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
+Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
 matplot(Xss0, type='l')
 matplot(Xss1, type='l')
-
-####PCA####
-
-library(fields)
-fd <- Data2fd(observations, abscissa, basis)
-pca_dati <- pca.fd(fd,nharm=5,centerfns=TRUE)
-plot(cumsum(pca_dati$values)[1:5]/sum(pca_dati$values),xlab='j',ylab='CPV',ylim=c(0,1))
-
-# plot of the FPCs as perturbation of the mean
-media <- mean.fd(fd)
-plot(media,lwd=2,ylim=c(-15,95),ylab='fertilità',main='FPC1')
-lines(media+pca_dati$harmonics[1,]*sqrt(pca_dati$values[1]), col=3)
-lines(media-pca_dati$harmonics[1,]*sqrt(pca_dati$values[1]), col=2)   #+ -> verde / - -> rosso
-
-media <- mean.fd(fd)
-plot(media,lwd=2,ylim=c(-15,95),ylab='fertilità',main='FPC2')
-lines(media+pca_dati$harmonics[2,]*sqrt(pca_dati$values[2]), col=3)
-lines(media-pca_dati$harmonics[2,]*sqrt(pca_dati$values[2]), col=2)   #+ -> verde / - -> rosso
-
-media <- mean.fd(fd)
-plot(media,lwd=2,ylim=c(-15,95),ylab='fertilità',main='FPC3')
-lines(media+pca_dati$harmonics[3,]*sqrt(pca_dati$values[3]), col=3)
-lines(media-pca_dati$harmonics[3,]*sqrt(pca_dati$values[3]), col=2)   #+ -> verde / - -> rosso
-
-plot(pca_dati$scores[, 1], type='l')
-plot(pca_dati$scores[, 2], type='l')   #C'è da parlarne per una vita
-#La pc1 mi da la fertilità in giovane eta ed era cresciuta per diminuire di nuovo
-#La pc2 mi da la fertilità in eta adulta e invece cresce, ma sembra aver plafonato
+matplot(Xss2, type='l', col=color_palette)  #Molto interessante
 
 ####Nonparametric - depth####
 library(roahd)

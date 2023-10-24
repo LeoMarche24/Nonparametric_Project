@@ -1,0 +1,19 @@
+Stando a quanto riportato nella sezione "metadati" del sito dell'istat per il nostro dataset:
+
+"I dati riferiti al tasso di fecondità totale e all’età media della madre al parto sono stati sostituiti (Anni 2002-2020).
+Gli indicatori, riferiti alle donne tra 15 e 49 anni, sono stati calcolati utilizzando con una nuova metodologia di stima (per quanto riguarda i nati) e tengono conto della popolazione ricostruita alla luce delle risultanze censuarie.
+Pertanto, gli indicatori di fecondità dal 2002 al 2020 sono nuovi e sostituiscono integralmente quanto pubblicato in precedenza."
+
+I dati dal 2002 sono presenti (stimati) anche per province esistenti oggi che nel 2002 non erano ancora state istituite. Nel caso specifico ci riferiamo alle seguenti:
+
+1. Nel 2009, è stata creata la Provincia di Fermo, separandola dalla Provincia di Ascoli Piceno nelle Marche.
+
+2. Nel 2010, è stata istituita la Provincia di Barletta-Andria-Trani, separandola dalla Provincia di Bari in Puglia.
+
+3. Nel 2015, è stata creata la Provincia di Monza e Brianza, separandola dalla Provincia di Milano in Lombardia.
+
+4. Nel 2015, la Provincia di Lodi è stata separata dalla Provincia di Milano.
+
+5. Nel 2015, è stata istituita la Provincia di Sud Sardegna, separandola dalla Provincia di Cagliari in Sardegna.
+
+6. Nel 2017, la Provincia di Reggio di Calabria è stata suddivisa in due province: la Provincia di Reggio Calabria e la Provincia di Vibo Valentia.
