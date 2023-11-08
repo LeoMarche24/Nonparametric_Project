@@ -1,6 +1,5 @@
-setwd("C:/Users/leoma/OneDrive/Documents/PoliMi/Nonparametric Statistics/Progetto_Locale/Core_Provincie")
 library(readr)
-provincie <- read_csv("Fecondita_Eta_Provincie.csv", 
+provincie <- read_csv("Core_Provincie/Fecondita_Eta_Provincie.csv", 
            col_types = cols(ITTER107 = col_skip(), 
            TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
            ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 

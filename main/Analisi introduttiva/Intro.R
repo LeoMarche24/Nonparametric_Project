@@ -1,6 +1,6 @@
 library(readr)
 
-nati <- read_csv("Nati totali.csv", 
+nati <- read_csv("Analisi Introduttiva/Nati totali.csv", 
                  col_types = cols(ITTER107 = col_skip(), 
                                   TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                   `Seleziona periodo` = col_skip(), 
@@ -26,7 +26,7 @@ matplot(t(birth), type='l')
 
 ##Ora creo un altro dataset col numero di residenti
 
-res <- read_csv("Residenti storico.csv", 
+res <- read_csv("Analisi Introduttiva/Residenti storico.csv", 
                 col_types = cols(ITTER107 = col_skip(), TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                  ETA1 = col_skip(), `Classe di età` = col_skip(),SEXISTAT1 = col_skip(), Sesso = col_skip(), 
                                  CITTADINANZA = col_skip(), Cittadinanza = col_skip(), `Seleziona periodo` = col_skip(), 
