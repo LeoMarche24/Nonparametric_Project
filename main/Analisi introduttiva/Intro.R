@@ -86,7 +86,7 @@ for(i in 1:16){
   
 
 
-### leaflet
+### leaflet (da eliminare da qua)
 
 
 library(dplyr)
@@ -122,16 +122,11 @@ ita_map_data %>%
   )
 
 
-
-
-
-# MEI
-
-
+### MEI & MHI (MHI più intuitivo)
 library(roahd)
+library(DepthProc)
 
 data = fData(grid = years, values = nati)
-
 
 band_depth = BD(Data = nati)
 median_curve_manual <- data[which.max(band_depth),]
@@ -141,9 +136,6 @@ plot(data)
 lines(grid_ecg,median_curve_manual$values, lw = 2)
 
 median.mbd =  median_fData(fData = data, type = "MBD")
-
-library(DepthProc)
-
 
 tukey.depth=depth(u=data$values,method='Tukey')
 tukey.deepest.idx = which(tukey.depth==max(tukey.depth))
@@ -157,15 +149,88 @@ lines(years, data$values[15,], col="green", lwd = 2)
 lines(years, data$values[61,], col="blue", lwd = 2)
 lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2)
 
+mhi.data= MHI(data)
+which.max(mhi.data)
+which.min(mhi.data)
 
 
+### PERMUTATION TEST
 
+## year 2019 -> test between nord / centro / sud 
+# faccio un dataset con le province nord / sud / centro e con solo l'anno 2019
+# dataset divisi nord/centro/sud (isole comprese nel sud)
+nati_data = data.frame(cbind(nati,prov))
 
+prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
+nati_nord = nati_data[nati_data$prov %in% prov_nord, ]
 
+prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
+nati_centro = nati_data[nati_data$prov %in% prov_centro, ]
 
+prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
+nati_sud = nati_data[nati_data$prov %in% prov_sud, ]
 
+nati_sud$position = 'sud'
+nati_centro$position = 'centro'
+nati_nord$position = 'nord'
 
+nati_sud_2019 = nati_sud[,18:20]
+nati_centro_2019 = nati_centro[,18:20]
+nati_nord_2019 = nati_nord[,18:20]
 
+nati_2019 = rbind(nati_nord_2019, nati_centro_2019, nati_sud_2019) # dataset da usare
 
+rm(list = c('nati_nord', 'nati_centro', 'nati_sud', 'prov_nord', 'prov_sud', 'prov_centro', 'nati_sud_2019', 'nati_centro_2019', 'nati_nord_2019'))
 
+# one-way anova
+g <- nlevels(as.factor(nati_2019$position))
+n <- dim(nati_2019)[1]
 
+# moltiplico la colonna del numero di figli solo per una questione grafica
+layout(cbind(1,2))
+plot(as.factor(nati_2019$position), as.numeric(nati_2019$X2019)*1000, xlab='position',col=rainbow(g),main='Original Data')
+
+# H0: the distributions belong to the same population
+# H1: (H0)^c
+
+# Parametric test:
+fit <- aov(as.numeric(nati_2019$X2019) ~ as.factor(nati_2019$position))
+summary(fit)
+
+# Permutation test:
+# Test statistic: F stat
+T0 <- summary(fit)[[1]][1,4]
+T0
+
+permutazione <- sample(1:n)
+X2019_perm <- as.numeric(nati_2019$X2019)[permutazione]
+fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$position))
+summary(fit_perm)
+
+plot(as.factor(nati_2019$position), X2019_perm, xlab='position',col=rainbow(g),main='Permuted Data')
+
+# CMC to estimate the p-value
+B <- 1000 # Number of permutations
+T_stat <- numeric(B)
+
+for(perm in 1:B){
+  # Permutation:
+  permutation <- sample(1:n)
+  X2019_perm <- as.numeric(nati_2019$X2019)[permutation]
+  fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$position))
+  
+  # Test statistic:
+  T_stat[perm] <- summary(fit_perm)[[1]][1,4]
+}
+
+layout(1)
+hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
+abline(v=T0,col=3,lwd=2)
+
+plot(ecdf(T_stat))
+abline(v=T0,col=3,lwd=2)
+
+# p-value
+p_val <- sum(T_stat>=T0)/B
+p_val
+# we reject the null hypothesis
