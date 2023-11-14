@@ -22,7 +22,7 @@ row.names(birth) <- prov
 colnames(birth) <- years
 rm(nati)
 
-matplot(t(birth), type='l')
+matplot(t(birth), type='l') 
 
 ##Ora creo un altro dataset col numero di residenti
 
@@ -45,82 +45,17 @@ nati <- birth/popolazione
 rm(list = c('birth', 'res', 'popolazione'))
 matplot(t(nati), type='l', x = years)
 
+# Differenza overall 2002/2019
 temp = nati[,1] - nati[,18]
 which.min(temp)
 
-### Possiamo notare che per ogni singola provincia delta(2018,2002) sia > 0 
-
 plot(temp, ylim= c(-0.0005, 0.005))
 abline(h = 0, col = 2)
-
-###Questo è il nostro dataset con cui iniziare l'analisi.
-
-View(as.matrix(nati[, 1]))
-View(as.matrix(nati[, 18]))
+# Possiamo notare che per ogni singola provincia delta(2018,2002) sia > 0 
 
 #Analisi funzionale (depth measure) sulla fda e magari derivate?
 #Altro su indici specifici? 
 #->Flourish per grafici fighi
-
-d1 = nati[,1:9]
-d2 = nati[,10:18]
-
-m1  = colMeans(t(d1))
-m2  = colMeans(t(d2))
-
-plot( m1 , col = 2, pch = 16)
-points(m2 , col = 3, pch = 16)
-
-diff = m1-m2
-
-which.min(diff)
-
-ancona = nati[3,]
-
-anconaDiff = diff(as.vector(ancona))
-i = 0
-perc = rep(1,16)
-for(i in 1:16){
-  perc[i] = 100*anconaDiff[i+1]/ancona[i]
-  }
-  
-
-
-### leaflet (da eliminare da qua)
-
-
-library(dplyr)
-library(leaflet)
-library(rgdal)
-library(sf)
-
-# Import Italy shapefile
-ita_map = readOGR('C:/[...]/Limiti01012020_g/ProvCM01012020_g', 
-                  'ProvCM01012020_g_WGS84', stringsAsFactors = FALSE)
-
-# Merge
-colnames(data_19)[1] = "COD_PROV" # <--- This is the numerical provincial code
-ita_map_sf = st_as_sf(ita_map)
-ita_map_sf$COD_PROV <- as.numeric(ita_map_sf$COD_PROV)
-ita_map_data <- left_join(ita_map_sf, data_19, by = "COD_PROV")
-
-# Specify Color Palette
-pal <- colorQuantile("Blues", domain = ita_map_data$unilav_ula, n=5)
-
-# Generate map with leaflet
-ita_map_data %>%
-  st_transform(crs = 4326) %>%
-  leaflet() %>%
-  addProviderTiles("Esri.WorldGrayCanvas") %>%
-  setView(lat = 41.8719, lng = 12.5674, zoom = 5) %>%
-  addPolygons(
-    fillColor = ~pal(unilav_ula),
-    stroke = FALSE,
-    smoothFactor = 0.2,
-    fillOpacity = 0.7,
-    label=~unilav_ula
-  )
-
 
 ### MEI & MHI (MHI più intuitivo)
 library(roahd)
@@ -159,7 +94,8 @@ which.min(mhi.data)
 ## year 2019 -> test between nord / centro / sud 
 # faccio un dataset con le province nord / sud / centro e con solo l'anno 2019
 # dataset divisi nord/centro/sud (isole comprese nel sud)
-nati_data = data.frame(cbind(nati,prov))
+nati_data = data.frame(nati=nati,prov = prov)
+geo <- NULL
 
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
 nati_nord = nati_data[nati_data$prov %in% prov_nord, ]
@@ -169,6 +105,11 @@ nati_centro = nati_data[nati_data$prov %in% prov_centro, ]
 
 prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
 nati_sud = nati_data[nati_data$prov %in% prov_sud, ]
+
+geo <- ifelse(nati_data$prov %in% prov_nord, 'nord', NA)
+geo[which(is.na(geo))] <- ifelse(nati_data[which(is.na(geo)) ,]$prov %in% prov_sud, 'sud', 'centro')
+
+nati_data <- data.frame(nati_data, geo=geo)
 
 nati_sud$position = 'sud'
 nati_centro$position = 'centro'
@@ -234,3 +175,92 @@ abline(v=T0,col=3,lwd=2)
 p_val <- sum(T_stat>=T0)/B
 p_val
 # we reject the null hypothesis
+
+## PEMRUTATION PER CURVA DI PVALUE SU TUTTI GLI ANNI
+p.value <- NULL
+for (i in 1:length(years)){
+  fit <- aov(as.numeric(nati_data[,i]) ~ as.factor(geo))
+  
+  # Permutation test:
+  # Test statistic: F stat
+  T0 <- summary(fit)[[1]][1,4]
+  T0
+  
+  B <- 1000 
+  T_stat <- numeric(B)
+  
+  for(perm in 1:B){
+    permutation <- sample(1:n)
+    temp <- nati_data[,i]
+    temp_perm <- as.numeric(temp)[permutation]
+    fit_perm <- aov(temp_perm ~ as.factor(geo))
+    
+    T_stat[perm] <- summary(fit_perm)[[1]][1,4]
+  }
+  
+  p.value[i] <- sum(T_stat>=T0)/B
+}
+
+plot(years, p.value, type ='l')
+abline(h=0.05, col ='red')
+
+col <- ifelse(geo == 'nord', 'blue', ifelse(geo == 'centro', 'red','green'))
+matplot(t(nati_data[,-((ncol(nati_data)-1):ncol(nati_data))]), type='l', col = col)
+
+## PERMUTATON TEST SULLA CURVA 2002/2019 CON GEO COME PERMUTAZIONE
+
+data = fData(grid = years, values = nati_data[,-((ncol(nati_data)-1):ncol(nati_data))])
+
+data_nord <- data[which(geo=='nord') ,]
+data_centro <- data[which(geo=='centro') ,]
+data_sud <- data[which(geo=='sud') ,]
+
+band_depth_nord = BD(Data = data_nord)
+band_depth_centro = BD(Data = data_centro)
+band_depth_sud = BD(Data = data_sud)
+
+mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
+mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
+ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
+
+plot(data, col='black')
+lines(years, mn, col='blue', lwd=5)
+lines(years, mc, col='red', lwd=5)
+lines(years, ms, col='green', lwd=5)
+
+T0 <- sum(abs(mn-mc))+sum(abs(mn-ms))+sum(abs(mc-ms))
+
+B <- 1000 # Number of permutations
+T_stat <- numeric(B)
+
+for(perm in 1:B){
+  # Permutation:
+  permutation <- sample(1:n)
+  geo_perm <- geo[permutation]
+  data_nord <- data[which(geo_perm=='nord') ,]
+  data_centro <- data[which(geo_perm=='centro') ,]
+  data_sud <- data[which(geo_perm=='sud') ,]
+  
+  band_depth_nord = BD(Data = data_nord)
+  band_depth_centro = BD(Data = data_centro)
+  band_depth_sud = BD(Data = data_sud)
+  
+  mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
+  mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
+  ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
+  # Test statistic:
+  T_stat[perm] <- sum(abs(mn-mc))+sum(abs(mn-ms))+sum(abs(mc-ms))
+}
+
+layout(1)
+hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
+abline(v=T0,col=3,lwd=2)
+
+plot(ecdf(T_stat))
+abline(v=T0,col=3,lwd=2)
+
+# p-value
+p_val <- sum(T_stat>=T0)/B
+p_val
+# il fattore geografico non è influente nella differenza delle mediane
+
