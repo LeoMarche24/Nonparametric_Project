@@ -1,7 +1,7 @@
 #Fermo il tempo e guardo 107 linee che rappresentano le età al parto
 
 library(readr)
-province <- read_csv("Core_provincie/Fecondita_Eta_provincie.csv", 
+province <- read_csv("Smoothing/Fecondita_Eta_province.csv", 
                       col_types = cols(ITTER107 = col_skip(), 
                                        TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                        ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 

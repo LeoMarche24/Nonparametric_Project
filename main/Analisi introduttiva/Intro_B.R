@@ -36,31 +36,9 @@ legend('topright', fill=color_palette, legend=years)
 library(fda)
 abscissa <- 1:length(eta)
 observations <- t(fac)
+##Optimal : m = 6, nbasis = 9
 
-orders <- 2:6
-gcv <- matrix(rep(0, length(orders)*length(abscissa)), nrow = length(orders), ncol = (length(abscissa)))
-row.names(gcv) <- orders
-colnames(gcv) <- abscissa
-for (m in orders)
-{
-  grid <- (m+1):(length(abscissa)-1)
-  for (i in grid)
-  {
-    basis <- create.bspline.basis(rangeval=range(abscissa), nbasis=i, norder = m)
-    functionalPar <- fdPar(fdobj=basis) 
-    for (j in 1:length(years))
-    { gcv[m-1, i] <- gcv[m-1, i] + smooth.basis(1:34, observations[, j], functionalPar)$gcv}
-  }
-}
-View(gcv)
-min <- min(gcv[-which(gcv==0)])
-which(gcv == min, arr.ind=TRUE) 
-# m = 2 order = 13, prendere ordine 2 non ha senso.
-# scegliamo allora la prima base dispari di ordine sufficientemente grande (m = 5) e numero di basi 10
-
-##Optimal : m = 6, nbasis = 10
-
-basis <- create.bspline.basis(rangeval=range(abscissa), nbasis=10, norder = 5)
+basis <- create.bspline.basis(rangeval=range(abscissa), nbasis=9, norder = 5)
 basismat <- eval.basis(abscissa, basis)
 est_coef = lsfit(basismat, observations, intercept=FALSE)$coef
 Xsp0 <- basismat %*% est_coef
@@ -78,7 +56,7 @@ Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
 Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
 matplot(Xss0, type='l')
 matplot(Xss1, type='l')
-quartz()
+x11()
 matplot(Xss2, type='l', col=color_palette)  #Potenzialmente interessante
 abline(h=0, col = 'red')
 
@@ -97,21 +75,3 @@ epi <- MEI(data)
 plot(years, hypo, type='l')  #Quante linee ci sono sopra a quella in particolare, indice di alteza overall della curva
 #Indice di bassezza overall della fertilità
 plot(years, epi, type='l')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
