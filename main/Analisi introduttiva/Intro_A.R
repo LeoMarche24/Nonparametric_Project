@@ -43,13 +43,13 @@ for(p in 1:length(prov))
 
 nati <- birth/popolazione
 rm(list = c('birth', 'res', 'popolazione'))
-matplot(t(nati), type='l', x = years)
+matplot(t(nati), type='l', x = years, main = 'Plot intro A [1]')
 
 # Differenza overall 2002/2019
 temp = nati[,1] - nati[,18]
 which.min(temp)
 
-plot(temp, ylim= c(-0.0005, 0.005))
+plot(temp, ylim= c(-0.0005, 0.005), main = 'Plot intro A [2]')
 abline(h = 0, col = 2)
 # Possiamo notare che per ogni singola provincia delta(2018,2002) sia > 0 
 
@@ -73,20 +73,26 @@ lines(grid_ecg,median_curve_manual$values, lw = 2)
 median.mbd =  median_fData(fData = data, type = "MBD")
 
 tukey.depth=depth(u=data$values,method='Tukey')
-tukey.deepest.idx = which(tukey.depth==max(tukey.depth))
+tukey.deepest.idx = which(tukey.depth==max(tukey.depth)) # Torino -> [93,]
 lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2)
 
 plot(data)
 mei.data= MEI(data)
 which.max(mei.data)
 which.min(mei.data)
-lines(years, data$values[15,], col="green", lwd = 2)
-lines(years, data$values[61,], col="blue", lwd = 2)
+lines(years, data$values[15,], col="green", lwd = 2) # 15 è Bolzano, min MEI
+lines(years, data$values[61,], col="blue", lwd = 2) # 61 è Oristano, max MEI
 lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2)
 
 mhi.data= MHI(data)
 which.max(mhi.data)
 which.min(mhi.data)
+plot(data, main = 'Plot intro A [3]')
+lines(years, data$values[15,], col="green", lwd = 2) # 15 è Bolzano, max MHI
+lines(years, data$values[61,], col="blue", lwd = 2) # 61 è Oristano, min MHI
+lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2) # 93 è Torino 
+
+
 
 
 ### PERMUTATION TEST
@@ -111,31 +117,18 @@ geo[which(is.na(geo))] <- ifelse(nati_data[which(is.na(geo)) ,]$prov %in% prov_s
 
 nati_data <- data.frame(nati_data, geo=geo)
 
-nati_sud$position = 'sud'
-nati_centro$position = 'centro'
-nati_nord$position = 'nord'
-
-nati_sud_2019 = nati_sud[,18:20]
-nati_centro_2019 = nati_centro[,18:20]
-nati_nord_2019 = nati_nord[,18:20]
-
-nati_2019 = rbind(nati_nord_2019, nati_centro_2019, nati_sud_2019) # dataset da usare
-
-rm(list = c('nati_nord', 'nati_centro', 'nati_sud', 'prov_nord', 'prov_sud', 'prov_centro', 'nati_sud_2019', 'nati_centro_2019', 'nati_nord_2019'))
+nati_2019 = nati_data[,18:20]
+rm(list = c('prov_nord', 'prov_sud', 'prov_centro'))
 
 # one-way anova
-g <- nlevels(as.factor(nati_2019$position))
+g <- nlevels(as.factor(nati_2019$geo))
 n <- dim(nati_2019)[1]
-
-# moltiplico la colonna del numero di figli solo per una questione grafica
-layout(cbind(1,2))
-plot(as.factor(nati_2019$position), as.numeric(nati_2019$X2019)*1000, xlab='position',col=rainbow(g),main='Original Data')
 
 # H0: the distributions belong to the same population
 # H1: (H0)^c
 
 # Parametric test:
-fit <- aov(as.numeric(nati_2019$X2019) ~ as.factor(nati_2019$position))
+fit <- aov(as.numeric(nati_2019$nati.2019) ~ as.factor(nati_2019$geo))
 summary(fit)
 
 # Permutation test:
@@ -144,11 +137,14 @@ T0 <- summary(fit)[[1]][1,4]
 T0
 
 permutazione <- sample(1:n)
-X2019_perm <- as.numeric(nati_2019$X2019)[permutazione]
-fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$position))
+X2019_perm <- as.numeric(nati_2019$nati.2019)[permutazione]
+fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$geo))
 summary(fit_perm)
 
-plot(as.factor(nati_2019$position), X2019_perm, xlab='position',col=rainbow(g),main='Permuted Data')
+# moltiplico la colonna del numero di figli solo per una questione grafica
+layout(cbind(1,2))
+plot(as.factor(nati_2019$geo), as.numeric(nati_2019$nati.2019)*1000, xlab='position',col=rainbow(g),main='Original Data - Plot intro A [4]' )
+plot(as.factor(nati_2019$geo), X2019_perm*1000, xlab='position',col=rainbow(g),main='Permuted Data')
 
 # CMC to estimate the p-value
 B <- 1000 # Number of permutations
@@ -157,19 +153,19 @@ T_stat <- numeric(B)
 for(perm in 1:B){
   # Permutation:
   permutation <- sample(1:n)
-  X2019_perm <- as.numeric(nati_2019$X2019)[permutation]
-  fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$position))
+  X2019_perm <- as.numeric(nati_2019$nati.2019)[permutation]
+  fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$geo))
   
   # Test statistic:
   T_stat[perm] <- summary(fit_perm)[[1]][1,4]
 }
 
-layout(1)
+layout(rbind(1,2))
+plot(ecdf(T_stat), main = 'Plot intro A [5]')
+abline(v=T0,col=3,lwd=2)
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
-abline(v=T0,col=3,lwd=2)
+abline(v=T0,col=3,lwd=2) # maybe just one of the two;
 
-plot(ecdf(T_stat))
-abline(v=T0,col=3,lwd=2)
 
 # p-value
 p_val <- sum(T_stat>=T0)/B
@@ -201,7 +197,7 @@ for (i in 1:length(years)){
   p.value[i] <- sum(T_stat>=T0)/B
 }
 
-plot(years, p.value, type ='l')
+plot(years, p.value, type ='l', main = 'Plot intro A [6]')
 abline(h=0.05, col ='red')
 
 col <- ifelse(geo == 'nord', 'blue', ifelse(geo == 'centro', 'red','green'))
@@ -223,7 +219,7 @@ mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
 mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
 ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
 
-plot(data, col='black')
+plot(data, col='black', main = 'Plot intro A [7]')
 lines(years, mn, col='blue', lwd=5)
 lines(years, mc, col='red', lwd=5)
 lines(years, ms, col='green', lwd=5)
@@ -236,7 +232,7 @@ T_stat <- numeric(B)
 for(perm in 1:B){
   # Permutation:
   permutation <- sample(1:n)
-  geo_perm <- geo[permutation]
+  geo_perm <- geo1[permutation]
   data_nord <- data[which(geo_perm=='nord') ,]
   data_centro <- data[which(geo_perm=='centro') ,]
   data_sud <- data[which(geo_perm=='sud') ,]
@@ -252,11 +248,10 @@ for(perm in 1:B){
   T_stat[perm] <- sum(abs(mn-mc))+sum(abs(mn-ms))+sum(abs(mc-ms))
 }
 
-layout(1)
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
+layout(rbind(2,1))
+plot(ecdf(T_stat), main = 'Plot intro A [8]')
 abline(v=T0,col=3,lwd=2)
-
-plot(ecdf(T_stat))
+hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
 abline(v=T0,col=3,lwd=2)
 
 # p-value

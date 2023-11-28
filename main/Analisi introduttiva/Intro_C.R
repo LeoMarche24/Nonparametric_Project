@@ -1,15 +1,15 @@
 #Fermo il tempo e guardo 107 linee che rappresentano le età al parto
 
 library(readr)
-provincie <- read_csv("Core_Provincie/Fecondita_Eta_Provincie.csv", 
+province <- read_csv("Core_provincie/Fecondita_Eta_provincie.csv", 
                       col_types = cols(ITTER107 = col_skip(), 
                                        TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                        ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 
                                        `Flag Codes` = col_skip(), Flags = col_skip()))
 
-years <- sort(unique(provincie$TIME))
-eta <- unique(provincie$`Età della madre`)
-prov <- sort(unique(provincie$Territorio))
+years <- sort(unique(province$TIME))
+eta <- unique(province$`Età della madre`)
+prov <- sort(unique(province$Territorio))
 years <- years[4:23]
 eta <- eta[-34]
 
@@ -18,16 +18,16 @@ for (i in 1:length(prov))
 {
   for (j in 1:length(eta))
   {
-    row2017 <- which(provincie$Territorio==prov[i] & provincie$`Età della madre`==eta[j] & provincie$TIME==2017)
-    row2018 <- which(provincie$Territorio==prov[i] & provincie$`Età della madre`==eta[j] & provincie$TIME==2018)
-    row2019 <- which(provincie$Territorio==prov[i] & provincie$`Età della madre`==eta[j] & provincie$TIME==2019)
+    row2019 <- which(province$Territorio==prov[i] & province$`Età della madre`==eta[j] & province$TIME==2019)
+    row2020 <- which(province$Territorio==prov[i] & province$`Età della madre`==eta[j] & province$TIME==2020)
+    row2021 <- which(province$Territorio==prov[i] & province$`Età della madre`==eta[j] & province$TIME==2021)
     
-    fertility[i, j] <- (1/6)*provincie$Value[row2017]+(1/3)*provincie$Value[row2018]+(1/2)*provincie$Value[row2019]
+    fertility[i, j] <- (1/6)*province$Value[row2019]+(1/3)*province$Value[row2020]+(1/2)*province$Value[row2021]
   }
 }
-rm(provincie)
+rm(province)
 
-matplot(t(fertility), type='l')
+matplot(t(fertility), type='l', main = 'Plot intro C [1]')
 
 #MEI & MHI
 library(roahd)
@@ -52,7 +52,7 @@ tukey.depth=depth(u=data$values,method='Tukey')
 tukey.deepest.idx = which(tukey.depth==max(tukey.depth))
 lines(eta, data$values[tukey.deepest.idx[1],], col="red", lwd = 2)  #Tuckey meglio
 
-plot(data)
+plot(data, main = 'Plot intro C [2]')
 mei.data= MEI(data)
 which.max(mei.data)
 which.min(mei.data)
@@ -194,7 +194,7 @@ mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
 mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
 ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
 
-plot(data, col='black')
+plot(data, col='black', main = 'Plot intro C [3]')
 lines(eta, mn, col='blue', lwd=5)
 lines(eta, mc, col='red', lwd=5)
 lines(eta, ms, col='green', lwd=5)
@@ -223,19 +223,20 @@ for(perm in 1:B){
   T_stat[perm] <- ((mn-mc)%*%(mn-mc))+((mn-ms)%*%(mn-ms))+((mc-ms)%*%(mc-ms))
 }
 
-layout(1)
+layout(rbind(2,1))
+plot(ecdf(T_stat), main = 'Plot intro C [4]')
+abline(v=T0,col=3,lwd=2)
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
 abline(v=T0,col=3,lwd=2)
-#Rifiuto
-plot(ecdf(T_stat))
-abline(v=T0,col=3,lwd=2)
+#accetto p-val = 0.823
+
 
 # p-value
 p_val <- sum(T_stat>=T0)/B
 p_val
 
 
-#Derivata seconda
+#Derivata seconda [ANCORA DA RIVEDERE]
 eta <- 17:50
 data <- t(Xss2)[, -c(1,2,3,length(eta)-2, length(eta)-1, length(eta))]
 eta <- 20:47
