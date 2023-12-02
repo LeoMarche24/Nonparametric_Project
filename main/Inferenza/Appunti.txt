@@ -1,0 +1,5 @@
+Test 1:
+Brutalmente, vedere se c'è differenza territoriale nord sud centro guardando a tutte le curve per tutti gli anni. Ovviamente verrà rifiutato.
+Sono davvero troppi dati, si potrebbe pensare di riusare una strategia simila alla bootstrap anova ma con senno e con concezione di causa, magari può essere utile anche Zapiola per vedere di non dire castronerie sul bootstrap, ma potrebbe essere un modo di vederlo.
+Non sono riuscito a farlo con la manova, da capire come mai, sinceramente non ne ho idea, tuttavia il risultato è significativo, si rifiuta H0, l'effetto territoriale è significativo.
+Sto provando ad includere la bootstrap anova dentro una sorta di permutation test, provando a tirare in mezzo più cose, non so se sia rilevante quello che verrà fuori ma vediamo al massimo lo tralasciamo.

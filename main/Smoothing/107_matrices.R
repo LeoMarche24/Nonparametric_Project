@@ -67,3 +67,20 @@ matplot(Xss0,type='l')
 Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
 matplot(Xss2,type='l')
 
+####Create a dataset with the smoothed functions####
+prov_smooth <- list()
+for (i in 1:length(prov))
+{
+  temp <- list()
+  Xss <- smooth.basis(abscissa, t(observations), functionalPar)
+  Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
+  Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
+  Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
+  temp[[1]] <- Xss0
+  temp[[2]] <- Xss1
+  temp[[3]] <- Xss2
+  prov_smooth[[i]] <- temp
+}
+
+save(prov_smooth, file = "data")
+save(list = c("years", "eta", "prov"), file="env")
