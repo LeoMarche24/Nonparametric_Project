@@ -9,5 +9,5 @@ As an introductive analysis we have shrinked the 3D domain in 2D domains integra
 2. **Intro B**: Integrating out the space, an analysis on how the rates for ages have changed in the last 20 years.
 3. **Intro C**: Integrating out the time, an analysis of how the rates for ages changes nowadays in the various Italy's provinces.
 
-##Mathematical framework
-The mathematical framework is the functional data analysis, where each curve is treated as a function of a precise space.
+## Mathematical framework
+The mathematical framework is the functional data analysis, where each curve is treated as a function of a precise space. We use nonparametric approaches to deal with such data and to perform inference tests.
