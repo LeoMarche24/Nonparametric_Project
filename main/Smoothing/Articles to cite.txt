@@ -1,5 +1,5 @@
 FDA, Ramsay SIlverman 2005
-Il tipo polacco
+Il tipo polacco per smoothing superfici
 A new relational method for smoothing and
 projecting age specific fertility rates:
 TOPALS

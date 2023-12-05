@@ -1,7 +1,7 @@
 #Fermo il tempo e guardo 107 linee che rappresentano le età al parto
 
 library(readr)
-province <- read_csv("Smoothing/Fecondita_Eta_province.csv", 
+province <- read_csv("Datasets/Fecondita_Eta_province.csv", 
                       col_types = cols(ITTER107 = col_skip(), 
                                        TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                        ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 
@@ -236,12 +236,13 @@ p_val <- sum(T_stat>=T0)/B
 p_val
 
 
-#Derivata seconda [ANCORA DA RIVEDERE]
+#Derivata seconda
 eta <- 17:50
 data <- t(Xss2)[, -c(1,2,3,length(eta)-2, length(eta)-1, length(eta))]
 eta <- 20:47
 data = fData(grid = eta, values = data)
 
+layout(c(1,1))
 med <- data[which.max(depth(u = data$values, method = 'Tukey'))]
 plot(data)
 lines(eta, med$values)
@@ -293,7 +294,6 @@ for(perm in 1:B){
 layout(1)
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
 abline(v=T0,col=3,lwd=2)
-#Rifiuto
 plot(ecdf(T_stat))
 abline(v=T0,col=3,lwd=2)
 

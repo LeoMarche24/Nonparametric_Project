@@ -1,5 +1,5 @@
 library(readr)
-province <- read_csv("Smoothing/Fecondita_Eta_province.csv", 
+province <- read_csv("Datasets/Fecondita_Eta_province.csv", 
            col_types = cols(ITTER107 = col_skip(), 
            TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
            ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 
@@ -82,5 +82,5 @@ for (i in 1:length(prov))
   prov_smooth[[i]] <- temp
 }
 
-save(prov_smooth, file = "data")
-save(list = c("years", "eta", "prov"), file="env")
+save(prov_smooth, file = "Datasets/data")
+save(list = c("years", "eta", "prov"), file="Datasets/env")
