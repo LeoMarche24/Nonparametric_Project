@@ -31,7 +31,7 @@ for (i in 1:length(prov))
   prov_list[[i]] <- temp
 }
 
-matplot(t(prov_list[[1]]), type='l')
+matplot(17:50, t(prov_list[[which(prov=='Milano')]]), type='l', xlab = 'Age', ylab = 'Fertility rate')
 plot(prov_list[[1]][, 1:2])
 
 ####Smoothing####

@@ -25,7 +25,7 @@ row.names(fac) <- years
 # Define the number of colors in your series
 n_colors <- length(years)
 # Create a color palette that smoothly transitions from red to blue
-color_palette <- colorRampPalette(c("black", "green"))(n_colors)
+color_palette <- colorRampPalette(c("skyblue", "darkblue"))(n_colors)
 
 x11()
 matplot(eta,t(fac), type='l', col=color_palette)
@@ -44,8 +44,8 @@ est_coef = lsfit(basismat, observations, intercept=FALSE)$coef
 Xsp0 <- basismat %*% est_coef
 
 x11()
-matplot(Xsp0, type='l', col=color_palette)
-legend('topright', fill=color_palette, legend=years)
+matplot(17:50, Xsp0, type='l', xlab = 'Age', ylab = 'Fertility rate')
+#legend('topright', fill=color_palette, legend=years)
 
 ####Derivatives####
 
@@ -54,11 +54,16 @@ Xss <- smooth.basis(abscissa, observations, functionalPar)
 Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
 Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
 Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
-matplot(Xss0, type='l')
+matplot(Xss0, type='l', xlab = 'Age')
 matplot(Xss1, type='l')
 x11()
-matplot(Xss2, type='l', col=color_palette)  #Potenzialmente interessante
-abline(h=0, col = 'red')
+matplot(Xss2, type='l', xlab = 'Age')  #Potenzialmente interessante
+
+dataXss1 <- fData(eta, t(Xss1))
+plot(dataXss1, type='l')
+
+dataXss2 <- fData(eta, t(Xss2))
+plot(dataXss2, type='l', xlab = 'Ages')
 
 ####Nonparametric - depth####
 library(roahd)
@@ -66,7 +71,7 @@ data <- fData(eta, t(Xsp0))
 med <- median_fData(data) #anche se non ha molto senso prendere in considerazione la mediana di time series
 int <- seq(med$t0, med$tP, by=med$h)
 x11()
-plot(data, type='l')
+plot(data, type='l', xlab = 'Ages', ylab = 'Fertility rate')
 lines(int, med$values, lwd=6, col='red')
 
 hypo <- MHI(data)
