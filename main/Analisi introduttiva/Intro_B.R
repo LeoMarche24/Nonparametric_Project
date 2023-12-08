@@ -57,7 +57,7 @@ Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
 matplot(Xss0, type='l', xlab = 'Age')
 matplot(Xss1, type='l')
 x11()
-matplot(Xss2, type='l', xlab = 'Age')  #Potenzialmente interessante
+matplot(17:50, Xss2, type='l', xlab = 'Age')  #Potenzialmente interessante
 
 dataXss1 <- fData(eta, t(Xss1))
 plot(dataXss1, type='l')
