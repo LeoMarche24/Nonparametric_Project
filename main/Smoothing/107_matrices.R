@@ -40,7 +40,6 @@ library(fda)
 nbasis <- 6:30
 m <- 6
 abscissa <- 17:50
-observations <- temp
 gcv_sum <- 0
 
 for (j in 1:length(prov))
@@ -48,6 +47,7 @@ for (j in 1:length(prov))
   gcv <- numeric(length(nbasis))
   observations <- prov_list[[j]]
   for (i in 1:length(nbasis)){
+    observations <- prov_list[[j]]
     basis <- create.bspline.basis(rangeval = range(abscissa), nbasis[i], norder = m)
     gcv[i] <- mean(smooth.basis(abscissa, t(observations), basis)$gcv)
   }
@@ -72,6 +72,7 @@ prov_smooth <- list()
 for (i in 1:length(prov))
 {
   temp <- list()
+  observations <- prov_list[[i]]
   Xss <- smooth.basis(abscissa, t(observations), functionalPar)
   Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
   Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
