@@ -1,0 +1,6 @@
+Tentativo di implementazione FANOVA sul dataset totale 107 provincie per le 34 età.
+Abbiamo implementato il test sulla guida di "Multi-aspect local inference for functional data: Analysis of ultrasound tongue profiles" sezione 2.3.1.
+Problemi sugli ordini di grandezza.
+? Troppi dati rispetto al DS del paper -> probabilmente no
+
+Da capire come implementare una buona statistica test.
