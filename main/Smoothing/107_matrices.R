@@ -64,6 +64,9 @@ Xss <- smooth.basis(abscissa, t(observations), functionalPar)
 Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
 matplot(Xss0,type='l')
 
+Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
+matplot(Xss1,type='l')
+
 Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
 matplot(Xss2,type='l')
 
