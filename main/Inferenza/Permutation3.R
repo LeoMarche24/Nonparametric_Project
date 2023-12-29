@@ -1,4 +1,4 @@
-#Test su curve base
+#Test su curve derivate seconde
 load("Datasets/data")
 load("Datasets/env")
 library(fda)
@@ -10,7 +10,7 @@ for (i in 1:length(prov))
 {
   for (j in 1:length(years))
   {
-    total_curves <- cbind(total_curves, prov_smooth[[i]][[2]][, j])
+    total_curves <- cbind(total_curves, prov_smooth[[i]][[3]][, j])
   }
 }
 total_curves <- data.frame(total_curves)
@@ -164,7 +164,7 @@ for (i in 1:length(abscissa))
 }
 
 plot(p_val, type='l')
-abline(h=0.05)
+abline(h=0.1)
 
 ####Curva di varianza####  - yet to be interpreted
 var_mat <- NULL
