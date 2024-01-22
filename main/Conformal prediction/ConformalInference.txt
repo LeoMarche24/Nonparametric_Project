@@ -1,0 +1,4 @@
+Bisogna usare il pacchetto conformalInference che abbiamo usato a lezione usando ovariate che abbiamo trovato ottimali nella semiparametrric regression, cercando proiezioni per le quantities of interest.
+Un'altra idea che potremmo attuare e di cercare worst case e best case sulle covariate che abbiamo in proiezione nei prossimi 20/30 anni e poi fare un plot con tre varie linee che corrispondono alla best case o worst case scenario delle fertility rates.
+
+A proposito di questo potremmo anche pensare che la conformal prediction potremmo farla sulle curve totali relative all'italia, non per tutte le provincie, e magari dividerle tra nord sud e centro, per semplificarci leggermente il lavoro. anche qui nel contesto della storia da raccontare può avere senso dire che vogliamo sapere quali sono le zone più critiche però poi le previsioni in prospettiva ci interessano generali per tutte le età.

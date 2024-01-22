@@ -1,9 +1,0 @@
-Test 1:
-functional anova, con l'apposito pacchetto. Inizialmente vedere brutalmente se c'è, e ce n'è differenza su anni e su territorio, quindi banalmente nord centro e sud, e i 20 anni che ci sono, valutare che questi siano significativi, e sperandoanche che questi siano significativi in particolari punti delle funzioni hopefully interpretabili.
-Ovviamente questo procedimento va fatto anche per la derivata prima e seconda, sperando di riuscire a trovare un modo per recuperare l'approccio tipico da NPS ovvero le smoothing splines.
-
-Una volta avuti questi risultati, smontiamo il dato funzionale e andiamo a analizzare ai raggi x una particolare feature, che sia il massimo, il minimo, il picco o insomma, ovviamente a seconda dei precedenti test.
-
-L'idea generale è quella di capire dove si trova la variabilità, questo credo sia importante anche a livello della storia che dobbiamo costruire, capire che questo step dell'inferenza noi lo usiamo per andare a scovare dove nelle funzioni si trovi la variabilità che è presente nelle variabili territoriali e di anni diversi.
-
-Una volta decise quali sono le differenze più significative, ad esempio con la pvalue curve o semplicamente considerando che alcune features sono più importanti di altre, come il massimo della derivata seconda, si possono fare delle distrbuzioni bootstrap ad esempio per vedere bene le differenze anche in distribuzione di queste cose (depth versus depth per verificare due distribuzioni uguali),  rank test per vedere eventuali difformità nella distribuzione delle statistiche, e tutto quello che può venire in mente, influence function da ultimo e per forza.S

@@ -1,0 +1,6 @@
+Smoothing
+Inferenza
+Semiparametric regression
+Conformal prediction
+
+Inferenza è la cosa che prenderà più tempo, smoothing quella meno, quindi due su questi due punti, uno su semiparametric reg e altro su conformal.

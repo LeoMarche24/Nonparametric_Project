@@ -1,0 +1,1 @@
+La regressione va fatta semplicemente dal codice del laboratorio con un gam molto semplice dove si usano sia covariate che smoothing spline, con lo stesso lambda che abbiamo usato nello smoothing.

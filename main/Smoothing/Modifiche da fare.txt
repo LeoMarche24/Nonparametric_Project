@@ -1,0 +1,2 @@
+Lo smoothing fatto col codice di fda non va bene, bisogna rientrare nel framework della NPS, come ha detto Zapiola. Per farlo lo smoothing deve essere fatto coi codici della nonparametric regression, quindi scegliendo smoothing splines e selezionando un lambda che valga per tutti e poi smoothare con lo stesso lambda per tutti.
+La cosa che possiamo salvare in stile lista come abbiamo passato le cose qua potrebbero essere i coefficienti delle spline che scegliamo di usare, oppure cassiamo completamente questa procedura e andiamo direttamente all'inferenza.

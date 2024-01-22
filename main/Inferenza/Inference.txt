@@ -1,0 +1,5 @@
+Test 1:
+functional anova, con l'apposito pacchetto. Inizialmente vedere brutalmente se c'è, e ce n'è differenza su anni e su territorio, quindi banalmente nord centro e sud, e i 20 anni che ci sono, valutare che questi siano significativi, e sperandoanche che questi siano significativi in particolari punti delle funzioni hopefully interpretabili.
+Ovviamente questo procedimento va fatto anche per la derivata prima e seconda, sperando di riuscire a trovare un modo per recuperare l'approccio tipico da NPS ovvero le smoothing splines.
+
+Fda for tongue profile per vedere se fare anche come approccio iniziale un test che valuta tutte le derivate delle funzioni.
