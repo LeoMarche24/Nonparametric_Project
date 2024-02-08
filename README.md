@@ -1,7 +1,7 @@
 # Nonparametric_Project
 Project for the course Nonparametric statistics
 
-The objective is to give an overall interpretation to the fertility rates in Italy in the last 20 years, addressing the differences in space (*data are divided by province*) and in the class of ages of the mothers.
+The objective is to give an overall interpretation of the decreasing in the fertility rates in Italy in the last 20 years, addressing the differences in space (*data are divided by province*) and in the class of ages of the mothers, trying to capture an overall variability in these different factors.
 
 ## Analisi introduttiva
 As an introductive analysis we have shrinked the 3D domain in 2D domains integrating out a variable at a time.
