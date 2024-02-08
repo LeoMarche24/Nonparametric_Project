@@ -58,33 +58,18 @@ plot(nbasis,gcv_sum)
 nbasis[which.min(gcv_sum)]
 abline(v = nbasis[which.min(gcv_sum)], col = 2)
 
-basis <- create.bspline.basis(range(abscissa), 9, norder=m)     
-functionalPar <- fdPar(fdobj=basis)
-Xss <- smooth.basis(abscissa, t(observations), functionalPar)
-Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
-matplot(Xss0,type='l')
+fit0 <- smooth.spline(17:50, prov_list[[1]][1,],df = 9)
+new <- seq(17,50,length=200)
+pred <- predict(fit0, new)$y
+plot(new, pred,type='l')
 
-Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
-matplot(Xss1,type='l')
+pred <- predict(fit0, new, deriv=1)$y
+plot(new, pred,type='l')
 
-Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
-matplot(Xss2,type='l')
+pred <- predict(fit0, new, deriv=2)$y
+plot(new, pred,type='l')
 
-####Create a dataset with the smoothed functions####
-prov_smooth <- list()
-for (i in 1:length(prov))
-{
-  temp <- list()
-  observations <- prov_list[[i]]
-  Xss <- smooth.basis(abscissa, t(observations), functionalPar)
-  Xss0 <- eval.fd(abscissa, Xss$fd, Lfd=0)
-  Xss1 <- eval.fd(abscissa, Xss$fd, Lfd=1)
-  Xss2 <- eval.fd(abscissa, Xss$fd, Lfd=2)
-  temp[[1]] <- Xss0
-  temp[[2]] <- Xss1
-  temp[[3]] <- Xss2
-  prov_smooth[[i]] <- temp
-}
+####Create a dataset with the organized observations####
 
-save(prov_smooth, file = "Datasets/data")
+save(prov_list, file = "Datasets/data")
 save(list = c("years", "eta", "prov"), file="Datasets/env")
