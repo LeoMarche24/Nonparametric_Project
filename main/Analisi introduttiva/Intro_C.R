@@ -14,7 +14,7 @@ years <- years[4:23]
 eta <- eta[-34]
 
 fertility <- matrix(rep(0, length(eta)*length(prov)), nrow=length(prov), ncol = length(eta))
-pb=progress_bar$new(total=length(prov)*length(eta))
+pb = progress_bar$new(total=length(prov)*length(eta))
 pb$tick(0)
 for (i in 1:length(prov))
 {
@@ -101,6 +101,27 @@ for (i in 1:length(lab))
 }
 legend(x = 'topright',fill=rainbow(length(lab)), legend = nomi)
 
+## l2 norm for medians
+norms <- NULL
+for (i in 1:length(lab))
+{
+  med <- median_fData(fData = data[which(geo==nomi[i])], type = "MBD")
+  norm_i <- norm(med$values, type = '2')
+  norms[i] <- norm_i
+}
+norms_stand <- data.frame(geo = c("prov_nord_est", "prov_nord_ovest", "prov_centro_est", "prov_centro_ovest", "prov_sud", "prov_isole"), 
+                          norms = norms/max(data$values)*34)
+
+plot <- ggplot(norms_stand, aes(x = geo, y = norms)) +
+  geom_point(size = 4, col = rainbow(length(lab))) +
+  labs(title = "Standardized norms of medians",
+       x = "Geographic position", y = "Norms") +
+  scale_color_manual(values = c("prov_nord_est" = "red", "prov_sud" = "blue", "prov_centro_est" = "green", "prov_nord_ovest" = "yellow", "prov_isole" = "purple", "prov_centro_ovest" = "cyan")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(plot)
+
+
 library(fdANOVA)
 test <- fanova.tests(x=t(fertility[, -ncol(fertility)]), group.label = fertility[, ncol(fertility)], test = "L2N")
 T0 <- test$L2N$statL2
@@ -159,3 +180,9 @@ for (i in 1:length(eta))
 }
 
 matplot(p_val_fun, type='l')
+
+
+
+
+
+
