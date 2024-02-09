@@ -8,6 +8,7 @@ province <- read_csv("Datasets/Fecondita_Eta_province.csv",
 ###Le province della Sardegna sono state unite dopo il 2013, France con un idea di soluzione
 #Nel frattempo, continuare analisi con quello che si ha.
 #province unite per creare Sud Sardegna hanno rilevazioni < 2002 --> Appunti Fra
+library(splines)
 
 years <- sort(unique(province$TIME))
 eta <- unique(province$`Età della madre`)
