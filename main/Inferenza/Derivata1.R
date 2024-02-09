@@ -142,6 +142,15 @@ anni <- 2002:2021
 anni_tot <- rep(anni, each=107)
 anni_tot <- as.factor(anni_tot)
 
+trim_total <- matrix(nrow = 20, ncol = 34)
+for (i in 1:length(years)) {
+  tm <- apply(total_curves[,(107*i - 107 + 1):(107*i)], MARGIN = 1, FUN = function(x){mean(x, trim = .4)} )
+  trim_total[i,] <- tm
+}
+
+data1 <- fData(1:34, trim_total)
+plot(data1)
+
 T0 <- fanova.tests(x = total_curves, anni_tot,  test = "L2N", parallel = TRUE)$L2N$statL2
 
 B <- 1000
