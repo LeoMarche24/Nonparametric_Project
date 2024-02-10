@@ -1,10 +1,14 @@
 #Test su derivate seconde
-load("Datasets/data")
-load("Datasets/env")
+load("./Datasets/data")
+load("./Datasets/env")
 library(splines)
 library(roahd)
 library(fdANOVA)
+library(progress)
 
+color_pal <- colorRampPalette(colors = c("orange", "darkred"))
+col.3 <- color_pal(3)
+colBG <- "grey80"
 ####Test overall on the smoothed data####
 total_curves <- matrix(0, nrow = length(eta), ncol=length(prov)*length(years))
 for (i in 1:length(prov))
@@ -78,7 +82,7 @@ plot(data_aux2)
 
 ##Prova con il fattore geografico su tre livelli##
 x11()
-plot(data, col='black')
+plot(data, col=colBG)
 
 data_nord <- data$values[which(geo == 'nord') ,]
 data_centro <- data$values[which(geo == 'centro') ,]
@@ -87,10 +91,11 @@ data_sud <- data$values[which(geo=='sud') ,]
 m_n <- colMeans(data_nord)
 m_c <- colMeans(data_centro)
 m_s <- colMeans(data_sud)
-
-lines(m_n, col='blue', lwd=2)
-lines(m_c, col='green', lwd=2)
-lines(m_s, col='yellow', lwd=2)
+lines(m_n, col=col.3[1], lwd=2)
+lines(m_c, col=col.3[2], lwd=2)
+lines(m_s, col=col.3[3], lwd=2)
+legend(x = -4.5,legend=c("North", "Center","South"),
+       col=col.3, lty=1, cex=0.8)
 
 T0 <- fanova.tests(x = total_curves, geo,  test = "L2N", parallel = TRUE)$L2N$statL2
 
@@ -98,16 +103,16 @@ B <- 1000
 T_stat <- numeric(B)
 pb=progress_bar$new(total=B)
 pb$tick(0)
+set.seed(2024)
 for(perm in 1:B){
   permutation <- sample(1:length(geo))
   geo_perm <- geo[permutation]
-  
   T_stat[perm] <- fanova.tests(x = total_curves, geo_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
   pb$tick()
 }
 
 hist(T_stat, xlim=range(c(0,T0)))
-abline(v = T0) # rifiuto
+abline(v = T0, col ="red") # rifiuto
 
 #p-value curve# - ci mette 10 min
 abscissa <- 1:34
@@ -118,6 +123,7 @@ for (i in 1:length(abscissa))
 {
   T0 <- summary(aov(t(as.matrix(total_curves[i ,])) ~ geo))[[1]][1,4]
   B <- 1000
+  set.seed(2024)
   for(perm in 1:B){
     permutation <- sample(1:length(geo))
     geo_perm <- geo[permutation]
@@ -128,9 +134,8 @@ for (i in 1:length(abscissa))
   p_val[i] <- sum(T_stat>T0)/length(T_stat)
 }
 
-plot(p_val, type='l')
-abline(h=0.05) 
-
+plot(p_val, type='l',ylim = c(0,1))
+abline(h=0.05, col = "red") 
 
 ####differenze negli anni####
 anni <- 2002:2021
@@ -152,7 +157,7 @@ for(perm in 1:B){
 }
 
 hist(T_stat, xlim = range(c(0,T0)))
-abline(v = T0)
+abline(v = T0, col = "red")
 
 #p-value curve# - ci mette 10 min
 abscissa <- 1:34
@@ -174,11 +179,11 @@ for (i in 1:length(abscissa))
 }
 
 p_values <- read.table("pvalues_derivata2.txt", header = T)
-plot(p_values[,1], type='l') # 
+plot(p_values[,1], type='l',ylim = c(0,1)) # 
 abline(h=0.05, col = 'red')
 
 p_val1 <- p.adjust(p_val, method = "bonferroni")
-plot(p_values[,2], type='l', ylab = 'p.bonf', xlab = 'Age') 
+plot(p_values[,2], type='l', ylab = 'p.bonf', xlab = 'Age',,ylim = c(0,1)) 
 abline(h=0.05, col = 'red')
 
 # p_values <- data.frame(pvalue = p_val, pvalue_adj = p_val1)
