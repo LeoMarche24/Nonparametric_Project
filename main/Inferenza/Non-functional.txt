@@ -1,2 +1,0 @@
-For the non functional part of the project, potremmo focalizzarci su alcune features che magari sono molto interpretabili e potrebbero essere presentate come a spiegare meglio alcuni risultati che abbiamo gia trovato dall'analisi dei dati funzionali.
-Ad esempio massimi delle funzioni, punti in cui si attraversa lo zero, e tutto ciò può essere calcolato con l anonparametric regression, infatti coi codici del corso si può fare la curva valutata su una fine grid, che rende fattibile calcolare il massimo.

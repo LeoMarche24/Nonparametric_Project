@@ -1,5 +1,6 @@
 library(readr)
-
+color_gray <- "gray80"
+color_pal <- colorRampPalette(colors = c("orange", "darkred"))
 nati <- read_csv("Analisi Introduttiva/Nati totali.csv", 
                  col_types = cols(ITTER107 = col_skip(), 
                                   TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
@@ -24,7 +25,7 @@ rm(nati)
 
 matplot(t(birth), type='l') 
 
-##Ora creo un altro dataset col numero di residenti
+## Dataset with the residents
 
 res <- read_csv("Analisi Introduttiva/Residenti storico.csv", 
                 col_types = cols(ITTER107 = col_skip(), TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
@@ -44,21 +45,14 @@ for(p in 1:length(prov))
 nati <- birth/popolazione
 rm(list = c('birth', 'res', 'popolazione'))
 x11()
-matplot(t(nati), type='l', x = years, main = 'Plot intro A [1]', xlab = 'Year', ylab = '')
+matplot(t(nati), type='l', x = years, main = 'Plot intro A', 
+        xlab = 'Year', ylab = 'Birth per person', col=color_pal(dim(nati)[1]))
 
-# Differenza overall 2002/2019
+# Difference overall 2002/2019
 temp = nati[,1] - nati[,18]
 which.min(temp)
 
-plot(temp, ylim= c(-0.0005, 0.005), main = 'Plot intro A [2]')
-abline(h = 0, col = 2)
-# Possiamo notare che per ogni singola provincia delta(2018,2002) sia > 0 
-
-#Analisi funzionale (depth measure) sulla fda e magari derivate?
-#Altro su indici specifici? 
-#->Flourish per grafici fighi
-
-### MEI & MHI (MHI più intuitivo)
+### MEI & MHI 
 library(roahd)
 library(DepthProc)
 
@@ -68,39 +62,14 @@ band_depth = BD(Data = nati)
 median_curve_manual <- data[which.max(band_depth),]
 grid_ecg <- seq(median_curve_manual$t0,median_curve_manual$tP,by=median_curve_manual$h)
 
-plot(data)
-lines(grid_ecg,median_curve_manual$values, lw = 2)
+plot(data, col=color_gray)
+lines(grid_ecg,median_curve_manual$values, lw = 2, col=color_pal(2)[1])
 
 median.mbd =  median_fData(fData = data, type = "MBD")
-
-tukey.depth=depth(u=data$values,method='Tukey')
-tukey.deepest.idx = which(tukey.depth==max(tukey.depth)) # Torino -> [93,]
-lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2)
-
-plot(data, xlab = 'Year')
-mei.data= MEI(data)
-which.max(mei.data)
-which.min(mei.data)
-lines(years, data$values[15,], col="darkgreen", lwd = 3) # 15 è Bolzano, min MEI
-lines(years, data$values[61,], col="darkblue", lwd = 3) # 61 è Oristano, max MEI
-lines(years, data$values[tukey.deepest.idx[1],], col="darkred", lwd = 3)
-
-mhi.data= MHI(data)
-which.max(mhi.data)
-which.min(mhi.data)
-plot(data, main = 'Plot intro A [3]')
-lines(years, data$values[15,], col="green", lwd = 2) # 15 è Bolzano, max MHI
-lines(years, data$values[61,], col="blue", lwd = 2) # 61 è Oristano, min MHI
-lines(years, data$values[tukey.deepest.idx[1],], col="red", lwd = 2) # 93 è Torino 
-
-
-
 
 ### PERMUTATION TEST
 
 ## year 2019 -> test between nord / centro / sud 
-# faccio un dataset con le province nord / sud / centro e con solo l'anno 2019
-# dataset divisi nord/centro/sud (isole comprese nel sud)
 nati_data = data.frame(nati=nati,prov = prov)
 geo <- NULL
 
@@ -138,15 +107,8 @@ summary(fit)
 T0 <- summary(fit)[[1]][1,4]
 T0
 
-permutazione <- sample(1:n)
-X2019_perm <- as.numeric(nati_2019$nati.2019)[permutazione]
-fit_perm <- aov(X2019_perm ~ as.factor(nati_2019$geo))
-summary(fit_perm)
-
-# moltiplico la colonna del numero di figli solo per una questione grafica
-layout(cbind(1,2))
-plot(as.factor(nati_2019$geo), as.numeric(nati_2019$nati.2019)*1000, xlab='position',col=rainbow(g),main='Original Data - Plot intro A [4]' )
-plot(as.factor(nati_2019$geo), X2019_perm*1000, xlab='position',col=rainbow(g),main='Permuted Data')
+plot(as.factor(nati_2019$geo), as.numeric(nati_2019$nati.2019)*1000, 
+     xlab='position',col=color_pal(g),main='Original Data - Plot intro A' )
 
 # CMC to estimate the p-value
 B <- 1000 # Number of permutations
@@ -162,62 +124,8 @@ for(perm in 1:B){
   T_stat[perm] <- summary(fit_perm)[[1]][1,4]
 }
 
-layout(rbind(1,2))
-plot(ecdf(T_stat), main = 'Plot intro A [5]')
-abline(v=T0,col=3,lwd=2)
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
-abline(v=T0,col=3,lwd=2) # maybe just one of the two;
-
-# one-way anova 2012
-g <- nlevels(as.factor(nati_2012$geo))
-n <- dim(nati_2012)[1]
-
-# H0: the distributions belong to the same population
-# H1: (H0)^c
-
-# Parametric test:
-fit <- aov(as.numeric(nati_2012$nati.2012) ~ as.factor(nati_2012$geo))
-summary(fit)
-
-# Permutation test:
-# Test statistic: F stat
-T0 <- summary(fit)[[1]][1,4]
-T0
-
-permutazione <- sample(1:n)
-X2012_perm <- as.numeric(nati_2012$nati.2012)[permutazione]
-fit_perm <- aov(X2012_perm ~ as.factor(nati_2012$geo))
-summary(fit_perm)
-
-# moltiplico la colonna del numero di figli solo per una questione grafica
-layout(cbind(1,2))
-plot(as.factor(nati_2012$geo), as.numeric(nati_2012$nati.2012)*1000, xlab='position',col=rainbow(g),main='Original Data - Plot intro A [4]' )
-plot(as.factor(nati_2012$geo), X2012_perm*1000, xlab='position',col=rainbow(g),main='Permuted Data')
-
-# CMC to estimate the p-value
-B <- 1000 # Number of permutations
-T_stat <- numeric(B)
-
-for(perm in 1:B){
-  # Permutation:
-  permutation <- sample(1:n)
-  X2012_perm <- as.numeric(nati_2012$nati.2012)[permutation]
-  fit_perm <- aov(X2012_perm ~ as.factor(nati_2012$geo))
-  
-  # Test statistic:
-  T_stat[perm] <- summary(fit_perm)[[1]][1,4]
-}
-
-layout(rbind(1,2))
-plot(ecdf(T_stat), main = 'Plot intro A [5]')
-abline(v=T0,col=3,lwd=2)
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
-abline(v=T0,col=3,lwd=2)
-
-# p-value
-p_val <- sum(T_stat>=T0)/B
-p_val
-# we reject the null hypothesis
+hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=color_gray)
+abline(v=T0,lwd=2, col=color_pal(2)[1]) 
 
 ## PEMRUTATION PER CURVA DI PVALUE SU TUTTI GLI ANNI
 p.value <- NULL
@@ -244,13 +152,10 @@ for (i in 1:length(years)){
   p.value[i] <- sum(T_stat>=T0)/B
 }
 
-plot(years, p.value, type ='l', main = 'Plot intro A [6]', lwd=2, xlab = 'Years')
-abline(h=0.05, col ='red')
+plot(years, p.value, type ='l', main = 'Plot intro A', lwd=2, xlab = 'Years', col=color_pal(2)[2])
+abline(h=0.05, col ='darkred')
 
-col <- ifelse(geo == 'nord', 'blue', ifelse(geo == 'centro', 'red','green'))
-matplot(t(nati_data[,-((ncol(nati_data)-1):ncol(nati_data))]), type='l', col = col)
-
-## PERMUTATON TEST SULLA CURVA 2002/2019 CON GEO COME PERMUTAZIONE
+## PERMUTATON TEST ON 2002/2019 WITH GEO AS PERMUTATION
 
 data = fData(grid = years, values = nati_data[,-((ncol(nati_data)-1):ncol(nati_data))])
 
@@ -266,43 +171,7 @@ mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
 mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
 ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
 
-plot(data, main = 'Plot intro A [7]', xlab = 'Years')
-lines(years, mn, col='darkblue', lwd=3)
-lines(years, mc, col='darkred', lwd=3)
-lines(years, ms, col='darkgreen', lwd=3)
-
-T0 <- sum(abs(mn-mc))+sum(abs(mn-ms))+sum(abs(mc-ms))
-
-B <- 1000 # Number of permutations
-T_stat <- numeric(B)
-
-for(perm in 1:B){
-  # Permutation:
-  permutation <- sample(1:n)
-  geo_perm <- geo[permutation]
-  data_nord <- data[which(geo_perm=='nord') ,]
-  data_centro <- data[which(geo_perm=='centro') ,]
-  data_sud <- data[which(geo_perm=='sud') ,]
-  
-  band_depth_nord = BD(Data = data_nord)
-  band_depth_centro = BD(Data = data_centro)
-  band_depth_sud = BD(Data = data_sud)
-  
-  mn <- as.numeric(data_nord[which.max(band_depth_nord),]$values)
-  mc <- as.numeric(data_centro[which.max(band_depth_centro),]$values)
-  ms <- as.numeric(data_sud[which.max(band_depth_sud),]$values)
-  # Test statistic:
-  T_stat[perm] <- sum(abs(mn-mc))+sum(abs(mn-ms))+sum(abs(mc-ms))
-}
-
-layout(rbind(2,1))
-plot(ecdf(T_stat), main = 'Plot intro A [8]')
-abline(v=T0,col=2,lwd=2)
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30)
-abline(v=T0,col=3,lwd=2)
-
-# p-value
-p_val <- sum(T_stat>=T0)/B
-p_val
-# il fattore geografico non è influente nella differenza delle mediane
-
+plot(data, main = 'Plot intro A [7]', xlab = 'Years', col=color_gray)
+lines(years, mn, col=color_pal(3)[1], lwd=3)
+lines(years, mc, col=color_pal(3)[2], lwd=3)
+lines(years, ms, col=color_pal(3)[3], lwd=3)
