@@ -1,0 +1,401 @@
+"Territorio" "Classe.di.età" "TIME" "Value"
+"Piemonte" "15-24 anni" "2018" 20.705267
+"Piemonte" "15-24 anni" "2019" 20.905239
+"Piemonte" "15-24 anni" "2020" 20.440931
+"Piemonte" "15-24 anni" "2021" 21.22906
+"Valle d'Aosta / Vallée d'Aoste" "15-24 anni" "2018" 22.712334
+"Valle d'Aosta / Vallée d'Aoste" "15-24 anni" "2019" 22.436173
+"Valle d'Aosta / Vallée d'Aoste" "15-24 anni" "2020" 18.760713
+"Valle d'Aosta / Vallée d'Aoste" "15-24 anni" "2021" 20.202622
+"Liguria" "15-24 anni" "2018" 16.262714
+"Liguria" "15-24 anni" "2019" 16.478001
+"Liguria" "15-24 anni" "2020" 14.542493
+"Liguria" "15-24 anni" "2021" 17.541224
+"Lombardia" "15-24 anni" "2018" 23.079914
+"Lombardia" "15-24 anni" "2019" 24.135676
+"Lombardia" "15-24 anni" "2020" 21.178471
+"Lombardia" "15-24 anni" "2021" 21.595993
+"Trentino Alto Adige / Südtirol" "15-24 anni" "2018" 30.959286
+"Trentino Alto Adige / Südtirol" "15-24 anni" "2019" 32.93218
+"Trentino Alto Adige / Südtirol" "15-24 anni" "2020" 30.922162
+"Trentino Alto Adige / Südtirol" "15-24 anni" "2021" 31.654738
+"Veneto" "15-24 anni" "2018" 22.986773
+"Veneto" "15-24 anni" "2019" 25.488193
+"Veneto" "15-24 anni" "2020" 22.171788
+"Veneto" "15-24 anni" "2021" 22.227199
+"Friuli-Venezia Giulia" "15-24 anni" "2018" 19.525621
+"Friuli-Venezia Giulia" "15-24 anni" "2019" 21.673305
+"Friuli-Venezia Giulia" "15-24 anni" "2020" 21.933627
+"Friuli-Venezia Giulia" "15-24 anni" "2021" 23.519265
+"Emilia-Romagna" "15-24 anni" "2018" 23.608617
+"Emilia-Romagna" "15-24 anni" "2019" 24.4868
+"Emilia-Romagna" "15-24 anni" "2020" 21.594474
+"Emilia-Romagna" "15-24 anni" "2021" 20.414778
+"Toscana" "15-24 anni" "2018" 19.731606
+"Toscana" "15-24 anni" "2019" 20.204505
+"Toscana" "15-24 anni" "2020" 17.818336
+"Toscana" "15-24 anni" "2021" 19.503036
+"Umbria" "15-24 anni" "2018" 17.559103
+"Umbria" "15-24 anni" "2019" 17.956295
+"Umbria" "15-24 anni" "2020" 15.92774
+"Umbria" "15-24 anni" "2021" 16.045474
+"Marche" "15-24 anni" "2018" 20.072985
+"Marche" "15-24 anni" "2019" 19.561843
+"Marche" "15-24 anni" "2020" 16.7188
+"Marche" "15-24 anni" "2021" 20.683788
+"Lazio" "15-24 anni" "2018" 16.013283
+"Lazio" "15-24 anni" "2019" 15.808044
+"Lazio" "15-24 anni" "2020" 14.346143
+"Lazio" "15-24 anni" "2021" 15.196625
+"Piemonte" "25-34 anni" "2018" 72.572451
+"Piemonte" "25-34 anni" "2019" 73.916584
+"Piemonte" "25-34 anni" "2020" 70.090294
+"Piemonte" "25-34 anni" "2021" 73.496319
+"Valle d'Aosta / Vallée d'Aoste" "25-34 anni" "2018" 75.669804
+"Valle d'Aosta / Vallée d'Aoste" "25-34 anni" "2019" 76.001305
+"Valle d'Aosta / Vallée d'Aoste" "25-34 anni" "2020" 72.880376
+"Valle d'Aosta / Vallée d'Aoste" "25-34 anni" "2021" 73.230897
+"Liguria" "25-34 anni" "2018" 69.022046
+"Liguria" "25-34 anni" "2019" 68.039286
+"Liguria" "25-34 anni" "2020" 63.137128
+"Liguria" "25-34 anni" "2021" 68.283054
+"Lombardia" "25-34 anni" "2018" 76.682705
+"Lombardia" "25-34 anni" "2019" 78.084113
+"Lombardia" "25-34 anni" "2020" 75.003805
+"Lombardia" "25-34 anni" "2021" 75.120614
+"Trentino Alto Adige / Südtirol" "25-34 anni" "2018" 80.266049
+"Trentino Alto Adige / Südtirol" "25-34 anni" "2019" 79.516556
+"Trentino Alto Adige / Südtirol" "25-34 anni" "2020" 76.483802
+"Trentino Alto Adige / Südtirol" "25-34 anni" "2021" 75.913628
+"Veneto" "25-34 anni" "2018" 76.880403
+"Veneto" "25-34 anni" "2019" 76.289256
+"Veneto" "25-34 anni" "2020" 73.51229
+"Veneto" "25-34 anni" "2021" 76.582589
+"Friuli-Venezia Giulia" "25-34 anni" "2018" 72.934618
+"Friuli-Venezia Giulia" "25-34 anni" "2019" 73.038845
+"Friuli-Venezia Giulia" "25-34 anni" "2020" 72.755372
+"Friuli-Venezia Giulia" "25-34 anni" "2021" 76.160278
+"Emilia-Romagna" "25-34 anni" "2018" 74.697498
+"Emilia-Romagna" "25-34 anni" "2019" 75.563588
+"Emilia-Romagna" "25-34 anni" "2020" 72.551055
+"Emilia-Romagna" "25-34 anni" "2021" 75.725863
+"Toscana" "25-34 anni" "2018" 69.288419
+"Toscana" "25-34 anni" "2019" 71.410455
+"Toscana" "25-34 anni" "2020" 70.246316
+"Toscana" "25-34 anni" "2021" 71.010175
+"Umbria" "25-34 anni" "2018" 66.956223
+"Umbria" "25-34 anni" "2019" 70.010404
+"Umbria" "25-34 anni" "2020" 64.727461
+"Umbria" "25-34 anni" "2021" 69.224194
+"Marche" "25-34 anni" "2018" 71.272991
+"Marche" "25-34 anni" "2019" 70.552774
+"Marche" "25-34 anni" "2020" 69.574946
+"Marche" "25-34 anni" "2021" 69.959209
+"Lazio" "25-34 anni" "2018" 62.671807
+"Lazio" "25-34 anni" "2019" 62.822022
+"Lazio" "25-34 anni" "2020" 60.367831
+"Lazio" "25-34 anni" "2021" 62.384818
+"Piemonte" "35-44 anni" "2018" 82.915003
+"Piemonte" "35-44 anni" "2019" 82.888838
+"Piemonte" "35-44 anni" "2020" 80.966179
+"Piemonte" "35-44 anni" "2021" 81.442446
+"Valle d'Aosta / Vallée d'Aoste" "35-44 anni" "2018" 83.068557
+"Valle d'Aosta / Vallée d'Aoste" "35-44 anni" "2019" 84.407511
+"Valle d'Aosta / Vallée d'Aoste" "35-44 anni" "2020" 82.854121
+"Valle d'Aosta / Vallée d'Aoste" "35-44 anni" "2021" 81.862509
+"Liguria" "35-44 anni" "2018" 78.024586
+"Liguria" "35-44 anni" "2019" 77.051958
+"Liguria" "35-44 anni" "2020" 77.067144
+"Liguria" "35-44 anni" "2021" 80.657787
+"Lombardia" "35-44 anni" "2018" 83.816018
+"Lombardia" "35-44 anni" "2019" 84.094691
+"Lombardia" "35-44 anni" "2020" 82.566474
+"Lombardia" "35-44 anni" "2021" 83.258202
+"Trentino Alto Adige / Südtirol" "35-44 anni" "2018" 86.680525
+"Trentino Alto Adige / Südtirol" "35-44 anni" "2019" 86.107846
+"Trentino Alto Adige / Südtirol" "35-44 anni" "2020" 84.442067
+"Trentino Alto Adige / Südtirol" "35-44 anni" "2021" 84.331846
+"Veneto" "35-44 anni" "2018" 82.981989
+"Veneto" "35-44 anni" "2019" 83.828363
+"Veneto" "35-44 anni" "2020" 83.112252
+"Veneto" "35-44 anni" "2021" 83.724326
+"Friuli-Venezia Giulia" "35-44 anni" "2018" 83.698769
+"Friuli-Venezia Giulia" "35-44 anni" "2019" 82.810141
+"Friuli-Venezia Giulia" "35-44 anni" "2020" 82.145951
+"Friuli-Venezia Giulia" "35-44 anni" "2021" 82.568481
+"Emilia-Romagna" "35-44 anni" "2018" 85.152534
+"Emilia-Romagna" "35-44 anni" "2019" 85.732553
+"Emilia-Romagna" "35-44 anni" "2020" 83.98335
+"Emilia-Romagna" "35-44 anni" "2021" 84.539363
+"Toscana" "35-44 anni" "2018" 82.322593
+"Toscana" "35-44 anni" "2019" 82.078962
+"Toscana" "35-44 anni" "2020" 79.425171
+"Toscana" "35-44 anni" "2021" 81.329005
+"Umbria" "35-44 anni" "2018" 79.532751
+"Umbria" "35-44 anni" "2019" 80.876609
+"Umbria" "35-44 anni" "2020" 80.937401
+"Umbria" "35-44 anni" "2021" 82.961407
+"Marche" "35-44 anni" "2018" 79.959304
+"Marche" "35-44 anni" "2019" 80.562368
+"Marche" "35-44 anni" "2020" 80.081541
+"Marche" "35-44 anni" "2021" 79.761244
+"Lazio" "35-44 anni" "2018" 76.242738
+"Lazio" "35-44 anni" "2019" 76.234092
+"Lazio" "35-44 anni" "2020" 73.367978
+"Lazio" "35-44 anni" "2021" 74.040956
+"Piemonte" "45-54 anni" "2018" 81.693587
+"Piemonte" "45-54 anni" "2019" 81.722875
+"Piemonte" "45-54 anni" "2020" 80.408598
+"Piemonte" "45-54 anni" "2021" 80.526892
+"Valle d'Aosta / Vallée d'Aoste" "45-54 anni" "2018" 83.32632
+"Valle d'Aosta / Vallée d'Aoste" "45-54 anni" "2019" 84.499716
+"Valle d'Aosta / Vallée d'Aoste" "45-54 anni" "2020" 84.139656
+"Valle d'Aosta / Vallée d'Aoste" "45-54 anni" "2021" 84.928358
+"Liguria" "45-54 anni" "2018" 76.97702
+"Liguria" "45-54 anni" "2019" 78.022294
+"Liguria" "45-54 anni" "2020" 77.479136
+"Liguria" "45-54 anni" "2021" 79.019205
+"Lombardia" "45-54 anni" "2018" 81.78115
+"Lombardia" "45-54 anni" "2019" 83.022346
+"Lombardia" "45-54 anni" "2020" 81.308131
+"Lombardia" "45-54 anni" "2021" 82.825939
+"Trentino Alto Adige / Südtirol" "45-54 anni" "2018" 86.50741
+"Trentino Alto Adige / Südtirol" "45-54 anni" "2019" 87.465485
+"Trentino Alto Adige / Südtirol" "45-54 anni" "2020" 85.890239
+"Trentino Alto Adige / Südtirol" "45-54 anni" "2021" 86.527581
+"Veneto" "45-54 anni" "2018" 80.584106
+"Veneto" "45-54 anni" "2019" 81.524832
+"Veneto" "45-54 anni" "2020" 79.854003
+"Veneto" "45-54 anni" "2021" 82.425603
+"Friuli-Venezia Giulia" "45-54 anni" "2018" 80.084682
+"Friuli-Venezia Giulia" "45-54 anni" "2019" 81.442948
+"Friuli-Venezia Giulia" "45-54 anni" "2020" 82.440757
+"Friuli-Venezia Giulia" "45-54 anni" "2021" 83.803608
+"Emilia-Romagna" "45-54 anni" "2018" 84.550209
+"Emilia-Romagna" "45-54 anni" "2019" 85.822993
+"Emilia-Romagna" "45-54 anni" "2020" 83.970515
+"Emilia-Romagna" "45-54 anni" "2021" 85.606225
+"Toscana" "45-54 anni" "2018" 81.198328
+"Toscana" "45-54 anni" "2019" 82.400632
+"Toscana" "45-54 anni" "2020" 80.873234
+"Toscana" "45-54 anni" "2021" 79.98104
+"Umbria" "45-54 anni" "2018" 77.281193
+"Umbria" "45-54 anni" "2019" 78.206919
+"Umbria" "45-54 anni" "2020" 76.963617
+"Umbria" "45-54 anni" "2021" 79.501142
+"Marche" "45-54 anni" "2018" 78.410817
+"Marche" "45-54 anni" "2019" 79.949901
+"Marche" "45-54 anni" "2020" 80.505229
+"Marche" "45-54 anni" "2021" 80.646925
+"Lazio" "45-54 anni" "2018" 73.131962
+"Lazio" "45-54 anni" "2019" 74.119086
+"Lazio" "45-54 anni" "2020" 73.30006
+"Lazio" "45-54 anni" "2021" 72.851237
+"Piemonte" "55-64 anni" "2018" 55.05712
+"Piemonte" "55-64 anni" "2019" 55.614416
+"Piemonte" "55-64 anni" "2020" 54.696977
+"Piemonte" "55-64 anni" "2021" 56.299359
+"Valle d'Aosta / Vallée d'Aoste" "55-64 anni" "2018" 57.878351
+"Valle d'Aosta / Vallée d'Aoste" "55-64 anni" "2019" 59.369902
+"Valle d'Aosta / Vallée d'Aoste" "55-64 anni" "2020" 59.126724
+"Valle d'Aosta / Vallée d'Aoste" "55-64 anni" "2021" 59.307614
+"Liguria" "55-64 anni" "2018" 57.790668
+"Liguria" "55-64 anni" "2019" 59.475142
+"Liguria" "55-64 anni" "2020" 58.104357
+"Liguria" "55-64 anni" "2021" 58.290917
+"Lombardia" "55-64 anni" "2018" 56.512077
+"Lombardia" "55-64 anni" "2019" 57.34549
+"Lombardia" "55-64 anni" "2020" 56.247037
+"Lombardia" "55-64 anni" "2021" 56.529497
+"Trentino Alto Adige / Südtirol" "55-64 anni" "2018" 61.008168
+"Trentino Alto Adige / Südtirol" "55-64 anni" "2019" 62.089615
+"Trentino Alto Adige / Südtirol" "55-64 anni" "2020" 60.325012
+"Trentino Alto Adige / Südtirol" "55-64 anni" "2021" 59.542991
+"Veneto" "55-64 anni" "2018" 55.350768
+"Veneto" "55-64 anni" "2019" 57.791127
+"Veneto" "55-64 anni" "2020" 55.433283
+"Veneto" "55-64 anni" "2021" 53.280576
+"Friuli-Venezia Giulia" "55-64 anni" "2018" 57.381639
+"Friuli-Venezia Giulia" "55-64 anni" "2019" 58.002388
+"Friuli-Venezia Giulia" "55-64 anni" "2020" 58.452813
+"Friuli-Venezia Giulia" "55-64 anni" "2021" 58.119644
+"Emilia-Romagna" "55-64 anni" "2018" 60.957812
+"Emilia-Romagna" "55-64 anni" "2019" 62.241335
+"Emilia-Romagna" "55-64 anni" "2020" 61.412963
+"Emilia-Romagna" "55-64 anni" "2021" 59.989672
+"Toscana" "55-64 anni" "2018" 60.810935
+"Toscana" "55-64 anni" "2019" 60.292036
+"Toscana" "55-64 anni" "2020" 61.055799
+"Toscana" "55-64 anni" "2021" 61.364233
+"Umbria" "55-64 anni" "2018" 55.650262
+"Umbria" "55-64 anni" "2019" 59.261778
+"Umbria" "55-64 anni" "2020" 59.4851
+"Umbria" "55-64 anni" "2021" 59.298195
+"Marche" "55-64 anni" "2018" 57.059683
+"Marche" "55-64 anni" "2019" 58.807067
+"Marche" "55-64 anni" "2020" 55.600985
+"Marche" "55-64 anni" "2021" 56.895813
+"Lazio" "55-64 anni" "2018" 58.587448
+"Lazio" "55-64 anni" "2019" 59.100139
+"Lazio" "55-64 anni" "2020" 58.513524
+"Lazio" "55-64 anni" "2021" 59.099457
+"Sicilia" "45-54 anni" "2018" 52.886238
+"Sicilia" "45-54 anni" "2019" 53.659897
+"Sicilia" "45-54 anni" "2020" 52.930728
+"Sicilia" "45-54 anni" "2021" 53.572311
+"Sardegna" "35-44 anni" "2018" 65.66158
+"Sardegna" "35-44 anni" "2019" 67.813195
+"Sardegna" "35-44 anni" "2020" 65.429865
+"Sardegna" "35-44 anni" "2021" 67.829161
+"Molise" "35-44 anni" "2018" 68.648567
+"Molise" "35-44 anni" "2019" 70.734037
+"Molise" "35-44 anni" "2020" 66.358684
+"Molise" "35-44 anni" "2021" 67.352933
+"Basilicata" "15-24 anni" "2018" 12.485723
+"Basilicata" "15-24 anni" "2019" 13.723066
+"Basilicata" "15-24 anni" "2020" 11.617936
+"Basilicata" "15-24 anni" "2021" 10.344006
+"Molise" "45-54 anni" "2018" 67.466918
+"Molise" "45-54 anni" "2019" 67.58394
+"Molise" "45-54 anni" "2020" 67.144293
+"Molise" "45-54 anni" "2021" 67.53044
+"Sardegna" "45-54 anni" "2018" 62.11757
+"Sardegna" "45-54 anni" "2019" 64.086919
+"Sardegna" "45-54 anni" "2020" 63.537951
+"Sardegna" "45-54 anni" "2021" 65.015283
+"Basilicata" "25-34 anni" "2018" 49.986526
+"Basilicata" "25-34 anni" "2019" 51.828876
+"Basilicata" "25-34 anni" "2020" 49.08019
+"Basilicata" "25-34 anni" "2021" 53.024305
+"Sicilia" "35-44 anni" "2018" 53.189742
+"Sicilia" "35-44 anni" "2019" 52.537574
+"Sicilia" "35-44 anni" "2020" 52.124847
+"Sicilia" "35-44 anni" "2021" 51.859532
+"Calabria" "35-44 anni" "2018" 53.357926
+"Calabria" "35-44 anni" "2019" 53.432891
+"Calabria" "35-44 anni" "2020" 54.640773
+"Calabria" "35-44 anni" "2021" 52.452505
+"Sardegna" "15-24 anni" "2018" 15.690076
+"Sardegna" "15-24 anni" "2019" 12.808421
+"Sardegna" "15-24 anni" "2020" 11.695135
+"Sardegna" "15-24 anni" "2021" 14.321181
+"Molise" "15-24 anni" "2018" 12.819551
+"Molise" "15-24 anni" "2019" 10.946828
+"Molise" "15-24 anni" "2020" 9.355762
+"Molise" "15-24 anni" "2021" 15.960045
+"Puglia" "35-44 anni" "2018" 58.281073
+"Puglia" "35-44 anni" "2019" 59.488529
+"Puglia" "35-44 anni" "2020" 58.842974
+"Puglia" "35-44 anni" "2021" 60.342715
+"Abruzzo" "35-44 anni" "2018" 67.818916
+"Abruzzo" "35-44 anni" "2019" 71.597306
+"Abruzzo" "35-44 anni" "2020" 71.440201
+"Abruzzo" "35-44 anni" "2021" 74.238476
+"Campania" "35-44 anni" "2018" 53.936398
+"Campania" "35-44 anni" "2019" 52.190766
+"Campania" "35-44 anni" "2020" 51.477137
+"Campania" "35-44 anni" "2021" 51.472442
+"Calabria" "45-54 anni" "2018" 51.332922
+"Calabria" "45-54 anni" "2019" 50.699275
+"Calabria" "45-54 anni" "2020" 48.404565
+"Calabria" "45-54 anni" "2021" 51.870566
+"Puglia" "45-54 anni" "2018" 55.914589
+"Puglia" "45-54 anni" "2019" 57.415569
+"Puglia" "45-54 anni" "2020" 55.625268
+"Puglia" "45-54 anni" "2021" 57.576943
+"Sicilia" "15-24 anni" "2018" 9.960858
+"Sicilia" "15-24 anni" "2019" 10.374339
+"Sicilia" "15-24 anni" "2020" 9.73508
+"Sicilia" "15-24 anni" "2021" 10.62961
+"Abruzzo" "45-54 anni" "2018" 72.804028
+"Abruzzo" "45-54 anni" "2019" 72.823988
+"Abruzzo" "45-54 anni" "2020" 70.482837
+"Abruzzo" "45-54 anni" "2021" 70.856111
+"Campania" "45-54 anni" "2018" 52.468921
+"Campania" "45-54 anni" "2019" 52.453405
+"Campania" "45-54 anni" "2020" 52.85825
+"Campania" "45-54 anni" "2021" 51.419128
+"Calabria" "25-34 anni" "2018" 42.294885
+"Calabria" "25-34 anni" "2019" 41.938478
+"Calabria" "25-34 anni" "2020" 39.797733
+"Calabria" "25-34 anni" "2021" 43.742122
+"Calabria" "15-24 anni" "2018" 11.829393
+"Calabria" "15-24 anni" "2019" 13.854821
+"Calabria" "15-24 anni" "2020" 11.309563
+"Calabria" "15-24 anni" "2021" 10.632584
+"Molise" "55-64 anni" "2018" 55.465971
+"Molise" "55-64 anni" "2019" 56.178827
+"Molise" "55-64 anni" "2020" 55.437374
+"Molise" "55-64 anni" "2021" 49.036126
+"Puglia" "15-24 anni" "2018" 12.950263
+"Puglia" "15-24 anni" "2019" 13.193515
+"Puglia" "15-24 anni" "2020" 13.722502
+"Puglia" "15-24 anni" "2021" 14.367469
+"Puglia" "25-34 anni" "2018" 48.222832
+"Puglia" "25-34 anni" "2019" 47.507863
+"Puglia" "25-34 anni" "2020" 45.444784
+"Puglia" "25-34 anni" "2021" 48.193838
+"Abruzzo" "25-34 anni" "2018" 61.460243
+"Abruzzo" "25-34 anni" "2019" 59.776611
+"Abruzzo" "25-34 anni" "2020" 57.594646
+"Abruzzo" "25-34 anni" "2021" 62.377738
+"Basilicata" "55-64 anni" "2018" 53.833472
+"Basilicata" "55-64 anni" "2019" 53.110949
+"Basilicata" "55-64 anni" "2020" 52.96025
+"Basilicata" "55-64 anni" "2021" 55.060235
+"Campania" "25-34 anni" "2018" 40.602696
+"Campania" "25-34 anni" "2019" 41.048825
+"Campania" "25-34 anni" "2020" 38.621373
+"Campania" "25-34 anni" "2021" 42.723895
+"Sardegna" "55-64 anni" "2018" 51.065075
+"Sardegna" "55-64 anni" "2019" 50.239219
+"Sardegna" "55-64 anni" "2020" 48.435281
+"Sardegna" "55-64 anni" "2021" 49.380832
+"Abruzzo" "15-24 anni" "2018" 17.361715
+"Abruzzo" "15-24 anni" "2019" 15.384679
+"Abruzzo" "15-24 anni" "2020" 14.574151
+"Abruzzo" "15-24 anni" "2021" 14.897114
+"Campania" "15-24 anni" "2018" 10.426332
+"Campania" "15-24 anni" "2019" 11.887447
+"Campania" "15-24 anni" "2020" 10.267636
+"Campania" "15-24 anni" "2021" 12.377907
+"Molise" "25-34 anni" "2018" 48.908939
+"Molise" "25-34 anni" "2019" 53.823018
+"Molise" "25-34 anni" "2020" 52.088199
+"Molise" "25-34 anni" "2021" 49.905076
+"Sardegna" "25-34 anni" "2018" 52.815828
+"Sardegna" "25-34 anni" "2019" 57.729029
+"Sardegna" "25-34 anni" "2020" 53.682189
+"Sardegna" "25-34 anni" "2021" 56.705942
+"Basilicata" "45-54 anni" "2018" 61.389559
+"Basilicata" "45-54 anni" "2019" 61.205528
+"Basilicata" "45-54 anni" "2020" 61.120857
+"Basilicata" "45-54 anni" "2021" 67.141045
+"Sicilia" "55-64 anni" "2018" 41.764188
+"Sicilia" "55-64 anni" "2019" 41.46307
+"Sicilia" "55-64 anni" "2020" 41.525842
+"Sicilia" "55-64 anni" "2021" 41.856956
+"Basilicata" "35-44 anni" "2018" 58.682659
+"Basilicata" "35-44 anni" "2019" 63.300668
+"Basilicata" "35-44 anni" "2020" 64.632781
+"Basilicata" "35-44 anni" "2021" 65.117796
+"Puglia" "55-64 anni" "2018" 44.107367
+"Puglia" "55-64 anni" "2019" 45.642374
+"Puglia" "55-64 anni" "2020" 46.373406
+"Puglia" "55-64 anni" "2021" 45.449569
+"Sicilia" "25-34 anni" "2018" 38.997314
+"Sicilia" "25-34 anni" "2019" 40.51107
+"Sicilia" "25-34 anni" "2020" 38.505447
+"Sicilia" "25-34 anni" "2021" 40.042637
+"Abruzzo" "55-64 anni" "2018" 55.647715
+"Abruzzo" "55-64 anni" "2019" 55.870962
+"Abruzzo" "55-64 anni" "2020" 54.213646
+"Abruzzo" "55-64 anni" "2021" 53.426207
+"Calabria" "55-64 anni" "2018" 44.282904
+"Calabria" "55-64 anni" "2019" 42.555777
+"Calabria" "55-64 anni" "2020" 42.310382
+"Calabria" "55-64 anni" "2021" 43.647152
+"Campania" "55-64 anni" "2018" 44.471468
+"Campania" "55-64 anni" "2019" 43.662682
+"Campania" "55-64 anni" "2020" 41.945109
+"Campania" "55-64 anni" "2021" 43.472006
