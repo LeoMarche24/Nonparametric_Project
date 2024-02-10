@@ -53,14 +53,23 @@ xgrid <- seq(1,20,length.out = 20)
 ygrid <- seq(1,34,length.out = 34)
 
 xygrid <- expand.grid(xgrid, ygrid)
+
 names(xygrid)=c('x','y')
 
 pred_tp = predict(model, newdata = data.frame(xygrid))
 
-persp3d(xgrid, ygrid, pred_tp, col = 'grey30')
+# persp3d(xgrid, ygrid, pred_tp, col = 'grey30', forceClipregion = F)
+# with(data,
+#      points3d(x, y, p1, col = 'black', size = 5))
 
-with(data,
-     points3d(x, y, p1, col = 'black', size = 5))
+# Reshape z values to create a matrix
+z_matrix <- matrix(pred_tp, nrow = length(xgrid), ncol = length(ygrid), byrow = TRUE)
+
+# Create a 3D surface plot
+surface3d(xgrid, ygrid, z_matrix, color = "black", alpha = 0.7, front="line")
+
+# Add labels and customize the plot as needed
+rgl.lab("X-axis", "Y-axis", "Z-axis", color="black", cex=1.2)
 
 
 
@@ -124,7 +133,7 @@ for(i in 1:680){
 x <- seq(2001,2021,length.out = 20)
 y <- seq(17,50,length.out = 34)
 pval = p.adjust(pval.fun,"BH")
-persp3d(x,y, pval, col = 'black', zlab = "z", xlab = "year", ylab = "age", zlim= c(0.001,1))
-planes3d(a = 0, b = 0, c = 1, d = -0.1, color = "green", alpha = .5)
 
-pval.fun
+persp3d(x,y, pval, col = 'black', zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
+planes3d(a = 0, b = 0, c = 1, d = -0.1, color = "darkorange", alpha = .75)
+
