@@ -5,6 +5,8 @@ library(splines)
 library(roahd)
 library(fdANOVA)
 
+color_pal <- colorRampPalette(colors = c("orange", "darkred"))
+
 ####Test overall on the smoothed data####
 total_curves <- matrix(0, nrow = length(eta), ncol=length(prov)*length(years))
 for (i in 1:length(prov))
@@ -54,7 +56,7 @@ prov_out <- match(names(total_curves)[num], prov)
 View(cbind(prov[prov_out], years[(num-prov_out)/107]))
 
 data_aux <- data[num]
-plot(data_aux)
+plot(data_aux, col = 'color_pal')
 pre <- which(data_aux$values[, 5]>20)
 prov_out_up <- match(names(total_curves)[num[pre]], prov)
 prov_out_down <- match(names(total_curves)[num[-pre]], prov)
@@ -64,7 +66,7 @@ View(cbind(names(total_curves)[num[-pre]], years[(num[-pre]-prov_out_down)/107])
 
 ##Prova con il fattore geografico su tre livelli##
 
-plot(data, col='black')
+plot(data, col='grey80')
 
 data_nord <- data$values[which(geo == 'nord') ,]
 data_centro <- data$values[which(geo == 'centro') ,]
@@ -74,9 +76,9 @@ m_n <- colMeans(data_nord)
 m_c <- colMeans(data_centro)
 m_s <- colMeans(data_sud)
 
-lines(m_n, col='blue', lwd=2)
-lines(m_c, col='green', lwd=2)
-lines(m_s, col='yellow', lwd=2)
+lines(m_n, col=color_pal(3)[1], lwd=2)
+lines(m_c, col=color_pal(3)[2], lwd=2)
+lines(m_s, col=color_pal(3)[3], lwd=2)
 
 T0 <- fanova.tests(x = total_curves, geo,  test = "L2N", parallel = TRUE)$L2N$statL2
 
@@ -93,8 +95,8 @@ for(perm in 1:B){
   
 }
 
-hist(T_stat, xlim=range(c(0,T0)))
-abline(v = T0)
+hist(T_stat, xlim=range(c(0,T0)), col = 'grey80')
+abline(v = T0, col = color_pal(1)[1], lwd = 5)
 
 #p-value curve# - ci mette 10 min
 abscissa <- 1:34
