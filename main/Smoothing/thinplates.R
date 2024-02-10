@@ -1,8 +1,16 @@
-### QUA TI PUOI SBIZZARRIRE
 
+# Load the necessary libraries
 library(dplyr)
 library(readr)
-province <- read_csv("Datasets/Fecondita_Eta_province.csv", 
+library(gam)
+library(splines)
+library(mgcv)
+library(rgl)
+library(plot3D)
+library(progress)
+# Import data 
+
+province <- read_csv("./Datasets/Fecondita_Eta_province.csv", 
                      col_types = cols(ITTER107 = col_skip(), 
                                       TIPO_DATO15 = col_skip(), `Tipo dato` = col_skip(), 
                                       ETA1 = col_skip(), `Seleziona periodo` = col_skip(), 
@@ -16,6 +24,8 @@ years <- years[4:23]
 eta <- eta[-34]
 
 prov_list <- list()
+
+# We build the dataset as a list of matrices
 
 for (i in 1:length(prov))
 {
@@ -31,59 +41,30 @@ for (i in 1:length(prov))
   prov_list[[i]] <- temp
 }
 
-matplot(17:50, t(prov_list[[which(prov=='Milano')]]), type='l', xlab = 'Age', ylab = 'Fertility rate')
-
-library(gam)
-library(splines)
-library(mgcv)
-library(rgl)
-library(plot3D)
-
-p1 <- as.vector(prov_list[[1]])
+# Plot one smoothed surface 
+p1 <- as.vector(prov_list[[3]])
 x <- 1:20
 y <- 1:34
 xyf <- expand.grid(x,y)
 names(xyf)=c('x','y')
 data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
-model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
+model <- with(data, gam(val ~ s(x, y, bs="tp", m = 3)))
 
-# xgrid <- seq(1,20,length.out = 100)
-# ygrid <- seq(1,34,length.out = 100)
-xgrid <- seq(1,20,length.out = 20)
-ygrid <- seq(1,34,length.out = 34)
-
-xygrid <- expand.grid(xgrid, ygrid)
-
+xgrid <- seq(1,20,length.out = 100)
+ygrid <- seq(1,34,length.out = 100)
 names(xygrid)=c('x','y')
-
 pred_tp = predict(model, newdata = data.frame(xygrid))
+persp3d(xgrid, ygrid, pred_tp, col = 'grey30', zlab = "rate",
+        xlab = "year" , ylab = "age" )
+with(data,points3d(x, y, p1, col = 'orange', size = 5))
 
-# persp3d(xgrid, ygrid, pred_tp, col = 'grey30', forceClipregion = F)
-# with(data,
-#      points3d(x, y, p1, col = 'black', size = 5))
+# Smooth every province
 
-# Reshape z values to create a matrix
-z_matrix <- matrix(pred_tp, nrow = length(xgrid), ncol = length(ygrid), byrow = TRUE)
-
-# Create a 3D surface plot
-surface3d(xgrid, ygrid, z_matrix, color = "black", alpha = 0.7, front="line")
-
-# Add labels and customize the plot as needed
-rgl.lab("X-axis", "Y-axis", "Z-axis", color="black", cex=1.2)
-
-
-
-
-# persp3d(xgrid, ygrid, surf_prov[[4]], col = 'grey30', zlab = "z")
-# persp3d(xgrid, ygrid, surf_prov[[22]], col = 'red', add = T)
-
-# with(data,
-#      points3d(x, y, p1, col = 'black', size = 5))
 surf_prov <- list()
 for(p in 1:length(prov_list)){
   p1 <- as.vector(prov_list[[p]])
   data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
-  model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
+  model <- with(data, gam(val ~ s(x, y, bs="tp", m = 3)))
   surf_prov[[p]] = predict(model, newdata = data.frame(xygrid))
 }
 
@@ -99,9 +80,12 @@ nomi <- c("prov_nord_est", "prov_nord_ovest", "prov_centro_est", "prov_centro_ov
 prov <- sort(unique(province$Territorio))
 df <- data.frame()
 
+# Exctract df from the list
+
 for(p in 1:107){
   df[p,1:680] = surf_prov[[p]]
 }
+# and assign to each smoothed provicnce the correct label
 geo <- rep(0,107)
 for (i in 1:107)
 {
@@ -112,11 +96,14 @@ for (i in 1:107)
   }
 }
 
+# Now we run the permutational ANOVA
+# Takes about 30min, we will provide the output to be loaded
+
 pb=progress::progress_bar$new(total=680)
 pb$tick(0)
 pval.fun=numeric(680)
 for(i in 1:680){
-  B <- 1000 
+  B <- 1000
   T_stat <- numeric(B)
   T0 <- summary(aov(df[,i] ~ geo))[[1]][1,4]
   set.seed(2024)
@@ -130,10 +117,25 @@ for(i in 1:680){
   pb$tick()
 }
 
+pval.fun <- read.table("./Datasets/p-val.txt")$x
+
+# Plot the p-value function 
 x <- seq(2001,2021,length.out = 20)
 y <- seq(17,50,length.out = 34)
+
+# Adjust the p-value using BH correction
 pval = p.adjust(pval.fun,"BH")
 
+# and plot the p-value function
 persp3d(x,y, pval, col = 'black', zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
 planes3d(a = 0, b = 0, c = 1, d = -0.1, color = "darkorange", alpha = .75)
+
+
+
+
+
+
+
+
+
 
