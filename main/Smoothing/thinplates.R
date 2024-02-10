@@ -48,7 +48,7 @@ y <- 1:34
 xyf <- expand.grid(x,y)
 names(xyf)=c('x','y')
 data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
-model <- with(data, gam(val ~ s(x, y, bs="tp", m = 3)))
+model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
 
 xgrid <- seq(1,20,length.out = 100)
 ygrid <- seq(1,34,length.out = 100)
@@ -64,7 +64,7 @@ surf_prov <- list()
 for(p in 1:length(prov_list)){
   p1 <- as.vector(prov_list[[p]])
   data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
-  model <- with(data, gam(val ~ s(x, y, bs="tp", m = 3)))
+  model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
   surf_prov[[p]] = predict(model, newdata = data.frame(xygrid))
 }
 
