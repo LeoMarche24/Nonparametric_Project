@@ -3,6 +3,7 @@ load("Datasets/data")
 load("Datasets/env")
 library(splines)
 library(roahd)
+library(fdANOVA)
 
 ####Test overall on the smoothed data####
 total_curves <- matrix(0, nrow = length(eta), ncol=length(prov)*length(years))
@@ -42,10 +43,10 @@ geo <- as.factor(geo)
 
 library(fdANOVA)
 data <- fData(1:34, t(total_curves))
-quartz()
+x11()
 out_mag <- roahd::fbplot(data) # no magnitude outliers
 
-quartz()
+x11()
 out_shape <- outliergram(data)
 num <- out_shape$ID_outliers
 prov_out <- match(names(total_curves)[num], prov)

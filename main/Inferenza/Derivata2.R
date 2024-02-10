@@ -3,6 +3,7 @@ load("Datasets/data")
 load("Datasets/env")
 library(splines)
 library(roahd)
+library(fdANOVA)
 
 ####Test overall on the smoothed data####
 total_curves <- matrix(0, nrow = length(eta), ncol=length(prov)*length(years))
@@ -26,6 +27,25 @@ geo <- ifelse(prov %in% prov_nord, 'nord', NA)
 geo[which(is.na(geo))] <- ifelse(prov[which(is.na(geo))] %in% prov_sud, 'sud', 'centro')
 geo <- rep(geo, 20)
 geo <- as.factor(geo)
+
+maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
+new <- data.frame(x=seq(17,50,length=1000))
+for (i in 1:length(years))
+{
+  for (j in 1:length(prov))
+  {
+    temp <- data.frame(x=17:50, y=prov_list[[j]][i ,])
+    model <- with(temp, smooth.spline(x,y,df = 9))
+    grid <- predict(model, new)$y
+    maxima[((i-1)*length(prov)+j),1] <- prov[j]
+    maxima[((i-1)*length(prov)+j),2] <- years[i]
+    maxima[((i-1)*length(prov)+j),3] <- as.numeric(new$x[which.max(grid$x)])
+    maxima[((i-1)*length(prov)+j),4] <- as.numeric(max(grid))
+  }
+}
+maxima <- data.frame(maxima)
+names(maxima) <- c("Province", "Year", "MaxDomain", "Max")
+
 
 #Outlier detection#
 
@@ -111,6 +131,7 @@ for (i in 1:length(abscissa))
 plot(p_val, type='l')
 abline(h=0.05) 
 
+
 ####differenze negli anni####
 anni <- 2002:2021
 anni_tot <- rep(anni, each=107)
@@ -171,3 +192,18 @@ for (i in 1:length(years)) {
 
 data1 <- fData(1:34, trim_total)
 plot(data1)
+
+
+# MANOVA test
+
+Prov_fact <- factor(maxima$Province) # ******************************************************************************
+Year_fact <- factor(maxima$Year) # ******************************************************************************
+x <- data.frame(MaxDomain=as.numeric(maxima$MaxDomain), Max=as.numeric(maxima$Max))
+fit <- manova( as.matrix(x) ~ Prov_fact + Year_fact ) 
+summary.manova(fit, test="Wilks")
+
+
+
+
+
+
