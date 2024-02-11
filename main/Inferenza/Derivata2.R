@@ -183,7 +183,7 @@ plot(p_values[,1], type='l',ylim = c(0,1)) #
 abline(h=0.05, col = 'red')
 
 p_val1 <- p.adjust(p_val, method = "bonferroni")
-plot(p_values[,2], type='l', ylab = 'p.bonf', xlab = 'Age',,ylim = c(0,1)) 
+plot(p_values[,2], type='l', ylab = 'p.bonf', xlab = 'Age',ylim = c(0,1)) 
 abline(h=0.05, col = 'red')
 
 # p_values <- data.frame(pvalue = p_val, pvalue_adj = p_val1)
