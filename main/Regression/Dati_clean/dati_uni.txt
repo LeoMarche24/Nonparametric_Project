@@ -1,681 +1,705 @@
-"Sesso" "Territorio" "TIME" "% rinunce" "iscritti_tot"
-"femmine" "Abruzzo" 2004 10.8 NA
-"femmine" "Abruzzo" 2005 13.4 NA
-"femmine" "Abruzzo" 2006 11.6 NA
-"femmine" "Abruzzo" 2007 10.4 NA
-"femmine" "Abruzzo" 2008 15 184648
-"femmine" "Abruzzo" 2009 11.7 186414
-"femmine" "Abruzzo" 2010 8.9 191984
-"femmine" "Abruzzo" 2011 10.1 186870
-"femmine" "Abruzzo" 2012 9.7 182320
-"femmine" "Abruzzo" 2013 6.2 348708
-"femmine" "Abruzzo" 2014 4.8 338248
-"femmine" "Abruzzo" 2015 4.8 320320
-"femmine" "Abruzzo" 2016 7.4 304344
-"femmine" "Abruzzo" 2017 7.7 303308
-"femmine" "Abruzzo" 2018 6.9 NA
-"femmine" "Abruzzo" 2019 4.2 NA
-"femmine" "Abruzzo" 2020 5.3 NA
-"femmine" "Basilicata" 2004 12.7 NA
-"femmine" "Basilicata" 2005 13.8 NA
-"femmine" "Basilicata" 2006 9.4 NA
-"femmine" "Basilicata" 2007 9.3 NA
-"femmine" "Basilicata" 2008 8.7 91336
-"femmine" "Basilicata" 2009 9.2 91496
-"femmine" "Basilicata" 2010 13.4 92822
-"femmine" "Basilicata" 2011 10.4 90162
-"femmine" "Basilicata" 2012 8.9 89690
-"femmine" "Basilicata" 2013 12.9 172184
-"femmine" "Basilicata" 2014 10.4 167056
-"femmine" "Basilicata" 2015 8.7 162032
-"femmine" "Basilicata" 2016 9.5 154676
-"femmine" "Basilicata" 2017 11.5 150092
-"femmine" "Basilicata" 2018 8 NA
-"femmine" "Basilicata" 2019 8.6 NA
-"femmine" "Basilicata" 2020 7.2 NA
-"femmine" "Calabria" 2004 18.9 NA
-"femmine" "Calabria" 2005 16.5 NA
-"femmine" "Calabria" 2006 17.4 NA
-"femmine" "Calabria" 2007 18.1 NA
-"femmine" "Calabria" 2008 15.5 309524
-"femmine" "Calabria" 2009 12.7 311100
-"femmine" "Calabria" 2010 12.8 313042
-"femmine" "Calabria" 2011 15.1 307192
-"femmine" "Calabria" 2012 14.8 295782
-"femmine" "Calabria" 2013 12.2 575444
-"femmine" "Calabria" 2014 11.7 556604
-"femmine" "Calabria" 2015 14.1 543020
-"femmine" "Calabria" 2016 13.5 520920
-"femmine" "Calabria" 2017 10.4 501560
-"femmine" "Calabria" 2018 14.7 NA
-"femmine" "Calabria" 2019 16.6 NA
-"femmine" "Calabria" 2020 12.8 NA
-"femmine" "Campania" 2004 25.5 NA
-"femmine" "Campania" 2005 24.8 NA
-"femmine" "Campania" 2006 25.4 NA
-"femmine" "Campania" 2007 28.4 NA
-"femmine" "Campania" 2008 25.8 770280
-"femmine" "Campania" 2009 23.2 780860
-"femmine" "Campania" 2010 22.3 780110
-"femmine" "Campania" 2011 21 779012
-"femmine" "Campania" 2012 18.2 768042
-"femmine" "Campania" 2013 17.6 1491088
-"femmine" "Campania" 2014 16.9 1456544
-"femmine" "Campania" 2015 18.2 1429252
-"femmine" "Campania" 2016 17.3 1400520
-"femmine" "Campania" 2017 17.7 1390100
-"femmine" "Campania" 2018 18.7 NA
-"femmine" "Campania" 2019 15.7 NA
-"femmine" "Campania" 2020 14.5 NA
-"femmine" "Emilia-Romagna" 2004 18.3 NA
-"femmine" "Emilia-Romagna" 2005 16.2 NA
-"femmine" "Emilia-Romagna" 2006 12.6 NA
-"femmine" "Emilia-Romagna" 2007 13 NA
-"femmine" "Emilia-Romagna" 2008 11.8 308672
-"femmine" "Emilia-Romagna" 2009 11.2 270168
-"femmine" "Emilia-Romagna" 2010 12.2 313154
-"femmine" "Emilia-Romagna" 2011 12.6 312316
-"femmine" "Emilia-Romagna" 2012 14.2 306570
-"femmine" "Emilia-Romagna" 2013 12.3 644884
-"femmine" "Emilia-Romagna" 2014 10.6 640612
-"femmine" "Emilia-Romagna" 2015 10 627212
-"femmine" "Emilia-Romagna" 2016 9.8 629664
-"femmine" "Emilia-Romagna" 2017 8.7 635864
-"femmine" "Emilia-Romagna" 2018 9.1 NA
-"femmine" "Emilia-Romagna" 2019 8.5 NA
-"femmine" "Emilia-Romagna" 2020 8.4 NA
-"femmine" "Friuli-Venezia Giulia" 2004 13.3 NA
-"femmine" "Friuli-Venezia Giulia" 2005 12 NA
-"femmine" "Friuli-Venezia Giulia" 2006 17.6 NA
-"femmine" "Friuli-Venezia Giulia" 2007 8.8 NA
-"femmine" "Friuli-Venezia Giulia" 2008 12.2 99152
-"femmine" "Friuli-Venezia Giulia" 2009 12.3 97614
-"femmine" "Friuli-Venezia Giulia" 2010 10.5 97538
-"femmine" "Friuli-Venezia Giulia" 2011 11.8 93968
-"femmine" "Friuli-Venezia Giulia" 2012 12.9 91776
-"femmine" "Friuli-Venezia Giulia" 2013 6.4 187496
-"femmine" "Friuli-Venezia Giulia" 2014 6 182952
-"femmine" "Friuli-Venezia Giulia" 2015 4.5 179020
-"femmine" "Friuli-Venezia Giulia" 2016 6.6 179032
-"femmine" "Friuli-Venezia Giulia" 2017 7.3 178788
-"femmine" "Friuli-Venezia Giulia" 2018 6.9 NA
-"femmine" "Friuli-Venezia Giulia" 2019 7.4 NA
-"femmine" "Friuli-Venezia Giulia" 2020 6.7 NA
-"femmine" "Lazio" 2004 13.6 NA
-"femmine" "Lazio" 2005 10.3 NA
-"femmine" "Lazio" 2006 9.5 NA
-"femmine" "Lazio" 2007 8.3 NA
-"femmine" "Lazio" 2008 10.6 641456
-"femmine" "Lazio" 2009 7.7 642842
-"femmine" "Lazio" 2010 9.4 641484
-"femmine" "Lazio" 2011 11.8 622544
-"femmine" "Lazio" 2012 9.5 608368
-"femmine" "Lazio" 2013 10.1 1246044
-"femmine" "Lazio" 2014 11.2 1222508
-"femmine" "Lazio" 2015 9.1 1198096
-"femmine" "Lazio" 2016 8.3 1187232
-"femmine" "Lazio" 2017 8.4 1192536
-"femmine" "Lazio" 2018 8.5 NA
-"femmine" "Lazio" 2019 10.2 NA
-"femmine" "Lazio" 2020 7.7 NA
-"femmine" "Liguria" 2004 11.1 NA
-"femmine" "Liguria" 2005 14.7 NA
-"femmine" "Liguria" 2006 14.7 NA
-"femmine" "Liguria" 2007 13.8 NA
-"femmine" "Liguria" 2008 9.8 126222
-"femmine" "Liguria" 2009 10.7 122218
-"femmine" "Liguria" 2010 15.2 122508
-"femmine" "Liguria" 2011 10.4 121992
-"femmine" "Liguria" 2012 15.5 118864
-"femmine" "Liguria" 2013 16 247332
-"femmine" "Liguria" 2014 11.5 241620
-"femmine" "Liguria" 2015 10.7 238556
-"femmine" "Liguria" 2016 12.7 239032
-"femmine" "Liguria" 2017 13.5 243684
-"femmine" "Liguria" 2018 12.6 NA
-"femmine" "Liguria" 2019 6.6 NA
-"femmine" "Liguria" 2020 6.5 NA
-"femmine" "Lombardia" 2004 17.7 NA
-"femmine" "Lombardia" 2005 17.8 NA
-"femmine" "Lombardia" 2006 13.3 NA
-"femmine" "Lombardia" 2007 12.7 NA
-"femmine" "Lombardia" 2008 15.1 687742
-"femmine" "Lombardia" 2009 17 676866
-"femmine" "Lombardia" 2010 14.6 669110
-"femmine" "Lombardia" 2011 13.8 665954
-"femmine" "Lombardia" 2012 11.5 679012
-"femmine" "Lombardia" 2013 11.1 1404216
-"femmine" "Lombardia" 2014 10.2 1389912
-"femmine" "Lombardia" 2015 10.3 1379764
-"femmine" "Lombardia" 2016 10.8 1388728
-"femmine" "Lombardia" 2017 8.2 1406792
-"femmine" "Lombardia" 2018 9.9 NA
-"femmine" "Lombardia" 2019 10.1 NA
-"femmine" "Lombardia" 2020 9.1 NA
-"femmine" "Marche" 2004 15.1 NA
-"femmine" "Marche" 2005 17.8 NA
-"femmine" "Marche" 2006 15.2 NA
-"femmine" "Marche" 2007 13.2 NA
-"femmine" "Marche" 2008 13.8 156122
-"femmine" "Marche" 2009 15.3 155700
-"femmine" "Marche" 2010 10.6 156190
-"femmine" "Marche" 2011 11.4 153710
-"femmine" "Marche" 2012 12 152194
-"femmine" "Marche" 2013 11.1 302620
-"femmine" "Marche" 2014 9.4 293820
-"femmine" "Marche" 2015 7.9 289648
-"femmine" "Marche" 2016 8.9 285432
-"femmine" "Marche" 2017 5 287332
-"femmine" "Marche" 2018 6.8 NA
-"femmine" "Marche" 2019 5.6 NA
-"femmine" "Marche" 2020 7.6 NA
-"femmine" "Molise" 2004 10.2 NA
-"femmine" "Molise" 2005 10.2 NA
-"femmine" "Molise" 2006 11.4 NA
-"femmine" "Molise" 2007 11.7 NA
-"femmine" "Molise" 2008 12.6 51538
-"femmine" "Molise" 2009 13.6 51140
-"femmine" "Molise" 2010 9.4 49816
-"femmine" "Molise" 2011 8.7 46098
-"femmine" "Molise" 2012 9.5 45450
-"femmine" "Molise" 2013 11.8 85528
-"femmine" "Molise" 2014 5.8 84180
-"femmine" "Molise" 2015 7.2 81064
-"femmine" "Molise" 2016 5.8 78944
-"femmine" "Molise" 2017 9.9 77072
-"femmine" "Molise" 2018 8 NA
-"femmine" "Molise" 2019 7 NA
-"femmine" "Molise" 2020 5.5 NA
-"femmine" "Piemonte" 2004 18.5 NA
-"femmine" "Piemonte" 2005 16 NA
-"femmine" "Piemonte" 2006 15.8 NA
-"femmine" "Piemonte" 2007 14.3 NA
-"femmine" "Piemonte" 2008 17.3 330626
-"femmine" "Piemonte" 2009 17.1 317584
-"femmine" "Piemonte" 2010 13.9 317178
-"femmine" "Piemonte" 2011 13.3 315838
-"femmine" "Piemonte" 2012 12.8 310270
-"femmine" "Piemonte" 2013 13.8 645620
-"femmine" "Piemonte" 2014 9 637644
-"femmine" "Piemonte" 2015 8.4 630592
-"femmine" "Piemonte" 2016 6.4 622924
-"femmine" "Piemonte" 2017 7.6 639292
-"femmine" "Piemonte" 2018 11.5 NA
-"femmine" "Piemonte" 2019 10.3 NA
-"femmine" "Piemonte" 2020 10.7 NA
-"femmine" "Puglia" 2004 26.5 NA
-"femmine" "Puglia" 2005 24.7 NA
-"femmine" "Puglia" 2006 22.4 NA
-"femmine" "Puglia" 2007 21.4 NA
-"femmine" "Puglia" 2008 18.7 522832
-"femmine" "Puglia" 2009 18.9 524224
-"femmine" "Puglia" 2010 16.9 549844
-"femmine" "Puglia" 2011 14.7 536602
-"femmine" "Puglia" 2012 16 491952
-"femmine" "Puglia" 2013 16.2 938940
-"femmine" "Puglia" 2014 13.5 905724
-"femmine" "Puglia" 2015 12.7 881972
-"femmine" "Puglia" 2016 12.3 854608
-"femmine" "Puglia" 2017 13.6 851272
-"femmine" "Puglia" 2018 13 NA
-"femmine" "Puglia" 2019 14.4 NA
-"femmine" "Puglia" 2020 14.1 NA
-"femmine" "Sardegna" 2004 21 NA
-"femmine" "Sardegna" 2005 23.4 NA
-"femmine" "Sardegna" 2006 22.2 NA
-"femmine" "Sardegna" 2007 16.7 NA
-"femmine" "Sardegna" 2008 18.3 217930
-"femmine" "Sardegna" 2009 16.9 209014
-"femmine" "Sardegna" 2010 15.4 203780
-"femmine" "Sardegna" 2011 18.1 197390
-"femmine" "Sardegna" 2012 19.7 187470
-"femmine" "Sardegna" 2013 21.2 372520
-"femmine" "Sardegna" 2014 17 354996
-"femmine" "Sardegna" 2015 14.8 342644
-"femmine" "Sardegna" 2016 12.1 334348
-"femmine" "Sardegna" 2017 15.6 333212
-"femmine" "Sardegna" 2018 16.5 NA
-"femmine" "Sardegna" 2019 13.1 NA
-"femmine" "Sardegna" 2020 8.2 NA
-"femmine" "Sicilia" 2004 25.7 NA
-"femmine" "Sicilia" 2005 26 NA
-"femmine" "Sicilia" 2006 24.5 NA
-"femmine" "Sicilia" 2007 22.7 NA
-"femmine" "Sicilia" 2008 23 623422
-"femmine" "Sicilia" 2009 23.6 623148
-"femmine" "Sicilia" 2010 22.1 605178
-"femmine" "Sicilia" 2011 20.8 596516
-"femmine" "Sicilia" 2012 20.1 589368
-"femmine" "Sicilia" 2013 21.7 1142088
-"femmine" "Sicilia" 2014 20.5 1105220
-"femmine" "Sicilia" 2015 19.6 1080884
-"femmine" "Sicilia" 2016 19.1 1055732
-"femmine" "Sicilia" 2017 17.4 1053208
-"femmine" "Sicilia" 2018 20.7 NA
-"femmine" "Sicilia" 2019 20.1 NA
-"femmine" "Sicilia" 2020 15.1 NA
-"femmine" "Toscana" 2004 15.3 NA
-"femmine" "Toscana" 2005 10.7 NA
-"femmine" "Toscana" 2006 12.9 NA
-"femmine" "Toscana" 2007 12.7 NA
-"femmine" "Toscana" 2008 13 319716
-"femmine" "Toscana" 2009 15.6 327329
-"femmine" "Toscana" 2010 14.7 314892
-"femmine" "Toscana" 2011 13.4 314254
-"femmine" "Toscana" 2012 14.7 309088
-"femmine" "Toscana" 2013 11.9 631024
-"femmine" "Toscana" 2014 10.8 604632
-"femmine" "Toscana" 2015 10 599012
-"femmine" "Toscana" 2016 8.7 601416
-"femmine" "Toscana" 2017 8.6 601260
-"femmine" "Toscana" 2018 9.8 NA
-"femmine" "Toscana" 2019 8.2 NA
-"femmine" "Toscana" 2020 9.1 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2004 17 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2005 13.8 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2006 12.4 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2007 13.3 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2008 13.1 83036
-"femmine" "Trentino Alto Adige / Südtirol" 2009 13.9 82630
-"femmine" "Trentino Alto Adige / Südtirol" 2010 13.2 84518
-"femmine" "Trentino Alto Adige / Südtirol" 2011 9.9 82890
-"femmine" "Trentino Alto Adige / Südtirol" 2012 11 78992
-"femmine" "Trentino Alto Adige / Südtirol" 2013 11.8 163260
-"femmine" "Trentino Alto Adige / Südtirol" 2014 8.8 156176
-"femmine" "Trentino Alto Adige / Südtirol" 2015 9.3 149764
-"femmine" "Trentino Alto Adige / Südtirol" 2016 6.8 150348
-"femmine" "Trentino Alto Adige / Südtirol" 2017 9.1 149640
-"femmine" "Trentino Alto Adige / Südtirol" 2018 8 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2019 7.8 NA
-"femmine" "Trentino Alto Adige / Südtirol" 2020 8.4 NA
-"femmine" "Umbria" 2004 11.2 NA
-"femmine" "Umbria" 2005 14 NA
-"femmine" "Umbria" 2006 12.2 NA
-"femmine" "Umbria" 2007 9.7 NA
-"femmine" "Umbria" 2008 12.6 90430
-"femmine" "Umbria" 2009 7.4 88948
-"femmine" "Umbria" 2010 9.7 86302
-"femmine" "Umbria" 2011 11 85168
-"femmine" "Umbria" 2012 13.3 81720
-"femmine" "Umbria" 2013 11.9 163444
-"femmine" "Umbria" 2014 9.3 157536
-"femmine" "Umbria" 2015 8.1 155680
-"femmine" "Umbria" 2016 5.8 152328
-"femmine" "Umbria" 2017 8.5 156316
-"femmine" "Umbria" 2018 7.1 NA
-"femmine" "Umbria" 2019 8.4 NA
-"femmine" "Umbria" 2020 12 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2004 18.3 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2005 17.8 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2006 15.3 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2007 15.2 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2008 19.1 10816
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2009 21.1 10658
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2010 15.2 10894
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2011 14.1 10808
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2012 16.9 10574
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2013 15.2 21796
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2014 13.4 20928
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2015 12.2 19884
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2016 10.8 19176
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2017 11.8 19552
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2018 13.6 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2019 9.7 NA
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2020 9 NA
-"femmine" "Veneto" 2004 14.5 NA
-"femmine" "Veneto" 2005 15 NA
-"femmine" "Veneto" 2006 12.3 NA
-"femmine" "Veneto" 2007 11.5 NA
-"femmine" "Veneto" 2008 13.3 374062
-"femmine" "Veneto" 2009 12.7 366808
-"femmine" "Veneto" 2010 13.6 381046
-"femmine" "Veneto" 2011 13.3 380674
-"femmine" "Veneto" 2012 11.8 378572
-"femmine" "Veneto" 2013 7.1 773116
-"femmine" "Veneto" 2014 7.9 759132
-"femmine" "Veneto" 2015 6.6 743380
-"femmine" "Veneto" 2016 7.1 751032
-"femmine" "Veneto" 2017 10.7 743812
-"femmine" "Veneto" 2018 10.6 NA
-"femmine" "Veneto" 2019 7.6 NA
-"femmine" "Veneto" 2020 8.1 NA
-"maschi" "Abruzzo" 2004 21.3 NA
-"maschi" "Abruzzo" 2005 17.3 NA
-"maschi" "Abruzzo" 2006 17.8 NA
-"maschi" "Abruzzo" 2007 18.8 NA
-"maschi" "Abruzzo" 2008 18.3 136572
-"maschi" "Abruzzo" 2009 16.8 134972
-"maschi" "Abruzzo" 2010 17.2 141640
-"maschi" "Abruzzo" 2011 13.9 137322
-"maschi" "Abruzzo" 2012 14.6 133134
-"maschi" "Abruzzo" 2013 15.2 255284
-"maschi" "Abruzzo" 2014 14.1 248772
-"maschi" "Abruzzo" 2015 23.2 237284
-"maschi" "Abruzzo" 2016 17.1 227812
-"maschi" "Abruzzo" 2017 7.1 230996
-"maschi" "Abruzzo" 2018 10.6 NA
-"maschi" "Abruzzo" 2019 15 NA
-"maschi" "Abruzzo" 2020 10.5 NA
-"maschi" "Basilicata" 2004 20.9 NA
-"maschi" "Basilicata" 2005 22.2 NA
-"maschi" "Basilicata" 2006 20.7 NA
-"maschi" "Basilicata" 2007 18.6 NA
-"maschi" "Basilicata" 2008 18.8 67768
-"maschi" "Basilicata" 2009 14.6 67534
-"maschi" "Basilicata" 2010 16.6 68110
-"maschi" "Basilicata" 2011 18.4 65678
-"maschi" "Basilicata" 2012 18.1 64354
-"maschi" "Basilicata" 2013 16.7 122556
-"maschi" "Basilicata" 2014 14 118696
-"maschi" "Basilicata" 2015 11.8 115176
-"maschi" "Basilicata" 2016 17.5 111920
-"maschi" "Basilicata" 2017 15.9 111148
-"maschi" "Basilicata" 2018 14 NA
-"maschi" "Basilicata" 2019 14.6 NA
-"maschi" "Basilicata" 2020 12.7 NA
-"maschi" "Calabria" 2004 25 NA
-"maschi" "Calabria" 2005 19.7 NA
-"maschi" "Calabria" 2006 21.7 NA
-"maschi" "Calabria" 2007 23.8 NA
-"maschi" "Calabria" 2008 21.5 229810
-"maschi" "Calabria" 2009 21.5 226082
-"maschi" "Calabria" 2010 19.2 224104
-"maschi" "Calabria" 2011 20.8 218008
-"maschi" "Calabria" 2012 18.8 209004
-"maschi" "Calabria" 2013 20.1 408028
-"maschi" "Calabria" 2014 21.8 393700
-"maschi" "Calabria" 2015 17.9 383940
-"maschi" "Calabria" 2016 17.7 375892
-"maschi" "Calabria" 2017 21.8 364624
-"maschi" "Calabria" 2018 25.5 NA
-"maschi" "Calabria" 2019 21.2 NA
-"maschi" "Calabria" 2020 20.2 NA
-"maschi" "Campania" 2004 31.3 NA
-"maschi" "Campania" 2005 30.3 NA
-"maschi" "Campania" 2006 28.5 NA
-"maschi" "Campania" 2007 29 NA
-"maschi" "Campania" 2008 26.8 581380
-"maschi" "Campania" 2009 23.8 577280
-"maschi" "Campania" 2010 24 572710
-"maschi" "Campania" 2011 22.5 578478
-"maschi" "Campania" 2012 24.9 561662
-"maschi" "Campania" 2013 26 1090996
-"maschi" "Campania" 2014 22.3 1078552
-"maschi" "Campania" 2015 19.4 1076800
-"maschi" "Campania" 2016 18.9 1066476
-"maschi" "Campania" 2017 20.3 1092992
-"maschi" "Campania" 2018 18.4 NA
-"maschi" "Campania" 2019 18.8 NA
-"maschi" "Campania" 2020 19.9 NA
-"maschi" "Emilia-Romagna" 2004 22.3 NA
-"maschi" "Emilia-Romagna" 2005 22.7 NA
-"maschi" "Emilia-Romagna" 2006 22 NA
-"maschi" "Emilia-Romagna" 2007 20.8 NA
-"maschi" "Emilia-Romagna" 2008 20 243608
-"maschi" "Emilia-Romagna" 2009 17.8 212836
-"maschi" "Emilia-Romagna" 2010 17.4 244546
-"maschi" "Emilia-Romagna" 2011 14.5 243816
-"maschi" "Emilia-Romagna" 2012 15.2 241028
-"maschi" "Emilia-Romagna" 2013 17.8 507124
-"maschi" "Emilia-Romagna" 2014 15.6 507360
-"maschi" "Emilia-Romagna" 2015 16.4 499092
-"maschi" "Emilia-Romagna" 2016 12.6 509384
-"maschi" "Emilia-Romagna" 2017 11.1 514828
-"maschi" "Emilia-Romagna" 2018 12.7 NA
-"maschi" "Emilia-Romagna" 2019 13.9 NA
-"maschi" "Emilia-Romagna" 2020 10.1 NA
-"maschi" "Friuli-Venezia Giulia" 2004 14.8 NA
-"maschi" "Friuli-Venezia Giulia" 2005 20.8 NA
-"maschi" "Friuli-Venezia Giulia" 2006 22.6 NA
-"maschi" "Friuli-Venezia Giulia" 2007 16.2 NA
-"maschi" "Friuli-Venezia Giulia" 2008 18.1 80910
-"maschi" "Friuli-Venezia Giulia" 2009 17 77684
-"maschi" "Friuli-Venezia Giulia" 2010 13.7 77958
-"maschi" "Friuli-Venezia Giulia" 2011 14.2 74624
-"maschi" "Friuli-Venezia Giulia" 2012 13.2 72922
-"maschi" "Friuli-Venezia Giulia" 2013 15.7 151948
-"maschi" "Friuli-Venezia Giulia" 2014 16 149468
-"maschi" "Friuli-Venezia Giulia" 2015 9.3 147544
-"maschi" "Friuli-Venezia Giulia" 2016 9.4 149300
-"maschi" "Friuli-Venezia Giulia" 2017 13.1 151576
-"maschi" "Friuli-Venezia Giulia" 2018 10.8 NA
-"maschi" "Friuli-Venezia Giulia" 2019 9.7 NA
-"maschi" "Friuli-Venezia Giulia" 2020 10.2 NA
-"maschi" "Lazio" 2004 17.8 NA
-"maschi" "Lazio" 2005 19.1 NA
-"maschi" "Lazio" 2006 14.4 NA
-"maschi" "Lazio" 2007 12.8 NA
-"maschi" "Lazio" 2008 15 506522
-"maschi" "Lazio" 2009 13.9 500240
-"maschi" "Lazio" 2010 16.6 494154
-"maschi" "Lazio" 2011 18.1 487528
-"maschi" "Lazio" 2012 15 472780
-"maschi" "Lazio" 2013 14.2 977556
-"maschi" "Lazio" 2014 13.8 978268
-"maschi" "Lazio" 2015 13.5 970608
-"maschi" "Lazio" 2016 13.4 966444
-"maschi" "Lazio" 2017 13.4 991124
-"maschi" "Lazio" 2018 13.9 NA
-"maschi" "Lazio" 2019 13.6 NA
-"maschi" "Lazio" 2020 15.8 NA
-"maschi" "Liguria" 2004 24.5 NA
-"maschi" "Liguria" 2005 18.3 NA
-"maschi" "Liguria" 2006 16.4 NA
-"maschi" "Liguria" 2007 18.8 NA
-"maschi" "Liguria" 2008 15 99874
-"maschi" "Liguria" 2009 14.2 95564
-"maschi" "Liguria" 2010 16.8 95810
-"maschi" "Liguria" 2011 18.3 94460
-"maschi" "Liguria" 2012 19.1 91904
-"maschi" "Liguria" 2013 13.7 195364
-"maschi" "Liguria" 2014 15.7 192912
-"maschi" "Liguria" 2015 13.3 192720
-"maschi" "Liguria" 2016 10.2 196124
-"maschi" "Liguria" 2017 12.7 201008
-"maschi" "Liguria" 2018 13 NA
-"maschi" "Liguria" 2019 13.1 NA
-"maschi" "Liguria" 2020 14.4 NA
-"maschi" "Lombardia" 2004 26.9 NA
-"maschi" "Lombardia" 2005 24.7 NA
-"maschi" "Lombardia" 2006 23.3 NA
-"maschi" "Lombardia" 2007 23.2 NA
-"maschi" "Lombardia" 2008 23.7 556594
-"maschi" "Lombardia" 2009 22.5 538782
-"maschi" "Lombardia" 2010 21.2 531874
-"maschi" "Lombardia" 2011 19.6 530922
-"maschi" "Lombardia" 2012 18.6 537498
-"maschi" "Lombardia" 2013 19.2 1127768
-"maschi" "Lombardia" 2014 15.4 1123220
-"maschi" "Lombardia" 2015 15.7 1121660
-"maschi" "Lombardia" 2016 14.6 1138916
-"maschi" "Lombardia" 2017 15.6 1166932
-"maschi" "Lombardia" 2018 16.4 NA
-"maschi" "Lombardia" 2019 12.8 NA
-"maschi" "Lombardia" 2020 14.4 NA
-"maschi" "Marche" 2004 19.3 NA
-"maschi" "Marche" 2005 20.5 NA
-"maschi" "Marche" 2006 19.6 NA
-"maschi" "Marche" 2007 18.3 NA
-"maschi" "Marche" 2008 14.9 116758
-"maschi" "Marche" 2009 15.5 116310
-"maschi" "Marche" 2010 18.9 117032
-"maschi" "Marche" 2011 13.6 116386
-"maschi" "Marche" 2012 18.3 117046
-"maschi" "Marche" 2013 15.3 230736
-"maschi" "Marche" 2014 12.4 227844
-"maschi" "Marche" 2015 11.9 226140
-"maschi" "Marche" 2016 13 224148
-"maschi" "Marche" 2017 14.8 228352
-"maschi" "Marche" 2018 12.9 NA
-"maschi" "Marche" 2019 11.6 NA
-"maschi" "Marche" 2020 11.9 NA
-"maschi" "Molise" 2004 20.4 NA
-"maschi" "Molise" 2005 20.5 NA
-"maschi" "Molise" 2006 20.2 NA
-"maschi" "Molise" 2007 20.5 NA
-"maschi" "Molise" 2008 19.4 38606
-"maschi" "Molise" 2009 19.4 37844
-"maschi" "Molise" 2010 17.2 36288
-"maschi" "Molise" 2011 16.5 34628
-"maschi" "Molise" 2012 10.2 33530
-"maschi" "Molise" 2013 18.6 62028
-"maschi" "Molise" 2014 18.1 61360
-"maschi" "Molise" 2015 12.8 58960
-"maschi" "Molise" 2016 14.4 58844
-"maschi" "Molise" 2017 13.9 60100
-"maschi" "Molise" 2018 13.7 NA
-"maschi" "Molise" 2019 14.5 NA
-"maschi" "Molise" 2020 11.4 NA
-"maschi" "Piemonte" 2004 27.1 NA
-"maschi" "Piemonte" 2005 25.6 NA
-"maschi" "Piemonte" 2006 23.1 NA
-"maschi" "Piemonte" 2007 20.2 NA
-"maschi" "Piemonte" 2008 19.5 262292
-"maschi" "Piemonte" 2009 21.9 250876
-"maschi" "Piemonte" 2010 21.2 252184
-"maschi" "Piemonte" 2011 18.4 249714
-"maschi" "Piemonte" 2012 19.4 246574
-"maschi" "Piemonte" 2013 17.5 507012
-"maschi" "Piemonte" 2014 16.2 503720
-"maschi" "Piemonte" 2015 16.6 498644
-"maschi" "Piemonte" 2016 13.7 498952
-"maschi" "Piemonte" 2017 14.7 513424
-"maschi" "Piemonte" 2018 15.6 NA
-"maschi" "Piemonte" 2019 11.3 NA
-"maschi" "Piemonte" 2020 13.2 NA
-"maschi" "Puglia" 2004 34.3 NA
-"maschi" "Puglia" 2005 33.2 NA
-"maschi" "Puglia" 2006 31.3 NA
-"maschi" "Puglia" 2007 28.4 NA
-"maschi" "Puglia" 2008 28.9 376182
-"maschi" "Puglia" 2009 30.6 376364
-"maschi" "Puglia" 2010 30 392126
-"maschi" "Puglia" 2011 23.8 385972
-"maschi" "Puglia" 2012 23.5 358916
-"maschi" "Puglia" 2013 23.3 676216
-"maschi" "Puglia" 2014 20.1 667428
-"maschi" "Puglia" 2015 20.5 665576
-"maschi" "Puglia" 2016 21.1 659444
-"maschi" "Puglia" 2017 23.3 666052
-"maschi" "Puglia" 2018 21.7 NA
-"maschi" "Puglia" 2019 21.1 NA
-"maschi" "Puglia" 2020 17 NA
-"maschi" "Sardegna" 2004 39 NA
-"maschi" "Sardegna" 2005 41.3 NA
-"maschi" "Sardegna" 2006 33.4 NA
-"maschi" "Sardegna" 2007 26.8 NA
-"maschi" "Sardegna" 2008 26.6 137106
-"maschi" "Sardegna" 2009 28 130700
-"maschi" "Sardegna" 2010 31.3 127380
-"maschi" "Sardegna" 2011 31.8 123752
-"maschi" "Sardegna" 2012 30.1 118670
-"maschi" "Sardegna" 2013 27.2 241800
-"maschi" "Sardegna" 2014 29.6 234720
-"maschi" "Sardegna" 2015 30.5 230460
-"maschi" "Sardegna" 2016 23.6 231168
-"maschi" "Sardegna" 2017 26.3 233780
-"maschi" "Sardegna" 2018 28.9 NA
-"maschi" "Sardegna" 2019 21.9 NA
-"maschi" "Sardegna" 2020 15.3 NA
-"maschi" "Sicilia" 2004 35.5 NA
-"maschi" "Sicilia" 2005 33.7 NA
-"maschi" "Sicilia" 2006 31.8 NA
-"maschi" "Sicilia" 2007 29 NA
-"maschi" "Sicilia" 2008 29.2 445150
-"maschi" "Sicilia" 2009 29 440260
-"maschi" "Sicilia" 2010 29.1 424388
-"maschi" "Sicilia" 2011 27.7 422748
-"maschi" "Sicilia" 2012 28.3 419626
-"maschi" "Sicilia" 2013 28.9 817788
-"maschi" "Sicilia" 2014 27.4 806500
-"maschi" "Sicilia" 2015 28.8 801004
-"maschi" "Sicilia" 2016 27.7 793120
-"maschi" "Sicilia" 2017 24.3 810544
-"maschi" "Sicilia" 2018 23.4 NA
-"maschi" "Sicilia" 2019 24.5 NA
-"maschi" "Sicilia" 2020 23.4 NA
-"maschi" "Toscana" 2004 26.7 NA
-"maschi" "Toscana" 2005 22.5 NA
-"maschi" "Toscana" 2006 20.2 NA
-"maschi" "Toscana" 2007 22.2 NA
-"maschi" "Toscana" 2008 20.2 250884
-"maschi" "Toscana" 2009 17.4 254740
-"maschi" "Toscana" 2010 20.2 247794
-"maschi" "Toscana" 2011 22.8 244864
-"maschi" "Toscana" 2012 20.2 242678
-"maschi" "Toscana" 2013 20.3 500604
-"maschi" "Toscana" 2014 16.7 484164
-"maschi" "Toscana" 2015 16.6 482532
-"maschi" "Toscana" 2016 14.2 486152
-"maschi" "Toscana" 2017 13 485932
-"maschi" "Toscana" 2018 11.3 NA
-"maschi" "Toscana" 2019 12.3 NA
-"maschi" "Toscana" 2020 14.1 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2004 26.6 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2005 25.1 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2006 22 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2007 20.8 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2008 20.9 61122
-"maschi" "Trentino Alto Adige / Südtirol" 2009 19.6 59238
-"maschi" "Trentino Alto Adige / Südtirol" 2010 21.3 58300
-"maschi" "Trentino Alto Adige / Südtirol" 2011 17.6 58468
-"maschi" "Trentino Alto Adige / Südtirol" 2012 20.3 57038
-"maschi" "Trentino Alto Adige / Südtirol" 2013 15.6 117768
-"maschi" "Trentino Alto Adige / Südtirol" 2014 12.8 113856
-"maschi" "Trentino Alto Adige / Südtirol" 2015 12.4 110076
-"maschi" "Trentino Alto Adige / Südtirol" 2016 12.2 108576
-"maschi" "Trentino Alto Adige / Südtirol" 2017 12.6 110444
-"maschi" "Trentino Alto Adige / Südtirol" 2018 9.9 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2019 10.7 NA
-"maschi" "Trentino Alto Adige / Südtirol" 2020 13.7 NA
-"maschi" "Umbria" 2004 15.4 NA
-"maschi" "Umbria" 2005 16.6 NA
-"maschi" "Umbria" 2006 16.3 NA
-"maschi" "Umbria" 2007 14.9 NA
-"maschi" "Umbria" 2008 16.2 67130
-"maschi" "Umbria" 2009 16.5 65093
-"maschi" "Umbria" 2010 16 63674
-"maschi" "Umbria" 2011 10.7 62610
-"maschi" "Umbria" 2012 12.7 60920
-"maschi" "Umbria" 2013 11.1 122556
-"maschi" "Umbria" 2014 8.8 119924
-"maschi" "Umbria" 2015 8.1 119404
-"maschi" "Umbria" 2016 7.6 121092
-"maschi" "Umbria" 2017 10 123840
-"maschi" "Umbria" 2018 9.6 NA
-"maschi" "Umbria" 2019 10.5 NA
-"maschi" "Umbria" 2020 10.5 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2004 25.1 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2005 24.8 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2006 27.3 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2007 32.3 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2008 32.8 7714
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2009 22.1 7189
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2010 27.3 7282
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2011 31.4 7320
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2012 25.6 7372
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2013 23.7 15208
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2014 18.9 14232
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2015 20.3 14156
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2016 18 14088
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2017 15.9 13964
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2018 16.7 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2019 18.5 NA
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2020 14 NA
-"maschi" "Veneto" 2004 22.2 NA
-"maschi" "Veneto" 2005 21 NA
-"maschi" "Veneto" 2006 17.1 NA
-"maschi" "Veneto" 2007 14.6 NA
-"maschi" "Veneto" 2008 17.6 302172
-"maschi" "Veneto" 2009 20.2 293230
-"maschi" "Veneto" 2010 17.3 306792
-"maschi" "Veneto" 2011 19.6 307100
-"maschi" "Veneto" 2012 15.8 302650
-"maschi" "Veneto" 2013 12.8 617160
-"maschi" "Veneto" 2014 8.9 618220
-"maschi" "Veneto" 2015 9.4 620672
-"maschi" "Veneto" 2016 6.7 629288
-"maschi" "Veneto" 2017 10.4 626484
-"maschi" "Veneto" 2018 11.4 NA
-"maschi" "Veneto" 2019 9.2 NA
-"maschi" "Veneto" 2020 12.8 NA
+"Sesso","Territorio","TIME","% rinunce","iscritti_tot"
+"femmine","Abruzzo",2004,10.8,NA
+"femmine","Abruzzo",2005,13.4,NA
+"femmine","Abruzzo",2006,11.6,NA
+"femmine","Abruzzo",2007,10.4,NA
+"femmine","Abruzzo",2008,15,184648
+"femmine","Abruzzo",2009,11.7,186414
+"femmine","Abruzzo",2010,8.9,191984
+"femmine","Abruzzo",2011,10.1,186870
+"femmine","Abruzzo",2012,9.7,182320
+"femmine","Abruzzo",2013,6.2,348708
+"femmine","Abruzzo",2014,4.8,338248
+"femmine","Abruzzo",2015,4.8,320320
+"femmine","Abruzzo",2016,7.4,304344
+"femmine","Abruzzo",2017,7.7,303308
+"femmine","Abruzzo",2018,6.9,NA
+"femmine","Abruzzo",2019,4.2,NA
+"femmine","Abruzzo",2020,5.3,NA
+"femmine","Basilicata",2004,12.7,NA
+"femmine","Basilicata",2005,13.8,NA
+"femmine","Basilicata",2006,9.4,NA
+"femmine","Basilicata",2007,9.3,NA
+"femmine","Basilicata",2008,8.7,91336
+"femmine","Basilicata",2009,9.2,91496
+"femmine","Basilicata",2010,13.4,92822
+"femmine","Basilicata",2011,10.4,90162
+"femmine","Basilicata",2012,8.9,89690
+"femmine","Basilicata",2013,12.9,172184
+"femmine","Basilicata",2014,10.4,167056
+"femmine","Basilicata",2015,8.7,162032
+"femmine","Basilicata",2016,9.5,154676
+"femmine","Basilicata",2017,11.5,150092
+"femmine","Basilicata",2018,8,NA
+"femmine","Basilicata",2019,8.6,NA
+"femmine","Basilicata",2020,7.2,NA
+"femmine","Bolzano / Bozen",2015,10,NA
+"femmine","Bolzano / Bozen",2016,6.9,NA
+"femmine","Bolzano / Bozen",2017,13,NA
+"femmine","Bolzano / Bozen",2018,11.4,NA
+"femmine","Bolzano / Bozen",2019,9.1,NA
+"femmine","Bolzano / Bozen",2020,11,NA
+"femmine","Calabria",2004,18.9,NA
+"femmine","Calabria",2005,16.5,NA
+"femmine","Calabria",2006,17.4,NA
+"femmine","Calabria",2007,18.1,NA
+"femmine","Calabria",2008,15.5,309524
+"femmine","Calabria",2009,12.7,311100
+"femmine","Calabria",2010,12.8,313042
+"femmine","Calabria",2011,15.1,307192
+"femmine","Calabria",2012,14.8,295782
+"femmine","Calabria",2013,12.2,575444
+"femmine","Calabria",2014,11.7,556604
+"femmine","Calabria",2015,14.1,543020
+"femmine","Calabria",2016,13.5,520920
+"femmine","Calabria",2017,10.4,501560
+"femmine","Calabria",2018,14.7,NA
+"femmine","Calabria",2019,16.6,NA
+"femmine","Calabria",2020,12.8,NA
+"femmine","Campania",2004,25.5,NA
+"femmine","Campania",2005,24.8,NA
+"femmine","Campania",2006,25.4,NA
+"femmine","Campania",2007,28.4,NA
+"femmine","Campania",2008,25.8,770280
+"femmine","Campania",2009,23.2,780860
+"femmine","Campania",2010,22.3,780110
+"femmine","Campania",2011,21,779012
+"femmine","Campania",2012,18.2,768042
+"femmine","Campania",2013,17.6,1491088
+"femmine","Campania",2014,16.9,1456544
+"femmine","Campania",2015,18.2,1429252
+"femmine","Campania",2016,17.3,1400520
+"femmine","Campania",2017,17.7,1390100
+"femmine","Campania",2018,18.7,NA
+"femmine","Campania",2019,15.7,NA
+"femmine","Campania",2020,14.5,NA
+"femmine","Emilia-Romagna",2004,18.3,NA
+"femmine","Emilia-Romagna",2005,16.2,NA
+"femmine","Emilia-Romagna",2006,12.6,NA
+"femmine","Emilia-Romagna",2007,13,NA
+"femmine","Emilia-Romagna",2008,11.8,308672
+"femmine","Emilia-Romagna",2009,11.2,270168
+"femmine","Emilia-Romagna",2010,12.2,313154
+"femmine","Emilia-Romagna",2011,12.6,312316
+"femmine","Emilia-Romagna",2012,14.2,306570
+"femmine","Emilia-Romagna",2013,12.3,644884
+"femmine","Emilia-Romagna",2014,10.6,640612
+"femmine","Emilia-Romagna",2015,10,627212
+"femmine","Emilia-Romagna",2016,9.8,629664
+"femmine","Emilia-Romagna",2017,8.7,635864
+"femmine","Emilia-Romagna",2018,9.1,NA
+"femmine","Emilia-Romagna",2019,8.5,NA
+"femmine","Emilia-Romagna",2020,8.4,NA
+"femmine","Friuli-Venezia Giulia",2004,13.3,NA
+"femmine","Friuli-Venezia Giulia",2005,12,NA
+"femmine","Friuli-Venezia Giulia",2006,17.6,NA
+"femmine","Friuli-Venezia Giulia",2007,8.8,NA
+"femmine","Friuli-Venezia Giulia",2008,12.2,99152
+"femmine","Friuli-Venezia Giulia",2009,12.3,97614
+"femmine","Friuli-Venezia Giulia",2010,10.5,97538
+"femmine","Friuli-Venezia Giulia",2011,11.8,93968
+"femmine","Friuli-Venezia Giulia",2012,12.9,91776
+"femmine","Friuli-Venezia Giulia",2013,6.4,187496
+"femmine","Friuli-Venezia Giulia",2014,6,182952
+"femmine","Friuli-Venezia Giulia",2015,4.5,179020
+"femmine","Friuli-Venezia Giulia",2016,6.6,179032
+"femmine","Friuli-Venezia Giulia",2017,7.3,178788
+"femmine","Friuli-Venezia Giulia",2018,6.9,NA
+"femmine","Friuli-Venezia Giulia",2019,7.4,NA
+"femmine","Friuli-Venezia Giulia",2020,6.7,NA
+"femmine","Lazio",2004,13.6,NA
+"femmine","Lazio",2005,10.3,NA
+"femmine","Lazio",2006,9.5,NA
+"femmine","Lazio",2007,8.3,NA
+"femmine","Lazio",2008,10.6,641456
+"femmine","Lazio",2009,7.7,642842
+"femmine","Lazio",2010,9.4,641484
+"femmine","Lazio",2011,11.8,622544
+"femmine","Lazio",2012,9.5,608368
+"femmine","Lazio",2013,10.1,1246044
+"femmine","Lazio",2014,11.2,1222508
+"femmine","Lazio",2015,9.1,1198096
+"femmine","Lazio",2016,8.3,1187232
+"femmine","Lazio",2017,8.4,1192536
+"femmine","Lazio",2018,8.5,NA
+"femmine","Lazio",2019,10.2,NA
+"femmine","Lazio",2020,7.7,NA
+"femmine","Liguria",2004,11.1,NA
+"femmine","Liguria",2005,14.7,NA
+"femmine","Liguria",2006,14.7,NA
+"femmine","Liguria",2007,13.8,NA
+"femmine","Liguria",2008,9.8,126222
+"femmine","Liguria",2009,10.7,122218
+"femmine","Liguria",2010,15.2,122508
+"femmine","Liguria",2011,10.4,121992
+"femmine","Liguria",2012,15.5,118864
+"femmine","Liguria",2013,16,247332
+"femmine","Liguria",2014,11.5,241620
+"femmine","Liguria",2015,10.7,238556
+"femmine","Liguria",2016,12.7,239032
+"femmine","Liguria",2017,13.5,243684
+"femmine","Liguria",2018,12.6,NA
+"femmine","Liguria",2019,6.6,NA
+"femmine","Liguria",2020,6.5,NA
+"femmine","Lombardia",2004,17.7,NA
+"femmine","Lombardia",2005,17.8,NA
+"femmine","Lombardia",2006,13.3,NA
+"femmine","Lombardia",2007,12.7,NA
+"femmine","Lombardia",2008,15.1,687742
+"femmine","Lombardia",2009,17,676866
+"femmine","Lombardia",2010,14.6,669110
+"femmine","Lombardia",2011,13.8,665954
+"femmine","Lombardia",2012,11.5,679012
+"femmine","Lombardia",2013,11.1,1404216
+"femmine","Lombardia",2014,10.2,1389912
+"femmine","Lombardia",2015,10.3,1379764
+"femmine","Lombardia",2016,10.8,1388728
+"femmine","Lombardia",2017,8.2,1406792
+"femmine","Lombardia",2018,9.9,NA
+"femmine","Lombardia",2019,10.1,NA
+"femmine","Lombardia",2020,9.1,NA
+"femmine","Marche",2004,15.1,NA
+"femmine","Marche",2005,17.8,NA
+"femmine","Marche",2006,15.2,NA
+"femmine","Marche",2007,13.2,NA
+"femmine","Marche",2008,13.8,156122
+"femmine","Marche",2009,15.3,155700
+"femmine","Marche",2010,10.6,156190
+"femmine","Marche",2011,11.4,153710
+"femmine","Marche",2012,12,152194
+"femmine","Marche",2013,11.1,302620
+"femmine","Marche",2014,9.4,293820
+"femmine","Marche",2015,7.9,289648
+"femmine","Marche",2016,8.9,285432
+"femmine","Marche",2017,5,287332
+"femmine","Marche",2018,6.8,NA
+"femmine","Marche",2019,5.6,NA
+"femmine","Marche",2020,7.6,NA
+"femmine","Molise",2004,10.2,NA
+"femmine","Molise",2005,10.2,NA
+"femmine","Molise",2006,11.4,NA
+"femmine","Molise",2007,11.7,NA
+"femmine","Molise",2008,12.6,51538
+"femmine","Molise",2009,13.6,51140
+"femmine","Molise",2010,9.4,49816
+"femmine","Molise",2011,8.7,46098
+"femmine","Molise",2012,9.5,45450
+"femmine","Molise",2013,11.8,85528
+"femmine","Molise",2014,5.8,84180
+"femmine","Molise",2015,7.2,81064
+"femmine","Molise",2016,5.8,78944
+"femmine","Molise",2017,9.9,77072
+"femmine","Molise",2018,8,NA
+"femmine","Molise",2019,7,NA
+"femmine","Molise",2020,5.5,NA
+"femmine","Piemonte",2004,18.5,NA
+"femmine","Piemonte",2005,16,NA
+"femmine","Piemonte",2006,15.8,NA
+"femmine","Piemonte",2007,14.3,NA
+"femmine","Piemonte",2008,17.3,330626
+"femmine","Piemonte",2009,17.1,317584
+"femmine","Piemonte",2010,13.9,317178
+"femmine","Piemonte",2011,13.3,315838
+"femmine","Piemonte",2012,12.8,310270
+"femmine","Piemonte",2013,13.8,645620
+"femmine","Piemonte",2014,9,637644
+"femmine","Piemonte",2015,8.4,630592
+"femmine","Piemonte",2016,6.4,622924
+"femmine","Piemonte",2017,7.6,639292
+"femmine","Piemonte",2018,11.5,NA
+"femmine","Piemonte",2019,10.3,NA
+"femmine","Piemonte",2020,10.7,NA
+"femmine","Puglia",2004,26.5,NA
+"femmine","Puglia",2005,24.7,NA
+"femmine","Puglia",2006,22.4,NA
+"femmine","Puglia",2007,21.4,NA
+"femmine","Puglia",2008,18.7,522832
+"femmine","Puglia",2009,18.9,524224
+"femmine","Puglia",2010,16.9,549844
+"femmine","Puglia",2011,14.7,536602
+"femmine","Puglia",2012,16,491952
+"femmine","Puglia",2013,16.2,938940
+"femmine","Puglia",2014,13.5,905724
+"femmine","Puglia",2015,12.7,881972
+"femmine","Puglia",2016,12.3,854608
+"femmine","Puglia",2017,13.6,851272
+"femmine","Puglia",2018,13,NA
+"femmine","Puglia",2019,14.4,NA
+"femmine","Puglia",2020,14.1,NA
+"femmine","Sardegna",2004,21,NA
+"femmine","Sardegna",2005,23.4,NA
+"femmine","Sardegna",2006,22.2,NA
+"femmine","Sardegna",2007,16.7,NA
+"femmine","Sardegna",2008,18.3,217930
+"femmine","Sardegna",2009,16.9,209014
+"femmine","Sardegna",2010,15.4,203780
+"femmine","Sardegna",2011,18.1,197390
+"femmine","Sardegna",2012,19.7,187470
+"femmine","Sardegna",2013,21.2,372520
+"femmine","Sardegna",2014,17,354996
+"femmine","Sardegna",2015,14.8,342644
+"femmine","Sardegna",2016,12.1,334348
+"femmine","Sardegna",2017,15.6,333212
+"femmine","Sardegna",2018,16.5,NA
+"femmine","Sardegna",2019,13.1,NA
+"femmine","Sardegna",2020,8.2,NA
+"femmine","Sicilia",2004,25.7,NA
+"femmine","Sicilia",2005,26,NA
+"femmine","Sicilia",2006,24.5,NA
+"femmine","Sicilia",2007,22.7,NA
+"femmine","Sicilia",2008,23,623422
+"femmine","Sicilia",2009,23.6,623148
+"femmine","Sicilia",2010,22.1,605178
+"femmine","Sicilia",2011,20.8,596516
+"femmine","Sicilia",2012,20.1,589368
+"femmine","Sicilia",2013,21.7,1142088
+"femmine","Sicilia",2014,20.5,1105220
+"femmine","Sicilia",2015,19.6,1080884
+"femmine","Sicilia",2016,19.1,1055732
+"femmine","Sicilia",2017,17.4,1053208
+"femmine","Sicilia",2018,20.7,NA
+"femmine","Sicilia",2019,20.1,NA
+"femmine","Sicilia",2020,15.1,NA
+"femmine","Toscana",2004,15.3,NA
+"femmine","Toscana",2005,10.7,NA
+"femmine","Toscana",2006,12.9,NA
+"femmine","Toscana",2007,12.7,NA
+"femmine","Toscana",2008,13,319716
+"femmine","Toscana",2009,15.6,327329
+"femmine","Toscana",2010,14.7,314892
+"femmine","Toscana",2011,13.4,314254
+"femmine","Toscana",2012,14.7,309088
+"femmine","Toscana",2013,11.9,631024
+"femmine","Toscana",2014,10.8,604632
+"femmine","Toscana",2015,10,599012
+"femmine","Toscana",2016,8.7,601416
+"femmine","Toscana",2017,8.6,601260
+"femmine","Toscana",2018,9.8,NA
+"femmine","Toscana",2019,8.2,NA
+"femmine","Toscana",2020,9.1,NA
+"femmine","Trentino Alto Adige / Südtirol",2004,17,NA
+"femmine","Trentino Alto Adige / Südtirol",2005,13.8,NA
+"femmine","Trentino Alto Adige / Südtirol",2006,12.4,NA
+"femmine","Trentino Alto Adige / Südtirol",2007,13.3,NA
+"femmine","Trentino Alto Adige / Südtirol",2008,13.1,83036
+"femmine","Trentino Alto Adige / Südtirol",2009,13.9,82630
+"femmine","Trentino Alto Adige / Südtirol",2010,13.2,84518
+"femmine","Trentino Alto Adige / Südtirol",2011,9.9,82890
+"femmine","Trentino Alto Adige / Südtirol",2012,11,78992
+"femmine","Trentino Alto Adige / Südtirol",2013,11.8,163260
+"femmine","Trentino Alto Adige / Südtirol",2014,8.8,156176
+"femmine","Trentino Alto Adige / Südtirol",2015,9.3,149764
+"femmine","Trentino Alto Adige / Südtirol",2016,6.8,150348
+"femmine","Trentino Alto Adige / Südtirol",2017,9.1,149640
+"femmine","Trentino Alto Adige / Südtirol",2018,8,NA
+"femmine","Trentino Alto Adige / Südtirol",2019,7.8,NA
+"femmine","Trentino Alto Adige / Südtirol",2020,8.4,NA
+"femmine","Trento",2015,8.7,NA
+"femmine","Trento",2016,6.6,NA
+"femmine","Trento",2017,5,NA
+"femmine","Trento",2018,4.3,NA
+"femmine","Trento",2019,6.4,NA
+"femmine","Trento",2020,5.6,NA
+"femmine","Umbria",2004,11.2,NA
+"femmine","Umbria",2005,14,NA
+"femmine","Umbria",2006,12.2,NA
+"femmine","Umbria",2007,9.7,NA
+"femmine","Umbria",2008,12.6,90430
+"femmine","Umbria",2009,7.4,88948
+"femmine","Umbria",2010,9.7,86302
+"femmine","Umbria",2011,11,85168
+"femmine","Umbria",2012,13.3,81720
+"femmine","Umbria",2013,11.9,163444
+"femmine","Umbria",2014,9.3,157536
+"femmine","Umbria",2015,8.1,155680
+"femmine","Umbria",2016,5.8,152328
+"femmine","Umbria",2017,8.5,156316
+"femmine","Umbria",2018,7.1,NA
+"femmine","Umbria",2019,8.4,NA
+"femmine","Umbria",2020,12,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2004,18.3,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2005,17.8,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2006,15.3,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2007,15.2,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2008,19.1,10816
+"femmine","Valle d'Aosta / Vallée d'Aoste",2009,21.1,10658
+"femmine","Valle d'Aosta / Vallée d'Aoste",2010,15.2,10894
+"femmine","Valle d'Aosta / Vallée d'Aoste",2011,14.1,10808
+"femmine","Valle d'Aosta / Vallée d'Aoste",2012,16.9,10574
+"femmine","Valle d'Aosta / Vallée d'Aoste",2013,15.2,21796
+"femmine","Valle d'Aosta / Vallée d'Aoste",2014,13.4,20928
+"femmine","Valle d'Aosta / Vallée d'Aoste",2015,12.2,19884
+"femmine","Valle d'Aosta / Vallée d'Aoste",2016,10.8,19176
+"femmine","Valle d'Aosta / Vallée d'Aoste",2017,11.8,19552
+"femmine","Valle d'Aosta / Vallée d'Aoste",2018,13.6,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2019,9.7,NA
+"femmine","Valle d'Aosta / Vallée d'Aoste",2020,9,NA
+"femmine","Veneto",2004,14.5,NA
+"femmine","Veneto",2005,15,NA
+"femmine","Veneto",2006,12.3,NA
+"femmine","Veneto",2007,11.5,NA
+"femmine","Veneto",2008,13.3,374062
+"femmine","Veneto",2009,12.7,366808
+"femmine","Veneto",2010,13.6,381046
+"femmine","Veneto",2011,13.3,380674
+"femmine","Veneto",2012,11.8,378572
+"femmine","Veneto",2013,7.1,773116
+"femmine","Veneto",2014,7.9,759132
+"femmine","Veneto",2015,6.6,743380
+"femmine","Veneto",2016,7.1,751032
+"femmine","Veneto",2017,10.7,743812
+"femmine","Veneto",2018,10.6,NA
+"femmine","Veneto",2019,7.6,NA
+"femmine","Veneto",2020,8.1,NA
+"maschi","Abruzzo",2004,21.3,NA
+"maschi","Abruzzo",2005,17.3,NA
+"maschi","Abruzzo",2006,17.8,NA
+"maschi","Abruzzo",2007,18.8,NA
+"maschi","Abruzzo",2008,18.3,136572
+"maschi","Abruzzo",2009,16.8,134972
+"maschi","Abruzzo",2010,17.2,141640
+"maschi","Abruzzo",2011,13.9,137322
+"maschi","Abruzzo",2012,14.6,133134
+"maschi","Abruzzo",2013,15.2,255284
+"maschi","Abruzzo",2014,14.1,248772
+"maschi","Abruzzo",2015,23.2,237284
+"maschi","Abruzzo",2016,17.1,227812
+"maschi","Abruzzo",2017,7.1,230996
+"maschi","Abruzzo",2018,10.6,NA
+"maschi","Abruzzo",2019,15,NA
+"maschi","Abruzzo",2020,10.5,NA
+"maschi","Basilicata",2004,20.9,NA
+"maschi","Basilicata",2005,22.2,NA
+"maschi","Basilicata",2006,20.7,NA
+"maschi","Basilicata",2007,18.6,NA
+"maschi","Basilicata",2008,18.8,67768
+"maschi","Basilicata",2009,14.6,67534
+"maschi","Basilicata",2010,16.6,68110
+"maschi","Basilicata",2011,18.4,65678
+"maschi","Basilicata",2012,18.1,64354
+"maschi","Basilicata",2013,16.7,122556
+"maschi","Basilicata",2014,14,118696
+"maschi","Basilicata",2015,11.8,115176
+"maschi","Basilicata",2016,17.5,111920
+"maschi","Basilicata",2017,15.9,111148
+"maschi","Basilicata",2018,14,NA
+"maschi","Basilicata",2019,14.6,NA
+"maschi","Basilicata",2020,12.7,NA
+"maschi","Bolzano / Bozen",2015,16,NA
+"maschi","Bolzano / Bozen",2016,15.1,NA
+"maschi","Bolzano / Bozen",2017,14.6,NA
+"maschi","Bolzano / Bozen",2018,10.6,NA
+"maschi","Bolzano / Bozen",2019,14,NA
+"maschi","Bolzano / Bozen",2020,17.2,NA
+"maschi","Calabria",2004,25,NA
+"maschi","Calabria",2005,19.7,NA
+"maschi","Calabria",2006,21.7,NA
+"maschi","Calabria",2007,23.8,NA
+"maschi","Calabria",2008,21.5,229810
+"maschi","Calabria",2009,21.5,226082
+"maschi","Calabria",2010,19.2,224104
+"maschi","Calabria",2011,20.8,218008
+"maschi","Calabria",2012,18.8,209004
+"maschi","Calabria",2013,20.1,408028
+"maschi","Calabria",2014,21.8,393700
+"maschi","Calabria",2015,17.9,383940
+"maschi","Calabria",2016,17.7,375892
+"maschi","Calabria",2017,21.8,364624
+"maschi","Calabria",2018,25.5,NA
+"maschi","Calabria",2019,21.2,NA
+"maschi","Calabria",2020,20.2,NA
+"maschi","Campania",2004,31.3,NA
+"maschi","Campania",2005,30.3,NA
+"maschi","Campania",2006,28.5,NA
+"maschi","Campania",2007,29,NA
+"maschi","Campania",2008,26.8,581380
+"maschi","Campania",2009,23.8,577280
+"maschi","Campania",2010,24,572710
+"maschi","Campania",2011,22.5,578478
+"maschi","Campania",2012,24.9,561662
+"maschi","Campania",2013,26,1090996
+"maschi","Campania",2014,22.3,1078552
+"maschi","Campania",2015,19.4,1076800
+"maschi","Campania",2016,18.9,1066476
+"maschi","Campania",2017,20.3,1092992
+"maschi","Campania",2018,18.4,NA
+"maschi","Campania",2019,18.8,NA
+"maschi","Campania",2020,19.9,NA
+"maschi","Emilia-Romagna",2004,22.3,NA
+"maschi","Emilia-Romagna",2005,22.7,NA
+"maschi","Emilia-Romagna",2006,22,NA
+"maschi","Emilia-Romagna",2007,20.8,NA
+"maschi","Emilia-Romagna",2008,20,243608
+"maschi","Emilia-Romagna",2009,17.8,212836
+"maschi","Emilia-Romagna",2010,17.4,244546
+"maschi","Emilia-Romagna",2011,14.5,243816
+"maschi","Emilia-Romagna",2012,15.2,241028
+"maschi","Emilia-Romagna",2013,17.8,507124
+"maschi","Emilia-Romagna",2014,15.6,507360
+"maschi","Emilia-Romagna",2015,16.4,499092
+"maschi","Emilia-Romagna",2016,12.6,509384
+"maschi","Emilia-Romagna",2017,11.1,514828
+"maschi","Emilia-Romagna",2018,12.7,NA
+"maschi","Emilia-Romagna",2019,13.9,NA
+"maschi","Emilia-Romagna",2020,10.1,NA
+"maschi","Friuli-Venezia Giulia",2004,14.8,NA
+"maschi","Friuli-Venezia Giulia",2005,20.8,NA
+"maschi","Friuli-Venezia Giulia",2006,22.6,NA
+"maschi","Friuli-Venezia Giulia",2007,16.2,NA
+"maschi","Friuli-Venezia Giulia",2008,18.1,80910
+"maschi","Friuli-Venezia Giulia",2009,17,77684
+"maschi","Friuli-Venezia Giulia",2010,13.7,77958
+"maschi","Friuli-Venezia Giulia",2011,14.2,74624
+"maschi","Friuli-Venezia Giulia",2012,13.2,72922
+"maschi","Friuli-Venezia Giulia",2013,15.7,151948
+"maschi","Friuli-Venezia Giulia",2014,16,149468
+"maschi","Friuli-Venezia Giulia",2015,9.3,147544
+"maschi","Friuli-Venezia Giulia",2016,9.4,149300
+"maschi","Friuli-Venezia Giulia",2017,13.1,151576
+"maschi","Friuli-Venezia Giulia",2018,10.8,NA
+"maschi","Friuli-Venezia Giulia",2019,9.7,NA
+"maschi","Friuli-Venezia Giulia",2020,10.2,NA
+"maschi","Lazio",2004,17.8,NA
+"maschi","Lazio",2005,19.1,NA
+"maschi","Lazio",2006,14.4,NA
+"maschi","Lazio",2007,12.8,NA
+"maschi","Lazio",2008,15,506522
+"maschi","Lazio",2009,13.9,500240
+"maschi","Lazio",2010,16.6,494154
+"maschi","Lazio",2011,18.1,487528
+"maschi","Lazio",2012,15,472780
+"maschi","Lazio",2013,14.2,977556
+"maschi","Lazio",2014,13.8,978268
+"maschi","Lazio",2015,13.5,970608
+"maschi","Lazio",2016,13.4,966444
+"maschi","Lazio",2017,13.4,991124
+"maschi","Lazio",2018,13.9,NA
+"maschi","Lazio",2019,13.6,NA
+"maschi","Lazio",2020,15.8,NA
+"maschi","Liguria",2004,24.5,NA
+"maschi","Liguria",2005,18.3,NA
+"maschi","Liguria",2006,16.4,NA
+"maschi","Liguria",2007,18.8,NA
+"maschi","Liguria",2008,15,99874
+"maschi","Liguria",2009,14.2,95564
+"maschi","Liguria",2010,16.8,95810
+"maschi","Liguria",2011,18.3,94460
+"maschi","Liguria",2012,19.1,91904
+"maschi","Liguria",2013,13.7,195364
+"maschi","Liguria",2014,15.7,192912
+"maschi","Liguria",2015,13.3,192720
+"maschi","Liguria",2016,10.2,196124
+"maschi","Liguria",2017,12.7,201008
+"maschi","Liguria",2018,13,NA
+"maschi","Liguria",2019,13.1,NA
+"maschi","Liguria",2020,14.4,NA
+"maschi","Lombardia",2004,26.9,NA
+"maschi","Lombardia",2005,24.7,NA
+"maschi","Lombardia",2006,23.3,NA
+"maschi","Lombardia",2007,23.2,NA
+"maschi","Lombardia",2008,23.7,556594
+"maschi","Lombardia",2009,22.5,538782
+"maschi","Lombardia",2010,21.2,531874
+"maschi","Lombardia",2011,19.6,530922
+"maschi","Lombardia",2012,18.6,537498
+"maschi","Lombardia",2013,19.2,1127768
+"maschi","Lombardia",2014,15.4,1123220
+"maschi","Lombardia",2015,15.7,1121660
+"maschi","Lombardia",2016,14.6,1138916
+"maschi","Lombardia",2017,15.6,1166932
+"maschi","Lombardia",2018,16.4,NA
+"maschi","Lombardia",2019,12.8,NA
+"maschi","Lombardia",2020,14.4,NA
+"maschi","Marche",2004,19.3,NA
+"maschi","Marche",2005,20.5,NA
+"maschi","Marche",2006,19.6,NA
+"maschi","Marche",2007,18.3,NA
+"maschi","Marche",2008,14.9,116758
+"maschi","Marche",2009,15.5,116310
+"maschi","Marche",2010,18.9,117032
+"maschi","Marche",2011,13.6,116386
+"maschi","Marche",2012,18.3,117046
+"maschi","Marche",2013,15.3,230736
+"maschi","Marche",2014,12.4,227844
+"maschi","Marche",2015,11.9,226140
+"maschi","Marche",2016,13,224148
+"maschi","Marche",2017,14.8,228352
+"maschi","Marche",2018,12.9,NA
+"maschi","Marche",2019,11.6,NA
+"maschi","Marche",2020,11.9,NA
+"maschi","Molise",2004,20.4,NA
+"maschi","Molise",2005,20.5,NA
+"maschi","Molise",2006,20.2,NA
+"maschi","Molise",2007,20.5,NA
+"maschi","Molise",2008,19.4,38606
+"maschi","Molise",2009,19.4,37844
+"maschi","Molise",2010,17.2,36288
+"maschi","Molise",2011,16.5,34628
+"maschi","Molise",2012,10.2,33530
+"maschi","Molise",2013,18.6,62028
+"maschi","Molise",2014,18.1,61360
+"maschi","Molise",2015,12.8,58960
+"maschi","Molise",2016,14.4,58844
+"maschi","Molise",2017,13.9,60100
+"maschi","Molise",2018,13.7,NA
+"maschi","Molise",2019,14.5,NA
+"maschi","Molise",2020,11.4,NA
+"maschi","Piemonte",2004,27.1,NA
+"maschi","Piemonte",2005,25.6,NA
+"maschi","Piemonte",2006,23.1,NA
+"maschi","Piemonte",2007,20.2,NA
+"maschi","Piemonte",2008,19.5,262292
+"maschi","Piemonte",2009,21.9,250876
+"maschi","Piemonte",2010,21.2,252184
+"maschi","Piemonte",2011,18.4,249714
+"maschi","Piemonte",2012,19.4,246574
+"maschi","Piemonte",2013,17.5,507012
+"maschi","Piemonte",2014,16.2,503720
+"maschi","Piemonte",2015,16.6,498644
+"maschi","Piemonte",2016,13.7,498952
+"maschi","Piemonte",2017,14.7,513424
+"maschi","Piemonte",2018,15.6,NA
+"maschi","Piemonte",2019,11.3,NA
+"maschi","Piemonte",2020,13.2,NA
+"maschi","Puglia",2004,34.3,NA
+"maschi","Puglia",2005,33.2,NA
+"maschi","Puglia",2006,31.3,NA
+"maschi","Puglia",2007,28.4,NA
+"maschi","Puglia",2008,28.9,376182
+"maschi","Puglia",2009,30.6,376364
+"maschi","Puglia",2010,30,392126
+"maschi","Puglia",2011,23.8,385972
+"maschi","Puglia",2012,23.5,358916
+"maschi","Puglia",2013,23.3,676216
+"maschi","Puglia",2014,20.1,667428
+"maschi","Puglia",2015,20.5,665576
+"maschi","Puglia",2016,21.1,659444
+"maschi","Puglia",2017,23.3,666052
+"maschi","Puglia",2018,21.7,NA
+"maschi","Puglia",2019,21.1,NA
+"maschi","Puglia",2020,17,NA
+"maschi","Sardegna",2004,39,NA
+"maschi","Sardegna",2005,41.3,NA
+"maschi","Sardegna",2006,33.4,NA
+"maschi","Sardegna",2007,26.8,NA
+"maschi","Sardegna",2008,26.6,137106
+"maschi","Sardegna",2009,28,130700
+"maschi","Sardegna",2010,31.3,127380
+"maschi","Sardegna",2011,31.8,123752
+"maschi","Sardegna",2012,30.1,118670
+"maschi","Sardegna",2013,27.2,241800
+"maschi","Sardegna",2014,29.6,234720
+"maschi","Sardegna",2015,30.5,230460
+"maschi","Sardegna",2016,23.6,231168
+"maschi","Sardegna",2017,26.3,233780
+"maschi","Sardegna",2018,28.9,NA
+"maschi","Sardegna",2019,21.9,NA
+"maschi","Sardegna",2020,15.3,NA
+"maschi","Sicilia",2004,35.5,NA
+"maschi","Sicilia",2005,33.7,NA
+"maschi","Sicilia",2006,31.8,NA
+"maschi","Sicilia",2007,29,NA
+"maschi","Sicilia",2008,29.2,445150
+"maschi","Sicilia",2009,29,440260
+"maschi","Sicilia",2010,29.1,424388
+"maschi","Sicilia",2011,27.7,422748
+"maschi","Sicilia",2012,28.3,419626
+"maschi","Sicilia",2013,28.9,817788
+"maschi","Sicilia",2014,27.4,806500
+"maschi","Sicilia",2015,28.8,801004
+"maschi","Sicilia",2016,27.7,793120
+"maschi","Sicilia",2017,24.3,810544
+"maschi","Sicilia",2018,23.4,NA
+"maschi","Sicilia",2019,24.5,NA
+"maschi","Sicilia",2020,23.4,NA
+"maschi","Toscana",2004,26.7,NA
+"maschi","Toscana",2005,22.5,NA
+"maschi","Toscana",2006,20.2,NA
+"maschi","Toscana",2007,22.2,NA
+"maschi","Toscana",2008,20.2,250884
+"maschi","Toscana",2009,17.4,254740
+"maschi","Toscana",2010,20.2,247794
+"maschi","Toscana",2011,22.8,244864
+"maschi","Toscana",2012,20.2,242678
+"maschi","Toscana",2013,20.3,500604
+"maschi","Toscana",2014,16.7,484164
+"maschi","Toscana",2015,16.6,482532
+"maschi","Toscana",2016,14.2,486152
+"maschi","Toscana",2017,13,485932
+"maschi","Toscana",2018,11.3,NA
+"maschi","Toscana",2019,12.3,NA
+"maschi","Toscana",2020,14.1,NA
+"maschi","Trentino Alto Adige / Südtirol",2004,26.6,NA
+"maschi","Trentino Alto Adige / Südtirol",2005,25.1,NA
+"maschi","Trentino Alto Adige / Südtirol",2006,22,NA
+"maschi","Trentino Alto Adige / Südtirol",2007,20.8,NA
+"maschi","Trentino Alto Adige / Südtirol",2008,20.9,61122
+"maschi","Trentino Alto Adige / Südtirol",2009,19.6,59238
+"maschi","Trentino Alto Adige / Südtirol",2010,21.3,58300
+"maschi","Trentino Alto Adige / Südtirol",2011,17.6,58468
+"maschi","Trentino Alto Adige / Südtirol",2012,20.3,57038
+"maschi","Trentino Alto Adige / Südtirol",2013,15.6,117768
+"maschi","Trentino Alto Adige / Südtirol",2014,12.8,113856
+"maschi","Trentino Alto Adige / Südtirol",2015,12.4,110076
+"maschi","Trentino Alto Adige / Südtirol",2016,12.2,108576
+"maschi","Trentino Alto Adige / Südtirol",2017,12.6,110444
+"maschi","Trentino Alto Adige / Südtirol",2018,9.9,NA
+"maschi","Trentino Alto Adige / Südtirol",2019,10.7,NA
+"maschi","Trentino Alto Adige / Südtirol",2020,13.7,NA
+"maschi","Trento",2015,8.7,NA
+"maschi","Trento",2016,9.1,NA
+"maschi","Trento",2017,10.4,NA
+"maschi","Trento",2018,9,NA
+"maschi","Trento",2019,7.1,NA
+"maschi","Trento",2020,10,NA
+"maschi","Umbria",2004,15.4,NA
+"maschi","Umbria",2005,16.6,NA
+"maschi","Umbria",2006,16.3,NA
+"maschi","Umbria",2007,14.9,NA
+"maschi","Umbria",2008,16.2,67130
+"maschi","Umbria",2009,16.5,65093
+"maschi","Umbria",2010,16,63674
+"maschi","Umbria",2011,10.7,62610
+"maschi","Umbria",2012,12.7,60920
+"maschi","Umbria",2013,11.1,122556
+"maschi","Umbria",2014,8.8,119924
+"maschi","Umbria",2015,8.1,119404
+"maschi","Umbria",2016,7.6,121092
+"maschi","Umbria",2017,10,123840
+"maschi","Umbria",2018,9.6,NA
+"maschi","Umbria",2019,10.5,NA
+"maschi","Umbria",2020,10.5,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2004,25.1,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2005,24.8,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2006,27.3,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2007,32.3,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2008,32.8,7714
+"maschi","Valle d'Aosta / Vallée d'Aoste",2009,22.1,7189
+"maschi","Valle d'Aosta / Vallée d'Aoste",2010,27.3,7282
+"maschi","Valle d'Aosta / Vallée d'Aoste",2011,31.4,7320
+"maschi","Valle d'Aosta / Vallée d'Aoste",2012,25.6,7372
+"maschi","Valle d'Aosta / Vallée d'Aoste",2013,23.7,15208
+"maschi","Valle d'Aosta / Vallée d'Aoste",2014,18.9,14232
+"maschi","Valle d'Aosta / Vallée d'Aoste",2015,20.3,14156
+"maschi","Valle d'Aosta / Vallée d'Aoste",2016,18,14088
+"maschi","Valle d'Aosta / Vallée d'Aoste",2017,15.9,13964
+"maschi","Valle d'Aosta / Vallée d'Aoste",2018,16.7,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2019,18.5,NA
+"maschi","Valle d'Aosta / Vallée d'Aoste",2020,14,NA
+"maschi","Veneto",2004,22.2,NA
+"maschi","Veneto",2005,21,NA
+"maschi","Veneto",2006,17.1,NA
+"maschi","Veneto",2007,14.6,NA
+"maschi","Veneto",2008,17.6,302172
+"maschi","Veneto",2009,20.2,293230
+"maschi","Veneto",2010,17.3,306792
+"maschi","Veneto",2011,19.6,307100
+"maschi","Veneto",2012,15.8,302650
+"maschi","Veneto",2013,12.8,617160
+"maschi","Veneto",2014,8.9,618220
+"maschi","Veneto",2015,9.4,620672
+"maschi","Veneto",2016,6.7,629288
+"maschi","Veneto",2017,10.4,626484
+"maschi","Veneto",2018,11.4,NA
+"maschi","Veneto",2019,9.2,NA
+"maschi","Veneto",2020,12.8,NA

@@ -25,11 +25,9 @@ iscritti2 <- iscritti1 %>%
   summarise(iscritti_tot = sum(Iscritti))
 
 universita <- merge(rinuncia1, iscritti2, by = c("Sesso", "Territorio", "TIME"), all.x = TRUE)
-universita <- subset(universita, !(universita$Territorio %in% c("Trento","Bolzano / Bozen")))
 rm(iscritti, iscritti1, iscritti2, rinuncia, rinuncia1)
 
-# write.table(universita, "dati_uni.txt", row.names = FALSE)
-
+# write.csv(universita, "dati_uni.txt", row.names = FALSE)
 
 
 # popolazione
@@ -42,7 +40,7 @@ unique(emi1$TIME)
 unique(emi1$Sesso)
 unique(emi1$Età)
 
-regioni <- universita$Territorio
+regioni <- unique(universita$Territorio)
 emi1 <- emi1[which(emi1$Sesso != 'totale'),]
 emi1 <- subset(emi1, (emi1$Età %in% c("40-64 anni","18-39 anni")))
 emi1 <- subset(emi1, (emi1$Territorio.di.origine %in% regioni))
@@ -50,7 +48,6 @@ emi1 <- subset(emi1, (emi1$Territorio.di.origine %in% regioni))
 emi2 <- emi1 %>%
   group_by(TIME, Territorio.di.origine, Sesso, Età) %>%
   summarise(emigrazioni_tot = sum(Value))
-# emi1: numero di emigrati da Territorio.di.origine per anno, sesso e età
 rm(emi, emi1)
 
 
@@ -74,9 +71,9 @@ imm2 <- imm1 %>%
 names(emi2)[names(emi2) == "Territorio.di.origine"] <- "Territorio"
 names(imm2)[names(imm2) == "Territorio.di.di.destinazione"] <- "Territorio"
 
-popolazione <-  merge(emi2, imm2, by = c("Sesso", "Territorio", "TIME", "Età"), all.x = TRUE)
-
-# write.table(popolazione, "dati_immigrazioni_emigrazioni.txt", row.names = FALSE)
+popolazione <- merge(emi2, imm2, by = c("Sesso", "Territorio", "TIME", "Età"), all.x = TRUE)
+popolazione <- popolazione[which(popolazione$TIME != 2022),]
+# write.csv(popolazione, "dati_immigrazioni_emigrazioni.txt", row.names = FALSE)
 
 
 # salute
@@ -94,12 +91,12 @@ names(interruzioni)[names(interruzioni) == "Territorio.di.residenza"] <- "Territ
 names(interruzioni)[names(interruzioni) == "Value"] <- "% interruzioni" # % interruzioni per gruppo sul totale delle interruzioni nell'anno
 names(interruzioni)[names(interruzioni) == "Età.e.classe.di.età"] <- "Età"
 
-# write.table(interruzioni, "dati_interruzioni_gravidanze.txt", row.names = FALSE)
+# write.csv(interruzioni, "dati_interruzioni_gravidanze.txt", row.names = FALSE)
 
 
 # tasso di occupazione e disoccupazione
-to <- read.csv("occupazioneistat.csv", header = T)
-to_pre <- read.csv("occupazionepre.csv", header = T)
+to <- read.csv("DS_covariate/TO (tasso di occupazione)/occupazioneistat.csv", header = T)
+to_pre <- read.csv("DS_covariate/TO (tasso di occupazione)/occupazionepre.csv", header = T)
 
 colnames(to_pre)
 
@@ -119,8 +116,8 @@ to_tot <- subset(to_tot, (to_tot$Classe.di.età %in% c("15-24 anni","25-34 anni"
 to_tot <- to_tot[which(to_tot$Sesso != 'totale'),]
 
 # disoccupazione
-dis <- read.csv("disoccupazioneistat.csv", header = T)
-dis2021 <- read.csv("dis2021.csv", header = T)
+dis <- read.csv("DS_covariate/TO (tasso di occupazione)/disoccupazioneistat.csv", header = T)
+dis2021 <- read.csv("DS_covariate/TO (tasso di occupazione)/dis2021.csv", header = T)
 colnames(dis)
 unique(dis$TIME)
 
@@ -140,4 +137,7 @@ names(to_tot)[names(to_tot) == "Value"] <- "Tasso occupazione"
 occupazione <- merge(to_tot, dis_tot, by = c("Sesso", "Territorio", "TIME", "Classe.di.età"), all.x = TRUE)
 occupazione[which(is.na(occupazione), arr.ind = TRUE),] # c'è un na
 
-write.table(occupazione, "dati_inattivita_occupazione.txt", row.names = FALSE)
+# write.csv(occupazione, "dati_inattivita_occupazione.txt", row.names = FALSE)
+
+rm(dis, dis_tot, dis1, dis2021, emi2, imm, imm1, imm2, interr_per_prov_eta_anno, to_2021, to_pre, to_pre1, to_tot)
+

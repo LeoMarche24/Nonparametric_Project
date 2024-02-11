@@ -1,1681 +1,1761 @@
-"Sesso" "Territorio" "TIME" "Età" "emigrazioni_tot" "immigrazioni_tot"
-"femmine" "Abruzzo" 2002 "18-39 anni" 28756 32280
-"femmine" "Abruzzo" 2002 "40-64 anni" 9354 12168
-"femmine" "Abruzzo" 2003 "18-39 anni" 28182 36932
-"femmine" "Abruzzo" 2003 "40-64 anni" 9472 16460
-"femmine" "Abruzzo" 2004 "18-39 anni" 29874 37062
-"femmine" "Abruzzo" 2004 "40-64 anni" 11076 15644
-"femmine" "Abruzzo" 2005 "18-39 anni" 29188 36116
-"femmine" "Abruzzo" 2005 "40-64 anni" 11336 15900
-"femmine" "Abruzzo" 2006 "18-39 anni" 31076 36328
-"femmine" "Abruzzo" 2006 "40-64 anni" 11738 15086
-"femmine" "Abruzzo" 2007 "18-39 anni" 31916 47458
-"femmine" "Abruzzo" 2007 "40-64 anni" 12636 21938
-"femmine" "Abruzzo" 2008 "18-39 anni" 32724 44496
-"femmine" "Abruzzo" 2008 "40-64 anni" 13768 22124
-"femmine" "Abruzzo" 2009 "18-39 anni" 32358 37716
-"femmine" "Abruzzo" 2009 "40-64 anni" 14514 19306
-"femmine" "Abruzzo" 2010 "18-39 anni" 32252 38206
-"femmine" "Abruzzo" 2010 "40-64 anni" 14640 20088
-"femmine" "Abruzzo" 2011 "18-39 anni" 33010 38526
-"femmine" "Abruzzo" 2011 "40-64 anni" 15972 19914
-"femmine" "Abruzzo" 2012 "18-39 anni" 39298 42810
-"femmine" "Abruzzo" 2012 "40-64 anni" 20796 24082
-"femmine" "Abruzzo" 2013 "18-39 anni" 35984 38024
-"femmine" "Abruzzo" 2013 "40-64 anni" 18692 21566
-"femmine" "Abruzzo" 2014 "18-39 anni" 34278 34462
-"femmine" "Abruzzo" 2014 "40-64 anni" 18302 19970
-"femmine" "Abruzzo" 2015 "18-39 anni" 33976 34098
-"femmine" "Abruzzo" 2015 "40-64 anni" 17806 19544
-"femmine" "Abruzzo" 2016 "18-39 anni" 35484 35304
-"femmine" "Abruzzo" 2016 "40-64 anni" 19496 21218
-"femmine" "Abruzzo" 2017 "18-39 anni" 34848 32534
-"femmine" "Abruzzo" 2017 "40-64 anni" 19120 19774
-"femmine" "Abruzzo" 2018 "18-39 anni" 35614 34308
-"femmine" "Abruzzo" 2018 "40-64 anni" 19876 22260
-"femmine" "Abruzzo" 2019 "18-39 anni" 37338 35498
-"femmine" "Abruzzo" 2019 "40-64 anni" 21818 24384
-"femmine" "Abruzzo" 2020 "18-39 anni" 33322 31532
-"femmine" "Abruzzo" 2020 "40-64 anni" 19150 20732
-"femmine" "Abruzzo" 2021 "18-39 anni" 33360 33368
-"femmine" "Abruzzo" 2021 "40-64 anni" 21000 23592
-"femmine" "Abruzzo" 2022 "18-39 anni" 36362 36916
-"femmine" "Abruzzo" 2022 "40-64 anni" 21108 25982
-"femmine" "Basilicata" 2002 "18-39 anni" 12432 8978
-"femmine" "Basilicata" 2002 "40-64 anni" 3110 3074
-"femmine" "Basilicata" 2003 "18-39 anni" 12568 9920
-"femmine" "Basilicata" 2003 "40-64 anni" 3282 4150
-"femmine" "Basilicata" 2004 "18-39 anni" 12120 9804
-"femmine" "Basilicata" 2004 "40-64 anni" 3918 4096
-"femmine" "Basilicata" 2005 "18-39 anni" 12312 8546
-"femmine" "Basilicata" 2005 "40-64 anni" 3744 3462
-"femmine" "Basilicata" 2006 "18-39 anni" 12514 8618
-"femmine" "Basilicata" 2006 "40-64 anni" 3794 3414
-"femmine" "Basilicata" 2007 "18-39 anni" 12174 11700
-"femmine" "Basilicata" 2007 "40-64 anni" 4094 5412
-"femmine" "Basilicata" 2008 "18-39 anni" 12850 10048
-"femmine" "Basilicata" 2008 "40-64 anni" 4182 4738
-"femmine" "Basilicata" 2009 "18-39 anni" 13008 9750
-"femmine" "Basilicata" 2009 "40-64 anni" 4566 4712
-"femmine" "Basilicata" 2010 "18-39 anni" 12638 9564
-"femmine" "Basilicata" 2010 "40-64 anni" 4158 4818
-"femmine" "Basilicata" 2011 "18-39 anni" 12362 10320
-"femmine" "Basilicata" 2011 "40-64 anni" 4164 4802
-"femmine" "Basilicata" 2012 "18-39 anni" 14470 10810
-"femmine" "Basilicata" 2012 "40-64 anni" 5410 5470
-"femmine" "Basilicata" 2013 "18-39 anni" 11568 9414
-"femmine" "Basilicata" 2013 "40-64 anni" 4582 5014
-"femmine" "Basilicata" 2014 "18-39 anni" 11762 8774
-"femmine" "Basilicata" 2014 "40-64 anni" 5056 4612
-"femmine" "Basilicata" 2015 "18-39 anni" 11458 8608
-"femmine" "Basilicata" 2015 "40-64 anni" 4452 4310
-"femmine" "Basilicata" 2016 "18-39 anni" 12784 8506
-"femmine" "Basilicata" 2016 "40-64 anni" 5238 4874
-"femmine" "Basilicata" 2017 "18-39 anni" 12294 8894
-"femmine" "Basilicata" 2017 "40-64 anni" 5488 4890
-"femmine" "Basilicata" 2018 "18-39 anni" 12722 8892
-"femmine" "Basilicata" 2018 "40-64 anni" 5372 4886
-"femmine" "Basilicata" 2019 "18-39 anni" 14368 8922
-"femmine" "Basilicata" 2019 "40-64 anni" 6042 5272
-"femmine" "Basilicata" 2020 "18-39 anni" 12268 7586
-"femmine" "Basilicata" 2020 "40-64 anni" 5260 4712
-"femmine" "Basilicata" 2021 "18-39 anni" 12696 8414
-"femmine" "Basilicata" 2021 "40-64 anni" 5802 5980
-"femmine" "Basilicata" 2022 "18-39 anni" 14462 9946
-"femmine" "Basilicata" 2022 "40-64 anni" 6256 6530
-"femmine" "Calabria" 2002 "18-39 anni" 54654 42140
-"femmine" "Calabria" 2002 "40-64 anni" 14272 14002
-"femmine" "Calabria" 2003 "18-39 anni" 56790 52220
-"femmine" "Calabria" 2003 "40-64 anni" 15774 21388
-"femmine" "Calabria" 2004 "18-39 anni" 62016 44230
-"femmine" "Calabria" 2004 "40-64 anni" 18470 18846
-"femmine" "Calabria" 2005 "18-39 anni" 54054 38902
-"femmine" "Calabria" 2005 "40-64 anni" 17268 15722
-"femmine" "Calabria" 2006 "18-39 anni" 52906 38464
-"femmine" "Calabria" 2006 "40-64 anni" 18504 17026
-"femmine" "Calabria" 2007 "18-39 anni" 51208 57384
-"femmine" "Calabria" 2007 "40-64 anni" 17656 25496
-"femmine" "Calabria" 2008 "18-39 anni" 52146 47552
-"femmine" "Calabria" 2008 "40-64 anni" 18796 22834
-"femmine" "Calabria" 2009 "18-39 anni" 53246 47394
-"femmine" "Calabria" 2009 "40-64 anni" 19940 23656
-"femmine" "Calabria" 2010 "18-39 anni" 51798 46400
-"femmine" "Calabria" 2010 "40-64 anni" 19688 23294
-"femmine" "Calabria" 2011 "18-39 anni" 51604 43164
-"femmine" "Calabria" 2011 "40-64 anni" 19732 21236
-"femmine" "Calabria" 2012 "18-39 anni" 59206 45916
-"femmine" "Calabria" 2012 "40-64 anni" 25226 25508
-"femmine" "Calabria" 2013 "18-39 anni" 50180 41360
-"femmine" "Calabria" 2013 "40-64 anni" 21510 22234
-"femmine" "Calabria" 2014 "18-39 anni" 48948 38618
-"femmine" "Calabria" 2014 "40-64 anni" 19924 21648
-"femmine" "Calabria" 2015 "18-39 anni" 47398 35974
-"femmine" "Calabria" 2015 "40-64 anni" 19910 19134
-"femmine" "Calabria" 2016 "18-39 anni" 50650 38556
-"femmine" "Calabria" 2016 "40-64 anni" 21402 20408
-"femmine" "Calabria" 2017 "18-39 anni" 49364 36978
-"femmine" "Calabria" 2017 "40-64 anni" 21566 19992
-"femmine" "Calabria" 2018 "18-39 anni" 49800 36450
-"femmine" "Calabria" 2018 "40-64 anni" 21974 20748
-"femmine" "Calabria" 2019 "18-39 anni" 58456 37882
-"femmine" "Calabria" 2019 "40-64 anni" 25310 22622
-"femmine" "Calabria" 2020 "18-39 anni" 47768 31740
-"femmine" "Calabria" 2020 "40-64 anni" 21582 19656
-"femmine" "Calabria" 2021 "18-39 anni" 49896 36884
-"femmine" "Calabria" 2021 "40-64 anni" 22290 23398
-"femmine" "Calabria" 2022 "18-39 anni" 54968 40740
-"femmine" "Calabria" 2022 "40-64 anni" 24188 26622
-"femmine" "Campania" 2002 "18-39 anni" 168372 129864
-"femmine" "Campania" 2002 "40-64 anni" 47738 43074
-"femmine" "Campania" 2003 "18-39 anni" 166238 155328
-"femmine" "Campania" 2003 "40-64 anni" 49804 63444
-"femmine" "Campania" 2004 "18-39 anni" 175992 164860
-"femmine" "Campania" 2004 "40-64 anni" 57116 71980
-"femmine" "Campania" 2005 "18-39 anni" 166922 139370
-"femmine" "Campania" 2005 "40-64 anni" 57260 54114
-"femmine" "Campania" 2006 "18-39 anni" 165482 138722
-"femmine" "Campania" 2006 "40-64 anni" 60614 55210
-"femmine" "Campania" 2007 "18-39 anni" 169422 156150
-"femmine" "Campania" 2007 "40-64 anni" 64282 66412
-"femmine" "Campania" 2008 "18-39 anni" 178714 154932
-"femmine" "Campania" 2008 "40-64 anni" 67766 70360
-"femmine" "Campania" 2009 "18-39 anni" 161634 148996
-"femmine" "Campania" 2009 "40-64 anni" 65006 69224
-"femmine" "Campania" 2010 "18-39 anni" 161692 151078
-"femmine" "Campania" 2010 "40-64 anni" 67766 76482
-"femmine" "Campania" 2011 "18-39 anni" 166210 146200
-"femmine" "Campania" 2011 "40-64 anni" 71468 75666
-"femmine" "Campania" 2012 "18-39 anni" 188050 159014
-"femmine" "Campania" 2012 "40-64 anni" 87492 84736
-"femmine" "Campania" 2013 "18-39 anni" 162446 142582
-"femmine" "Campania" 2013 "40-64 anni" 76650 77340
-"femmine" "Campania" 2014 "18-39 anni" 151234 132926
-"femmine" "Campania" 2014 "40-64 anni" 72420 71200
-"femmine" "Campania" 2015 "18-39 anni" 146268 125680
-"femmine" "Campania" 2015 "40-64 anni" 70046 68304
-"femmine" "Campania" 2016 "18-39 anni" 150194 127030
-"femmine" "Campania" 2016 "40-64 anni" 73754 70576
-"femmine" "Campania" 2017 "18-39 anni" 147466 124574
-"femmine" "Campania" 2017 "40-64 anni" 72508 69062
-"femmine" "Campania" 2018 "18-39 anni" 148744 119518
-"femmine" "Campania" 2018 "40-64 anni" 72906 67904
-"femmine" "Campania" 2019 "18-39 anni" 167022 129064
-"femmine" "Campania" 2019 "40-64 anni" 81488 75532
-"femmine" "Campania" 2020 "18-39 anni" 142344 113326
-"femmine" "Campania" 2020 "40-64 anni" 72532 67866
-"femmine" "Campania" 2021 "18-39 anni" 149994 121770
-"femmine" "Campania" 2021 "40-64 anni" 75932 71804
-"femmine" "Campania" 2022 "18-39 anni" 162110 127092
-"femmine" "Campania" 2022 "40-64 anni" 75788 76258
-"femmine" "Emilia-Romagna" 2002 "18-39 anni" 112560 169806
-"femmine" "Emilia-Romagna" 2002 "40-64 anni" 38500 49108
-"femmine" "Emilia-Romagna" 2003 "18-39 anni" 108734 186476
-"femmine" "Emilia-Romagna" 2003 "40-64 anni" 37916 66650
-"femmine" "Emilia-Romagna" 2004 "18-39 anni" 128576 203038
-"femmine" "Emilia-Romagna" 2004 "40-64 anni" 48384 73778
-"femmine" "Emilia-Romagna" 2005 "18-39 anni" 123576 189538
-"femmine" "Emilia-Romagna" 2005 "40-64 anni" 49546 66716
-"femmine" "Emilia-Romagna" 2006 "18-39 anni" 128202 194024
-"femmine" "Emilia-Romagna" 2006 "40-64 anni" 52974 71384
-"femmine" "Emilia-Romagna" 2007 "18-39 anni" 128734 218246
-"femmine" "Emilia-Romagna" 2007 "40-64 anni" 54482 85840
-"femmine" "Emilia-Romagna" 2008 "18-39 anni" 127518 222878
-"femmine" "Emilia-Romagna" 2008 "40-64 anni" 58292 96264
-"femmine" "Emilia-Romagna" 2009 "18-39 anni" 125018 198640
-"femmine" "Emilia-Romagna" 2009 "40-64 anni" 58120 89450
-"femmine" "Emilia-Romagna" 2010 "18-39 anni" 130578 205702
-"femmine" "Emilia-Romagna" 2010 "40-64 anni" 64052 99916
-"femmine" "Emilia-Romagna" 2011 "18-39 anni" 131036 190338
-"femmine" "Emilia-Romagna" 2011 "40-64 anni" 67382 90270
-"femmine" "Emilia-Romagna" 2012 "18-39 anni" 138042 189082
-"femmine" "Emilia-Romagna" 2012 "40-64 anni" 77930 93854
-"femmine" "Emilia-Romagna" 2013 "18-39 anni" 123546 168500
-"femmine" "Emilia-Romagna" 2013 "40-64 anni" 72602 85518
-"femmine" "Emilia-Romagna" 2014 "18-39 anni" 117848 156000
-"femmine" "Emilia-Romagna" 2014 "40-64 anni" 71476 82334
-"femmine" "Emilia-Romagna" 2015 "18-39 anni" 114602 153338
-"femmine" "Emilia-Romagna" 2015 "40-64 anni" 71026 80940
-"femmine" "Emilia-Romagna" 2016 "18-39 anni" 116248 156186
-"femmine" "Emilia-Romagna" 2016 "40-64 anni" 75794 86288
-"femmine" "Emilia-Romagna" 2017 "18-39 anni" 115428 159956
-"femmine" "Emilia-Romagna" 2017 "40-64 anni" 77128 88854
-"femmine" "Emilia-Romagna" 2018 "18-39 anni" 114534 162968
-"femmine" "Emilia-Romagna" 2018 "40-64 anni" 77698 90884
-"femmine" "Emilia-Romagna" 2019 "18-39 anni" 123326 179558
-"femmine" "Emilia-Romagna" 2019 "40-64 anni" 88446 102476
-"femmine" "Emilia-Romagna" 2020 "18-39 anni" 115606 155416
-"femmine" "Emilia-Romagna" 2020 "40-64 anni" 80198 90322
-"femmine" "Emilia-Romagna" 2021 "18-39 anni" 117806 162188
-"femmine" "Emilia-Romagna" 2021 "40-64 anni" 85762 96980
-"femmine" "Emilia-Romagna" 2022 "18-39 anni" 123496 182648
-"femmine" "Emilia-Romagna" 2022 "40-64 anni" 86738 105456
-"femmine" "Friuli-Venezia Giulia" 2002 "18-39 anni" 33928 45216
-"femmine" "Friuli-Venezia Giulia" 2002 "40-64 anni" 9964 13150
-"femmine" "Friuli-Venezia Giulia" 2003 "18-39 anni" 34088 48870
-"femmine" "Friuli-Venezia Giulia" 2003 "40-64 anni" 11018 17432
-"femmine" "Friuli-Venezia Giulia" 2004 "18-39 anni" 37694 51056
-"femmine" "Friuli-Venezia Giulia" 2004 "40-64 anni" 13230 17740
-"femmine" "Friuli-Venezia Giulia" 2005 "18-39 anni" 38256 49306
-"femmine" "Friuli-Venezia Giulia" 2005 "40-64 anni" 13336 16706
-"femmine" "Friuli-Venezia Giulia" 2006 "18-39 anni" 39724 51484
-"femmine" "Friuli-Venezia Giulia" 2006 "40-64 anni" 14000 18590
-"femmine" "Friuli-Venezia Giulia" 2007 "18-39 anni" 40076 57148
-"femmine" "Friuli-Venezia Giulia" 2007 "40-64 anni" 14766 21852
-"femmine" "Friuli-Venezia Giulia" 2008 "18-39 anni" 38294 53864
-"femmine" "Friuli-Venezia Giulia" 2008 "40-64 anni" 15128 22968
-"femmine" "Friuli-Venezia Giulia" 2009 "18-39 anni" 37324 48750
-"femmine" "Friuli-Venezia Giulia" 2009 "40-64 anni" 16320 21714
-"femmine" "Friuli-Venezia Giulia" 2010 "18-39 anni" 39598 49258
-"femmine" "Friuli-Venezia Giulia" 2010 "40-64 anni" 17194 23132
-"femmine" "Friuli-Venezia Giulia" 2011 "18-39 anni" 37210 46648
-"femmine" "Friuli-Venezia Giulia" 2011 "40-64 anni" 18210 21716
-"femmine" "Friuli-Venezia Giulia" 2012 "18-39 anni" 38988 47830
-"femmine" "Friuli-Venezia Giulia" 2012 "40-64 anni" 20384 24166
-"femmine" "Friuli-Venezia Giulia" 2013 "18-39 anni" 36006 42870
-"femmine" "Friuli-Venezia Giulia" 2013 "40-64 anni" 18408 21870
-"femmine" "Friuli-Venezia Giulia" 2014 "18-39 anni" 35380 40140
-"femmine" "Friuli-Venezia Giulia" 2014 "40-64 anni" 18804 20866
-"femmine" "Friuli-Venezia Giulia" 2015 "18-39 anni" 34840 39112
-"femmine" "Friuli-Venezia Giulia" 2015 "40-64 anni" 18566 20826
-"femmine" "Friuli-Venezia Giulia" 2016 "18-39 anni" 34890 40752
-"femmine" "Friuli-Venezia Giulia" 2016 "40-64 anni" 20524 23608
-"femmine" "Friuli-Venezia Giulia" 2017 "18-39 anni" 34780 40454
-"femmine" "Friuli-Venezia Giulia" 2017 "40-64 anni" 21446 25194
-"femmine" "Friuli-Venezia Giulia" 2018 "18-39 anni" 34076 40842
-"femmine" "Friuli-Venezia Giulia" 2018 "40-64 anni" 21644 26096
-"femmine" "Friuli-Venezia Giulia" 2019 "18-39 anni" 38404 44016
-"femmine" "Friuli-Venezia Giulia" 2019 "40-64 anni" 24136 27866
-"femmine" "Friuli-Venezia Giulia" 2020 "18-39 anni" 33908 39436
-"femmine" "Friuli-Venezia Giulia" 2020 "40-64 anni" 21774 25450
-"femmine" "Friuli-Venezia Giulia" 2021 "18-39 anni" 34140 41486
-"femmine" "Friuli-Venezia Giulia" 2021 "40-64 anni" 22714 27218
-"femmine" "Friuli-Venezia Giulia" 2022 "18-39 anni" 36054 44484
-"femmine" "Friuli-Venezia Giulia" 2022 "40-64 anni" 22970 29052
-"femmine" "Lazio" 2002 "18-39 anni" 106690 142268
-"femmine" "Lazio" 2002 "40-64 anni" 51846 57362
-"femmine" "Lazio" 2003 "18-39 anni" 104448 172530
-"femmine" "Lazio" 2003 "40-64 anni" 51430 68612
-"femmine" "Lazio" 2004 "18-39 anni" 106132 182746
-"femmine" "Lazio" 2004 "40-64 anni" 54396 76564
-"femmine" "Lazio" 2005 "18-39 anni" 119124 170134
-"femmine" "Lazio" 2005 "40-64 anni" 64406 74050
-"femmine" "Lazio" 2006 "18-39 anni" 111300 164628
-"femmine" "Lazio" 2006 "40-64 anni" 58692 71010
-"femmine" "Lazio" 2007 "18-39 anni" 104054 196664
-"femmine" "Lazio" 2007 "40-64 anni" 56288 83314
-"femmine" "Lazio" 2008 "18-39 anni" 129674 218102
-"femmine" "Lazio" 2008 "40-64 anni" 75156 102430
-"femmine" "Lazio" 2009 "18-39 anni" 110030 186712
-"femmine" "Lazio" 2009 "40-64 anni" 61998 87428
-"femmine" "Lazio" 2010 "18-39 anni" 111908 187208
-"femmine" "Lazio" 2010 "40-64 anni" 65816 91202
-"femmine" "Lazio" 2011 "18-39 anni" 111108 182946
-"femmine" "Lazio" 2011 "40-64 anni" 65834 89948
-"femmine" "Lazio" 2012 "18-39 anni" 137784 219584
-"femmine" "Lazio" 2012 "40-64 anni" 87832 115848
-"femmine" "Lazio" 2013 "18-39 anni" 116534 172282
-"femmine" "Lazio" 2013 "40-64 anni" 72948 91470
-"femmine" "Lazio" 2014 "18-39 anni" 113020 158850
-"femmine" "Lazio" 2014 "40-64 anni" 73266 88866
-"femmine" "Lazio" 2015 "18-39 anni" 109822 147206
-"femmine" "Lazio" 2015 "40-64 anni" 71508 83640
-"femmine" "Lazio" 2016 "18-39 anni" 113638 146362
-"femmine" "Lazio" 2016 "40-64 anni" 77458 86470
-"femmine" "Lazio" 2017 "18-39 anni" 108966 141012
-"femmine" "Lazio" 2017 "40-64 anni" 76372 84136
-"femmine" "Lazio" 2018 "18-39 anni" 109280 136154
-"femmine" "Lazio" 2018 "40-64 anni" 78212 84052
-"femmine" "Lazio" 2019 "18-39 anni" 115664 143392
-"femmine" "Lazio" 2019 "40-64 anni" 84894 91930
-"femmine" "Lazio" 2020 "18-39 anni" 98936 120062
-"femmine" "Lazio" 2020 "40-64 anni" 75538 78068
-"femmine" "Lazio" 2021 "18-39 anni" 105184 131920
-"femmine" "Lazio" 2021 "40-64 anni" 79700 87332
-"femmine" "Lazio" 2022 "18-39 anni" 111822 148798
-"femmine" "Lazio" 2022 "40-64 anni" 84018 98086
-"femmine" "Liguria" 2002 "18-39 anni" 38694 45882
-"femmine" "Liguria" 2002 "40-64 anni" 18626 23170
-"femmine" "Liguria" 2003 "18-39 anni" 36132 56292
-"femmine" "Liguria" 2003 "40-64 anni" 18096 26902
-"femmine" "Liguria" 2004 "18-39 anni" 39492 55502
-"femmine" "Liguria" 2004 "40-64 anni" 21098 27906
-"femmine" "Liguria" 2005 "18-39 anni" 36954 46432
-"femmine" "Liguria" 2005 "40-64 anni" 20416 26604
-"femmine" "Liguria" 2006 "18-39 anni" 38170 48738
-"femmine" "Liguria" 2006 "40-64 anni" 21896 28656
-"femmine" "Liguria" 2007 "18-39 anni" 38714 53162
-"femmine" "Liguria" 2007 "40-64 anni" 23228 32104
-"femmine" "Liguria" 2008 "18-39 anni" 37974 57314
-"femmine" "Liguria" 2008 "40-64 anni" 23520 33678
-"femmine" "Liguria" 2009 "18-39 anni" 36298 50420
-"femmine" "Liguria" 2009 "40-64 anni" 22620 32130
-"femmine" "Liguria" 2010 "18-39 anni" 39490 56550
-"femmine" "Liguria" 2010 "40-64 anni" 26392 36314
-"femmine" "Liguria" 2011 "18-39 anni" 37292 50678
-"femmine" "Liguria" 2011 "40-64 anni" 25358 33332
-"femmine" "Liguria" 2012 "18-39 anni" 42982 53384
-"femmine" "Liguria" 2012 "40-64 anni" 32488 36348
-"femmine" "Liguria" 2013 "18-39 anni" 38368 46256
-"femmine" "Liguria" 2013 "40-64 anni" 28840 31920
-"femmine" "Liguria" 2014 "18-39 anni" 36650 41624
-"femmine" "Liguria" 2014 "40-64 anni" 27262 29834
-"femmine" "Liguria" 2015 "18-39 anni" 35558 40724
-"femmine" "Liguria" 2015 "40-64 anni" 26532 29426
-"femmine" "Liguria" 2016 "18-39 anni" 34746 42548
-"femmine" "Liguria" 2016 "40-64 anni" 26886 31122
-"femmine" "Liguria" 2017 "18-39 anni" 34848 41286
-"femmine" "Liguria" 2017 "40-64 anni" 26882 31732
-"femmine" "Liguria" 2018 "18-39 anni" 35368 43614
-"femmine" "Liguria" 2018 "40-64 anni" 27016 33364
-"femmine" "Liguria" 2019 "18-39 anni" 36854 44196
-"femmine" "Liguria" 2019 "40-64 anni" 28896 34444
-"femmine" "Liguria" 2020 "18-39 anni" 33902 38236
-"femmine" "Liguria" 2020 "40-64 anni" 26978 31338
-"femmine" "Liguria" 2021 "18-39 anni" 34278 42802
-"femmine" "Liguria" 2021 "40-64 anni" 28974 35306
-"femmine" "Liguria" 2022 "18-39 anni" 35410 47046
-"femmine" "Liguria" 2022 "40-64 anni" 28134 37404
-"femmine" "Lombardia" 2002 "18-39 anni" 294066 381412
-"femmine" "Lombardia" 2002 "40-64 anni" 101072 104802
-"femmine" "Lombardia" 2003 "18-39 anni" 288516 415842
-"femmine" "Lombardia" 2003 "40-64 anni" 99710 127884
-"femmine" "Lombardia" 2004 "18-39 anni" 328844 473548
-"femmine" "Lombardia" 2004 "40-64 anni" 123260 154674
-"femmine" "Lombardia" 2005 "18-39 anni" 313186 416642
-"femmine" "Lombardia" 2005 "40-64 anni" 117674 131482
-"femmine" "Lombardia" 2006 "18-39 anni" 336506 435328
-"femmine" "Lombardia" 2006 "40-64 anni" 133640 145638
-"femmine" "Lombardia" 2007 "18-39 anni" 326668 457132
-"femmine" "Lombardia" 2007 "40-64 anni" 133706 157802
-"femmine" "Lombardia" 2008 "18-39 anni" 314924 442092
-"femmine" "Lombardia" 2008 "40-64 anni" 132610 162666
-"femmine" "Lombardia" 2009 "18-39 anni" 289222 412740
-"femmine" "Lombardia" 2009 "40-64 anni" 126406 158278
-"femmine" "Lombardia" 2010 "18-39 anni" 304954 449996
-"femmine" "Lombardia" 2010 "40-64 anni" 137056 185908
-"femmine" "Lombardia" 2011 "18-39 anni" 308360 429780
-"femmine" "Lombardia" 2011 "40-64 anni" 145004 178352
-"femmine" "Lombardia" 2012 "18-39 anni" 344656 446852
-"femmine" "Lombardia" 2012 "40-64 anni" 167908 186872
-"femmine" "Lombardia" 2013 "18-39 anni" 310494 401524
-"femmine" "Lombardia" 2013 "40-64 anni" 155422 174140
-"femmine" "Lombardia" 2014 "18-39 anni" 299776 379860
-"femmine" "Lombardia" 2014 "40-64 anni" 155494 169726
-"femmine" "Lombardia" 2015 "18-39 anni" 292914 364140
-"femmine" "Lombardia" 2015 "40-64 anni" 157974 167138
-"femmine" "Lombardia" 2016 "18-39 anni" 301706 372770
-"femmine" "Lombardia" 2016 "40-64 anni" 166554 178246
-"femmine" "Lombardia" 2017 "18-39 anni" 297610 384562
-"femmine" "Lombardia" 2017 "40-64 anni" 170900 185100
-"femmine" "Lombardia" 2018 "18-39 anni" 296658 394450
-"femmine" "Lombardia" 2018 "40-64 anni" 177058 192092
-"femmine" "Lombardia" 2019 "18-39 anni" 324708 432702
-"femmine" "Lombardia" 2019 "40-64 anni" 197750 218678
-"femmine" "Lombardia" 2020 "18-39 anni" 297154 359300
-"femmine" "Lombardia" 2020 "40-64 anni" 182338 186398
-"femmine" "Lombardia" 2021 "18-39 anni" 314124 391616
-"femmine" "Lombardia" 2021 "40-64 anni" 202018 211530
-"femmine" "Lombardia" 2022 "18-39 anni" 320612 431288
-"femmine" "Lombardia" 2022 "40-64 anni" 202004 227412
-"femmine" "Marche" 2002 "18-39 anni" 31164 46678
-"femmine" "Marche" 2002 "40-64 anni" 9376 14152
-"femmine" "Marche" 2003 "18-39 anni" 33574 57230
-"femmine" "Marche" 2003 "40-64 anni" 10766 23952
-"femmine" "Marche" 2004 "18-39 anni" 40090 59046
-"femmine" "Marche" 2004 "40-64 anni" 13904 22000
-"femmine" "Marche" 2005 "18-39 anni" 38338 53868
-"femmine" "Marche" 2005 "40-64 anni" 13876 19714
-"femmine" "Marche" 2006 "18-39 anni" 38900 52778
-"femmine" "Marche" 2006 "40-64 anni" 14900 19192
-"femmine" "Marche" 2007 "18-39 anni" 38830 64328
-"femmine" "Marche" 2007 "40-64 anni" 14904 27024
-"femmine" "Marche" 2008 "18-39 anni" 40652 62286
-"femmine" "Marche" 2008 "40-64 anni" 17204 28044
-"femmine" "Marche" 2009 "18-39 anni" 41622 56120
-"femmine" "Marche" 2009 "40-64 anni" 16998 25976
-"femmine" "Marche" 2010 "18-39 anni" 41996 54854
-"femmine" "Marche" 2010 "40-64 anni" 18284 28320
-"femmine" "Marche" 2011 "18-39 anni" 41330 50704
-"femmine" "Marche" 2011 "40-64 anni" 19796 25878
-"femmine" "Marche" 2012 "18-39 anni" 45502 53034
-"femmine" "Marche" 2012 "40-64 anni" 23472 28474
-"femmine" "Marche" 2013 "18-39 anni" 40036 42490
-"femmine" "Marche" 2013 "40-64 anni" 22170 25408
-"femmine" "Marche" 2014 "18-39 anni" 37944 40856
-"femmine" "Marche" 2014 "40-64 anni" 21678 24664
-"femmine" "Marche" 2015 "18-39 anni" 36766 39458
-"femmine" "Marche" 2015 "40-64 anni" 21940 23912
-"femmine" "Marche" 2016 "18-39 anni" 37656 39026
-"femmine" "Marche" 2016 "40-64 anni" 22300 24518
-"femmine" "Marche" 2017 "18-39 anni" 37622 40458
-"femmine" "Marche" 2017 "40-64 anni" 23744 25848
-"femmine" "Marche" 2018 "18-39 anni" 37518 40830
-"femmine" "Marche" 2018 "40-64 anni" 23804 26274
-"femmine" "Marche" 2019 "18-39 anni" 40978 42624
-"femmine" "Marche" 2019 "40-64 anni" 26312 28370
-"femmine" "Marche" 2020 "18-39 anni" 36906 37080
-"femmine" "Marche" 2020 "40-64 anni" 24112 26840
-"femmine" "Marche" 2021 "18-39 anni" 36024 39354
-"femmine" "Marche" 2021 "40-64 anni" 24638 28774
-"femmine" "Marche" 2022 "18-39 anni" 38992 43390
-"femmine" "Marche" 2022 "40-64 anni" 25998 30506
-"femmine" "Molise" 2002 "18-39 anni" 7166 6918
-"femmine" "Molise" 2002 "40-64 anni" 1952 2764
-"femmine" "Molise" 2003 "18-39 anni" 7090 7680
-"femmine" "Molise" 2003 "40-64 anni" 2192 3230
-"femmine" "Molise" 2004 "18-39 anni" 7964 7448
-"femmine" "Molise" 2004 "40-64 anni" 2366 2928
-"femmine" "Molise" 2005 "18-39 anni" 7462 6844
-"femmine" "Molise" 2005 "40-64 anni" 2650 3080
-"femmine" "Molise" 2006 "18-39 anni" 7818 7114
-"femmine" "Molise" 2006 "40-64 anni" 2532 3224
-"femmine" "Molise" 2007 "18-39 anni" 7104 8410
-"femmine" "Molise" 2007 "40-64 anni" 2632 3522
-"femmine" "Molise" 2008 "18-39 anni" 7274 8048
-"femmine" "Molise" 2008 "40-64 anni" 3032 4190
-"femmine" "Molise" 2009 "18-39 anni" 7954 7768
-"femmine" "Molise" 2009 "40-64 anni" 3054 3816
-"femmine" "Molise" 2010 "18-39 anni" 7592 7388
-"femmine" "Molise" 2010 "40-64 anni" 2992 3808
-"femmine" "Molise" 2011 "18-39 anni" 7600 7636
-"femmine" "Molise" 2011 "40-64 anni" 3254 3950
-"femmine" "Molise" 2012 "18-39 anni" 9270 7976
-"femmine" "Molise" 2012 "40-64 anni" 4292 4766
-"femmine" "Molise" 2013 "18-39 anni" 8042 6818
-"femmine" "Molise" 2013 "40-64 anni" 3716 4080
-"femmine" "Molise" 2014 "18-39 anni" 7742 6334
-"femmine" "Molise" 2014 "40-64 anni" 3784 3624
-"femmine" "Molise" 2015 "18-39 anni" 7680 6266
-"femmine" "Molise" 2015 "40-64 anni" 3514 3320
-"femmine" "Molise" 2016 "18-39 anni" 8402 6480
-"femmine" "Molise" 2016 "40-64 anni" 4116 3650
-"femmine" "Molise" 2017 "18-39 anni" 7930 6414
-"femmine" "Molise" 2017 "40-64 anni" 3940 3558
-"femmine" "Molise" 2018 "18-39 anni" 8772 7084
-"femmine" "Molise" 2018 "40-64 anni" 4104 4060
-"femmine" "Molise" 2019 "18-39 anni" 9764 7052
-"femmine" "Molise" 2019 "40-64 anni" 4760 4636
-"femmine" "Molise" 2020 "18-39 anni" 8358 6080
-"femmine" "Molise" 2020 "40-64 anni" 4180 3644
-"femmine" "Molise" 2021 "18-39 anni" 8368 6674
-"femmine" "Molise" 2021 "40-64 anni" 4510 4502
-"femmine" "Molise" 2022 "18-39 anni" 9232 8040
-"femmine" "Molise" 2022 "40-64 anni" 4498 4984
-"femmine" "Piemonte" 2002 "18-39 anni" 135314 156714
-"femmine" "Piemonte" 2002 "40-64 anni" 52348 54942
-"femmine" "Piemonte" 2003 "18-39 anni" 131582 193470
-"femmine" "Piemonte" 2003 "40-64 anni" 51952 71324
-"femmine" "Piemonte" 2004 "18-39 anni" 148922 185662
-"femmine" "Piemonte" 2004 "40-64 anni" 61968 71018
-"femmine" "Piemonte" 2005 "18-39 anni" 136426 165066
-"femmine" "Piemonte" 2005 "40-64 anni" 59908 63540
-"femmine" "Piemonte" 2006 "18-39 anni" 139662 166618
-"femmine" "Piemonte" 2006 "40-64 anni" 64136 67360
-"femmine" "Piemonte" 2007 "18-39 anni" 144958 222792
-"femmine" "Piemonte" 2007 "40-64 anni" 68382 93618
-"femmine" "Piemonte" 2008 "18-39 anni" 141996 195814
-"femmine" "Piemonte" 2008 "40-64 anni" 68168 88914
-"femmine" "Piemonte" 2009 "18-39 anni" 139898 181326
-"femmine" "Piemonte" 2009 "40-64 anni" 69590 86212
-"femmine" "Piemonte" 2010 "18-39 anni" 139834 181860
-"femmine" "Piemonte" 2010 "40-64 anni" 71932 89996
-"femmine" "Piemonte" 2011 "18-39 anni" 138752 172104
-"femmine" "Piemonte" 2011 "40-64 anni" 74170 86682
-"femmine" "Piemonte" 2012 "18-39 anni" 155832 191468
-"femmine" "Piemonte" 2012 "40-64 anni" 87590 98960
-"femmine" "Piemonte" 2013 "18-39 anni" 137344 158854
-"femmine" "Piemonte" 2013 "40-64 anni" 78926 86226
-"femmine" "Piemonte" 2014 "18-39 anni" 132318 149666
-"femmine" "Piemonte" 2014 "40-64 anni" 79156 83866
-"femmine" "Piemonte" 2015 "18-39 anni" 129554 144594
-"femmine" "Piemonte" 2015 "40-64 anni" 78736 83046
-"femmine" "Piemonte" 2016 "18-39 anni" 130216 146218
-"femmine" "Piemonte" 2016 "40-64 anni" 81344 85254
-"femmine" "Piemonte" 2017 "18-39 anni" 128456 148134
-"femmine" "Piemonte" 2017 "40-64 anni" 83162 88218
-"femmine" "Piemonte" 2018 "18-39 anni" 126630 146018
-"femmine" "Piemonte" 2018 "40-64 anni" 82808 87564
-"femmine" "Piemonte" 2019 "18-39 anni" 135212 160580
-"femmine" "Piemonte" 2019 "40-64 anni" 89522 97058
-"femmine" "Piemonte" 2020 "18-39 anni" 124782 139810
-"femmine" "Piemonte" 2020 "40-64 anni" 81936 85220
-"femmine" "Piemonte" 2021 "18-39 anni" 124952 143100
-"femmine" "Piemonte" 2021 "40-64 anni" 84562 91160
-"femmine" "Piemonte" 2022 "18-39 anni" 130054 157946
-"femmine" "Piemonte" 2022 "40-64 anni" 86922 97190
-"femmine" "Puglia" 2002 "18-39 anni" 83930 61590
-"femmine" "Puglia" 2002 "40-64 anni" 20312 20452
-"femmine" "Puglia" 2003 "18-39 anni" 82780 66546
-"femmine" "Puglia" 2003 "40-64 anni" 21626 23694
-"femmine" "Puglia" 2004 "18-39 anni" 83376 64096
-"femmine" "Puglia" 2004 "40-64 anni" 23248 24218
-"femmine" "Puglia" 2005 "18-39 anni" 78988 60992
-"femmine" "Puglia" 2005 "40-64 anni" 22306 23214
-"femmine" "Puglia" 2006 "18-39 anni" 81874 60948
-"femmine" "Puglia" 2006 "40-64 anni" 22828 22602
-"femmine" "Puglia" 2007 "18-39 anni" 79250 72934
-"femmine" "Puglia" 2007 "40-64 anni" 23592 29820
-"femmine" "Puglia" 2008 "18-39 anni" 82868 70452
-"femmine" "Puglia" 2008 "40-64 anni" 25576 30658
-"femmine" "Puglia" 2009 "18-39 anni" 77240 66634
-"femmine" "Puglia" 2009 "40-64 anni" 23916 29994
-"femmine" "Puglia" 2010 "18-39 anni" 78904 71230
-"femmine" "Puglia" 2010 "40-64 anni" 26444 35660
-"femmine" "Puglia" 2011 "18-39 anni" 80818 67638
-"femmine" "Puglia" 2011 "40-64 anni" 27754 31842
-"femmine" "Puglia" 2012 "18-39 anni" 90738 73226
-"femmine" "Puglia" 2012 "40-64 anni" 34372 37230
-"femmine" "Puglia" 2013 "18-39 anni" 81556 64816
-"femmine" "Puglia" 2013 "40-64 anni" 31116 37326
-"femmine" "Puglia" 2014 "18-39 anni" 78136 62992
-"femmine" "Puglia" 2014 "40-64 anni" 30918 33282
-"femmine" "Puglia" 2015 "18-39 anni" 76696 59472
-"femmine" "Puglia" 2015 "40-64 anni" 32136 32730
-"femmine" "Puglia" 2016 "18-39 anni" 78128 59198
-"femmine" "Puglia" 2016 "40-64 anni" 34008 34440
-"femmine" "Puglia" 2017 "18-39 anni" 78966 59956
-"femmine" "Puglia" 2017 "40-64 anni" 35152 35932
-"femmine" "Puglia" 2018 "18-39 anni" 80024 58100
-"femmine" "Puglia" 2018 "40-64 anni" 36010 34902
-"femmine" "Puglia" 2019 "18-39 anni" 88516 63286
-"femmine" "Puglia" 2019 "40-64 anni" 39780 38836
-"femmine" "Puglia" 2020 "18-39 anni" 76464 58530
-"femmine" "Puglia" 2020 "40-64 anni" 34562 37672
-"femmine" "Puglia" 2021 "18-39 anni" 77134 64126
-"femmine" "Puglia" 2021 "40-64 anni" 37324 44726
-"femmine" "Puglia" 2022 "18-39 anni" 90040 67184
-"femmine" "Puglia" 2022 "40-64 anni" 40518 48566
-"femmine" "Sardegna" 2002 "18-39 anni" 38062 33850
-"femmine" "Sardegna" 2002 "40-64 anni" 10624 12802
-"femmine" "Sardegna" 2003 "18-39 anni" 39000 37640
-"femmine" "Sardegna" 2003 "40-64 anni" 11268 14382
-"femmine" "Sardegna" 2004 "18-39 anni" 39776 37962
-"femmine" "Sardegna" 2004 "40-64 anni" 11888 14726
-"femmine" "Sardegna" 2005 "18-39 anni" 38718 36814
-"femmine" "Sardegna" 2005 "40-64 anni" 12130 15566
-"femmine" "Sardegna" 2006 "18-39 anni" 40004 38480
-"femmine" "Sardegna" 2006 "40-64 anni" 13476 17640
-"femmine" "Sardegna" 2007 "18-39 anni" 38894 43222
-"femmine" "Sardegna" 2007 "40-64 anni" 14252 20800
-"femmine" "Sardegna" 2008 "18-39 anni" 42070 44048
-"femmine" "Sardegna" 2008 "40-64 anni" 15558 21178
-"femmine" "Sardegna" 2009 "18-39 anni" 40352 40998
-"femmine" "Sardegna" 2009 "40-64 anni" 16452 20512
-"femmine" "Sardegna" 2010 "18-39 anni" 40804 42456
-"femmine" "Sardegna" 2010 "40-64 anni" 17070 22684
-"femmine" "Sardegna" 2011 "18-39 anni" 40828 40382
-"femmine" "Sardegna" 2011 "40-64 anni" 17844 21408
-"femmine" "Sardegna" 2012 "18-39 anni" 46294 44396
-"femmine" "Sardegna" 2012 "40-64 anni" 22686 25896
-"femmine" "Sardegna" 2013 "18-39 anni" 39866 37428
-"femmine" "Sardegna" 2013 "40-64 anni" 20490 23556
-"femmine" "Sardegna" 2014 "18-39 anni" 38888 35432
-"femmine" "Sardegna" 2014 "40-64 anni" 19328 21486
-"femmine" "Sardegna" 2015 "18-39 anni" 36334 32756
-"femmine" "Sardegna" 2015 "40-64 anni" 19298 20880
-"femmine" "Sardegna" 2016 "18-39 anni" 37308 33028
-"femmine" "Sardegna" 2016 "40-64 anni" 20664 22608
-"femmine" "Sardegna" 2017 "18-39 anni" 36766 33298
-"femmine" "Sardegna" 2017 "40-64 anni" 21314 23238
-"femmine" "Sardegna" 2018 "18-39 anni" 36296 32664
-"femmine" "Sardegna" 2018 "40-64 anni" 21576 23274
-"femmine" "Sardegna" 2019 "18-39 anni" 38878 33554
-"femmine" "Sardegna" 2019 "40-64 anni" 24426 25532
-"femmine" "Sardegna" 2020 "18-39 anni" 34710 30728
-"femmine" "Sardegna" 2020 "40-64 anni" 21798 23530
-"femmine" "Sardegna" 2021 "18-39 anni" 34522 32984
-"femmine" "Sardegna" 2021 "40-64 anni" 23598 26638
-"femmine" "Sardegna" 2022 "18-39 anni" 36988 34442
-"femmine" "Sardegna" 2022 "40-64 anni" 24390 27692
-"femmine" "Sicilia" 2002 "18-39 anni" 113162 89690
-"femmine" "Sicilia" 2002 "40-64 anni" 35638 33694
-"femmine" "Sicilia" 2003 "18-39 anni" 109654 95724
-"femmine" "Sicilia" 2003 "40-64 anni" 35606 36650
-"femmine" "Sicilia" 2004 "18-39 anni" 121158 103964
-"femmine" "Sicilia" 2004 "40-64 anni" 41612 41576
-"femmine" "Sicilia" 2005 "18-39 anni" 107294 95316
-"femmine" "Sicilia" 2005 "40-64 anni" 38452 38320
-"femmine" "Sicilia" 2006 "18-39 anni" 110876 96800
-"femmine" "Sicilia" 2006 "40-64 anni" 40210 40014
-"femmine" "Sicilia" 2007 "18-39 anni" 112216 118160
-"femmine" "Sicilia" 2007 "40-64 anni" 41602 50964
-"femmine" "Sicilia" 2008 "18-39 anni" 115044 114090
-"femmine" "Sicilia" 2008 "40-64 anni" 43868 51938
-"femmine" "Sicilia" 2009 "18-39 anni" 109090 106642
-"femmine" "Sicilia" 2009 "40-64 anni" 41550 48298
-"femmine" "Sicilia" 2010 "18-39 anni" 112390 109328
-"femmine" "Sicilia" 2010 "40-64 anni" 44422 51628
-"femmine" "Sicilia" 2011 "18-39 anni" 110052 101532
-"femmine" "Sicilia" 2011 "40-64 anni" 44788 49194
-"femmine" "Sicilia" 2012 "18-39 anni" 131222 117548
-"femmine" "Sicilia" 2012 "40-64 anni" 58024 59522
-"femmine" "Sicilia" 2013 "18-39 anni" 114976 101376
-"femmine" "Sicilia" 2013 "40-64 anni" 50350 54142
-"femmine" "Sicilia" 2014 "18-39 anni" 110430 91974
-"femmine" "Sicilia" 2014 "40-64 anni" 49952 50832
-"femmine" "Sicilia" 2015 "18-39 anni" 109000 88158
-"femmine" "Sicilia" 2015 "40-64 anni" 49954 47952
-"femmine" "Sicilia" 2016 "18-39 anni" 114826 88352
-"femmine" "Sicilia" 2016 "40-64 anni" 53238 50570
-"femmine" "Sicilia" 2017 "18-39 anni" 114532 85808
-"femmine" "Sicilia" 2017 "40-64 anni" 54340 51272
-"femmine" "Sicilia" 2018 "18-39 anni" 120508 88884
-"femmine" "Sicilia" 2018 "40-64 anni" 56268 52674
-"femmine" "Sicilia" 2019 "18-39 anni" 133454 92838
-"femmine" "Sicilia" 2019 "40-64 anni" 59982 57442
-"femmine" "Sicilia" 2020 "18-39 anni" 112740 86500
-"femmine" "Sicilia" 2020 "40-64 anni" 53762 53424
-"femmine" "Sicilia" 2021 "18-39 anni" 110718 90748
-"femmine" "Sicilia" 2021 "40-64 anni" 56640 58384
-"femmine" "Sicilia" 2022 "18-39 anni" 126434 98138
-"femmine" "Sicilia" 2022 "40-64 anni" 59424 61884
-"femmine" "Toscana" 2002 "18-39 anni" 84538 116730
-"femmine" "Toscana" 2002 "40-64 anni" 32800 41688
-"femmine" "Toscana" 2003 "18-39 anni" 84326 138476
-"femmine" "Toscana" 2003 "40-64 anni" 33550 54070
-"femmine" "Toscana" 2004 "18-39 anni" 96568 141658
-"femmine" "Toscana" 2004 "40-64 anni" 39508 57892
-"femmine" "Toscana" 2005 "18-39 anni" 92282 130912
-"femmine" "Toscana" 2005 "40-64 anni" 40340 51906
-"femmine" "Toscana" 2006 "18-39 anni" 93162 129106
-"femmine" "Toscana" 2006 "40-64 anni" 43056 54640
-"femmine" "Toscana" 2007 "18-39 anni" 93406 159116
-"femmine" "Toscana" 2007 "40-64 anni" 44124 72528
-"femmine" "Toscana" 2008 "18-39 anni" 92196 144684
-"femmine" "Toscana" 2008 "40-64 anni" 45654 70924
-"femmine" "Toscana" 2009 "18-39 anni" 94444 143482
-"femmine" "Toscana" 2009 "40-64 anni" 49228 73726
-"femmine" "Toscana" 2010 "18-39 anni" 95070 144158
-"femmine" "Toscana" 2010 "40-64 anni" 50712 77610
-"femmine" "Toscana" 2011 "18-39 anni" 98024 138750
-"femmine" "Toscana" 2011 "40-64 anni" 55268 72220
-"femmine" "Toscana" 2012 "18-39 anni" 111432 151584
-"femmine" "Toscana" 2012 "40-64 anni" 66674 84138
-"femmine" "Toscana" 2013 "18-39 anni" 97240 126832
-"femmine" "Toscana" 2013 "40-64 anni" 59816 72862
-"femmine" "Toscana" 2014 "18-39 anni" 94064 119104
-"femmine" "Toscana" 2014 "40-64 anni" 58160 69388
-"femmine" "Toscana" 2015 "18-39 anni" 89660 113434
-"femmine" "Toscana" 2015 "40-64 anni" 59030 69220
-"femmine" "Toscana" 2016 "18-39 anni" 92526 116680
-"femmine" "Toscana" 2016 "40-64 anni" 62984 73560
-"femmine" "Toscana" 2017 "18-39 anni" 89426 111636
-"femmine" "Toscana" 2017 "40-64 anni" 63080 73182
-"femmine" "Toscana" 2018 "18-39 anni" 90712 111846
-"femmine" "Toscana" 2018 "40-64 anni" 65120 74070
-"femmine" "Toscana" 2019 "18-39 anni" 97902 124256
-"femmine" "Toscana" 2019 "40-64 anni" 71662 84836
-"femmine" "Toscana" 2020 "18-39 anni" 90552 105828
-"femmine" "Toscana" 2020 "40-64 anni" 65112 75362
-"femmine" "Toscana" 2021 "18-39 anni" 90072 110012
-"femmine" "Toscana" 2021 "40-64 anni" 69144 82488
-"femmine" "Toscana" 2022 "18-39 anni" 94758 122056
-"femmine" "Toscana" 2022 "40-64 anni" 71056 91676
-"femmine" "Trentino Alto Adige / Südtirol" 2002 "18-39 anni" 25540 32556
-"femmine" "Trentino Alto Adige / Südtirol" 2002 "40-64 anni" 6832 8396
-"femmine" "Trentino Alto Adige / Südtirol" 2003 "18-39 anni" 27078 37982
-"femmine" "Trentino Alto Adige / Südtirol" 2003 "40-64 anni" 7468 12588
-"femmine" "Trentino Alto Adige / Südtirol" 2004 "18-39 anni" 29706 40016
-"femmine" "Trentino Alto Adige / Südtirol" 2004 "40-64 anni" 9332 13474
-"femmine" "Trentino Alto Adige / Südtirol" 2005 "18-39 anni" 29356 40210
-"femmine" "Trentino Alto Adige / Südtirol" 2005 "40-64 anni" 9264 12124
-"femmine" "Trentino Alto Adige / Südtirol" 2006 "18-39 anni" 30578 40344
-"femmine" "Trentino Alto Adige / Südtirol" 2006 "40-64 anni" 10244 13182
-"femmine" "Trentino Alto Adige / Südtirol" 2007 "18-39 anni" 30868 46052
-"femmine" "Trentino Alto Adige / Südtirol" 2007 "40-64 anni" 10792 16776
-"femmine" "Trentino Alto Adige / Südtirol" 2008 "18-39 anni" 31110 44048
-"femmine" "Trentino Alto Adige / Südtirol" 2008 "40-64 anni" 11602 17280
-"femmine" "Trentino Alto Adige / Südtirol" 2009 "18-39 anni" 31502 43500
-"femmine" "Trentino Alto Adige / Südtirol" 2009 "40-64 anni" 11732 16902
-"femmine" "Trentino Alto Adige / Südtirol" 2010 "18-39 anni" 31116 41318
-"femmine" "Trentino Alto Adige / Südtirol" 2010 "40-64 anni" 12384 17586
-"femmine" "Trentino Alto Adige / Südtirol" 2011 "18-39 anni" 31614 41678
-"femmine" "Trentino Alto Adige / Südtirol" 2011 "40-64 anni" 13386 17430
-"femmine" "Trentino Alto Adige / Südtirol" 2012 "18-39 anni" 34082 43188
-"femmine" "Trentino Alto Adige / Südtirol" 2012 "40-64 anni" 15884 19518
-"femmine" "Trentino Alto Adige / Südtirol" 2013 "18-39 anni" 31818 39554
-"femmine" "Trentino Alto Adige / Südtirol" 2013 "40-64 anni" 14374 17892
-"femmine" "Trentino Alto Adige / Südtirol" 2014 "18-39 anni" 31928 37918
-"femmine" "Trentino Alto Adige / Südtirol" 2014 "40-64 anni" 14476 16686
-"femmine" "Trentino Alto Adige / Südtirol" 2015 "18-39 anni" 32444 37598
-"femmine" "Trentino Alto Adige / Südtirol" 2015 "40-64 anni" 15278 18344
-"femmine" "Trentino Alto Adige / Südtirol" 2016 "18-39 anni" 33076 37696
-"femmine" "Trentino Alto Adige / Südtirol" 2016 "40-64 anni" 16016 18380
-"femmine" "Trentino Alto Adige / Südtirol" 2017 "18-39 anni" 32962 39776
-"femmine" "Trentino Alto Adige / Südtirol" 2017 "40-64 anni" 16354 19860
-"femmine" "Trentino Alto Adige / Südtirol" 2018 "18-39 anni" 33552 41296
-"femmine" "Trentino Alto Adige / Südtirol" 2018 "40-64 anni" 16652 20938
-"femmine" "Trentino Alto Adige / Südtirol" 2019 "18-39 anni" 35688 41318
-"femmine" "Trentino Alto Adige / Südtirol" 2019 "40-64 anni" 18134 21712
-"femmine" "Trentino Alto Adige / Südtirol" 2020 "18-39 anni" 33472 37854
-"femmine" "Trentino Alto Adige / Südtirol" 2020 "40-64 anni" 16698 20152
-"femmine" "Trentino Alto Adige / Südtirol" 2021 "18-39 anni" 33736 37590
-"femmine" "Trentino Alto Adige / Südtirol" 2021 "40-64 anni" 18476 21600
-"femmine" "Trentino Alto Adige / Südtirol" 2022 "18-39 anni" 35824 41620
-"femmine" "Trentino Alto Adige / Südtirol" 2022 "40-64 anni" 19012 22760
-"femmine" "Umbria" 2002 "18-39 anni" 16050 23950
-"femmine" "Umbria" 2002 "40-64 anni" 5456 8590
-"femmine" "Umbria" 2003 "18-39 anni" 16462 31424
-"femmine" "Umbria" 2003 "40-64 anni" 5356 14254
-"femmine" "Umbria" 2004 "18-39 anni" 19238 30242
-"femmine" "Umbria" 2004 "40-64 anni" 7258 13008
-"femmine" "Umbria" 2005 "18-39 anni" 18976 29462
-"femmine" "Umbria" 2005 "40-64 anni" 7718 11998
-"femmine" "Umbria" 2006 "18-39 anni" 19060 27074
-"femmine" "Umbria" 2006 "40-64 anni" 8172 11566
-"femmine" "Umbria" 2007 "18-39 anni" 20422 38794
-"femmine" "Umbria" 2007 "40-64 anni" 8298 17422
-"femmine" "Umbria" 2008 "18-39 anni" 20264 34800
-"femmine" "Umbria" 2008 "40-64 anni" 9448 18388
-"femmine" "Umbria" 2009 "18-39 anni" 21872 33692
-"femmine" "Umbria" 2009 "40-64 anni" 10532 18142
-"femmine" "Umbria" 2010 "18-39 anni" 20768 32804
-"femmine" "Umbria" 2010 "40-64 anni" 11168 17840
-"femmine" "Umbria" 2011 "18-39 anni" 22046 28288
-"femmine" "Umbria" 2011 "40-64 anni" 11538 15660
-"femmine" "Umbria" 2012 "18-39 anni" 24238 29780
-"femmine" "Umbria" 2012 "40-64 anni" 14192 17410
-"femmine" "Umbria" 2013 "18-39 anni" 21158 25164
-"femmine" "Umbria" 2013 "40-64 anni" 12974 14620
-"femmine" "Umbria" 2014 "18-39 anni" 19740 21930
-"femmine" "Umbria" 2014 "40-64 anni" 12746 13562
-"femmine" "Umbria" 2015 "18-39 anni" 20116 21894
-"femmine" "Umbria" 2015 "40-64 anni" 12398 13712
-"femmine" "Umbria" 2016 "18-39 anni" 20732 21974
-"femmine" "Umbria" 2016 "40-64 anni" 13068 14456
-"femmine" "Umbria" 2017 "18-39 anni" 20142 21316
-"femmine" "Umbria" 2017 "40-64 anni" 13188 14542
-"femmine" "Umbria" 2018 "18-39 anni" 19628 21950
-"femmine" "Umbria" 2018 "40-64 anni" 13816 14956
-"femmine" "Umbria" 2019 "18-39 anni" 21790 23478
-"femmine" "Umbria" 2019 "40-64 anni" 14710 16612
-"femmine" "Umbria" 2020 "18-39 anni" 19766 20756
-"femmine" "Umbria" 2020 "40-64 anni" 13454 15160
-"femmine" "Umbria" 2021 "18-39 anni" 18994 21900
-"femmine" "Umbria" 2021 "40-64 anni" 13928 15620
-"femmine" "Umbria" 2022 "18-39 anni" 20532 23132
-"femmine" "Umbria" 2022 "40-64 anni" 13516 17106
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2002 "18-39 anni" 10112 11676
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2002 "40-64 anni" 3292 3632
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2003 "18-39 anni" 9832 13332
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2003 "40-64 anni" 3572 4260
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2004 "18-39 anni" 11028 13696
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2004 "40-64 anni" 3812 4504
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2005 "18-39 anni" 9952 12936
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2005 "40-64 anni" 3976 5224
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2006 "18-39 anni" 11076 13208
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2006 "40-64 anni" 4160 4588
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2007 "18-39 anni" 12108 14720
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2007 "40-64 anni" 5060 6172
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2008 "18-39 anni" 10952 13072
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2008 "40-64 anni" 5248 5968
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2009 "18-39 anni" 12720 14420
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2009 "40-64 anni" 6652 6984
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2010 "18-39 anni" 11592 13284
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2010 "40-64 anni" 5700 6716
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2011 "18-39 anni" 10628 12604
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2011 "40-64 anni" 5592 6420
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2012 "18-39 anni" 11752 14504
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2012 "40-64 anni" 6704 8132
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2013 "18-39 anni" 11040 13036
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2013 "40-64 anni" 5760 6728
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2014 "18-39 anni" 10684 11448
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2014 "40-64 anni" 6344 6792
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2015 "18-39 anni" 9908 10520
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2015 "40-64 anni" 6644 6216
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2016 "18-39 anni" 9784 10084
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2016 "40-64 anni" 6580 6712
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2017 "18-39 anni" 9864 10364
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2017 "40-64 anni" 6388 7108
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2018 "18-39 anni" 10004 10872
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2018 "40-64 anni" 6928 7064
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2019 "18-39 anni" 9968 10820
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2019 "40-64 anni" 6252 7076
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2020 "18-39 anni" 8296 9256
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2020 "40-64 anni" 6160 6704
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2021 "18-39 anni" 9300 9444
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2021 "40-64 anni" 6540 7152
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2022 "18-39 anni" 8972 10228
-"femmine" "Valle d'Aosta / Vallée d'Aoste" 2022 "40-64 anni" 6472 6940
-"femmine" "Veneto" 2002 "18-39 anni" 137348 173050
-"femmine" "Veneto" 2002 "40-64 anni" 38836 47364
-"femmine" "Veneto" 2003 "18-39 anni" 144556 211342
-"femmine" "Veneto" 2003 "40-64 anni" 42552 70568
-"femmine" "Veneto" 2004 "18-39 anni" 160694 211378
-"femmine" "Veneto" 2004 "40-64 anni" 52172 68478
-"femmine" "Veneto" 2005 "18-39 anni" 155288 199746
-"femmine" "Veneto" 2005 "40-64 anni" 51362 62130
-"femmine" "Veneto" 2006 "18-39 anni" 160680 204220
-"femmine" "Veneto" 2006 "40-64 anni" 56344 67078
-"femmine" "Veneto" 2007 "18-39 anni" 162248 237224
-"femmine" "Veneto" 2007 "40-64 anni" 57504 82600
-"femmine" "Veneto" 2008 "18-39 anni" 154738 221922
-"femmine" "Veneto" 2008 "40-64 anni" 60070 85610
-"femmine" "Veneto" 2009 "18-39 anni" 155334 199964
-"femmine" "Veneto" 2009 "40-64 anni" 61454 80162
-"femmine" "Veneto" 2010 "18-39 anni" 157016 206302
-"femmine" "Veneto" 2010 "40-64 anni" 65460 89168
-"femmine" "Veneto" 2011 "18-39 anni" 157840 195072
-"femmine" "Veneto" 2011 "40-64 anni" 69500 84736
-"femmine" "Veneto" 2012 "18-39 anni" 168170 194690
-"femmine" "Veneto" 2012 "40-64 anni" 80196 89100
-"femmine" "Veneto" 2013 "18-39 anni" 149472 168700
-"femmine" "Veneto" 2013 "40-64 anni" 72294 79888
-"femmine" "Veneto" 2014 "18-39 anni" 144816 162276
-"femmine" "Veneto" 2014 "40-64 anni" 73028 78888
-"femmine" "Veneto" 2015 "18-39 anni" 142170 158816
-"femmine" "Veneto" 2015 "40-64 anni" 74080 79384
-"femmine" "Veneto" 2016 "18-39 anni" 146944 163462
-"femmine" "Veneto" 2016 "40-64 anni" 79446 84838
-"femmine" "Veneto" 2017 "18-39 anni" 147154 170564
-"femmine" "Veneto" 2017 "40-64 anni" 82972 91480
-"femmine" "Veneto" 2018 "18-39 anni" 145818 173060
-"femmine" "Veneto" 2018 "40-64 anni" 86998 96414
-"femmine" "Veneto" 2019 "18-39 anni" 156390 181734
-"femmine" "Veneto" 2019 "40-64 anni" 94438 106120
-"femmine" "Veneto" 2020 "18-39 anni" 145722 161780
-"femmine" "Veneto" 2020 "40-64 anni" 88260 94942
-"femmine" "Veneto" 2021 "18-39 anni" 143694 166104
-"femmine" "Veneto" 2021 "40-64 anni" 92242 103124
-"femmine" "Veneto" 2022 "18-39 anni" 150674 180694
-"femmine" "Veneto" 2022 "40-64 anni" 92264 105986
-"maschi" "Abruzzo" 2002 "18-39 anni" 25814 30748
-"maschi" "Abruzzo" 2002 "40-64 anni" 10740 14194
-"maschi" "Abruzzo" 2003 "18-39 anni" 25958 37280
-"maschi" "Abruzzo" 2003 "40-64 anni" 10658 14932
-"maschi" "Abruzzo" 2004 "18-39 anni" 27658 36518
-"maschi" "Abruzzo" 2004 "40-64 anni" 12464 16942
-"maschi" "Abruzzo" 2005 "18-39 anni" 28072 34474
-"maschi" "Abruzzo" 2005 "40-64 anni" 12956 17304
-"maschi" "Abruzzo" 2006 "18-39 anni" 29466 33972
-"maschi" "Abruzzo" 2006 "40-64 anni" 13830 16750
-"maschi" "Abruzzo" 2007 "18-39 anni" 29988 46430
-"maschi" "Abruzzo" 2007 "40-64 anni" 14498 20712
-"maschi" "Abruzzo" 2008 "18-39 anni" 31354 42382
-"maschi" "Abruzzo" 2008 "40-64 anni" 15210 20902
-"maschi" "Abruzzo" 2009 "18-39 anni" 29080 34804
-"maschi" "Abruzzo" 2009 "40-64 anni" 14922 18366
-"maschi" "Abruzzo" 2010 "18-39 anni" 28966 35680
-"maschi" "Abruzzo" 2010 "40-64 anni" 15080 18484
-"maschi" "Abruzzo" 2011 "18-39 anni" 30116 37038
-"maschi" "Abruzzo" 2011 "40-64 anni" 15594 19374
-"maschi" "Abruzzo" 2012 "18-39 anni" 35818 40264
-"maschi" "Abruzzo" 2012 "40-64 anni" 20814 24382
-"maschi" "Abruzzo" 2013 "18-39 anni" 32682 34704
-"maschi" "Abruzzo" 2013 "40-64 anni" 19226 22546
-"maschi" "Abruzzo" 2014 "18-39 anni" 31424 32820
-"maschi" "Abruzzo" 2014 "40-64 anni" 18880 19742
-"maschi" "Abruzzo" 2015 "18-39 anni" 31884 31600
-"maschi" "Abruzzo" 2015 "40-64 anni" 18762 19128
-"maschi" "Abruzzo" 2016 "18-39 anni" 33676 35026
-"maschi" "Abruzzo" 2016 "40-64 anni" 19678 20628
-"maschi" "Abruzzo" 2017 "18-39 anni" 31690 35522
-"maschi" "Abruzzo" 2017 "40-64 anni" 19354 19488
-"maschi" "Abruzzo" 2018 "18-39 anni" 34338 38980
-"maschi" "Abruzzo" 2018 "40-64 anni" 20852 22560
-"maschi" "Abruzzo" 2019 "18-39 anni" 38872 36268
-"maschi" "Abruzzo" 2019 "40-64 anni" 23418 24836
-"maschi" "Abruzzo" 2020 "18-39 anni" 32342 31774
-"maschi" "Abruzzo" 2020 "40-64 anni" 20962 23132
-"maschi" "Abruzzo" 2021 "18-39 anni" 33722 36186
-"maschi" "Abruzzo" 2021 "40-64 anni" 22780 25390
-"maschi" "Abruzzo" 2022 "18-39 anni" 36724 39928
-"maschi" "Abruzzo" 2022 "40-64 anni" 23596 27026
-"maschi" "Basilicata" 2002 "18-39 anni" 13006 9318
-"maschi" "Basilicata" 2002 "40-64 anni" 3844 3994
-"maschi" "Basilicata" 2003 "18-39 anni" 12916 10994
-"maschi" "Basilicata" 2003 "40-64 anni" 4244 4558
-"maschi" "Basilicata" 2004 "18-39 anni" 12790 9496
-"maschi" "Basilicata" 2004 "40-64 anni" 4288 4408
-"maschi" "Basilicata" 2005 "18-39 anni" 13062 8576
-"maschi" "Basilicata" 2005 "40-64 anni" 4420 4170
-"maschi" "Basilicata" 2006 "18-39 anni" 12858 7980
-"maschi" "Basilicata" 2006 "40-64 anni" 4802 4104
-"maschi" "Basilicata" 2007 "18-39 anni" 12824 10866
-"maschi" "Basilicata" 2007 "40-64 anni" 4514 4630
-"maschi" "Basilicata" 2008 "18-39 anni" 12648 9372
-"maschi" "Basilicata" 2008 "40-64 anni" 4682 4668
-"maschi" "Basilicata" 2009 "18-39 anni" 12202 9058
-"maschi" "Basilicata" 2009 "40-64 anni" 4986 4468
-"maschi" "Basilicata" 2010 "18-39 anni" 11672 9186
-"maschi" "Basilicata" 2010 "40-64 anni" 4576 4642
-"maschi" "Basilicata" 2011 "18-39 anni" 11884 10196
-"maschi" "Basilicata" 2011 "40-64 anni" 4780 5772
-"maschi" "Basilicata" 2012 "18-39 anni" 13892 11360
-"maschi" "Basilicata" 2012 "40-64 anni" 5878 6332
-"maschi" "Basilicata" 2013 "18-39 anni" 11860 9218
-"maschi" "Basilicata" 2013 "40-64 anni" 5314 6036
-"maschi" "Basilicata" 2014 "18-39 anni" 12014 9758
-"maschi" "Basilicata" 2014 "40-64 anni" 5334 5712
-"maschi" "Basilicata" 2015 "18-39 anni" 11646 10734
-"maschi" "Basilicata" 2015 "40-64 anni" 4840 4614
-"maschi" "Basilicata" 2016 "18-39 anni" 13446 11652
-"maschi" "Basilicata" 2016 "40-64 anni" 6064 5438
-"maschi" "Basilicata" 2017 "18-39 anni" 13230 12898
-"maschi" "Basilicata" 2017 "40-64 anni" 5848 5406
-"maschi" "Basilicata" 2018 "18-39 anni" 14064 11376
-"maschi" "Basilicata" 2018 "40-64 anni" 6154 5514
-"maschi" "Basilicata" 2019 "18-39 anni" 16236 10330
-"maschi" "Basilicata" 2019 "40-64 anni" 7310 6036
-"maschi" "Basilicata" 2020 "18-39 anni" 14930 9568
-"maschi" "Basilicata" 2020 "40-64 anni" 6496 5340
-"maschi" "Basilicata" 2021 "18-39 anni" 14382 11304
-"maschi" "Basilicata" 2021 "40-64 anni" 6754 5970
-"maschi" "Basilicata" 2022 "18-39 anni" 16396 14828
-"maschi" "Basilicata" 2022 "40-64 anni" 6982 7224
-"maschi" "Calabria" 2002 "18-39 anni" 61086 43066
-"maschi" "Calabria" 2002 "40-64 anni" 18422 17222
-"maschi" "Calabria" 2003 "18-39 anni" 63038 56640
-"maschi" "Calabria" 2003 "40-64 anni" 19244 20112
-"maschi" "Calabria" 2004 "18-39 anni" 67482 43736
-"maschi" "Calabria" 2004 "40-64 anni" 21948 20336
-"maschi" "Calabria" 2005 "18-39 anni" 57896 37476
-"maschi" "Calabria" 2005 "40-64 anni" 20852 18086
-"maschi" "Calabria" 2006 "18-39 anni" 58828 38874
-"maschi" "Calabria" 2006 "40-64 anni" 21588 19602
-"maschi" "Calabria" 2007 "18-39 anni" 54690 55290
-"maschi" "Calabria" 2007 "40-64 anni" 20100 24534
-"maschi" "Calabria" 2008 "18-39 anni" 54470 46256
-"maschi" "Calabria" 2008 "40-64 anni" 20796 21858
-"maschi" "Calabria" 2009 "18-39 anni" 53546 47230
-"maschi" "Calabria" 2009 "40-64 anni" 21346 23678
-"maschi" "Calabria" 2010 "18-39 anni" 51446 49256
-"maschi" "Calabria" 2010 "40-64 anni" 20666 23208
-"maschi" "Calabria" 2011 "18-39 anni" 51250 44116
-"maschi" "Calabria" 2011 "40-64 anni" 21072 23664
-"maschi" "Calabria" 2012 "18-39 anni" 60272 47984
-"maschi" "Calabria" 2012 "40-64 anni" 27192 27784
-"maschi" "Calabria" 2013 "18-39 anni" 52316 44840
-"maschi" "Calabria" 2013 "40-64 anni" 23396 24566
-"maschi" "Calabria" 2014 "18-39 anni" 50624 43716
-"maschi" "Calabria" 2014 "40-64 anni" 22648 24342
-"maschi" "Calabria" 2015 "18-39 anni" 48552 47224
-"maschi" "Calabria" 2015 "40-64 anni" 21768 21586
-"maschi" "Calabria" 2016 "18-39 anni" 51372 49906
-"maschi" "Calabria" 2016 "40-64 anni" 24046 23710
-"maschi" "Calabria" 2017 "18-39 anni" 52444 48822
-"maschi" "Calabria" 2017 "40-64 anni" 23752 23270
-"maschi" "Calabria" 2018 "18-39 anni" 55006 46690
-"maschi" "Calabria" 2018 "40-64 anni" 24500 23316
-"maschi" "Calabria" 2019 "18-39 anni" 73374 47420
-"maschi" "Calabria" 2019 "40-64 anni" 29960 26798
-"maschi" "Calabria" 2020 "18-39 anni" 56070 36282
-"maschi" "Calabria" 2020 "40-64 anni" 24242 21456
-"maschi" "Calabria" 2021 "18-39 anni" 57754 45118
-"maschi" "Calabria" 2021 "40-64 anni" 26516 25132
-"maschi" "Calabria" 2022 "18-39 anni" 61270 48250
-"maschi" "Calabria" 2022 "40-64 anni" 26690 27246
-"maschi" "Campania" 2002 "18-39 anni" 191520 131540
-"maschi" "Campania" 2002 "40-64 anni" 59614 50958
-"maschi" "Campania" 2003 "18-39 anni" 184558 156764
-"maschi" "Campania" 2003 "40-64 anni" 60754 56660
-"maschi" "Campania" 2004 "18-39 anni" 192430 164706
-"maschi" "Campania" 2004 "40-64 anni" 67480 63260
-"maschi" "Campania" 2005 "18-39 anni" 181174 137580
-"maschi" "Campania" 2005 "40-64 anni" 66302 58142
-"maschi" "Campania" 2006 "18-39 anni" 184136 135402
-"maschi" "Campania" 2006 "40-64 anni" 68994 60484
-"maschi" "Campania" 2007 "18-39 anni" 183884 150876
-"maschi" "Campania" 2007 "40-64 anni" 73872 68470
-"maschi" "Campania" 2008 "18-39 anni" 189300 152732
-"maschi" "Campania" 2008 "40-64 anni" 76702 70360
-"maschi" "Campania" 2009 "18-39 anni" 167196 147066
-"maschi" "Campania" 2009 "40-64 anni" 72344 70666
-"maschi" "Campania" 2010 "18-39 anni" 167812 152190
-"maschi" "Campania" 2010 "40-64 anni" 74160 72904
-"maschi" "Campania" 2011 "18-39 anni" 179832 152412
-"maschi" "Campania" 2011 "40-64 anni" 81830 75516
-"maschi" "Campania" 2012 "18-39 anni" 206086 164862
-"maschi" "Campania" 2012 "40-64 anni" 99980 90108
-"maschi" "Campania" 2013 "18-39 anni" 176190 152458
-"maschi" "Campania" 2013 "40-64 anni" 89274 85126
-"maschi" "Campania" 2014 "18-39 anni" 164246 153536
-"maschi" "Campania" 2014 "40-64 anni" 82374 80854
-"maschi" "Campania" 2015 "18-39 anni" 159410 152720
-"maschi" "Campania" 2015 "40-64 anni" 76862 78056
-"maschi" "Campania" 2016 "18-39 anni" 164100 148992
-"maschi" "Campania" 2016 "40-64 anni" 81226 81062
-"maschi" "Campania" 2017 "18-39 anni" 158526 156074
-"maschi" "Campania" 2017 "40-64 anni" 80440 80642
-"maschi" "Campania" 2018 "18-39 anni" 169278 141438
-"maschi" "Campania" 2018 "40-64 anni" 82060 78678
-"maschi" "Campania" 2019 "18-39 anni" 194800 143640
-"maschi" "Campania" 2019 "40-64 anni" 96100 93210
-"maschi" "Campania" 2020 "18-39 anni" 162004 125350
-"maschi" "Campania" 2020 "40-64 anni" 85580 81364
-"maschi" "Campania" 2021 "18-39 anni" 172608 136788
-"maschi" "Campania" 2021 "40-64 anni" 91182 88320
-"maschi" "Campania" 2022 "18-39 anni" 181248 138832
-"maschi" "Campania" 2022 "40-64 anni" 90308 87538
-"maschi" "Emilia-Romagna" 2002 "18-39 anni" 122788 185926
-"maschi" "Emilia-Romagna" 2002 "40-64 anni" 49848 62298
-"maschi" "Emilia-Romagna" 2003 "18-39 anni" 119910 206434
-"maschi" "Emilia-Romagna" 2003 "40-64 anni" 49208 64136
-"maschi" "Emilia-Romagna" 2004 "18-39 anni" 137300 222930
-"maschi" "Emilia-Romagna" 2004 "40-64 anni" 60458 79068
-"maschi" "Emilia-Romagna" 2005 "18-39 anni" 137914 205704
-"maschi" "Emilia-Romagna" 2005 "40-64 anni" 60924 74962
-"maschi" "Emilia-Romagna" 2006 "18-39 anni" 142544 208834
-"maschi" "Emilia-Romagna" 2006 "40-64 anni" 66734 79212
-"maschi" "Emilia-Romagna" 2007 "18-39 anni" 139162 223472
-"maschi" "Emilia-Romagna" 2007 "40-64 anni" 68248 84260
-"maschi" "Emilia-Romagna" 2008 "18-39 anni" 135462 232698
-"maschi" "Emilia-Romagna" 2008 "40-64 anni" 69286 87658
-"maschi" "Emilia-Romagna" 2009 "18-39 anni" 130280 197476
-"maschi" "Emilia-Romagna" 2009 "40-64 anni" 67918 79874
-"maschi" "Emilia-Romagna" 2010 "18-39 anni" 131348 199092
-"maschi" "Emilia-Romagna" 2010 "40-64 anni" 70126 81500
-"maschi" "Emilia-Romagna" 2011 "18-39 anni" 130928 192234
-"maschi" "Emilia-Romagna" 2011 "40-64 anni" 75116 84336
-"maschi" "Emilia-Romagna" 2012 "18-39 anni" 138530 195258
-"maschi" "Emilia-Romagna" 2012 "40-64 anni" 83412 89662
-"maschi" "Emilia-Romagna" 2013 "18-39 anni" 125526 164414
-"maschi" "Emilia-Romagna" 2013 "40-64 anni" 79066 81946
-"maschi" "Emilia-Romagna" 2014 "18-39 anni" 118714 152424
-"maschi" "Emilia-Romagna" 2014 "40-64 anni" 77488 78070
-"maschi" "Emilia-Romagna" 2015 "18-39 anni" 113430 154806
-"maschi" "Emilia-Romagna" 2015 "40-64 anni" 77172 78258
-"maschi" "Emilia-Romagna" 2016 "18-39 anni" 115590 163072
-"maschi" "Emilia-Romagna" 2016 "40-64 anni" 82492 85316
-"maschi" "Emilia-Romagna" 2017 "18-39 anni" 114492 181694
-"maschi" "Emilia-Romagna" 2017 "40-64 anni" 82608 87954
-"maschi" "Emilia-Romagna" 2018 "18-39 anni" 117884 180560
-"maschi" "Emilia-Romagna" 2018 "40-64 anni" 84316 91994
-"maschi" "Emilia-Romagna" 2019 "18-39 anni" 133154 195388
-"maschi" "Emilia-Romagna" 2019 "40-64 anni" 96428 107788
-"maschi" "Emilia-Romagna" 2020 "18-39 anni" 123288 167452
-"maschi" "Emilia-Romagna" 2020 "40-64 anni" 90028 96228
-"maschi" "Emilia-Romagna" 2021 "18-39 anni" 126100 179358
-"maschi" "Emilia-Romagna" 2021 "40-64 anni" 94912 101132
-"maschi" "Emilia-Romagna" 2022 "18-39 anni" 131300 201078
-"maschi" "Emilia-Romagna" 2022 "40-64 anni" 93372 105910
-"maschi" "Friuli-Venezia Giulia" 2002 "18-39 anni" 37784 53086
-"maschi" "Friuli-Venezia Giulia" 2002 "40-64 anni" 13572 17516
-"maschi" "Friuli-Venezia Giulia" 2003 "18-39 anni" 38334 56788
-"maschi" "Friuli-Venezia Giulia" 2003 "40-64 anni" 14442 18164
-"maschi" "Friuli-Venezia Giulia" 2004 "18-39 anni" 43334 59240
-"maschi" "Friuli-Venezia Giulia" 2004 "40-64 anni" 16620 21366
-"maschi" "Friuli-Venezia Giulia" 2005 "18-39 anni" 43722 53986
-"maschi" "Friuli-Venezia Giulia" 2005 "40-64 anni" 17106 19590
-"maschi" "Friuli-Venezia Giulia" 2006 "18-39 anni" 42700 54428
-"maschi" "Friuli-Venezia Giulia" 2006 "40-64 anni" 17150 19586
-"maschi" "Friuli-Venezia Giulia" 2007 "18-39 anni" 42908 60776
-"maschi" "Friuli-Venezia Giulia" 2007 "40-64 anni" 17944 22870
-"maschi" "Friuli-Venezia Giulia" 2008 "18-39 anni" 40280 56566
-"maschi" "Friuli-Venezia Giulia" 2008 "40-64 anni" 17854 21928
-"maschi" "Friuli-Venezia Giulia" 2009 "18-39 anni" 39566 49522
-"maschi" "Friuli-Venezia Giulia" 2009 "40-64 anni" 18208 20082
-"maschi" "Friuli-Venezia Giulia" 2010 "18-39 anni" 40512 48866
-"maschi" "Friuli-Venezia Giulia" 2010 "40-64 anni" 19234 21448
-"maschi" "Friuli-Venezia Giulia" 2011 "18-39 anni" 38332 45464
-"maschi" "Friuli-Venezia Giulia" 2011 "40-64 anni" 19124 20446
-"maschi" "Friuli-Venezia Giulia" 2012 "18-39 anni" 39634 48166
-"maschi" "Friuli-Venezia Giulia" 2012 "40-64 anni" 22594 22894
-"maschi" "Friuli-Venezia Giulia" 2013 "18-39 anni" 34604 42164
-"maschi" "Friuli-Venezia Giulia" 2013 "40-64 anni" 19930 20676
-"maschi" "Friuli-Venezia Giulia" 2014 "18-39 anni" 35092 39714
-"maschi" "Friuli-Venezia Giulia" 2014 "40-64 anni" 19902 20124
-"maschi" "Friuli-Venezia Giulia" 2015 "18-39 anni" 33998 39398
-"maschi" "Friuli-Venezia Giulia" 2015 "40-64 anni" 20760 20262
-"maschi" "Friuli-Venezia Giulia" 2016 "18-39 anni" 35918 42262
-"maschi" "Friuli-Venezia Giulia" 2016 "40-64 anni" 21524 21974
-"maschi" "Friuli-Venezia Giulia" 2017 "18-39 anni" 33654 47282
-"maschi" "Friuli-Venezia Giulia" 2017 "40-64 anni" 22190 24346
-"maschi" "Friuli-Venezia Giulia" 2018 "18-39 anni" 34824 49782
-"maschi" "Friuli-Venezia Giulia" 2018 "40-64 anni" 22116 24884
-"maschi" "Friuli-Venezia Giulia" 2019 "18-39 anni" 40820 46794
-"maschi" "Friuli-Venezia Giulia" 2019 "40-64 anni" 26284 27006
-"maschi" "Friuli-Venezia Giulia" 2020 "18-39 anni" 35068 42290
-"maschi" "Friuli-Venezia Giulia" 2020 "40-64 anni" 22362 24904
-"maschi" "Friuli-Venezia Giulia" 2021 "18-39 anni" 35932 47812
-"maschi" "Friuli-Venezia Giulia" 2021 "40-64 anni" 23774 26656
-"maschi" "Friuli-Venezia Giulia" 2022 "18-39 anni" 38150 52050
-"maschi" "Friuli-Venezia Giulia" 2022 "40-64 anni" 24136 27480
-"maschi" "Lazio" 2002 "18-39 anni" 114792 132334
-"maschi" "Lazio" 2002 "40-64 anni" 60278 61050
-"maschi" "Lazio" 2003 "18-39 anni" 109822 161572
-"maschi" "Lazio" 2003 "40-64 anni" 60576 66870
-"maschi" "Lazio" 2004 "18-39 anni" 112798 186468
-"maschi" "Lazio" 2004 "40-64 anni" 64762 78022
-"maschi" "Lazio" 2005 "18-39 anni" 124176 157198
-"maschi" "Lazio" 2005 "40-64 anni" 74540 77754
-"maschi" "Lazio" 2006 "18-39 anni" 114508 152956
-"maschi" "Lazio" 2006 "40-64 anni" 68168 74044
-"maschi" "Lazio" 2007 "18-39 anni" 107544 191660
-"maschi" "Lazio" 2007 "40-64 anni" 64892 78878
-"maschi" "Lazio" 2008 "18-39 anni" 129738 212252
-"maschi" "Lazio" 2008 "40-64 anni" 85586 97762
-"maschi" "Lazio" 2009 "18-39 anni" 108842 185260
-"maschi" "Lazio" 2009 "40-64 anni" 69794 82132
-"maschi" "Lazio" 2010 "18-39 anni" 110410 186420
-"maschi" "Lazio" 2010 "40-64 anni" 72670 85004
-"maschi" "Lazio" 2011 "18-39 anni" 109886 187004
-"maschi" "Lazio" 2011 "40-64 anni" 71920 87132
-"maschi" "Lazio" 2012 "18-39 anni" 134648 228092
-"maschi" "Lazio" 2012 "40-64 anni" 97534 117062
-"maschi" "Lazio" 2013 "18-39 anni" 114724 173840
-"maschi" "Lazio" 2013 "40-64 anni" 80914 92126
-"maschi" "Lazio" 2014 "18-39 anni" 111114 165412
-"maschi" "Lazio" 2014 "40-64 anni" 81406 89982
-"maschi" "Lazio" 2015 "18-39 anni" 109800 164914
-"maschi" "Lazio" 2015 "40-64 anni" 80026 86534
-"maschi" "Lazio" 2016 "18-39 anni" 116954 164186
-"maschi" "Lazio" 2016 "40-64 anni" 84372 90164
-"maschi" "Lazio" 2017 "18-39 anni" 112558 158154
-"maschi" "Lazio" 2017 "40-64 anni" 84462 87926
-"maschi" "Lazio" 2018 "18-39 anni" 116014 156760
-"maschi" "Lazio" 2018 "40-64 anni" 87310 89304
-"maschi" "Lazio" 2019 "18-39 anni" 133668 160712
-"maschi" "Lazio" 2019 "40-64 anni" 97642 102020
-"maschi" "Lazio" 2020 "18-39 anni" 110968 132214
-"maschi" "Lazio" 2020 "40-64 anni" 86568 85636
-"maschi" "Lazio" 2021 "18-39 anni" 121064 150268
-"maschi" "Lazio" 2021 "40-64 anni" 93696 99716
-"maschi" "Lazio" 2022 "18-39 anni" 123150 160630
-"maschi" "Lazio" 2022 "40-64 anni" 94994 106326
-"maschi" "Liguria" 2002 "18-39 anni" 38560 44386
-"maschi" "Liguria" 2002 "40-64 anni" 22712 25796
-"maschi" "Liguria" 2003 "18-39 anni" 36624 52802
-"maschi" "Liguria" 2003 "40-64 anni" 22288 27258
-"maschi" "Liguria" 2004 "18-39 anni" 38488 53224
-"maschi" "Liguria" 2004 "40-64 anni" 24634 29288
-"maschi" "Liguria" 2005 "18-39 anni" 37150 46352
-"maschi" "Liguria" 2005 "40-64 anni" 24064 27554
-"maschi" "Liguria" 2006 "18-39 anni" 38602 46638
-"maschi" "Liguria" 2006 "40-64 anni" 25862 28748
-"maschi" "Liguria" 2007 "18-39 anni" 37900 49668
-"maschi" "Liguria" 2007 "40-64 anni" 25950 29712
-"maschi" "Liguria" 2008 "18-39 anni" 37694 55508
-"maschi" "Liguria" 2008 "40-64 anni" 26632 31364
-"maschi" "Liguria" 2009 "18-39 anni" 35304 48970
-"maschi" "Liguria" 2009 "40-64 anni" 25216 30448
-"maschi" "Liguria" 2010 "18-39 anni" 38458 54570
-"maschi" "Liguria" 2010 "40-64 anni" 28774 33064
-"maschi" "Liguria" 2011 "18-39 anni" 36044 50786
-"maschi" "Liguria" 2011 "40-64 anni" 28220 31376
-"maschi" "Liguria" 2012 "18-39 anni" 41280 53684
-"maschi" "Liguria" 2012 "40-64 anni" 32990 35228
-"maschi" "Liguria" 2013 "18-39 anni" 37488 45714
-"maschi" "Liguria" 2013 "40-64 anni" 30952 31038
-"maschi" "Liguria" 2014 "18-39 anni" 34852 41102
-"maschi" "Liguria" 2014 "40-64 anni" 29198 29810
-"maschi" "Liguria" 2015 "18-39 anni" 34522 42672
-"maschi" "Liguria" 2015 "40-64 anni" 28020 28750
-"maschi" "Liguria" 2016 "18-39 anni" 34452 48740
-"maschi" "Liguria" 2016 "40-64 anni" 29260 31904
-"maschi" "Liguria" 2017 "18-39 anni" 34800 48632
-"maschi" "Liguria" 2017 "40-64 anni" 29104 31846
-"maschi" "Liguria" 2018 "18-39 anni" 36152 48092
-"maschi" "Liguria" 2018 "40-64 anni" 29452 33306
-"maschi" "Liguria" 2019 "18-39 anni" 39644 48392
-"maschi" "Liguria" 2019 "40-64 anni" 31478 37660
-"maschi" "Liguria" 2020 "18-39 anni" 35508 41942
-"maschi" "Liguria" 2020 "40-64 anni" 29776 33842
-"maschi" "Liguria" 2021 "18-39 anni" 37968 49244
-"maschi" "Liguria" 2021 "40-64 anni" 31530 37360
-"maschi" "Liguria" 2022 "18-39 anni" 38316 56190
-"maschi" "Liguria" 2022 "40-64 anni" 29736 39168
-"maschi" "Lombardia" 2002 "18-39 anni" 318434 411038
-"maschi" "Lombardia" 2002 "40-64 anni" 129538 133702
-"maschi" "Lombardia" 2003 "18-39 anni" 311464 475416
-"maschi" "Lombardia" 2003 "40-64 anni" 129622 142256
-"maschi" "Lombardia" 2004 "18-39 anni" 356780 550810
-"maschi" "Lombardia" 2004 "40-64 anni" 154230 174294
-"maschi" "Lombardia" 2005 "18-39 anni" 346104 455116
-"maschi" "Lombardia" 2005 "40-64 anni" 148348 157136
-"maschi" "Lombardia" 2006 "18-39 anni" 372990 470188
-"maschi" "Lombardia" 2006 "40-64 anni" 167732 172604
-"maschi" "Lombardia" 2007 "18-39 anni" 356100 497196
-"maschi" "Lombardia" 2007 "40-64 anni" 172116 185334
-"maschi" "Lombardia" 2008 "18-39 anni" 338810 471434
-"maschi" "Lombardia" 2008 "40-64 anni" 169050 182844
-"maschi" "Lombardia" 2009 "18-39 anni" 301912 419678
-"maschi" "Lombardia" 2009 "40-64 anni" 155336 166272
-"maschi" "Lombardia" 2010 "18-39 anni" 312136 453852
-"maschi" "Lombardia" 2010 "40-64 anni" 166036 180508
-"maschi" "Lombardia" 2011 "18-39 anni" 311972 451062
-"maschi" "Lombardia" 2011 "40-64 anni" 174594 188206
-"maschi" "Lombardia" 2012 "18-39 anni" 351594 468968
-"maschi" "Lombardia" 2012 "40-64 anni" 203742 208134
-"maschi" "Lombardia" 2013 "18-39 anni" 315360 414118
-"maschi" "Lombardia" 2013 "40-64 anni" 190032 192550
-"maschi" "Lombardia" 2014 "18-39 anni" 302156 379374
-"maschi" "Lombardia" 2014 "40-64 anni" 186768 185466
-"maschi" "Lombardia" 2015 "18-39 anni" 296990 370498
-"maschi" "Lombardia" 2015 "40-64 anni" 188554 184606
-"maschi" "Lombardia" 2016 "18-39 anni" 304254 392552
-"maschi" "Lombardia" 2016 "40-64 anni" 200030 199156
-"maschi" "Lombardia" 2017 "18-39 anni" 303040 416398
-"maschi" "Lombardia" 2017 "40-64 anni" 203004 206164
-"maschi" "Lombardia" 2018 "18-39 anni" 308016 429968
-"maschi" "Lombardia" 2018 "40-64 anni" 212232 219268
-"maschi" "Lombardia" 2019 "18-39 anni" 345764 460948
-"maschi" "Lombardia" 2019 "40-64 anni" 242430 255658
-"maschi" "Lombardia" 2020 "18-39 anni" 307390 382588
-"maschi" "Lombardia" 2020 "40-64 anni" 219974 218448
-"maschi" "Lombardia" 2021 "18-39 anni" 334330 424802
-"maschi" "Lombardia" 2021 "40-64 anni" 245558 246852
-"maschi" "Lombardia" 2022 "18-39 anni" 337462 471442
-"maschi" "Lombardia" 2022 "40-64 anni" 239592 252708
-"maschi" "Marche" 2002 "18-39 anni" 32796 50680
-"maschi" "Marche" 2002 "40-64 anni" 12734 18192
-"maschi" "Marche" 2003 "18-39 anni" 34174 61316
-"maschi" "Marche" 2003 "40-64 anni" 13776 21288
-"maschi" "Marche" 2004 "18-39 anni" 40726 63544
-"maschi" "Marche" 2004 "40-64 anni" 16584 23356
-"maschi" "Marche" 2005 "18-39 anni" 40490 56268
-"maschi" "Marche" 2005 "40-64 anni" 16528 22332
-"maschi" "Marche" 2006 "18-39 anni" 40062 53378
-"maschi" "Marche" 2006 "40-64 anni" 17712 22194
-"maschi" "Marche" 2007 "18-39 anni" 39040 63410
-"maschi" "Marche" 2007 "40-64 anni" 18544 25676
-"maschi" "Marche" 2008 "18-39 anni" 41350 63460
-"maschi" "Marche" 2008 "40-64 anni" 19608 26494
-"maschi" "Marche" 2009 "18-39 anni" 41060 51796
-"maschi" "Marche" 2009 "40-64 anni" 19644 23502
-"maschi" "Marche" 2010 "18-39 anni" 40170 49620
-"maschi" "Marche" 2010 "40-64 anni" 19878 22780
-"maschi" "Marche" 2011 "18-39 anni" 38220 47542
-"maschi" "Marche" 2011 "40-64 anni" 20580 22732
-"maschi" "Marche" 2012 "18-39 anni" 41870 48298
-"maschi" "Marche" 2012 "40-64 anni" 25044 26158
-"maschi" "Marche" 2013 "18-39 anni" 37326 39164
-"maschi" "Marche" 2013 "40-64 anni" 22246 22058
-"maschi" "Marche" 2014 "18-39 anni" 35250 38126
-"maschi" "Marche" 2014 "40-64 anni" 21694 22070
-"maschi" "Marche" 2015 "18-39 anni" 34906 38672
-"maschi" "Marche" 2015 "40-64 anni" 21622 21704
-"maschi" "Marche" 2016 "18-39 anni" 35534 41520
-"maschi" "Marche" 2016 "40-64 anni" 23504 23478
-"maschi" "Marche" 2017 "18-39 anni" 36260 46680
-"maschi" "Marche" 2017 "40-64 anni" 23110 23826
-"maschi" "Marche" 2018 "18-39 anni" 37682 44628
-"maschi" "Marche" 2018 "40-64 anni" 24324 25200
-"maschi" "Marche" 2019 "18-39 anni" 42396 45106
-"maschi" "Marche" 2019 "40-64 anni" 27938 28620
-"maschi" "Marche" 2020 "18-39 anni" 37550 40942
-"maschi" "Marche" 2020 "40-64 anni" 25408 26090
-"maschi" "Marche" 2021 "18-39 anni" 37798 46826
-"maschi" "Marche" 2021 "40-64 anni" 26150 28694
-"maschi" "Marche" 2022 "18-39 anni" 40348 51006
-"maschi" "Marche" 2022 "40-64 anni" 26268 31350
-"maschi" "Molise" 2002 "18-39 anni" 6878 7712
-"maschi" "Molise" 2002 "40-64 anni" 2394 3598
-"maschi" "Molise" 2003 "18-39 anni" 6828 7730
-"maschi" "Molise" 2003 "40-64 anni" 2568 3332
-"maschi" "Molise" 2004 "18-39 anni" 7446 7516
-"maschi" "Molise" 2004 "40-64 anni" 3092 3686
-"maschi" "Molise" 2005 "18-39 anni" 7198 6686
-"maschi" "Molise" 2005 "40-64 anni" 2808 3448
-"maschi" "Molise" 2006 "18-39 anni" 7028 7096
-"maschi" "Molise" 2006 "40-64 anni" 2884 3740
-"maschi" "Molise" 2007 "18-39 anni" 7624 8382
-"maschi" "Molise" 2007 "40-64 anni" 3324 4120
-"maschi" "Molise" 2008 "18-39 anni" 7138 7550
-"maschi" "Molise" 2008 "40-64 anni" 3394 4228
-"maschi" "Molise" 2009 "18-39 anni" 7316 7396
-"maschi" "Molise" 2009 "40-64 anni" 3572 4348
-"maschi" "Molise" 2010 "18-39 anni" 7110 6994
-"maschi" "Molise" 2010 "40-64 anni" 3244 4000
-"maschi" "Molise" 2011 "18-39 anni" 7308 7692
-"maschi" "Molise" 2011 "40-64 anni" 3454 4562
-"maschi" "Molise" 2012 "18-39 anni" 8520 8278
-"maschi" "Molise" 2012 "40-64 anni" 4942 6024
-"maschi" "Molise" 2013 "18-39 anni" 7240 6780
-"maschi" "Molise" 2013 "40-64 anni" 4132 4998
-"maschi" "Molise" 2014 "18-39 anni" 6948 6726
-"maschi" "Molise" 2014 "40-64 anni" 4198 4332
-"maschi" "Molise" 2015 "18-39 anni" 8042 10568
-"maschi" "Molise" 2015 "40-64 anni" 3958 4036
-"maschi" "Molise" 2016 "18-39 anni" 9152 10650
-"maschi" "Molise" 2016 "40-64 anni" 4716 4478
-"maschi" "Molise" 2017 "18-39 anni" 8398 12360
-"maschi" "Molise" 2017 "40-64 anni" 4520 4286
-"maschi" "Molise" 2018 "18-39 anni" 9880 10410
-"maschi" "Molise" 2018 "40-64 anni" 4992 4612
-"maschi" "Molise" 2019 "18-39 anni" 11272 8812
-"maschi" "Molise" 2019 "40-64 anni" 5320 5272
-"maschi" "Molise" 2020 "18-39 anni" 9778 7538
-"maschi" "Molise" 2020 "40-64 anni" 4932 4638
-"maschi" "Molise" 2021 "18-39 anni" 10344 8846
-"maschi" "Molise" 2021 "40-64 anni" 5270 4976
-"maschi" "Molise" 2022 "18-39 anni" 10492 11410
-"maschi" "Molise" 2022 "40-64 anni" 5150 5336
-"maschi" "Piemonte" 2002 "18-39 anni" 140852 158768
-"maschi" "Piemonte" 2002 "40-64 anni" 65994 67738
-"maschi" "Piemonte" 2003 "18-39 anni" 135728 203676
-"maschi" "Piemonte" 2003 "40-64 anni" 65288 74636
-"maschi" "Piemonte" 2004 "18-39 anni" 152900 193170
-"maschi" "Piemonte" 2004 "40-64 anni" 74792 80148
-"maschi" "Piemonte" 2005 "18-39 anni" 143106 163122
-"maschi" "Piemonte" 2005 "40-64 anni" 73476 74816
-"maschi" "Piemonte" 2006 "18-39 anni" 145038 165948
-"maschi" "Piemonte" 2006 "40-64 anni" 75556 77210
-"maschi" "Piemonte" 2007 "18-39 anni" 148224 220928
-"maschi" "Piemonte" 2007 "40-64 anni" 81414 91776
-"maschi" "Piemonte" 2008 "18-39 anni" 143132 194132
-"maschi" "Piemonte" 2008 "40-64 anni" 79662 88990
-"maschi" "Piemonte" 2009 "18-39 anni" 137510 175114
-"maschi" "Piemonte" 2009 "40-64 anni" 79256 84782
-"maschi" "Piemonte" 2010 "18-39 anni" 135900 172070
-"maschi" "Piemonte" 2010 "40-64 anni" 81210 85582
-"maschi" "Piemonte" 2011 "18-39 anni" 133972 168034
-"maschi" "Piemonte" 2011 "40-64 anni" 82804 87844
-"maschi" "Piemonte" 2012 "18-39 anni" 151538 186804
-"maschi" "Piemonte" 2012 "40-64 anni" 98778 100700
-"maschi" "Piemonte" 2013 "18-39 anni" 133790 155254
-"maschi" "Piemonte" 2013 "40-64 anni" 88250 87060
-"maschi" "Piemonte" 2014 "18-39 anni" 128386 146964
-"maschi" "Piemonte" 2014 "40-64 anni" 87052 84782
-"maschi" "Piemonte" 2015 "18-39 anni" 124062 148888
-"maschi" "Piemonte" 2015 "40-64 anni" 85964 83990
-"maschi" "Piemonte" 2016 "18-39 anni" 127138 167116
-"maschi" "Piemonte" 2016 "40-64 anni" 90228 89514
-"maschi" "Piemonte" 2017 "18-39 anni" 128582 171178
-"maschi" "Piemonte" 2017 "40-64 anni" 90514 92824
-"maschi" "Piemonte" 2018 "18-39 anni" 129550 157624
-"maschi" "Piemonte" 2018 "40-64 anni" 89594 90652
-"maschi" "Piemonte" 2019 "18-39 anni" 145264 175260
-"maschi" "Piemonte" 2019 "40-64 anni" 99020 104900
-"maschi" "Piemonte" 2020 "18-39 anni" 130316 152788
-"maschi" "Piemonte" 2020 "40-64 anni" 91296 94098
-"maschi" "Piemonte" 2021 "18-39 anni" 136534 161506
-"maschi" "Piemonte" 2021 "40-64 anni" 95298 98118
-"maschi" "Piemonte" 2022 "18-39 anni" 138894 180840
-"maschi" "Piemonte" 2022 "40-64 anni" 94724 102856
-"maschi" "Puglia" 2002 "18-39 anni" 93212 63534
-"maschi" "Puglia" 2002 "40-64 anni" 25426 24970
-"maschi" "Puglia" 2003 "18-39 anni" 89718 72376
-"maschi" "Puglia" 2003 "40-64 anni" 25398 26710
-"maschi" "Puglia" 2004 "18-39 anni" 89728 66600
-"maschi" "Puglia" 2004 "40-64 anni" 28088 27666
-"maschi" "Puglia" 2005 "18-39 anni" 85644 61264
-"maschi" "Puglia" 2005 "40-64 anni" 26612 27710
-"maschi" "Puglia" 2006 "18-39 anni" 90744 61664
-"maschi" "Puglia" 2006 "40-64 anni" 27260 27436
-"maschi" "Puglia" 2007 "18-39 anni" 86846 70624
-"maschi" "Puglia" 2007 "40-64 anni" 28298 31480
-"maschi" "Puglia" 2008 "18-39 anni" 88454 68326
-"maschi" "Puglia" 2008 "40-64 anni" 29650 32422
-"maschi" "Puglia" 2009 "18-39 anni" 81436 65424
-"maschi" "Puglia" 2009 "40-64 anni" 28468 30800
-"maschi" "Puglia" 2010 "18-39 anni" 81070 70954
-"maschi" "Puglia" 2010 "40-64 anni" 29772 34278
-"maschi" "Puglia" 2011 "18-39 anni" 87318 66338
-"maschi" "Puglia" 2011 "40-64 anni" 32498 34380
-"maschi" "Puglia" 2012 "18-39 anni" 100506 74504
-"maschi" "Puglia" 2012 "40-64 anni" 39250 40380
-"maschi" "Puglia" 2013 "18-39 anni" 87136 65660
-"maschi" "Puglia" 2013 "40-64 anni" 35578 37104
-"maschi" "Puglia" 2014 "18-39 anni" 81548 65366
-"maschi" "Puglia" 2014 "40-64 anni" 34844 35312
-"maschi" "Puglia" 2015 "18-39 anni" 78626 66576
-"maschi" "Puglia" 2015 "40-64 anni" 34920 35714
-"maschi" "Puglia" 2016 "18-39 anni" 82338 68754
-"maschi" "Puglia" 2016 "40-64 anni" 37008 37360
-"maschi" "Puglia" 2017 "18-39 anni" 85054 74620
-"maschi" "Puglia" 2017 "40-64 anni" 39412 40034
-"maschi" "Puglia" 2018 "18-39 anni" 87732 74622
-"maschi" "Puglia" 2018 "40-64 anni" 39464 39366
-"maschi" "Puglia" 2019 "18-39 anni" 104394 74096
-"maschi" "Puglia" 2019 "40-64 anni" 44930 46078
-"maschi" "Puglia" 2020 "18-39 anni" 86622 67858
-"maschi" "Puglia" 2020 "40-64 anni" 40952 43414
-"maschi" "Puglia" 2021 "18-39 anni" 88056 76542
-"maschi" "Puglia" 2021 "40-64 anni" 43308 48324
-"maschi" "Puglia" 2022 "18-39 anni" 99532 78212
-"maschi" "Puglia" 2022 "40-64 anni" 44440 49842
-"maschi" "Sardegna" 2002 "18-39 anni" 39314 36158
-"maschi" "Sardegna" 2002 "40-64 anni" 13598 16324
-"maschi" "Sardegna" 2003 "18-39 anni" 39130 39938
-"maschi" "Sardegna" 2003 "40-64 anni" 13526 17292
-"maschi" "Sardegna" 2004 "18-39 anni" 39632 38890
-"maschi" "Sardegna" 2004 "40-64 anni" 15358 18796
-"maschi" "Sardegna" 2005 "18-39 anni" 37870 37152
-"maschi" "Sardegna" 2005 "40-64 anni" 15268 19492
-"maschi" "Sardegna" 2006 "18-39 anni" 38574 38304
-"maschi" "Sardegna" 2006 "40-64 anni" 16132 20230
-"maschi" "Sardegna" 2007 "18-39 anni" 38442 41104
-"maschi" "Sardegna" 2007 "40-64 anni" 16488 22088
-"maschi" "Sardegna" 2008 "18-39 anni" 39446 41018
-"maschi" "Sardegna" 2008 "40-64 anni" 18510 22576
-"maschi" "Sardegna" 2009 "18-39 anni" 38200 38026
-"maschi" "Sardegna" 2009 "40-64 anni" 18246 21308
-"maschi" "Sardegna" 2010 "18-39 anni" 36834 39152
-"maschi" "Sardegna" 2010 "40-64 anni" 18434 22416
-"maschi" "Sardegna" 2011 "18-39 anni" 37332 36870
-"maschi" "Sardegna" 2011 "40-64 anni" 19592 21694
-"maschi" "Sardegna" 2012 "18-39 anni" 41786 41264
-"maschi" "Sardegna" 2012 "40-64 anni" 24450 26834
-"maschi" "Sardegna" 2013 "18-39 anni" 36578 35816
-"maschi" "Sardegna" 2013 "40-64 anni" 21922 24802
-"maschi" "Sardegna" 2014 "18-39 anni" 34782 32476
-"maschi" "Sardegna" 2014 "40-64 anni" 20764 22444
-"maschi" "Sardegna" 2015 "18-39 anni" 33426 34446
-"maschi" "Sardegna" 2015 "40-64 anni" 19932 21724
-"maschi" "Sardegna" 2016 "18-39 anni" 35184 36608
-"maschi" "Sardegna" 2016 "40-64 anni" 21364 22424
-"maschi" "Sardegna" 2017 "18-39 anni" 35112 41028
-"maschi" "Sardegna" 2017 "40-64 anni" 21804 23384
-"maschi" "Sardegna" 2018 "18-39 anni" 36296 35900
-"maschi" "Sardegna" 2018 "40-64 anni" 22566 23234
-"maschi" "Sardegna" 2019 "18-39 anni" 40036 34124
-"maschi" "Sardegna" 2019 "40-64 anni" 25276 26454
-"maschi" "Sardegna" 2020 "18-39 anni" 35620 30356
-"maschi" "Sardegna" 2020 "40-64 anni" 23230 25074
-"maschi" "Sardegna" 2021 "18-39 anni" 34356 31958
-"maschi" "Sardegna" 2021 "40-64 anni" 24552 27254
-"maschi" "Sardegna" 2022 "18-39 anni" 36758 34182
-"maschi" "Sardegna" 2022 "40-64 anni" 25270 29164
-"maschi" "Sicilia" 2002 "18-39 anni" 126764 88880
-"maschi" "Sicilia" 2002 "40-64 anni" 42570 38724
-"maschi" "Sicilia" 2003 "18-39 anni" 121954 107220
-"maschi" "Sicilia" 2003 "40-64 anni" 42574 41382
-"maschi" "Sicilia" 2004 "18-39 anni" 133914 106124
-"maschi" "Sicilia" 2004 "40-64 anni" 48252 46186
-"maschi" "Sicilia" 2005 "18-39 anni" 121220 99036
-"maschi" "Sicilia" 2005 "40-64 anni" 46062 45870
-"maschi" "Sicilia" 2006 "18-39 anni" 125052 97336
-"maschi" "Sicilia" 2006 "40-64 anni" 47148 46440
-"maschi" "Sicilia" 2007 "18-39 anni" 123318 117500
-"maschi" "Sicilia" 2007 "40-64 anni" 49362 52934
-"maschi" "Sicilia" 2008 "18-39 anni" 124646 115896
-"maschi" "Sicilia" 2008 "40-64 anni" 51780 55244
-"maschi" "Sicilia" 2009 "18-39 anni" 113128 108440
-"maschi" "Sicilia" 2009 "40-64 anni" 47420 52230
-"maschi" "Sicilia" 2010 "18-39 anni" 113664 115310
-"maschi" "Sicilia" 2010 "40-64 anni" 50598 56194
-"maschi" "Sicilia" 2011 "18-39 anni" 112942 104432
-"maschi" "Sicilia" 2011 "40-64 anni" 50040 53634
-"maschi" "Sicilia" 2012 "18-39 anni" 135312 119288
-"maschi" "Sicilia" 2012 "40-64 anni" 65372 66742
-"maschi" "Sicilia" 2013 "18-39 anni" 117218 106026
-"maschi" "Sicilia" 2013 "40-64 anni" 57634 58860
-"maschi" "Sicilia" 2014 "18-39 anni" 112798 107800
-"maschi" "Sicilia" 2014 "40-64 anni" 57374 57338
-"maschi" "Sicilia" 2015 "18-39 anni" 111314 104864
-"maschi" "Sicilia" 2015 "40-64 anni" 55194 53098
-"maschi" "Sicilia" 2016 "18-39 anni" 120506 100286
-"maschi" "Sicilia" 2016 "40-64 anni" 59400 55892
-"maschi" "Sicilia" 2017 "18-39 anni" 123564 98304
-"maschi" "Sicilia" 2017 "40-64 anni" 61116 56928
-"maschi" "Sicilia" 2018 "18-39 anni" 132636 103780
-"maschi" "Sicilia" 2018 "40-64 anni" 64514 58874
-"maschi" "Sicilia" 2019 "18-39 anni" 148308 99152
-"maschi" "Sicilia" 2019 "40-64 anni" 71960 66240
-"maschi" "Sicilia" 2020 "18-39 anni" 129942 96092
-"maschi" "Sicilia" 2020 "40-64 anni" 62724 60826
-"maschi" "Sicilia" 2021 "18-39 anni" 125882 101530
-"maschi" "Sicilia" 2021 "40-64 anni" 64422 64646
-"maschi" "Sicilia" 2022 "18-39 anni" 138336 109582
-"maschi" "Sicilia" 2022 "40-64 anni" 67484 69502
-"maschi" "Toscana" 2002 "18-39 anni" 89080 117376
-"maschi" "Toscana" 2002 "40-64 anni" 41514 50228
-"maschi" "Toscana" 2003 "18-39 anni" 87910 145526
-"maschi" "Toscana" 2003 "40-64 anni" 41084 54984
-"maschi" "Toscana" 2004 "18-39 anni" 99392 150618
-"maschi" "Toscana" 2004 "40-64 anni" 48168 61516
-"maschi" "Toscana" 2005 "18-39 anni" 96622 132994
-"maschi" "Toscana" 2005 "40-64 anni" 48412 57762
-"maschi" "Toscana" 2006 "18-39 anni" 98386 131618
-"maschi" "Toscana" 2006 "40-64 anni" 50842 60146
-"maschi" "Toscana" 2007 "18-39 anni" 95796 151240
-"maschi" "Toscana" 2007 "40-64 anni" 52670 66052
-"maschi" "Toscana" 2008 "18-39 anni" 94106 139480
-"maschi" "Toscana" 2008 "40-64 anni" 51768 64444
-"maschi" "Toscana" 2009 "18-39 anni" 91638 133066
-"maschi" "Toscana" 2009 "40-64 anni" 53590 62890
-"maschi" "Toscana" 2010 "18-39 anni" 90638 134934
-"maschi" "Toscana" 2010 "40-64 anni" 53740 64858
-"maschi" "Toscana" 2011 "18-39 anni" 94028 130620
-"maschi" "Toscana" 2011 "40-64 anni" 57116 66540
-"maschi" "Toscana" 2012 "18-39 anni" 107234 144796
-"maschi" "Toscana" 2012 "40-64 anni" 69354 77678
-"maschi" "Toscana" 2013 "18-39 anni" 92556 119882
-"maschi" "Toscana" 2013 "40-64 anni" 61976 67440
-"maschi" "Toscana" 2014 "18-39 anni" 90284 112570
-"maschi" "Toscana" 2014 "40-64 anni" 60034 65336
-"maschi" "Toscana" 2015 "18-39 anni" 85492 108986
-"maschi" "Toscana" 2015 "40-64 anni" 59652 65464
-"maschi" "Toscana" 2016 "18-39 anni" 89840 128556
-"maschi" "Toscana" 2016 "40-64 anni" 63816 68626
-"maschi" "Toscana" 2017 "18-39 anni" 90434 131822
-"maschi" "Toscana" 2017 "40-64 anni" 64126 69906
-"maschi" "Toscana" 2018 "18-39 anni" 93360 118702
-"maschi" "Toscana" 2018 "40-64 anni" 67490 73272
-"maschi" "Toscana" 2019 "18-39 anni" 105634 133570
-"maschi" "Toscana" 2019 "40-64 anni" 76252 87262
-"maschi" "Toscana" 2020 "18-39 anni" 94828 112818
-"maschi" "Toscana" 2020 "40-64 anni" 70808 78656
-"maschi" "Toscana" 2021 "18-39 anni" 99396 123040
-"maschi" "Toscana" 2021 "40-64 anni" 75248 83714
-"maschi" "Toscana" 2022 "18-39 anni" 100286 134614
-"maschi" "Toscana" 2022 "40-64 anni" 73922 87026
-"maschi" "Trentino Alto Adige / Südtirol" 2002 "18-39 anni" 24352 33006
-"maschi" "Trentino Alto Adige / Südtirol" 2002 "40-64 anni" 8788 10500
-"maschi" "Trentino Alto Adige / Südtirol" 2003 "18-39 anni" 26174 37824
-"maschi" "Trentino Alto Adige / Südtirol" 2003 "40-64 anni" 9766 11958
-"maschi" "Trentino Alto Adige / Südtirol" 2004 "18-39 anni" 27896 41324
-"maschi" "Trentino Alto Adige / Südtirol" 2004 "40-64 anni" 11978 14408
-"maschi" "Trentino Alto Adige / Südtirol" 2005 "18-39 anni" 27580 38554
-"maschi" "Trentino Alto Adige / Südtirol" 2005 "40-64 anni" 11258 13694
-"maschi" "Trentino Alto Adige / Südtirol" 2006 "18-39 anni" 28778 40064
-"maschi" "Trentino Alto Adige / Südtirol" 2006 "40-64 anni" 12562 14838
-"maschi" "Trentino Alto Adige / Südtirol" 2007 "18-39 anni" 29688 42820
-"maschi" "Trentino Alto Adige / Südtirol" 2007 "40-64 anni" 13512 16964
-"maschi" "Trentino Alto Adige / Südtirol" 2008 "18-39 anni" 28540 39932
-"maschi" "Trentino Alto Adige / Südtirol" 2008 "40-64 anni" 13224 16646
-"maschi" "Trentino Alto Adige / Südtirol" 2009 "18-39 anni" 28438 37914
-"maschi" "Trentino Alto Adige / Südtirol" 2009 "40-64 anni" 13406 15692
-"maschi" "Trentino Alto Adige / Südtirol" 2010 "18-39 anni" 27604 38238
-"maschi" "Trentino Alto Adige / Südtirol" 2010 "40-64 anni" 13744 16370
-"maschi" "Trentino Alto Adige / Südtirol" 2011 "18-39 anni" 28938 38644
-"maschi" "Trentino Alto Adige / Südtirol" 2011 "40-64 anni" 14750 17206
-"maschi" "Trentino Alto Adige / Südtirol" 2012 "18-39 anni" 31192 40842
-"maschi" "Trentino Alto Adige / Südtirol" 2012 "40-64 anni" 16798 18866
-"maschi" "Trentino Alto Adige / Südtirol" 2013 "18-39 anni" 28822 37290
-"maschi" "Trentino Alto Adige / Südtirol" 2013 "40-64 anni" 15626 17032
-"maschi" "Trentino Alto Adige / Südtirol" 2014 "18-39 anni" 28932 35308
-"maschi" "Trentino Alto Adige / Südtirol" 2014 "40-64 anni" 16056 16898
-"maschi" "Trentino Alto Adige / Südtirol" 2015 "18-39 anni" 30362 36988
-"maschi" "Trentino Alto Adige / Südtirol" 2015 "40-64 anni" 16292 17842
-"maschi" "Trentino Alto Adige / Südtirol" 2016 "18-39 anni" 30056 37530
-"maschi" "Trentino Alto Adige / Südtirol" 2016 "40-64 anni" 16904 18360
-"maschi" "Trentino Alto Adige / Südtirol" 2017 "18-39 anni" 31942 41976
-"maschi" "Trentino Alto Adige / Südtirol" 2017 "40-64 anni" 17782 19890
-"maschi" "Trentino Alto Adige / Südtirol" 2018 "18-39 anni" 34016 42884
-"maschi" "Trentino Alto Adige / Südtirol" 2018 "40-64 anni" 17692 20448
-"maschi" "Trentino Alto Adige / Südtirol" 2019 "18-39 anni" 36872 42440
-"maschi" "Trentino Alto Adige / Südtirol" 2019 "40-64 anni" 19936 22290
-"maschi" "Trentino Alto Adige / Südtirol" 2020 "18-39 anni" 31600 37302
-"maschi" "Trentino Alto Adige / Südtirol" 2020 "40-64 anni" 17980 20436
-"maschi" "Trentino Alto Adige / Südtirol" 2021 "18-39 anni" 33932 40186
-"maschi" "Trentino Alto Adige / Südtirol" 2021 "40-64 anni" 19270 20592
-"maschi" "Trentino Alto Adige / Südtirol" 2022 "18-39 anni" 35410 43738
-"maschi" "Trentino Alto Adige / Südtirol" 2022 "40-64 anni" 19658 21882
-"maschi" "Umbria" 2002 "18-39 anni" 16108 24206
-"maschi" "Umbria" 2002 "40-64 anni" 6498 9926
-"maschi" "Umbria" 2003 "18-39 anni" 16692 29834
-"maschi" "Umbria" 2003 "40-64 anni" 7178 11624
-"maschi" "Umbria" 2004 "18-39 anni" 18736 30402
-"maschi" "Umbria" 2004 "40-64 anni" 8302 12132
-"maschi" "Umbria" 2005 "18-39 anni" 18158 27140
-"maschi" "Umbria" 2005 "40-64 anni" 8196 12256
-"maschi" "Umbria" 2006 "18-39 anni" 19200 26122
-"maschi" "Umbria" 2006 "40-64 anni" 9138 11614
-"maschi" "Umbria" 2007 "18-39 anni" 20072 35288
-"maschi" "Umbria" 2007 "40-64 anni" 9892 14412
-"maschi" "Umbria" 2008 "18-39 anni" 18914 31766
-"maschi" "Umbria" 2008 "40-64 anni" 9516 14278
-"maschi" "Umbria" 2009 "18-39 anni" 20002 29486
-"maschi" "Umbria" 2009 "40-64 anni" 10430 14108
-"maschi" "Umbria" 2010 "18-39 anni" 19640 29688
-"maschi" "Umbria" 2010 "40-64 anni" 10608 13518
-"maschi" "Umbria" 2011 "18-39 anni" 19672 26210
-"maschi" "Umbria" 2011 "40-64 anni" 11116 13354
-"maschi" "Umbria" 2012 "18-39 anni" 22600 28520
-"maschi" "Umbria" 2012 "40-64 anni" 13302 15268
-"maschi" "Umbria" 2013 "18-39 anni" 20364 21640
-"maschi" "Umbria" 2013 "40-64 anni" 12796 12578
-"maschi" "Umbria" 2014 "18-39 anni" 18910 19740
-"maschi" "Umbria" 2014 "40-64 anni" 11772 11908
-"maschi" "Umbria" 2015 "18-39 anni" 19108 20922
-"maschi" "Umbria" 2015 "40-64 anni" 12330 12316
-"maschi" "Umbria" 2016 "18-39 anni" 18984 21414
-"maschi" "Umbria" 2016 "40-64 anni" 12412 12686
-"maschi" "Umbria" 2017 "18-39 anni" 18972 23762
-"maschi" "Umbria" 2017 "40-64 anni" 12434 13122
-"maschi" "Umbria" 2018 "18-39 anni" 19540 23560
-"maschi" "Umbria" 2018 "40-64 anni" 12728 13622
-"maschi" "Umbria" 2019 "18-39 anni" 21564 24038
-"maschi" "Umbria" 2019 "40-64 anni" 14956 16696
-"maschi" "Umbria" 2020 "18-39 anni" 19866 21386
-"maschi" "Umbria" 2020 "40-64 anni" 13674 14442
-"maschi" "Umbria" 2021 "18-39 anni" 19606 23028
-"maschi" "Umbria" 2021 "40-64 anni" 13792 14700
-"maschi" "Umbria" 2022 "18-39 anni" 21734 26668
-"maschi" "Umbria" 2022 "40-64 anni" 13816 15580
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2002 "18-39 anni" 11060 12912
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2002 "40-64 anni" 4240 4308
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2003 "18-39 anni" 10568 14192
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2003 "40-64 anni" 4328 5032
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2004 "18-39 anni" 11540 14484
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2004 "40-64 anni" 5324 6292
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2005 "18-39 anni" 11352 14300
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2005 "40-64 anni" 5576 6172
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2006 "18-39 anni" 11840 13536
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2006 "40-64 anni" 5288 5412
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2007 "18-39 anni" 12404 14240
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2007 "40-64 anni" 6132 6232
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2008 "18-39 anni" 11968 13124
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2008 "40-64 anni" 6408 6164
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2009 "18-39 anni" 12100 13104
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2009 "40-64 anni" 7264 6856
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2010 "18-39 anni" 11760 13020
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2010 "40-64 anni" 6252 6308
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2011 "18-39 anni" 10776 12116
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2011 "40-64 anni" 6348 6236
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2012 "18-39 anni" 11012 13528
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2012 "40-64 anni" 7376 7352
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2013 "18-39 anni" 10616 12784
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2013 "40-64 anni" 6440 6480
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2014 "18-39 anni" 9848 10204
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2014 "40-64 anni" 6824 6432
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2015 "18-39 anni" 10096 10052
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2015 "40-64 anni" 6384 5864
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2016 "18-39 anni" 8952 11060
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2016 "40-64 anni" 6740 6252
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2017 "18-39 anni" 9212 10932
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2017 "40-64 anni" 6396 6112
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2018 "18-39 anni" 9704 11160
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2018 "40-64 anni" 7196 6960
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2019 "18-39 anni" 10140 11336
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2019 "40-64 anni" 7216 7176
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2020 "18-39 anni" 8996 9404
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2020 "40-64 anni" 6652 6604
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2021 "18-39 anni" 9524 9940
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2021 "40-64 anni" 7128 7628
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2022 "18-39 anni" 9336 10676
-"maschi" "Valle d'Aosta / Vallée d'Aoste" 2022 "40-64 anni" 6648 7060
-"maschi" "Veneto" 2002 "18-39 anni" 140614 186926
-"maschi" "Veneto" 2002 "40-64 anni" 50630 60306
-"maschi" "Veneto" 2003 "18-39 anni" 148364 233962
-"maschi" "Veneto" 2003 "40-64 anni" 55262 71048
-"maschi" "Veneto" 2004 "18-39 anni" 167596 241842
-"maschi" "Veneto" 2004 "40-64 anni" 66068 79712
-"maschi" "Veneto" 2005 "18-39 anni" 166598 210948
-"maschi" "Veneto" 2005 "40-64 anni" 65326 73894
-"maschi" "Veneto" 2006 "18-39 anni" 172012 209344
-"maschi" "Veneto" 2006 "40-64 anni" 69842 77616
-"maschi" "Veneto" 2007 "18-39 anni" 168178 244948
-"maschi" "Veneto" 2007 "40-64 anni" 73138 87588
-"maschi" "Veneto" 2008 "18-39 anni" 157890 225422
-"maschi" "Veneto" 2008 "40-64 anni" 69962 83108
-"maschi" "Veneto" 2009 "18-39 anni" 152246 192342
-"maschi" "Veneto" 2009 "40-64 anni" 72164 79172
-"maschi" "Veneto" 2010 "18-39 anni" 149730 186746
-"maschi" "Veneto" 2010 "40-64 anni" 74176 79260
-"maschi" "Veneto" 2011 "18-39 anni" 149600 184418
-"maschi" "Veneto" 2011 "40-64 anni" 77700 82860
-"maschi" "Veneto" 2012 "18-39 anni" 158878 181988
-"maschi" "Veneto" 2012 "40-64 anni" 87966 88128
-"maschi" "Veneto" 2013 "18-39 anni" 139774 153816
-"maschi" "Veneto" 2013 "40-64 anni" 78674 76896
-"maschi" "Veneto" 2014 "18-39 anni" 134744 149128
-"maschi" "Veneto" 2014 "40-64 anni" 79510 78654
-"maschi" "Veneto" 2015 "18-39 anni" 131734 146846
-"maschi" "Veneto" 2015 "40-64 anni" 80266 78552
-"maschi" "Veneto" 2016 "18-39 anni" 135242 158816
-"maschi" "Veneto" 2016 "40-64 anni" 84630 85016
-"maschi" "Veneto" 2017 "18-39 anni" 135798 171880
-"maschi" "Veneto" 2017 "40-64 anni" 88616 91652
-"maschi" "Veneto" 2018 "18-39 anni" 140924 187568
-"maschi" "Veneto" 2018 "40-64 anni" 92648 97366
-"maschi" "Veneto" 2019 "18-39 anni" 153924 185984
-"maschi" "Veneto" 2019 "40-64 anni" 103318 110296
-"maschi" "Veneto" 2020 "18-39 anni" 138962 162756
-"maschi" "Veneto" 2020 "40-64 anni" 96410 100194
-"maschi" "Veneto" 2021 "18-39 anni" 142918 173420
-"maschi" "Veneto" 2021 "40-64 anni" 100708 108068
-"maschi" "Veneto" 2022 "18-39 anni" 148146 186938
-"maschi" "Veneto" 2022 "40-64 anni" 98150 109854
+"Sesso","Territorio","TIME","Età","emigrazioni_tot","immigrazioni_tot"
+"femmine","Abruzzo",2002,"18-39 anni",28756,32280
+"femmine","Abruzzo",2002,"40-64 anni",9354,12168
+"femmine","Abruzzo",2003,"18-39 anni",28182,36932
+"femmine","Abruzzo",2003,"40-64 anni",9472,16460
+"femmine","Abruzzo",2004,"18-39 anni",29874,37062
+"femmine","Abruzzo",2004,"40-64 anni",11076,15644
+"femmine","Abruzzo",2005,"18-39 anni",29188,36116
+"femmine","Abruzzo",2005,"40-64 anni",11336,15900
+"femmine","Abruzzo",2006,"18-39 anni",31076,36328
+"femmine","Abruzzo",2006,"40-64 anni",11738,15086
+"femmine","Abruzzo",2007,"18-39 anni",31916,47458
+"femmine","Abruzzo",2007,"40-64 anni",12636,21938
+"femmine","Abruzzo",2008,"18-39 anni",32724,44496
+"femmine","Abruzzo",2008,"40-64 anni",13768,22124
+"femmine","Abruzzo",2009,"18-39 anni",32358,37716
+"femmine","Abruzzo",2009,"40-64 anni",14514,19306
+"femmine","Abruzzo",2010,"18-39 anni",32252,38206
+"femmine","Abruzzo",2010,"40-64 anni",14640,20088
+"femmine","Abruzzo",2011,"18-39 anni",33010,38526
+"femmine","Abruzzo",2011,"40-64 anni",15972,19914
+"femmine","Abruzzo",2012,"18-39 anni",39298,42810
+"femmine","Abruzzo",2012,"40-64 anni",20796,24082
+"femmine","Abruzzo",2013,"18-39 anni",35984,38024
+"femmine","Abruzzo",2013,"40-64 anni",18692,21566
+"femmine","Abruzzo",2014,"18-39 anni",34278,34462
+"femmine","Abruzzo",2014,"40-64 anni",18302,19970
+"femmine","Abruzzo",2015,"18-39 anni",33976,34098
+"femmine","Abruzzo",2015,"40-64 anni",17806,19544
+"femmine","Abruzzo",2016,"18-39 anni",35484,35304
+"femmine","Abruzzo",2016,"40-64 anni",19496,21218
+"femmine","Abruzzo",2017,"18-39 anni",34848,32534
+"femmine","Abruzzo",2017,"40-64 anni",19120,19774
+"femmine","Abruzzo",2018,"18-39 anni",35614,34308
+"femmine","Abruzzo",2018,"40-64 anni",19876,22260
+"femmine","Abruzzo",2019,"18-39 anni",37338,35498
+"femmine","Abruzzo",2019,"40-64 anni",21818,24384
+"femmine","Abruzzo",2020,"18-39 anni",33322,31532
+"femmine","Abruzzo",2020,"40-64 anni",19150,20732
+"femmine","Abruzzo",2021,"18-39 anni",33360,33368
+"femmine","Abruzzo",2021,"40-64 anni",21000,23592
+"femmine","Basilicata",2002,"18-39 anni",12432,8978
+"femmine","Basilicata",2002,"40-64 anni",3110,3074
+"femmine","Basilicata",2003,"18-39 anni",12568,9920
+"femmine","Basilicata",2003,"40-64 anni",3282,4150
+"femmine","Basilicata",2004,"18-39 anni",12120,9804
+"femmine","Basilicata",2004,"40-64 anni",3918,4096
+"femmine","Basilicata",2005,"18-39 anni",12312,8546
+"femmine","Basilicata",2005,"40-64 anni",3744,3462
+"femmine","Basilicata",2006,"18-39 anni",12514,8618
+"femmine","Basilicata",2006,"40-64 anni",3794,3414
+"femmine","Basilicata",2007,"18-39 anni",12174,11700
+"femmine","Basilicata",2007,"40-64 anni",4094,5412
+"femmine","Basilicata",2008,"18-39 anni",12850,10048
+"femmine","Basilicata",2008,"40-64 anni",4182,4738
+"femmine","Basilicata",2009,"18-39 anni",13008,9750
+"femmine","Basilicata",2009,"40-64 anni",4566,4712
+"femmine","Basilicata",2010,"18-39 anni",12638,9564
+"femmine","Basilicata",2010,"40-64 anni",4158,4818
+"femmine","Basilicata",2011,"18-39 anni",12362,10320
+"femmine","Basilicata",2011,"40-64 anni",4164,4802
+"femmine","Basilicata",2012,"18-39 anni",14470,10810
+"femmine","Basilicata",2012,"40-64 anni",5410,5470
+"femmine","Basilicata",2013,"18-39 anni",11568,9414
+"femmine","Basilicata",2013,"40-64 anni",4582,5014
+"femmine","Basilicata",2014,"18-39 anni",11762,8774
+"femmine","Basilicata",2014,"40-64 anni",5056,4612
+"femmine","Basilicata",2015,"18-39 anni",11458,8608
+"femmine","Basilicata",2015,"40-64 anni",4452,4310
+"femmine","Basilicata",2016,"18-39 anni",12784,8506
+"femmine","Basilicata",2016,"40-64 anni",5238,4874
+"femmine","Basilicata",2017,"18-39 anni",12294,8894
+"femmine","Basilicata",2017,"40-64 anni",5488,4890
+"femmine","Basilicata",2018,"18-39 anni",12722,8892
+"femmine","Basilicata",2018,"40-64 anni",5372,4886
+"femmine","Basilicata",2019,"18-39 anni",14368,8922
+"femmine","Basilicata",2019,"40-64 anni",6042,5272
+"femmine","Basilicata",2020,"18-39 anni",12268,7586
+"femmine","Basilicata",2020,"40-64 anni",5260,4712
+"femmine","Basilicata",2021,"18-39 anni",12696,8414
+"femmine","Basilicata",2021,"40-64 anni",5802,5980
+"femmine","Bolzano / Bozen",2002,"18-39 anni",12182,14548
+"femmine","Bolzano / Bozen",2002,"40-64 anni",2944,3242
+"femmine","Bolzano / Bozen",2003,"18-39 anni",12894,16504
+"femmine","Bolzano / Bozen",2003,"40-64 anni",3268,4300
+"femmine","Bolzano / Bozen",2004,"18-39 anni",14312,17568
+"femmine","Bolzano / Bozen",2004,"40-64 anni",4096,5042
+"femmine","Bolzano / Bozen",2005,"18-39 anni",13984,18980
+"femmine","Bolzano / Bozen",2005,"40-64 anni",3966,5030
+"femmine","Bolzano / Bozen",2006,"18-39 anni",13880,18212
+"femmine","Bolzano / Bozen",2006,"40-64 anni",4032,5206
+"femmine","Bolzano / Bozen",2007,"18-39 anni",14480,21330
+"femmine","Bolzano / Bozen",2007,"40-64 anni",4616,7146
+"femmine","Bolzano / Bozen",2008,"18-39 anni",14734,19788
+"femmine","Bolzano / Bozen",2008,"40-64 anni",4678,6890
+"femmine","Bolzano / Bozen",2009,"18-39 anni",14898,19896
+"femmine","Bolzano / Bozen",2009,"40-64 anni",5040,7060
+"femmine","Bolzano / Bozen",2010,"18-39 anni",14762,18740
+"femmine","Bolzano / Bozen",2010,"40-64 anni",5404,7136
+"femmine","Bolzano / Bozen",2011,"18-39 anni",14824,19234
+"femmine","Bolzano / Bozen",2011,"40-64 anni",5772,7610
+"femmine","Bolzano / Bozen",2012,"18-39 anni",16714,20740
+"femmine","Bolzano / Bozen",2012,"40-64 anni",7014,8648
+"femmine","Bolzano / Bozen",2013,"18-39 anni",15180,18528
+"femmine","Bolzano / Bozen",2013,"40-64 anni",6240,7766
+"femmine","Bolzano / Bozen",2014,"18-39 anni",15288,18054
+"femmine","Bolzano / Bozen",2014,"40-64 anni",6396,7360
+"femmine","Bolzano / Bozen",2015,"18-39 anni",16418,18884
+"femmine","Bolzano / Bozen",2015,"40-64 anni",6736,8226
+"femmine","Bolzano / Bozen",2016,"18-39 anni",16250,18786
+"femmine","Bolzano / Bozen",2016,"40-64 anni",7014,8414
+"femmine","Bolzano / Bozen",2017,"18-39 anni",16276,19986
+"femmine","Bolzano / Bozen",2017,"40-64 anni",7060,9222
+"femmine","Bolzano / Bozen",2018,"18-39 anni",16866,20868
+"femmine","Bolzano / Bozen",2018,"40-64 anni",7298,9534
+"femmine","Bolzano / Bozen",2019,"18-39 anni",18324,20256
+"femmine","Bolzano / Bozen",2019,"40-64 anni",8614,9798
+"femmine","Bolzano / Bozen",2020,"18-39 anni",17298,18750
+"femmine","Bolzano / Bozen",2020,"40-64 anni",7732,8942
+"femmine","Bolzano / Bozen",2021,"18-39 anni",17400,18850
+"femmine","Bolzano / Bozen",2021,"40-64 anni",8522,9824
+"femmine","Calabria",2002,"18-39 anni",54654,42140
+"femmine","Calabria",2002,"40-64 anni",14272,14002
+"femmine","Calabria",2003,"18-39 anni",56790,52220
+"femmine","Calabria",2003,"40-64 anni",15774,21388
+"femmine","Calabria",2004,"18-39 anni",62016,44230
+"femmine","Calabria",2004,"40-64 anni",18470,18846
+"femmine","Calabria",2005,"18-39 anni",54054,38902
+"femmine","Calabria",2005,"40-64 anni",17268,15722
+"femmine","Calabria",2006,"18-39 anni",52906,38464
+"femmine","Calabria",2006,"40-64 anni",18504,17026
+"femmine","Calabria",2007,"18-39 anni",51208,57384
+"femmine","Calabria",2007,"40-64 anni",17656,25496
+"femmine","Calabria",2008,"18-39 anni",52146,47552
+"femmine","Calabria",2008,"40-64 anni",18796,22834
+"femmine","Calabria",2009,"18-39 anni",53246,47394
+"femmine","Calabria",2009,"40-64 anni",19940,23656
+"femmine","Calabria",2010,"18-39 anni",51798,46400
+"femmine","Calabria",2010,"40-64 anni",19688,23294
+"femmine","Calabria",2011,"18-39 anni",51604,43164
+"femmine","Calabria",2011,"40-64 anni",19732,21236
+"femmine","Calabria",2012,"18-39 anni",59206,45916
+"femmine","Calabria",2012,"40-64 anni",25226,25508
+"femmine","Calabria",2013,"18-39 anni",50180,41360
+"femmine","Calabria",2013,"40-64 anni",21510,22234
+"femmine","Calabria",2014,"18-39 anni",48948,38618
+"femmine","Calabria",2014,"40-64 anni",19924,21648
+"femmine","Calabria",2015,"18-39 anni",47398,35974
+"femmine","Calabria",2015,"40-64 anni",19910,19134
+"femmine","Calabria",2016,"18-39 anni",50650,38556
+"femmine","Calabria",2016,"40-64 anni",21402,20408
+"femmine","Calabria",2017,"18-39 anni",49364,36978
+"femmine","Calabria",2017,"40-64 anni",21566,19992
+"femmine","Calabria",2018,"18-39 anni",49800,36450
+"femmine","Calabria",2018,"40-64 anni",21974,20748
+"femmine","Calabria",2019,"18-39 anni",58456,37882
+"femmine","Calabria",2019,"40-64 anni",25310,22622
+"femmine","Calabria",2020,"18-39 anni",47768,31740
+"femmine","Calabria",2020,"40-64 anni",21582,19656
+"femmine","Calabria",2021,"18-39 anni",49896,36884
+"femmine","Calabria",2021,"40-64 anni",22290,23398
+"femmine","Campania",2002,"18-39 anni",168372,129864
+"femmine","Campania",2002,"40-64 anni",47738,43074
+"femmine","Campania",2003,"18-39 anni",166238,155328
+"femmine","Campania",2003,"40-64 anni",49804,63444
+"femmine","Campania",2004,"18-39 anni",175992,164860
+"femmine","Campania",2004,"40-64 anni",57116,71980
+"femmine","Campania",2005,"18-39 anni",166922,139370
+"femmine","Campania",2005,"40-64 anni",57260,54114
+"femmine","Campania",2006,"18-39 anni",165482,138722
+"femmine","Campania",2006,"40-64 anni",60614,55210
+"femmine","Campania",2007,"18-39 anni",169422,156150
+"femmine","Campania",2007,"40-64 anni",64282,66412
+"femmine","Campania",2008,"18-39 anni",178714,154932
+"femmine","Campania",2008,"40-64 anni",67766,70360
+"femmine","Campania",2009,"18-39 anni",161634,148996
+"femmine","Campania",2009,"40-64 anni",65006,69224
+"femmine","Campania",2010,"18-39 anni",161692,151078
+"femmine","Campania",2010,"40-64 anni",67766,76482
+"femmine","Campania",2011,"18-39 anni",166210,146200
+"femmine","Campania",2011,"40-64 anni",71468,75666
+"femmine","Campania",2012,"18-39 anni",188050,159014
+"femmine","Campania",2012,"40-64 anni",87492,84736
+"femmine","Campania",2013,"18-39 anni",162446,142582
+"femmine","Campania",2013,"40-64 anni",76650,77340
+"femmine","Campania",2014,"18-39 anni",151234,132926
+"femmine","Campania",2014,"40-64 anni",72420,71200
+"femmine","Campania",2015,"18-39 anni",146268,125680
+"femmine","Campania",2015,"40-64 anni",70046,68304
+"femmine","Campania",2016,"18-39 anni",150194,127030
+"femmine","Campania",2016,"40-64 anni",73754,70576
+"femmine","Campania",2017,"18-39 anni",147466,124574
+"femmine","Campania",2017,"40-64 anni",72508,69062
+"femmine","Campania",2018,"18-39 anni",148744,119518
+"femmine","Campania",2018,"40-64 anni",72906,67904
+"femmine","Campania",2019,"18-39 anni",167022,129064
+"femmine","Campania",2019,"40-64 anni",81488,75532
+"femmine","Campania",2020,"18-39 anni",142344,113326
+"femmine","Campania",2020,"40-64 anni",72532,67866
+"femmine","Campania",2021,"18-39 anni",149994,121770
+"femmine","Campania",2021,"40-64 anni",75932,71804
+"femmine","Emilia-Romagna",2002,"18-39 anni",112560,169806
+"femmine","Emilia-Romagna",2002,"40-64 anni",38500,49108
+"femmine","Emilia-Romagna",2003,"18-39 anni",108734,186476
+"femmine","Emilia-Romagna",2003,"40-64 anni",37916,66650
+"femmine","Emilia-Romagna",2004,"18-39 anni",128576,203038
+"femmine","Emilia-Romagna",2004,"40-64 anni",48384,73778
+"femmine","Emilia-Romagna",2005,"18-39 anni",123576,189538
+"femmine","Emilia-Romagna",2005,"40-64 anni",49546,66716
+"femmine","Emilia-Romagna",2006,"18-39 anni",128202,194024
+"femmine","Emilia-Romagna",2006,"40-64 anni",52974,71384
+"femmine","Emilia-Romagna",2007,"18-39 anni",128734,218246
+"femmine","Emilia-Romagna",2007,"40-64 anni",54482,85840
+"femmine","Emilia-Romagna",2008,"18-39 anni",127518,222878
+"femmine","Emilia-Romagna",2008,"40-64 anni",58292,96264
+"femmine","Emilia-Romagna",2009,"18-39 anni",125018,198640
+"femmine","Emilia-Romagna",2009,"40-64 anni",58120,89450
+"femmine","Emilia-Romagna",2010,"18-39 anni",130578,205702
+"femmine","Emilia-Romagna",2010,"40-64 anni",64052,99916
+"femmine","Emilia-Romagna",2011,"18-39 anni",131036,190338
+"femmine","Emilia-Romagna",2011,"40-64 anni",67382,90270
+"femmine","Emilia-Romagna",2012,"18-39 anni",138042,189082
+"femmine","Emilia-Romagna",2012,"40-64 anni",77930,93854
+"femmine","Emilia-Romagna",2013,"18-39 anni",123546,168500
+"femmine","Emilia-Romagna",2013,"40-64 anni",72602,85518
+"femmine","Emilia-Romagna",2014,"18-39 anni",117848,156000
+"femmine","Emilia-Romagna",2014,"40-64 anni",71476,82334
+"femmine","Emilia-Romagna",2015,"18-39 anni",114602,153338
+"femmine","Emilia-Romagna",2015,"40-64 anni",71026,80940
+"femmine","Emilia-Romagna",2016,"18-39 anni",116248,156186
+"femmine","Emilia-Romagna",2016,"40-64 anni",75794,86288
+"femmine","Emilia-Romagna",2017,"18-39 anni",115428,159956
+"femmine","Emilia-Romagna",2017,"40-64 anni",77128,88854
+"femmine","Emilia-Romagna",2018,"18-39 anni",114534,162968
+"femmine","Emilia-Romagna",2018,"40-64 anni",77698,90884
+"femmine","Emilia-Romagna",2019,"18-39 anni",123326,179558
+"femmine","Emilia-Romagna",2019,"40-64 anni",88446,102476
+"femmine","Emilia-Romagna",2020,"18-39 anni",115606,155416
+"femmine","Emilia-Romagna",2020,"40-64 anni",80198,90322
+"femmine","Emilia-Romagna",2021,"18-39 anni",117806,162188
+"femmine","Emilia-Romagna",2021,"40-64 anni",85762,96980
+"femmine","Friuli-Venezia Giulia",2002,"18-39 anni",33928,45216
+"femmine","Friuli-Venezia Giulia",2002,"40-64 anni",9964,13150
+"femmine","Friuli-Venezia Giulia",2003,"18-39 anni",34088,48870
+"femmine","Friuli-Venezia Giulia",2003,"40-64 anni",11018,17432
+"femmine","Friuli-Venezia Giulia",2004,"18-39 anni",37694,51056
+"femmine","Friuli-Venezia Giulia",2004,"40-64 anni",13230,17740
+"femmine","Friuli-Venezia Giulia",2005,"18-39 anni",38256,49306
+"femmine","Friuli-Venezia Giulia",2005,"40-64 anni",13336,16706
+"femmine","Friuli-Venezia Giulia",2006,"18-39 anni",39724,51484
+"femmine","Friuli-Venezia Giulia",2006,"40-64 anni",14000,18590
+"femmine","Friuli-Venezia Giulia",2007,"18-39 anni",40076,57148
+"femmine","Friuli-Venezia Giulia",2007,"40-64 anni",14766,21852
+"femmine","Friuli-Venezia Giulia",2008,"18-39 anni",38294,53864
+"femmine","Friuli-Venezia Giulia",2008,"40-64 anni",15128,22968
+"femmine","Friuli-Venezia Giulia",2009,"18-39 anni",37324,48750
+"femmine","Friuli-Venezia Giulia",2009,"40-64 anni",16320,21714
+"femmine","Friuli-Venezia Giulia",2010,"18-39 anni",39598,49258
+"femmine","Friuli-Venezia Giulia",2010,"40-64 anni",17194,23132
+"femmine","Friuli-Venezia Giulia",2011,"18-39 anni",37210,46648
+"femmine","Friuli-Venezia Giulia",2011,"40-64 anni",18210,21716
+"femmine","Friuli-Venezia Giulia",2012,"18-39 anni",38988,47830
+"femmine","Friuli-Venezia Giulia",2012,"40-64 anni",20384,24166
+"femmine","Friuli-Venezia Giulia",2013,"18-39 anni",36006,42870
+"femmine","Friuli-Venezia Giulia",2013,"40-64 anni",18408,21870
+"femmine","Friuli-Venezia Giulia",2014,"18-39 anni",35380,40140
+"femmine","Friuli-Venezia Giulia",2014,"40-64 anni",18804,20866
+"femmine","Friuli-Venezia Giulia",2015,"18-39 anni",34840,39112
+"femmine","Friuli-Venezia Giulia",2015,"40-64 anni",18566,20826
+"femmine","Friuli-Venezia Giulia",2016,"18-39 anni",34890,40752
+"femmine","Friuli-Venezia Giulia",2016,"40-64 anni",20524,23608
+"femmine","Friuli-Venezia Giulia",2017,"18-39 anni",34780,40454
+"femmine","Friuli-Venezia Giulia",2017,"40-64 anni",21446,25194
+"femmine","Friuli-Venezia Giulia",2018,"18-39 anni",34076,40842
+"femmine","Friuli-Venezia Giulia",2018,"40-64 anni",21644,26096
+"femmine","Friuli-Venezia Giulia",2019,"18-39 anni",38404,44016
+"femmine","Friuli-Venezia Giulia",2019,"40-64 anni",24136,27866
+"femmine","Friuli-Venezia Giulia",2020,"18-39 anni",33908,39436
+"femmine","Friuli-Venezia Giulia",2020,"40-64 anni",21774,25450
+"femmine","Friuli-Venezia Giulia",2021,"18-39 anni",34140,41486
+"femmine","Friuli-Venezia Giulia",2021,"40-64 anni",22714,27218
+"femmine","Lazio",2002,"18-39 anni",106690,142268
+"femmine","Lazio",2002,"40-64 anni",51846,57362
+"femmine","Lazio",2003,"18-39 anni",104448,172530
+"femmine","Lazio",2003,"40-64 anni",51430,68612
+"femmine","Lazio",2004,"18-39 anni",106132,182746
+"femmine","Lazio",2004,"40-64 anni",54396,76564
+"femmine","Lazio",2005,"18-39 anni",119124,170134
+"femmine","Lazio",2005,"40-64 anni",64406,74050
+"femmine","Lazio",2006,"18-39 anni",111300,164628
+"femmine","Lazio",2006,"40-64 anni",58692,71010
+"femmine","Lazio",2007,"18-39 anni",104054,196664
+"femmine","Lazio",2007,"40-64 anni",56288,83314
+"femmine","Lazio",2008,"18-39 anni",129674,218102
+"femmine","Lazio",2008,"40-64 anni",75156,102430
+"femmine","Lazio",2009,"18-39 anni",110030,186712
+"femmine","Lazio",2009,"40-64 anni",61998,87428
+"femmine","Lazio",2010,"18-39 anni",111908,187208
+"femmine","Lazio",2010,"40-64 anni",65816,91202
+"femmine","Lazio",2011,"18-39 anni",111108,182946
+"femmine","Lazio",2011,"40-64 anni",65834,89948
+"femmine","Lazio",2012,"18-39 anni",137784,219584
+"femmine","Lazio",2012,"40-64 anni",87832,115848
+"femmine","Lazio",2013,"18-39 anni",116534,172282
+"femmine","Lazio",2013,"40-64 anni",72948,91470
+"femmine","Lazio",2014,"18-39 anni",113020,158850
+"femmine","Lazio",2014,"40-64 anni",73266,88866
+"femmine","Lazio",2015,"18-39 anni",109822,147206
+"femmine","Lazio",2015,"40-64 anni",71508,83640
+"femmine","Lazio",2016,"18-39 anni",113638,146362
+"femmine","Lazio",2016,"40-64 anni",77458,86470
+"femmine","Lazio",2017,"18-39 anni",108966,141012
+"femmine","Lazio",2017,"40-64 anni",76372,84136
+"femmine","Lazio",2018,"18-39 anni",109280,136154
+"femmine","Lazio",2018,"40-64 anni",78212,84052
+"femmine","Lazio",2019,"18-39 anni",115664,143392
+"femmine","Lazio",2019,"40-64 anni",84894,91930
+"femmine","Lazio",2020,"18-39 anni",98936,120062
+"femmine","Lazio",2020,"40-64 anni",75538,78068
+"femmine","Lazio",2021,"18-39 anni",105184,131920
+"femmine","Lazio",2021,"40-64 anni",79700,87332
+"femmine","Liguria",2002,"18-39 anni",38694,45882
+"femmine","Liguria",2002,"40-64 anni",18626,23170
+"femmine","Liguria",2003,"18-39 anni",36132,56292
+"femmine","Liguria",2003,"40-64 anni",18096,26902
+"femmine","Liguria",2004,"18-39 anni",39492,55502
+"femmine","Liguria",2004,"40-64 anni",21098,27906
+"femmine","Liguria",2005,"18-39 anni",36954,46432
+"femmine","Liguria",2005,"40-64 anni",20416,26604
+"femmine","Liguria",2006,"18-39 anni",38170,48738
+"femmine","Liguria",2006,"40-64 anni",21896,28656
+"femmine","Liguria",2007,"18-39 anni",38714,53162
+"femmine","Liguria",2007,"40-64 anni",23228,32104
+"femmine","Liguria",2008,"18-39 anni",37974,57314
+"femmine","Liguria",2008,"40-64 anni",23520,33678
+"femmine","Liguria",2009,"18-39 anni",36298,50420
+"femmine","Liguria",2009,"40-64 anni",22620,32130
+"femmine","Liguria",2010,"18-39 anni",39490,56550
+"femmine","Liguria",2010,"40-64 anni",26392,36314
+"femmine","Liguria",2011,"18-39 anni",37292,50678
+"femmine","Liguria",2011,"40-64 anni",25358,33332
+"femmine","Liguria",2012,"18-39 anni",42982,53384
+"femmine","Liguria",2012,"40-64 anni",32488,36348
+"femmine","Liguria",2013,"18-39 anni",38368,46256
+"femmine","Liguria",2013,"40-64 anni",28840,31920
+"femmine","Liguria",2014,"18-39 anni",36650,41624
+"femmine","Liguria",2014,"40-64 anni",27262,29834
+"femmine","Liguria",2015,"18-39 anni",35558,40724
+"femmine","Liguria",2015,"40-64 anni",26532,29426
+"femmine","Liguria",2016,"18-39 anni",34746,42548
+"femmine","Liguria",2016,"40-64 anni",26886,31122
+"femmine","Liguria",2017,"18-39 anni",34848,41286
+"femmine","Liguria",2017,"40-64 anni",26882,31732
+"femmine","Liguria",2018,"18-39 anni",35368,43614
+"femmine","Liguria",2018,"40-64 anni",27016,33364
+"femmine","Liguria",2019,"18-39 anni",36854,44196
+"femmine","Liguria",2019,"40-64 anni",28896,34444
+"femmine","Liguria",2020,"18-39 anni",33902,38236
+"femmine","Liguria",2020,"40-64 anni",26978,31338
+"femmine","Liguria",2021,"18-39 anni",34278,42802
+"femmine","Liguria",2021,"40-64 anni",28974,35306
+"femmine","Lombardia",2002,"18-39 anni",294066,381412
+"femmine","Lombardia",2002,"40-64 anni",101072,104802
+"femmine","Lombardia",2003,"18-39 anni",288516,415842
+"femmine","Lombardia",2003,"40-64 anni",99710,127884
+"femmine","Lombardia",2004,"18-39 anni",328844,473548
+"femmine","Lombardia",2004,"40-64 anni",123260,154674
+"femmine","Lombardia",2005,"18-39 anni",313186,416642
+"femmine","Lombardia",2005,"40-64 anni",117674,131482
+"femmine","Lombardia",2006,"18-39 anni",336506,435328
+"femmine","Lombardia",2006,"40-64 anni",133640,145638
+"femmine","Lombardia",2007,"18-39 anni",326668,457132
+"femmine","Lombardia",2007,"40-64 anni",133706,157802
+"femmine","Lombardia",2008,"18-39 anni",314924,442092
+"femmine","Lombardia",2008,"40-64 anni",132610,162666
+"femmine","Lombardia",2009,"18-39 anni",289222,412740
+"femmine","Lombardia",2009,"40-64 anni",126406,158278
+"femmine","Lombardia",2010,"18-39 anni",304954,449996
+"femmine","Lombardia",2010,"40-64 anni",137056,185908
+"femmine","Lombardia",2011,"18-39 anni",308360,429780
+"femmine","Lombardia",2011,"40-64 anni",145004,178352
+"femmine","Lombardia",2012,"18-39 anni",344656,446852
+"femmine","Lombardia",2012,"40-64 anni",167908,186872
+"femmine","Lombardia",2013,"18-39 anni",310494,401524
+"femmine","Lombardia",2013,"40-64 anni",155422,174140
+"femmine","Lombardia",2014,"18-39 anni",299776,379860
+"femmine","Lombardia",2014,"40-64 anni",155494,169726
+"femmine","Lombardia",2015,"18-39 anni",292914,364140
+"femmine","Lombardia",2015,"40-64 anni",157974,167138
+"femmine","Lombardia",2016,"18-39 anni",301706,372770
+"femmine","Lombardia",2016,"40-64 anni",166554,178246
+"femmine","Lombardia",2017,"18-39 anni",297610,384562
+"femmine","Lombardia",2017,"40-64 anni",170900,185100
+"femmine","Lombardia",2018,"18-39 anni",296658,394450
+"femmine","Lombardia",2018,"40-64 anni",177058,192092
+"femmine","Lombardia",2019,"18-39 anni",324708,432702
+"femmine","Lombardia",2019,"40-64 anni",197750,218678
+"femmine","Lombardia",2020,"18-39 anni",297154,359300
+"femmine","Lombardia",2020,"40-64 anni",182338,186398
+"femmine","Lombardia",2021,"18-39 anni",314124,391616
+"femmine","Lombardia",2021,"40-64 anni",202018,211530
+"femmine","Marche",2002,"18-39 anni",31164,46678
+"femmine","Marche",2002,"40-64 anni",9376,14152
+"femmine","Marche",2003,"18-39 anni",33574,57230
+"femmine","Marche",2003,"40-64 anni",10766,23952
+"femmine","Marche",2004,"18-39 anni",40090,59046
+"femmine","Marche",2004,"40-64 anni",13904,22000
+"femmine","Marche",2005,"18-39 anni",38338,53868
+"femmine","Marche",2005,"40-64 anni",13876,19714
+"femmine","Marche",2006,"18-39 anni",38900,52778
+"femmine","Marche",2006,"40-64 anni",14900,19192
+"femmine","Marche",2007,"18-39 anni",38830,64328
+"femmine","Marche",2007,"40-64 anni",14904,27024
+"femmine","Marche",2008,"18-39 anni",40652,62286
+"femmine","Marche",2008,"40-64 anni",17204,28044
+"femmine","Marche",2009,"18-39 anni",41622,56120
+"femmine","Marche",2009,"40-64 anni",16998,25976
+"femmine","Marche",2010,"18-39 anni",41996,54854
+"femmine","Marche",2010,"40-64 anni",18284,28320
+"femmine","Marche",2011,"18-39 anni",41330,50704
+"femmine","Marche",2011,"40-64 anni",19796,25878
+"femmine","Marche",2012,"18-39 anni",45502,53034
+"femmine","Marche",2012,"40-64 anni",23472,28474
+"femmine","Marche",2013,"18-39 anni",40036,42490
+"femmine","Marche",2013,"40-64 anni",22170,25408
+"femmine","Marche",2014,"18-39 anni",37944,40856
+"femmine","Marche",2014,"40-64 anni",21678,24664
+"femmine","Marche",2015,"18-39 anni",36766,39458
+"femmine","Marche",2015,"40-64 anni",21940,23912
+"femmine","Marche",2016,"18-39 anni",37656,39026
+"femmine","Marche",2016,"40-64 anni",22300,24518
+"femmine","Marche",2017,"18-39 anni",37622,40458
+"femmine","Marche",2017,"40-64 anni",23744,25848
+"femmine","Marche",2018,"18-39 anni",37518,40830
+"femmine","Marche",2018,"40-64 anni",23804,26274
+"femmine","Marche",2019,"18-39 anni",40978,42624
+"femmine","Marche",2019,"40-64 anni",26312,28370
+"femmine","Marche",2020,"18-39 anni",36906,37080
+"femmine","Marche",2020,"40-64 anni",24112,26840
+"femmine","Marche",2021,"18-39 anni",36024,39354
+"femmine","Marche",2021,"40-64 anni",24638,28774
+"femmine","Molise",2002,"18-39 anni",7166,6918
+"femmine","Molise",2002,"40-64 anni",1952,2764
+"femmine","Molise",2003,"18-39 anni",7090,7680
+"femmine","Molise",2003,"40-64 anni",2192,3230
+"femmine","Molise",2004,"18-39 anni",7964,7448
+"femmine","Molise",2004,"40-64 anni",2366,2928
+"femmine","Molise",2005,"18-39 anni",7462,6844
+"femmine","Molise",2005,"40-64 anni",2650,3080
+"femmine","Molise",2006,"18-39 anni",7818,7114
+"femmine","Molise",2006,"40-64 anni",2532,3224
+"femmine","Molise",2007,"18-39 anni",7104,8410
+"femmine","Molise",2007,"40-64 anni",2632,3522
+"femmine","Molise",2008,"18-39 anni",7274,8048
+"femmine","Molise",2008,"40-64 anni",3032,4190
+"femmine","Molise",2009,"18-39 anni",7954,7768
+"femmine","Molise",2009,"40-64 anni",3054,3816
+"femmine","Molise",2010,"18-39 anni",7592,7388
+"femmine","Molise",2010,"40-64 anni",2992,3808
+"femmine","Molise",2011,"18-39 anni",7600,7636
+"femmine","Molise",2011,"40-64 anni",3254,3950
+"femmine","Molise",2012,"18-39 anni",9270,7976
+"femmine","Molise",2012,"40-64 anni",4292,4766
+"femmine","Molise",2013,"18-39 anni",8042,6818
+"femmine","Molise",2013,"40-64 anni",3716,4080
+"femmine","Molise",2014,"18-39 anni",7742,6334
+"femmine","Molise",2014,"40-64 anni",3784,3624
+"femmine","Molise",2015,"18-39 anni",7680,6266
+"femmine","Molise",2015,"40-64 anni",3514,3320
+"femmine","Molise",2016,"18-39 anni",8402,6480
+"femmine","Molise",2016,"40-64 anni",4116,3650
+"femmine","Molise",2017,"18-39 anni",7930,6414
+"femmine","Molise",2017,"40-64 anni",3940,3558
+"femmine","Molise",2018,"18-39 anni",8772,7084
+"femmine","Molise",2018,"40-64 anni",4104,4060
+"femmine","Molise",2019,"18-39 anni",9764,7052
+"femmine","Molise",2019,"40-64 anni",4760,4636
+"femmine","Molise",2020,"18-39 anni",8358,6080
+"femmine","Molise",2020,"40-64 anni",4180,3644
+"femmine","Molise",2021,"18-39 anni",8368,6674
+"femmine","Molise",2021,"40-64 anni",4510,4502
+"femmine","Piemonte",2002,"18-39 anni",135314,156714
+"femmine","Piemonte",2002,"40-64 anni",52348,54942
+"femmine","Piemonte",2003,"18-39 anni",131582,193470
+"femmine","Piemonte",2003,"40-64 anni",51952,71324
+"femmine","Piemonte",2004,"18-39 anni",148922,185662
+"femmine","Piemonte",2004,"40-64 anni",61968,71018
+"femmine","Piemonte",2005,"18-39 anni",136426,165066
+"femmine","Piemonte",2005,"40-64 anni",59908,63540
+"femmine","Piemonte",2006,"18-39 anni",139662,166618
+"femmine","Piemonte",2006,"40-64 anni",64136,67360
+"femmine","Piemonte",2007,"18-39 anni",144958,222792
+"femmine","Piemonte",2007,"40-64 anni",68382,93618
+"femmine","Piemonte",2008,"18-39 anni",141996,195814
+"femmine","Piemonte",2008,"40-64 anni",68168,88914
+"femmine","Piemonte",2009,"18-39 anni",139898,181326
+"femmine","Piemonte",2009,"40-64 anni",69590,86212
+"femmine","Piemonte",2010,"18-39 anni",139834,181860
+"femmine","Piemonte",2010,"40-64 anni",71932,89996
+"femmine","Piemonte",2011,"18-39 anni",138752,172104
+"femmine","Piemonte",2011,"40-64 anni",74170,86682
+"femmine","Piemonte",2012,"18-39 anni",155832,191468
+"femmine","Piemonte",2012,"40-64 anni",87590,98960
+"femmine","Piemonte",2013,"18-39 anni",137344,158854
+"femmine","Piemonte",2013,"40-64 anni",78926,86226
+"femmine","Piemonte",2014,"18-39 anni",132318,149666
+"femmine","Piemonte",2014,"40-64 anni",79156,83866
+"femmine","Piemonte",2015,"18-39 anni",129554,144594
+"femmine","Piemonte",2015,"40-64 anni",78736,83046
+"femmine","Piemonte",2016,"18-39 anni",130216,146218
+"femmine","Piemonte",2016,"40-64 anni",81344,85254
+"femmine","Piemonte",2017,"18-39 anni",128456,148134
+"femmine","Piemonte",2017,"40-64 anni",83162,88218
+"femmine","Piemonte",2018,"18-39 anni",126630,146018
+"femmine","Piemonte",2018,"40-64 anni",82808,87564
+"femmine","Piemonte",2019,"18-39 anni",135212,160580
+"femmine","Piemonte",2019,"40-64 anni",89522,97058
+"femmine","Piemonte",2020,"18-39 anni",124782,139810
+"femmine","Piemonte",2020,"40-64 anni",81936,85220
+"femmine","Piemonte",2021,"18-39 anni",124952,143100
+"femmine","Piemonte",2021,"40-64 anni",84562,91160
+"femmine","Puglia",2002,"18-39 anni",83930,61590
+"femmine","Puglia",2002,"40-64 anni",20312,20452
+"femmine","Puglia",2003,"18-39 anni",82780,66546
+"femmine","Puglia",2003,"40-64 anni",21626,23694
+"femmine","Puglia",2004,"18-39 anni",83376,64096
+"femmine","Puglia",2004,"40-64 anni",23248,24218
+"femmine","Puglia",2005,"18-39 anni",78988,60992
+"femmine","Puglia",2005,"40-64 anni",22306,23214
+"femmine","Puglia",2006,"18-39 anni",81874,60948
+"femmine","Puglia",2006,"40-64 anni",22828,22602
+"femmine","Puglia",2007,"18-39 anni",79250,72934
+"femmine","Puglia",2007,"40-64 anni",23592,29820
+"femmine","Puglia",2008,"18-39 anni",82868,70452
+"femmine","Puglia",2008,"40-64 anni",25576,30658
+"femmine","Puglia",2009,"18-39 anni",77240,66634
+"femmine","Puglia",2009,"40-64 anni",23916,29994
+"femmine","Puglia",2010,"18-39 anni",78904,71230
+"femmine","Puglia",2010,"40-64 anni",26444,35660
+"femmine","Puglia",2011,"18-39 anni",80818,67638
+"femmine","Puglia",2011,"40-64 anni",27754,31842
+"femmine","Puglia",2012,"18-39 anni",90738,73226
+"femmine","Puglia",2012,"40-64 anni",34372,37230
+"femmine","Puglia",2013,"18-39 anni",81556,64816
+"femmine","Puglia",2013,"40-64 anni",31116,37326
+"femmine","Puglia",2014,"18-39 anni",78136,62992
+"femmine","Puglia",2014,"40-64 anni",30918,33282
+"femmine","Puglia",2015,"18-39 anni",76696,59472
+"femmine","Puglia",2015,"40-64 anni",32136,32730
+"femmine","Puglia",2016,"18-39 anni",78128,59198
+"femmine","Puglia",2016,"40-64 anni",34008,34440
+"femmine","Puglia",2017,"18-39 anni",78966,59956
+"femmine","Puglia",2017,"40-64 anni",35152,35932
+"femmine","Puglia",2018,"18-39 anni",80024,58100
+"femmine","Puglia",2018,"40-64 anni",36010,34902
+"femmine","Puglia",2019,"18-39 anni",88516,63286
+"femmine","Puglia",2019,"40-64 anni",39780,38836
+"femmine","Puglia",2020,"18-39 anni",76464,58530
+"femmine","Puglia",2020,"40-64 anni",34562,37672
+"femmine","Puglia",2021,"18-39 anni",77134,64126
+"femmine","Puglia",2021,"40-64 anni",37324,44726
+"femmine","Sardegna",2002,"18-39 anni",38062,33850
+"femmine","Sardegna",2002,"40-64 anni",10624,12802
+"femmine","Sardegna",2003,"18-39 anni",39000,37640
+"femmine","Sardegna",2003,"40-64 anni",11268,14382
+"femmine","Sardegna",2004,"18-39 anni",39776,37962
+"femmine","Sardegna",2004,"40-64 anni",11888,14726
+"femmine","Sardegna",2005,"18-39 anni",38718,36814
+"femmine","Sardegna",2005,"40-64 anni",12130,15566
+"femmine","Sardegna",2006,"18-39 anni",40004,38480
+"femmine","Sardegna",2006,"40-64 anni",13476,17640
+"femmine","Sardegna",2007,"18-39 anni",38894,43222
+"femmine","Sardegna",2007,"40-64 anni",14252,20800
+"femmine","Sardegna",2008,"18-39 anni",42070,44048
+"femmine","Sardegna",2008,"40-64 anni",15558,21178
+"femmine","Sardegna",2009,"18-39 anni",40352,40998
+"femmine","Sardegna",2009,"40-64 anni",16452,20512
+"femmine","Sardegna",2010,"18-39 anni",40804,42456
+"femmine","Sardegna",2010,"40-64 anni",17070,22684
+"femmine","Sardegna",2011,"18-39 anni",40828,40382
+"femmine","Sardegna",2011,"40-64 anni",17844,21408
+"femmine","Sardegna",2012,"18-39 anni",46294,44396
+"femmine","Sardegna",2012,"40-64 anni",22686,25896
+"femmine","Sardegna",2013,"18-39 anni",39866,37428
+"femmine","Sardegna",2013,"40-64 anni",20490,23556
+"femmine","Sardegna",2014,"18-39 anni",38888,35432
+"femmine","Sardegna",2014,"40-64 anni",19328,21486
+"femmine","Sardegna",2015,"18-39 anni",36334,32756
+"femmine","Sardegna",2015,"40-64 anni",19298,20880
+"femmine","Sardegna",2016,"18-39 anni",37308,33028
+"femmine","Sardegna",2016,"40-64 anni",20664,22608
+"femmine","Sardegna",2017,"18-39 anni",36766,33298
+"femmine","Sardegna",2017,"40-64 anni",21314,23238
+"femmine","Sardegna",2018,"18-39 anni",36296,32664
+"femmine","Sardegna",2018,"40-64 anni",21576,23274
+"femmine","Sardegna",2019,"18-39 anni",38878,33554
+"femmine","Sardegna",2019,"40-64 anni",24426,25532
+"femmine","Sardegna",2020,"18-39 anni",34710,30728
+"femmine","Sardegna",2020,"40-64 anni",21798,23530
+"femmine","Sardegna",2021,"18-39 anni",34522,32984
+"femmine","Sardegna",2021,"40-64 anni",23598,26638
+"femmine","Sicilia",2002,"18-39 anni",113162,89690
+"femmine","Sicilia",2002,"40-64 anni",35638,33694
+"femmine","Sicilia",2003,"18-39 anni",109654,95724
+"femmine","Sicilia",2003,"40-64 anni",35606,36650
+"femmine","Sicilia",2004,"18-39 anni",121158,103964
+"femmine","Sicilia",2004,"40-64 anni",41612,41576
+"femmine","Sicilia",2005,"18-39 anni",107294,95316
+"femmine","Sicilia",2005,"40-64 anni",38452,38320
+"femmine","Sicilia",2006,"18-39 anni",110876,96800
+"femmine","Sicilia",2006,"40-64 anni",40210,40014
+"femmine","Sicilia",2007,"18-39 anni",112216,118160
+"femmine","Sicilia",2007,"40-64 anni",41602,50964
+"femmine","Sicilia",2008,"18-39 anni",115044,114090
+"femmine","Sicilia",2008,"40-64 anni",43868,51938
+"femmine","Sicilia",2009,"18-39 anni",109090,106642
+"femmine","Sicilia",2009,"40-64 anni",41550,48298
+"femmine","Sicilia",2010,"18-39 anni",112390,109328
+"femmine","Sicilia",2010,"40-64 anni",44422,51628
+"femmine","Sicilia",2011,"18-39 anni",110052,101532
+"femmine","Sicilia",2011,"40-64 anni",44788,49194
+"femmine","Sicilia",2012,"18-39 anni",131222,117548
+"femmine","Sicilia",2012,"40-64 anni",58024,59522
+"femmine","Sicilia",2013,"18-39 anni",114976,101376
+"femmine","Sicilia",2013,"40-64 anni",50350,54142
+"femmine","Sicilia",2014,"18-39 anni",110430,91974
+"femmine","Sicilia",2014,"40-64 anni",49952,50832
+"femmine","Sicilia",2015,"18-39 anni",109000,88158
+"femmine","Sicilia",2015,"40-64 anni",49954,47952
+"femmine","Sicilia",2016,"18-39 anni",114826,88352
+"femmine","Sicilia",2016,"40-64 anni",53238,50570
+"femmine","Sicilia",2017,"18-39 anni",114532,85808
+"femmine","Sicilia",2017,"40-64 anni",54340,51272
+"femmine","Sicilia",2018,"18-39 anni",120508,88884
+"femmine","Sicilia",2018,"40-64 anni",56268,52674
+"femmine","Sicilia",2019,"18-39 anni",133454,92838
+"femmine","Sicilia",2019,"40-64 anni",59982,57442
+"femmine","Sicilia",2020,"18-39 anni",112740,86500
+"femmine","Sicilia",2020,"40-64 anni",53762,53424
+"femmine","Sicilia",2021,"18-39 anni",110718,90748
+"femmine","Sicilia",2021,"40-64 anni",56640,58384
+"femmine","Toscana",2002,"18-39 anni",84538,116730
+"femmine","Toscana",2002,"40-64 anni",32800,41688
+"femmine","Toscana",2003,"18-39 anni",84326,138476
+"femmine","Toscana",2003,"40-64 anni",33550,54070
+"femmine","Toscana",2004,"18-39 anni",96568,141658
+"femmine","Toscana",2004,"40-64 anni",39508,57892
+"femmine","Toscana",2005,"18-39 anni",92282,130912
+"femmine","Toscana",2005,"40-64 anni",40340,51906
+"femmine","Toscana",2006,"18-39 anni",93162,129106
+"femmine","Toscana",2006,"40-64 anni",43056,54640
+"femmine","Toscana",2007,"18-39 anni",93406,159116
+"femmine","Toscana",2007,"40-64 anni",44124,72528
+"femmine","Toscana",2008,"18-39 anni",92196,144684
+"femmine","Toscana",2008,"40-64 anni",45654,70924
+"femmine","Toscana",2009,"18-39 anni",94444,143482
+"femmine","Toscana",2009,"40-64 anni",49228,73726
+"femmine","Toscana",2010,"18-39 anni",95070,144158
+"femmine","Toscana",2010,"40-64 anni",50712,77610
+"femmine","Toscana",2011,"18-39 anni",98024,138750
+"femmine","Toscana",2011,"40-64 anni",55268,72220
+"femmine","Toscana",2012,"18-39 anni",111432,151584
+"femmine","Toscana",2012,"40-64 anni",66674,84138
+"femmine","Toscana",2013,"18-39 anni",97240,126832
+"femmine","Toscana",2013,"40-64 anni",59816,72862
+"femmine","Toscana",2014,"18-39 anni",94064,119104
+"femmine","Toscana",2014,"40-64 anni",58160,69388
+"femmine","Toscana",2015,"18-39 anni",89660,113434
+"femmine","Toscana",2015,"40-64 anni",59030,69220
+"femmine","Toscana",2016,"18-39 anni",92526,116680
+"femmine","Toscana",2016,"40-64 anni",62984,73560
+"femmine","Toscana",2017,"18-39 anni",89426,111636
+"femmine","Toscana",2017,"40-64 anni",63080,73182
+"femmine","Toscana",2018,"18-39 anni",90712,111846
+"femmine","Toscana",2018,"40-64 anni",65120,74070
+"femmine","Toscana",2019,"18-39 anni",97902,124256
+"femmine","Toscana",2019,"40-64 anni",71662,84836
+"femmine","Toscana",2020,"18-39 anni",90552,105828
+"femmine","Toscana",2020,"40-64 anni",65112,75362
+"femmine","Toscana",2021,"18-39 anni",90072,110012
+"femmine","Toscana",2021,"40-64 anni",69144,82488
+"femmine","Trentino Alto Adige / Südtirol",2002,"18-39 anni",25540,32556
+"femmine","Trentino Alto Adige / Südtirol",2002,"40-64 anni",6832,8396
+"femmine","Trentino Alto Adige / Südtirol",2003,"18-39 anni",27078,37982
+"femmine","Trentino Alto Adige / Südtirol",2003,"40-64 anni",7468,12588
+"femmine","Trentino Alto Adige / Südtirol",2004,"18-39 anni",29706,40016
+"femmine","Trentino Alto Adige / Südtirol",2004,"40-64 anni",9332,13474
+"femmine","Trentino Alto Adige / Südtirol",2005,"18-39 anni",29356,40210
+"femmine","Trentino Alto Adige / Südtirol",2005,"40-64 anni",9264,12124
+"femmine","Trentino Alto Adige / Südtirol",2006,"18-39 anni",30578,40344
+"femmine","Trentino Alto Adige / Südtirol",2006,"40-64 anni",10244,13182
+"femmine","Trentino Alto Adige / Südtirol",2007,"18-39 anni",30868,46052
+"femmine","Trentino Alto Adige / Südtirol",2007,"40-64 anni",10792,16776
+"femmine","Trentino Alto Adige / Südtirol",2008,"18-39 anni",31110,44048
+"femmine","Trentino Alto Adige / Südtirol",2008,"40-64 anni",11602,17280
+"femmine","Trentino Alto Adige / Südtirol",2009,"18-39 anni",31502,43500
+"femmine","Trentino Alto Adige / Südtirol",2009,"40-64 anni",11732,16902
+"femmine","Trentino Alto Adige / Südtirol",2010,"18-39 anni",31116,41318
+"femmine","Trentino Alto Adige / Südtirol",2010,"40-64 anni",12384,17586
+"femmine","Trentino Alto Adige / Südtirol",2011,"18-39 anni",31614,41678
+"femmine","Trentino Alto Adige / Südtirol",2011,"40-64 anni",13386,17430
+"femmine","Trentino Alto Adige / Südtirol",2012,"18-39 anni",34082,43188
+"femmine","Trentino Alto Adige / Südtirol",2012,"40-64 anni",15884,19518
+"femmine","Trentino Alto Adige / Südtirol",2013,"18-39 anni",31818,39554
+"femmine","Trentino Alto Adige / Südtirol",2013,"40-64 anni",14374,17892
+"femmine","Trentino Alto Adige / Südtirol",2014,"18-39 anni",31928,37918
+"femmine","Trentino Alto Adige / Südtirol",2014,"40-64 anni",14476,16686
+"femmine","Trentino Alto Adige / Südtirol",2015,"18-39 anni",32444,37598
+"femmine","Trentino Alto Adige / Südtirol",2015,"40-64 anni",15278,18344
+"femmine","Trentino Alto Adige / Südtirol",2016,"18-39 anni",33076,37696
+"femmine","Trentino Alto Adige / Südtirol",2016,"40-64 anni",16016,18380
+"femmine","Trentino Alto Adige / Südtirol",2017,"18-39 anni",32962,39776
+"femmine","Trentino Alto Adige / Südtirol",2017,"40-64 anni",16354,19860
+"femmine","Trentino Alto Adige / Südtirol",2018,"18-39 anni",33552,41296
+"femmine","Trentino Alto Adige / Südtirol",2018,"40-64 anni",16652,20938
+"femmine","Trentino Alto Adige / Südtirol",2019,"18-39 anni",35688,41318
+"femmine","Trentino Alto Adige / Südtirol",2019,"40-64 anni",18134,21712
+"femmine","Trentino Alto Adige / Südtirol",2020,"18-39 anni",33472,37854
+"femmine","Trentino Alto Adige / Südtirol",2020,"40-64 anni",16698,20152
+"femmine","Trentino Alto Adige / Südtirol",2021,"18-39 anni",33736,37590
+"femmine","Trentino Alto Adige / Südtirol",2021,"40-64 anni",18476,21600
+"femmine","Trento",2002,"18-39 anni",13358,18008
+"femmine","Trento",2002,"40-64 anni",3888,5154
+"femmine","Trento",2003,"18-39 anni",14184,21478
+"femmine","Trento",2003,"40-64 anni",4200,8288
+"femmine","Trento",2004,"18-39 anni",15394,22448
+"femmine","Trento",2004,"40-64 anni",5236,8432
+"femmine","Trento",2005,"18-39 anni",15372,21230
+"femmine","Trento",2005,"40-64 anni",5298,7094
+"femmine","Trento",2006,"18-39 anni",16698,22132
+"femmine","Trento",2006,"40-64 anni",6212,7976
+"femmine","Trento",2007,"18-39 anni",16388,24722
+"femmine","Trento",2007,"40-64 anni",6176,9630
+"femmine","Trento",2008,"18-39 anni",16376,24260
+"femmine","Trento",2008,"40-64 anni",6924,10390
+"femmine","Trento",2009,"18-39 anni",16604,23604
+"femmine","Trento",2009,"40-64 anni",6692,9842
+"femmine","Trento",2010,"18-39 anni",16354,22578
+"femmine","Trento",2010,"40-64 anni",6980,10450
+"femmine","Trento",2011,"18-39 anni",16790,22444
+"femmine","Trento",2011,"40-64 anni",7614,9820
+"femmine","Trento",2012,"18-39 anni",17368,22448
+"femmine","Trento",2012,"40-64 anni",8870,10870
+"femmine","Trento",2013,"18-39 anni",16638,21026
+"femmine","Trento",2013,"40-64 anni",8134,10126
+"femmine","Trento",2014,"18-39 anni",16640,19864
+"femmine","Trento",2014,"40-64 anni",8080,9326
+"femmine","Trento",2015,"18-39 anni",16026,18714
+"femmine","Trento",2015,"40-64 anni",8542,10118
+"femmine","Trento",2016,"18-39 anni",16826,18910
+"femmine","Trento",2016,"40-64 anni",9002,9966
+"femmine","Trento",2017,"18-39 anni",16686,19790
+"femmine","Trento",2017,"40-64 anni",9294,10638
+"femmine","Trento",2018,"18-39 anni",16686,20428
+"femmine","Trento",2018,"40-64 anni",9354,11404
+"femmine","Trento",2019,"18-39 anni",17364,21062
+"femmine","Trento",2019,"40-64 anni",9520,11914
+"femmine","Trento",2020,"18-39 anni",16174,19104
+"femmine","Trento",2020,"40-64 anni",8966,11210
+"femmine","Trento",2021,"18-39 anni",16336,18740
+"femmine","Trento",2021,"40-64 anni",9954,11776
+"femmine","Umbria",2002,"18-39 anni",16050,23950
+"femmine","Umbria",2002,"40-64 anni",5456,8590
+"femmine","Umbria",2003,"18-39 anni",16462,31424
+"femmine","Umbria",2003,"40-64 anni",5356,14254
+"femmine","Umbria",2004,"18-39 anni",19238,30242
+"femmine","Umbria",2004,"40-64 anni",7258,13008
+"femmine","Umbria",2005,"18-39 anni",18976,29462
+"femmine","Umbria",2005,"40-64 anni",7718,11998
+"femmine","Umbria",2006,"18-39 anni",19060,27074
+"femmine","Umbria",2006,"40-64 anni",8172,11566
+"femmine","Umbria",2007,"18-39 anni",20422,38794
+"femmine","Umbria",2007,"40-64 anni",8298,17422
+"femmine","Umbria",2008,"18-39 anni",20264,34800
+"femmine","Umbria",2008,"40-64 anni",9448,18388
+"femmine","Umbria",2009,"18-39 anni",21872,33692
+"femmine","Umbria",2009,"40-64 anni",10532,18142
+"femmine","Umbria",2010,"18-39 anni",20768,32804
+"femmine","Umbria",2010,"40-64 anni",11168,17840
+"femmine","Umbria",2011,"18-39 anni",22046,28288
+"femmine","Umbria",2011,"40-64 anni",11538,15660
+"femmine","Umbria",2012,"18-39 anni",24238,29780
+"femmine","Umbria",2012,"40-64 anni",14192,17410
+"femmine","Umbria",2013,"18-39 anni",21158,25164
+"femmine","Umbria",2013,"40-64 anni",12974,14620
+"femmine","Umbria",2014,"18-39 anni",19740,21930
+"femmine","Umbria",2014,"40-64 anni",12746,13562
+"femmine","Umbria",2015,"18-39 anni",20116,21894
+"femmine","Umbria",2015,"40-64 anni",12398,13712
+"femmine","Umbria",2016,"18-39 anni",20732,21974
+"femmine","Umbria",2016,"40-64 anni",13068,14456
+"femmine","Umbria",2017,"18-39 anni",20142,21316
+"femmine","Umbria",2017,"40-64 anni",13188,14542
+"femmine","Umbria",2018,"18-39 anni",19628,21950
+"femmine","Umbria",2018,"40-64 anni",13816,14956
+"femmine","Umbria",2019,"18-39 anni",21790,23478
+"femmine","Umbria",2019,"40-64 anni",14710,16612
+"femmine","Umbria",2020,"18-39 anni",19766,20756
+"femmine","Umbria",2020,"40-64 anni",13454,15160
+"femmine","Umbria",2021,"18-39 anni",18994,21900
+"femmine","Umbria",2021,"40-64 anni",13928,15620
+"femmine","Valle d'Aosta / Vallée d'Aoste",2002,"18-39 anni",10112,11676
+"femmine","Valle d'Aosta / Vallée d'Aoste",2002,"40-64 anni",3292,3632
+"femmine","Valle d'Aosta / Vallée d'Aoste",2003,"18-39 anni",9832,13332
+"femmine","Valle d'Aosta / Vallée d'Aoste",2003,"40-64 anni",3572,4260
+"femmine","Valle d'Aosta / Vallée d'Aoste",2004,"18-39 anni",11028,13696
+"femmine","Valle d'Aosta / Vallée d'Aoste",2004,"40-64 anni",3812,4504
+"femmine","Valle d'Aosta / Vallée d'Aoste",2005,"18-39 anni",9952,12936
+"femmine","Valle d'Aosta / Vallée d'Aoste",2005,"40-64 anni",3976,5224
+"femmine","Valle d'Aosta / Vallée d'Aoste",2006,"18-39 anni",11076,13208
+"femmine","Valle d'Aosta / Vallée d'Aoste",2006,"40-64 anni",4160,4588
+"femmine","Valle d'Aosta / Vallée d'Aoste",2007,"18-39 anni",12108,14720
+"femmine","Valle d'Aosta / Vallée d'Aoste",2007,"40-64 anni",5060,6172
+"femmine","Valle d'Aosta / Vallée d'Aoste",2008,"18-39 anni",10952,13072
+"femmine","Valle d'Aosta / Vallée d'Aoste",2008,"40-64 anni",5248,5968
+"femmine","Valle d'Aosta / Vallée d'Aoste",2009,"18-39 anni",12720,14420
+"femmine","Valle d'Aosta / Vallée d'Aoste",2009,"40-64 anni",6652,6984
+"femmine","Valle d'Aosta / Vallée d'Aoste",2010,"18-39 anni",11592,13284
+"femmine","Valle d'Aosta / Vallée d'Aoste",2010,"40-64 anni",5700,6716
+"femmine","Valle d'Aosta / Vallée d'Aoste",2011,"18-39 anni",10628,12604
+"femmine","Valle d'Aosta / Vallée d'Aoste",2011,"40-64 anni",5592,6420
+"femmine","Valle d'Aosta / Vallée d'Aoste",2012,"18-39 anni",11752,14504
+"femmine","Valle d'Aosta / Vallée d'Aoste",2012,"40-64 anni",6704,8132
+"femmine","Valle d'Aosta / Vallée d'Aoste",2013,"18-39 anni",11040,13036
+"femmine","Valle d'Aosta / Vallée d'Aoste",2013,"40-64 anni",5760,6728
+"femmine","Valle d'Aosta / Vallée d'Aoste",2014,"18-39 anni",10684,11448
+"femmine","Valle d'Aosta / Vallée d'Aoste",2014,"40-64 anni",6344,6792
+"femmine","Valle d'Aosta / Vallée d'Aoste",2015,"18-39 anni",9908,10520
+"femmine","Valle d'Aosta / Vallée d'Aoste",2015,"40-64 anni",6644,6216
+"femmine","Valle d'Aosta / Vallée d'Aoste",2016,"18-39 anni",9784,10084
+"femmine","Valle d'Aosta / Vallée d'Aoste",2016,"40-64 anni",6580,6712
+"femmine","Valle d'Aosta / Vallée d'Aoste",2017,"18-39 anni",9864,10364
+"femmine","Valle d'Aosta / Vallée d'Aoste",2017,"40-64 anni",6388,7108
+"femmine","Valle d'Aosta / Vallée d'Aoste",2018,"18-39 anni",10004,10872
+"femmine","Valle d'Aosta / Vallée d'Aoste",2018,"40-64 anni",6928,7064
+"femmine","Valle d'Aosta / Vallée d'Aoste",2019,"18-39 anni",9968,10820
+"femmine","Valle d'Aosta / Vallée d'Aoste",2019,"40-64 anni",6252,7076
+"femmine","Valle d'Aosta / Vallée d'Aoste",2020,"18-39 anni",8296,9256
+"femmine","Valle d'Aosta / Vallée d'Aoste",2020,"40-64 anni",6160,6704
+"femmine","Valle d'Aosta / Vallée d'Aoste",2021,"18-39 anni",9300,9444
+"femmine","Valle d'Aosta / Vallée d'Aoste",2021,"40-64 anni",6540,7152
+"femmine","Veneto",2002,"18-39 anni",137348,173050
+"femmine","Veneto",2002,"40-64 anni",38836,47364
+"femmine","Veneto",2003,"18-39 anni",144556,211342
+"femmine","Veneto",2003,"40-64 anni",42552,70568
+"femmine","Veneto",2004,"18-39 anni",160694,211378
+"femmine","Veneto",2004,"40-64 anni",52172,68478
+"femmine","Veneto",2005,"18-39 anni",155288,199746
+"femmine","Veneto",2005,"40-64 anni",51362,62130
+"femmine","Veneto",2006,"18-39 anni",160680,204220
+"femmine","Veneto",2006,"40-64 anni",56344,67078
+"femmine","Veneto",2007,"18-39 anni",162248,237224
+"femmine","Veneto",2007,"40-64 anni",57504,82600
+"femmine","Veneto",2008,"18-39 anni",154738,221922
+"femmine","Veneto",2008,"40-64 anni",60070,85610
+"femmine","Veneto",2009,"18-39 anni",155334,199964
+"femmine","Veneto",2009,"40-64 anni",61454,80162
+"femmine","Veneto",2010,"18-39 anni",157016,206302
+"femmine","Veneto",2010,"40-64 anni",65460,89168
+"femmine","Veneto",2011,"18-39 anni",157840,195072
+"femmine","Veneto",2011,"40-64 anni",69500,84736
+"femmine","Veneto",2012,"18-39 anni",168170,194690
+"femmine","Veneto",2012,"40-64 anni",80196,89100
+"femmine","Veneto",2013,"18-39 anni",149472,168700
+"femmine","Veneto",2013,"40-64 anni",72294,79888
+"femmine","Veneto",2014,"18-39 anni",144816,162276
+"femmine","Veneto",2014,"40-64 anni",73028,78888
+"femmine","Veneto",2015,"18-39 anni",142170,158816
+"femmine","Veneto",2015,"40-64 anni",74080,79384
+"femmine","Veneto",2016,"18-39 anni",146944,163462
+"femmine","Veneto",2016,"40-64 anni",79446,84838
+"femmine","Veneto",2017,"18-39 anni",147154,170564
+"femmine","Veneto",2017,"40-64 anni",82972,91480
+"femmine","Veneto",2018,"18-39 anni",145818,173060
+"femmine","Veneto",2018,"40-64 anni",86998,96414
+"femmine","Veneto",2019,"18-39 anni",156390,181734
+"femmine","Veneto",2019,"40-64 anni",94438,106120
+"femmine","Veneto",2020,"18-39 anni",145722,161780
+"femmine","Veneto",2020,"40-64 anni",88260,94942
+"femmine","Veneto",2021,"18-39 anni",143694,166104
+"femmine","Veneto",2021,"40-64 anni",92242,103124
+"maschi","Abruzzo",2002,"18-39 anni",25814,30748
+"maschi","Abruzzo",2002,"40-64 anni",10740,14194
+"maschi","Abruzzo",2003,"18-39 anni",25958,37280
+"maschi","Abruzzo",2003,"40-64 anni",10658,14932
+"maschi","Abruzzo",2004,"18-39 anni",27658,36518
+"maschi","Abruzzo",2004,"40-64 anni",12464,16942
+"maschi","Abruzzo",2005,"18-39 anni",28072,34474
+"maschi","Abruzzo",2005,"40-64 anni",12956,17304
+"maschi","Abruzzo",2006,"18-39 anni",29466,33972
+"maschi","Abruzzo",2006,"40-64 anni",13830,16750
+"maschi","Abruzzo",2007,"18-39 anni",29988,46430
+"maschi","Abruzzo",2007,"40-64 anni",14498,20712
+"maschi","Abruzzo",2008,"18-39 anni",31354,42382
+"maschi","Abruzzo",2008,"40-64 anni",15210,20902
+"maschi","Abruzzo",2009,"18-39 anni",29080,34804
+"maschi","Abruzzo",2009,"40-64 anni",14922,18366
+"maschi","Abruzzo",2010,"18-39 anni",28966,35680
+"maschi","Abruzzo",2010,"40-64 anni",15080,18484
+"maschi","Abruzzo",2011,"18-39 anni",30116,37038
+"maschi","Abruzzo",2011,"40-64 anni",15594,19374
+"maschi","Abruzzo",2012,"18-39 anni",35818,40264
+"maschi","Abruzzo",2012,"40-64 anni",20814,24382
+"maschi","Abruzzo",2013,"18-39 anni",32682,34704
+"maschi","Abruzzo",2013,"40-64 anni",19226,22546
+"maschi","Abruzzo",2014,"18-39 anni",31424,32820
+"maschi","Abruzzo",2014,"40-64 anni",18880,19742
+"maschi","Abruzzo",2015,"18-39 anni",31884,31600
+"maschi","Abruzzo",2015,"40-64 anni",18762,19128
+"maschi","Abruzzo",2016,"18-39 anni",33676,35026
+"maschi","Abruzzo",2016,"40-64 anni",19678,20628
+"maschi","Abruzzo",2017,"18-39 anni",31690,35522
+"maschi","Abruzzo",2017,"40-64 anni",19354,19488
+"maschi","Abruzzo",2018,"18-39 anni",34338,38980
+"maschi","Abruzzo",2018,"40-64 anni",20852,22560
+"maschi","Abruzzo",2019,"18-39 anni",38872,36268
+"maschi","Abruzzo",2019,"40-64 anni",23418,24836
+"maschi","Abruzzo",2020,"18-39 anni",32342,31774
+"maschi","Abruzzo",2020,"40-64 anni",20962,23132
+"maschi","Abruzzo",2021,"18-39 anni",33722,36186
+"maschi","Abruzzo",2021,"40-64 anni",22780,25390
+"maschi","Basilicata",2002,"18-39 anni",13006,9318
+"maschi","Basilicata",2002,"40-64 anni",3844,3994
+"maschi","Basilicata",2003,"18-39 anni",12916,10994
+"maschi","Basilicata",2003,"40-64 anni",4244,4558
+"maschi","Basilicata",2004,"18-39 anni",12790,9496
+"maschi","Basilicata",2004,"40-64 anni",4288,4408
+"maschi","Basilicata",2005,"18-39 anni",13062,8576
+"maschi","Basilicata",2005,"40-64 anni",4420,4170
+"maschi","Basilicata",2006,"18-39 anni",12858,7980
+"maschi","Basilicata",2006,"40-64 anni",4802,4104
+"maschi","Basilicata",2007,"18-39 anni",12824,10866
+"maschi","Basilicata",2007,"40-64 anni",4514,4630
+"maschi","Basilicata",2008,"18-39 anni",12648,9372
+"maschi","Basilicata",2008,"40-64 anni",4682,4668
+"maschi","Basilicata",2009,"18-39 anni",12202,9058
+"maschi","Basilicata",2009,"40-64 anni",4986,4468
+"maschi","Basilicata",2010,"18-39 anni",11672,9186
+"maschi","Basilicata",2010,"40-64 anni",4576,4642
+"maschi","Basilicata",2011,"18-39 anni",11884,10196
+"maschi","Basilicata",2011,"40-64 anni",4780,5772
+"maschi","Basilicata",2012,"18-39 anni",13892,11360
+"maschi","Basilicata",2012,"40-64 anni",5878,6332
+"maschi","Basilicata",2013,"18-39 anni",11860,9218
+"maschi","Basilicata",2013,"40-64 anni",5314,6036
+"maschi","Basilicata",2014,"18-39 anni",12014,9758
+"maschi","Basilicata",2014,"40-64 anni",5334,5712
+"maschi","Basilicata",2015,"18-39 anni",11646,10734
+"maschi","Basilicata",2015,"40-64 anni",4840,4614
+"maschi","Basilicata",2016,"18-39 anni",13446,11652
+"maschi","Basilicata",2016,"40-64 anni",6064,5438
+"maschi","Basilicata",2017,"18-39 anni",13230,12898
+"maschi","Basilicata",2017,"40-64 anni",5848,5406
+"maschi","Basilicata",2018,"18-39 anni",14064,11376
+"maschi","Basilicata",2018,"40-64 anni",6154,5514
+"maschi","Basilicata",2019,"18-39 anni",16236,10330
+"maschi","Basilicata",2019,"40-64 anni",7310,6036
+"maschi","Basilicata",2020,"18-39 anni",14930,9568
+"maschi","Basilicata",2020,"40-64 anni",6496,5340
+"maschi","Basilicata",2021,"18-39 anni",14382,11304
+"maschi","Basilicata",2021,"40-64 anni",6754,5970
+"maschi","Bolzano / Bozen",2002,"18-39 anni",11610,14554
+"maschi","Bolzano / Bozen",2002,"40-64 anni",4034,4282
+"maschi","Bolzano / Bozen",2003,"18-39 anni",12342,16420
+"maschi","Bolzano / Bozen",2003,"40-64 anni",4342,4920
+"maschi","Bolzano / Bozen",2004,"18-39 anni",13198,18340
+"maschi","Bolzano / Bozen",2004,"40-64 anni",5662,6254
+"maschi","Bolzano / Bozen",2005,"18-39 anni",12850,18084
+"maschi","Bolzano / Bozen",2005,"40-64 anni",5022,5844
+"maschi","Bolzano / Bozen",2006,"18-39 anni",13070,18138
+"maschi","Bolzano / Bozen",2006,"40-64 anni",5594,6620
+"maschi","Bolzano / Bozen",2007,"18-39 anni",14062,19342
+"maschi","Bolzano / Bozen",2007,"40-64 anni",6112,7378
+"maschi","Bolzano / Bozen",2008,"18-39 anni",13236,17352
+"maschi","Bolzano / Bozen",2008,"40-64 anni",5888,7108
+"maschi","Bolzano / Bozen",2009,"18-39 anni",13158,16842
+"maschi","Bolzano / Bozen",2009,"40-64 anni",6102,6994
+"maschi","Bolzano / Bozen",2010,"18-39 anni",12962,17552
+"maschi","Bolzano / Bozen",2010,"40-64 anni",6274,7240
+"maschi","Bolzano / Bozen",2011,"18-39 anni",13882,18104
+"maschi","Bolzano / Bozen",2011,"40-64 anni",6692,7684
+"maschi","Bolzano / Bozen",2012,"18-39 anni",15166,19058
+"maschi","Bolzano / Bozen",2012,"40-64 anni",7792,8402
+"maschi","Bolzano / Bozen",2013,"18-39 anni",13452,17378
+"maschi","Bolzano / Bozen",2013,"40-64 anni",7188,7682
+"maschi","Bolzano / Bozen",2014,"18-39 anni",14054,16898
+"maschi","Bolzano / Bozen",2014,"40-64 anni",7466,7868
+"maschi","Bolzano / Bozen",2015,"18-39 anni",15222,18352
+"maschi","Bolzano / Bozen",2015,"40-64 anni",7894,8436
+"maschi","Bolzano / Bozen",2016,"18-39 anni",14966,19180
+"maschi","Bolzano / Bozen",2016,"40-64 anni",7634,8384
+"maschi","Bolzano / Bozen",2017,"18-39 anni",16064,20724
+"maschi","Bolzano / Bozen",2017,"40-64 anni",8210,9410
+"maschi","Bolzano / Bozen",2018,"18-39 anni",17268,21818
+"maschi","Bolzano / Bozen",2018,"40-64 anni",8118,9464
+"maschi","Bolzano / Bozen",2019,"18-39 anni",19402,21674
+"maschi","Bolzano / Bozen",2019,"40-64 anni",9624,9900
+"maschi","Bolzano / Bozen",2020,"18-39 anni",16398,18414
+"maschi","Bolzano / Bozen",2020,"40-64 anni",8518,9144
+"maschi","Bolzano / Bozen",2021,"18-39 anni",17652,19894
+"maschi","Bolzano / Bozen",2021,"40-64 anni",9252,9408
+"maschi","Calabria",2002,"18-39 anni",61086,43066
+"maschi","Calabria",2002,"40-64 anni",18422,17222
+"maschi","Calabria",2003,"18-39 anni",63038,56640
+"maschi","Calabria",2003,"40-64 anni",19244,20112
+"maschi","Calabria",2004,"18-39 anni",67482,43736
+"maschi","Calabria",2004,"40-64 anni",21948,20336
+"maschi","Calabria",2005,"18-39 anni",57896,37476
+"maschi","Calabria",2005,"40-64 anni",20852,18086
+"maschi","Calabria",2006,"18-39 anni",58828,38874
+"maschi","Calabria",2006,"40-64 anni",21588,19602
+"maschi","Calabria",2007,"18-39 anni",54690,55290
+"maschi","Calabria",2007,"40-64 anni",20100,24534
+"maschi","Calabria",2008,"18-39 anni",54470,46256
+"maschi","Calabria",2008,"40-64 anni",20796,21858
+"maschi","Calabria",2009,"18-39 anni",53546,47230
+"maschi","Calabria",2009,"40-64 anni",21346,23678
+"maschi","Calabria",2010,"18-39 anni",51446,49256
+"maschi","Calabria",2010,"40-64 anni",20666,23208
+"maschi","Calabria",2011,"18-39 anni",51250,44116
+"maschi","Calabria",2011,"40-64 anni",21072,23664
+"maschi","Calabria",2012,"18-39 anni",60272,47984
+"maschi","Calabria",2012,"40-64 anni",27192,27784
+"maschi","Calabria",2013,"18-39 anni",52316,44840
+"maschi","Calabria",2013,"40-64 anni",23396,24566
+"maschi","Calabria",2014,"18-39 anni",50624,43716
+"maschi","Calabria",2014,"40-64 anni",22648,24342
+"maschi","Calabria",2015,"18-39 anni",48552,47224
+"maschi","Calabria",2015,"40-64 anni",21768,21586
+"maschi","Calabria",2016,"18-39 anni",51372,49906
+"maschi","Calabria",2016,"40-64 anni",24046,23710
+"maschi","Calabria",2017,"18-39 anni",52444,48822
+"maschi","Calabria",2017,"40-64 anni",23752,23270
+"maschi","Calabria",2018,"18-39 anni",55006,46690
+"maschi","Calabria",2018,"40-64 anni",24500,23316
+"maschi","Calabria",2019,"18-39 anni",73374,47420
+"maschi","Calabria",2019,"40-64 anni",29960,26798
+"maschi","Calabria",2020,"18-39 anni",56070,36282
+"maschi","Calabria",2020,"40-64 anni",24242,21456
+"maschi","Calabria",2021,"18-39 anni",57754,45118
+"maschi","Calabria",2021,"40-64 anni",26516,25132
+"maschi","Campania",2002,"18-39 anni",191520,131540
+"maschi","Campania",2002,"40-64 anni",59614,50958
+"maschi","Campania",2003,"18-39 anni",184558,156764
+"maschi","Campania",2003,"40-64 anni",60754,56660
+"maschi","Campania",2004,"18-39 anni",192430,164706
+"maschi","Campania",2004,"40-64 anni",67480,63260
+"maschi","Campania",2005,"18-39 anni",181174,137580
+"maschi","Campania",2005,"40-64 anni",66302,58142
+"maschi","Campania",2006,"18-39 anni",184136,135402
+"maschi","Campania",2006,"40-64 anni",68994,60484
+"maschi","Campania",2007,"18-39 anni",183884,150876
+"maschi","Campania",2007,"40-64 anni",73872,68470
+"maschi","Campania",2008,"18-39 anni",189300,152732
+"maschi","Campania",2008,"40-64 anni",76702,70360
+"maschi","Campania",2009,"18-39 anni",167196,147066
+"maschi","Campania",2009,"40-64 anni",72344,70666
+"maschi","Campania",2010,"18-39 anni",167812,152190
+"maschi","Campania",2010,"40-64 anni",74160,72904
+"maschi","Campania",2011,"18-39 anni",179832,152412
+"maschi","Campania",2011,"40-64 anni",81830,75516
+"maschi","Campania",2012,"18-39 anni",206086,164862
+"maschi","Campania",2012,"40-64 anni",99980,90108
+"maschi","Campania",2013,"18-39 anni",176190,152458
+"maschi","Campania",2013,"40-64 anni",89274,85126
+"maschi","Campania",2014,"18-39 anni",164246,153536
+"maschi","Campania",2014,"40-64 anni",82374,80854
+"maschi","Campania",2015,"18-39 anni",159410,152720
+"maschi","Campania",2015,"40-64 anni",76862,78056
+"maschi","Campania",2016,"18-39 anni",164100,148992
+"maschi","Campania",2016,"40-64 anni",81226,81062
+"maschi","Campania",2017,"18-39 anni",158526,156074
+"maschi","Campania",2017,"40-64 anni",80440,80642
+"maschi","Campania",2018,"18-39 anni",169278,141438
+"maschi","Campania",2018,"40-64 anni",82060,78678
+"maschi","Campania",2019,"18-39 anni",194800,143640
+"maschi","Campania",2019,"40-64 anni",96100,93210
+"maschi","Campania",2020,"18-39 anni",162004,125350
+"maschi","Campania",2020,"40-64 anni",85580,81364
+"maschi","Campania",2021,"18-39 anni",172608,136788
+"maschi","Campania",2021,"40-64 anni",91182,88320
+"maschi","Emilia-Romagna",2002,"18-39 anni",122788,185926
+"maschi","Emilia-Romagna",2002,"40-64 anni",49848,62298
+"maschi","Emilia-Romagna",2003,"18-39 anni",119910,206434
+"maschi","Emilia-Romagna",2003,"40-64 anni",49208,64136
+"maschi","Emilia-Romagna",2004,"18-39 anni",137300,222930
+"maschi","Emilia-Romagna",2004,"40-64 anni",60458,79068
+"maschi","Emilia-Romagna",2005,"18-39 anni",137914,205704
+"maschi","Emilia-Romagna",2005,"40-64 anni",60924,74962
+"maschi","Emilia-Romagna",2006,"18-39 anni",142544,208834
+"maschi","Emilia-Romagna",2006,"40-64 anni",66734,79212
+"maschi","Emilia-Romagna",2007,"18-39 anni",139162,223472
+"maschi","Emilia-Romagna",2007,"40-64 anni",68248,84260
+"maschi","Emilia-Romagna",2008,"18-39 anni",135462,232698
+"maschi","Emilia-Romagna",2008,"40-64 anni",69286,87658
+"maschi","Emilia-Romagna",2009,"18-39 anni",130280,197476
+"maschi","Emilia-Romagna",2009,"40-64 anni",67918,79874
+"maschi","Emilia-Romagna",2010,"18-39 anni",131348,199092
+"maschi","Emilia-Romagna",2010,"40-64 anni",70126,81500
+"maschi","Emilia-Romagna",2011,"18-39 anni",130928,192234
+"maschi","Emilia-Romagna",2011,"40-64 anni",75116,84336
+"maschi","Emilia-Romagna",2012,"18-39 anni",138530,195258
+"maschi","Emilia-Romagna",2012,"40-64 anni",83412,89662
+"maschi","Emilia-Romagna",2013,"18-39 anni",125526,164414
+"maschi","Emilia-Romagna",2013,"40-64 anni",79066,81946
+"maschi","Emilia-Romagna",2014,"18-39 anni",118714,152424
+"maschi","Emilia-Romagna",2014,"40-64 anni",77488,78070
+"maschi","Emilia-Romagna",2015,"18-39 anni",113430,154806
+"maschi","Emilia-Romagna",2015,"40-64 anni",77172,78258
+"maschi","Emilia-Romagna",2016,"18-39 anni",115590,163072
+"maschi","Emilia-Romagna",2016,"40-64 anni",82492,85316
+"maschi","Emilia-Romagna",2017,"18-39 anni",114492,181694
+"maschi","Emilia-Romagna",2017,"40-64 anni",82608,87954
+"maschi","Emilia-Romagna",2018,"18-39 anni",117884,180560
+"maschi","Emilia-Romagna",2018,"40-64 anni",84316,91994
+"maschi","Emilia-Romagna",2019,"18-39 anni",133154,195388
+"maschi","Emilia-Romagna",2019,"40-64 anni",96428,107788
+"maschi","Emilia-Romagna",2020,"18-39 anni",123288,167452
+"maschi","Emilia-Romagna",2020,"40-64 anni",90028,96228
+"maschi","Emilia-Romagna",2021,"18-39 anni",126100,179358
+"maschi","Emilia-Romagna",2021,"40-64 anni",94912,101132
+"maschi","Friuli-Venezia Giulia",2002,"18-39 anni",37784,53086
+"maschi","Friuli-Venezia Giulia",2002,"40-64 anni",13572,17516
+"maschi","Friuli-Venezia Giulia",2003,"18-39 anni",38334,56788
+"maschi","Friuli-Venezia Giulia",2003,"40-64 anni",14442,18164
+"maschi","Friuli-Venezia Giulia",2004,"18-39 anni",43334,59240
+"maschi","Friuli-Venezia Giulia",2004,"40-64 anni",16620,21366
+"maschi","Friuli-Venezia Giulia",2005,"18-39 anni",43722,53986
+"maschi","Friuli-Venezia Giulia",2005,"40-64 anni",17106,19590
+"maschi","Friuli-Venezia Giulia",2006,"18-39 anni",42700,54428
+"maschi","Friuli-Venezia Giulia",2006,"40-64 anni",17150,19586
+"maschi","Friuli-Venezia Giulia",2007,"18-39 anni",42908,60776
+"maschi","Friuli-Venezia Giulia",2007,"40-64 anni",17944,22870
+"maschi","Friuli-Venezia Giulia",2008,"18-39 anni",40280,56566
+"maschi","Friuli-Venezia Giulia",2008,"40-64 anni",17854,21928
+"maschi","Friuli-Venezia Giulia",2009,"18-39 anni",39566,49522
+"maschi","Friuli-Venezia Giulia",2009,"40-64 anni",18208,20082
+"maschi","Friuli-Venezia Giulia",2010,"18-39 anni",40512,48866
+"maschi","Friuli-Venezia Giulia",2010,"40-64 anni",19234,21448
+"maschi","Friuli-Venezia Giulia",2011,"18-39 anni",38332,45464
+"maschi","Friuli-Venezia Giulia",2011,"40-64 anni",19124,20446
+"maschi","Friuli-Venezia Giulia",2012,"18-39 anni",39634,48166
+"maschi","Friuli-Venezia Giulia",2012,"40-64 anni",22594,22894
+"maschi","Friuli-Venezia Giulia",2013,"18-39 anni",34604,42164
+"maschi","Friuli-Venezia Giulia",2013,"40-64 anni",19930,20676
+"maschi","Friuli-Venezia Giulia",2014,"18-39 anni",35092,39714
+"maschi","Friuli-Venezia Giulia",2014,"40-64 anni",19902,20124
+"maschi","Friuli-Venezia Giulia",2015,"18-39 anni",33998,39398
+"maschi","Friuli-Venezia Giulia",2015,"40-64 anni",20760,20262
+"maschi","Friuli-Venezia Giulia",2016,"18-39 anni",35918,42262
+"maschi","Friuli-Venezia Giulia",2016,"40-64 anni",21524,21974
+"maschi","Friuli-Venezia Giulia",2017,"18-39 anni",33654,47282
+"maschi","Friuli-Venezia Giulia",2017,"40-64 anni",22190,24346
+"maschi","Friuli-Venezia Giulia",2018,"18-39 anni",34824,49782
+"maschi","Friuli-Venezia Giulia",2018,"40-64 anni",22116,24884
+"maschi","Friuli-Venezia Giulia",2019,"18-39 anni",40820,46794
+"maschi","Friuli-Venezia Giulia",2019,"40-64 anni",26284,27006
+"maschi","Friuli-Venezia Giulia",2020,"18-39 anni",35068,42290
+"maschi","Friuli-Venezia Giulia",2020,"40-64 anni",22362,24904
+"maschi","Friuli-Venezia Giulia",2021,"18-39 anni",35932,47812
+"maschi","Friuli-Venezia Giulia",2021,"40-64 anni",23774,26656
+"maschi","Lazio",2002,"18-39 anni",114792,132334
+"maschi","Lazio",2002,"40-64 anni",60278,61050
+"maschi","Lazio",2003,"18-39 anni",109822,161572
+"maschi","Lazio",2003,"40-64 anni",60576,66870
+"maschi","Lazio",2004,"18-39 anni",112798,186468
+"maschi","Lazio",2004,"40-64 anni",64762,78022
+"maschi","Lazio",2005,"18-39 anni",124176,157198
+"maschi","Lazio",2005,"40-64 anni",74540,77754
+"maschi","Lazio",2006,"18-39 anni",114508,152956
+"maschi","Lazio",2006,"40-64 anni",68168,74044
+"maschi","Lazio",2007,"18-39 anni",107544,191660
+"maschi","Lazio",2007,"40-64 anni",64892,78878
+"maschi","Lazio",2008,"18-39 anni",129738,212252
+"maschi","Lazio",2008,"40-64 anni",85586,97762
+"maschi","Lazio",2009,"18-39 anni",108842,185260
+"maschi","Lazio",2009,"40-64 anni",69794,82132
+"maschi","Lazio",2010,"18-39 anni",110410,186420
+"maschi","Lazio",2010,"40-64 anni",72670,85004
+"maschi","Lazio",2011,"18-39 anni",109886,187004
+"maschi","Lazio",2011,"40-64 anni",71920,87132
+"maschi","Lazio",2012,"18-39 anni",134648,228092
+"maschi","Lazio",2012,"40-64 anni",97534,117062
+"maschi","Lazio",2013,"18-39 anni",114724,173840
+"maschi","Lazio",2013,"40-64 anni",80914,92126
+"maschi","Lazio",2014,"18-39 anni",111114,165412
+"maschi","Lazio",2014,"40-64 anni",81406,89982
+"maschi","Lazio",2015,"18-39 anni",109800,164914
+"maschi","Lazio",2015,"40-64 anni",80026,86534
+"maschi","Lazio",2016,"18-39 anni",116954,164186
+"maschi","Lazio",2016,"40-64 anni",84372,90164
+"maschi","Lazio",2017,"18-39 anni",112558,158154
+"maschi","Lazio",2017,"40-64 anni",84462,87926
+"maschi","Lazio",2018,"18-39 anni",116014,156760
+"maschi","Lazio",2018,"40-64 anni",87310,89304
+"maschi","Lazio",2019,"18-39 anni",133668,160712
+"maschi","Lazio",2019,"40-64 anni",97642,102020
+"maschi","Lazio",2020,"18-39 anni",110968,132214
+"maschi","Lazio",2020,"40-64 anni",86568,85636
+"maschi","Lazio",2021,"18-39 anni",121064,150268
+"maschi","Lazio",2021,"40-64 anni",93696,99716
+"maschi","Liguria",2002,"18-39 anni",38560,44386
+"maschi","Liguria",2002,"40-64 anni",22712,25796
+"maschi","Liguria",2003,"18-39 anni",36624,52802
+"maschi","Liguria",2003,"40-64 anni",22288,27258
+"maschi","Liguria",2004,"18-39 anni",38488,53224
+"maschi","Liguria",2004,"40-64 anni",24634,29288
+"maschi","Liguria",2005,"18-39 anni",37150,46352
+"maschi","Liguria",2005,"40-64 anni",24064,27554
+"maschi","Liguria",2006,"18-39 anni",38602,46638
+"maschi","Liguria",2006,"40-64 anni",25862,28748
+"maschi","Liguria",2007,"18-39 anni",37900,49668
+"maschi","Liguria",2007,"40-64 anni",25950,29712
+"maschi","Liguria",2008,"18-39 anni",37694,55508
+"maschi","Liguria",2008,"40-64 anni",26632,31364
+"maschi","Liguria",2009,"18-39 anni",35304,48970
+"maschi","Liguria",2009,"40-64 anni",25216,30448
+"maschi","Liguria",2010,"18-39 anni",38458,54570
+"maschi","Liguria",2010,"40-64 anni",28774,33064
+"maschi","Liguria",2011,"18-39 anni",36044,50786
+"maschi","Liguria",2011,"40-64 anni",28220,31376
+"maschi","Liguria",2012,"18-39 anni",41280,53684
+"maschi","Liguria",2012,"40-64 anni",32990,35228
+"maschi","Liguria",2013,"18-39 anni",37488,45714
+"maschi","Liguria",2013,"40-64 anni",30952,31038
+"maschi","Liguria",2014,"18-39 anni",34852,41102
+"maschi","Liguria",2014,"40-64 anni",29198,29810
+"maschi","Liguria",2015,"18-39 anni",34522,42672
+"maschi","Liguria",2015,"40-64 anni",28020,28750
+"maschi","Liguria",2016,"18-39 anni",34452,48740
+"maschi","Liguria",2016,"40-64 anni",29260,31904
+"maschi","Liguria",2017,"18-39 anni",34800,48632
+"maschi","Liguria",2017,"40-64 anni",29104,31846
+"maschi","Liguria",2018,"18-39 anni",36152,48092
+"maschi","Liguria",2018,"40-64 anni",29452,33306
+"maschi","Liguria",2019,"18-39 anni",39644,48392
+"maschi","Liguria",2019,"40-64 anni",31478,37660
+"maschi","Liguria",2020,"18-39 anni",35508,41942
+"maschi","Liguria",2020,"40-64 anni",29776,33842
+"maschi","Liguria",2021,"18-39 anni",37968,49244
+"maschi","Liguria",2021,"40-64 anni",31530,37360
+"maschi","Lombardia",2002,"18-39 anni",318434,411038
+"maschi","Lombardia",2002,"40-64 anni",129538,133702
+"maschi","Lombardia",2003,"18-39 anni",311464,475416
+"maschi","Lombardia",2003,"40-64 anni",129622,142256
+"maschi","Lombardia",2004,"18-39 anni",356780,550810
+"maschi","Lombardia",2004,"40-64 anni",154230,174294
+"maschi","Lombardia",2005,"18-39 anni",346104,455116
+"maschi","Lombardia",2005,"40-64 anni",148348,157136
+"maschi","Lombardia",2006,"18-39 anni",372990,470188
+"maschi","Lombardia",2006,"40-64 anni",167732,172604
+"maschi","Lombardia",2007,"18-39 anni",356100,497196
+"maschi","Lombardia",2007,"40-64 anni",172116,185334
+"maschi","Lombardia",2008,"18-39 anni",338810,471434
+"maschi","Lombardia",2008,"40-64 anni",169050,182844
+"maschi","Lombardia",2009,"18-39 anni",301912,419678
+"maschi","Lombardia",2009,"40-64 anni",155336,166272
+"maschi","Lombardia",2010,"18-39 anni",312136,453852
+"maschi","Lombardia",2010,"40-64 anni",166036,180508
+"maschi","Lombardia",2011,"18-39 anni",311972,451062
+"maschi","Lombardia",2011,"40-64 anni",174594,188206
+"maschi","Lombardia",2012,"18-39 anni",351594,468968
+"maschi","Lombardia",2012,"40-64 anni",203742,208134
+"maschi","Lombardia",2013,"18-39 anni",315360,414118
+"maschi","Lombardia",2013,"40-64 anni",190032,192550
+"maschi","Lombardia",2014,"18-39 anni",302156,379374
+"maschi","Lombardia",2014,"40-64 anni",186768,185466
+"maschi","Lombardia",2015,"18-39 anni",296990,370498
+"maschi","Lombardia",2015,"40-64 anni",188554,184606
+"maschi","Lombardia",2016,"18-39 anni",304254,392552
+"maschi","Lombardia",2016,"40-64 anni",200030,199156
+"maschi","Lombardia",2017,"18-39 anni",303040,416398
+"maschi","Lombardia",2017,"40-64 anni",203004,206164
+"maschi","Lombardia",2018,"18-39 anni",308016,429968
+"maschi","Lombardia",2018,"40-64 anni",212232,219268
+"maschi","Lombardia",2019,"18-39 anni",345764,460948
+"maschi","Lombardia",2019,"40-64 anni",242430,255658
+"maschi","Lombardia",2020,"18-39 anni",307390,382588
+"maschi","Lombardia",2020,"40-64 anni",219974,218448
+"maschi","Lombardia",2021,"18-39 anni",334330,424802
+"maschi","Lombardia",2021,"40-64 anni",245558,246852
+"maschi","Marche",2002,"18-39 anni",32796,50680
+"maschi","Marche",2002,"40-64 anni",12734,18192
+"maschi","Marche",2003,"18-39 anni",34174,61316
+"maschi","Marche",2003,"40-64 anni",13776,21288
+"maschi","Marche",2004,"18-39 anni",40726,63544
+"maschi","Marche",2004,"40-64 anni",16584,23356
+"maschi","Marche",2005,"18-39 anni",40490,56268
+"maschi","Marche",2005,"40-64 anni",16528,22332
+"maschi","Marche",2006,"18-39 anni",40062,53378
+"maschi","Marche",2006,"40-64 anni",17712,22194
+"maschi","Marche",2007,"18-39 anni",39040,63410
+"maschi","Marche",2007,"40-64 anni",18544,25676
+"maschi","Marche",2008,"18-39 anni",41350,63460
+"maschi","Marche",2008,"40-64 anni",19608,26494
+"maschi","Marche",2009,"18-39 anni",41060,51796
+"maschi","Marche",2009,"40-64 anni",19644,23502
+"maschi","Marche",2010,"18-39 anni",40170,49620
+"maschi","Marche",2010,"40-64 anni",19878,22780
+"maschi","Marche",2011,"18-39 anni",38220,47542
+"maschi","Marche",2011,"40-64 anni",20580,22732
+"maschi","Marche",2012,"18-39 anni",41870,48298
+"maschi","Marche",2012,"40-64 anni",25044,26158
+"maschi","Marche",2013,"18-39 anni",37326,39164
+"maschi","Marche",2013,"40-64 anni",22246,22058
+"maschi","Marche",2014,"18-39 anni",35250,38126
+"maschi","Marche",2014,"40-64 anni",21694,22070
+"maschi","Marche",2015,"18-39 anni",34906,38672
+"maschi","Marche",2015,"40-64 anni",21622,21704
+"maschi","Marche",2016,"18-39 anni",35534,41520
+"maschi","Marche",2016,"40-64 anni",23504,23478
+"maschi","Marche",2017,"18-39 anni",36260,46680
+"maschi","Marche",2017,"40-64 anni",23110,23826
+"maschi","Marche",2018,"18-39 anni",37682,44628
+"maschi","Marche",2018,"40-64 anni",24324,25200
+"maschi","Marche",2019,"18-39 anni",42396,45106
+"maschi","Marche",2019,"40-64 anni",27938,28620
+"maschi","Marche",2020,"18-39 anni",37550,40942
+"maschi","Marche",2020,"40-64 anni",25408,26090
+"maschi","Marche",2021,"18-39 anni",37798,46826
+"maschi","Marche",2021,"40-64 anni",26150,28694
+"maschi","Molise",2002,"18-39 anni",6878,7712
+"maschi","Molise",2002,"40-64 anni",2394,3598
+"maschi","Molise",2003,"18-39 anni",6828,7730
+"maschi","Molise",2003,"40-64 anni",2568,3332
+"maschi","Molise",2004,"18-39 anni",7446,7516
+"maschi","Molise",2004,"40-64 anni",3092,3686
+"maschi","Molise",2005,"18-39 anni",7198,6686
+"maschi","Molise",2005,"40-64 anni",2808,3448
+"maschi","Molise",2006,"18-39 anni",7028,7096
+"maschi","Molise",2006,"40-64 anni",2884,3740
+"maschi","Molise",2007,"18-39 anni",7624,8382
+"maschi","Molise",2007,"40-64 anni",3324,4120
+"maschi","Molise",2008,"18-39 anni",7138,7550
+"maschi","Molise",2008,"40-64 anni",3394,4228
+"maschi","Molise",2009,"18-39 anni",7316,7396
+"maschi","Molise",2009,"40-64 anni",3572,4348
+"maschi","Molise",2010,"18-39 anni",7110,6994
+"maschi","Molise",2010,"40-64 anni",3244,4000
+"maschi","Molise",2011,"18-39 anni",7308,7692
+"maschi","Molise",2011,"40-64 anni",3454,4562
+"maschi","Molise",2012,"18-39 anni",8520,8278
+"maschi","Molise",2012,"40-64 anni",4942,6024
+"maschi","Molise",2013,"18-39 anni",7240,6780
+"maschi","Molise",2013,"40-64 anni",4132,4998
+"maschi","Molise",2014,"18-39 anni",6948,6726
+"maschi","Molise",2014,"40-64 anni",4198,4332
+"maschi","Molise",2015,"18-39 anni",8042,10568
+"maschi","Molise",2015,"40-64 anni",3958,4036
+"maschi","Molise",2016,"18-39 anni",9152,10650
+"maschi","Molise",2016,"40-64 anni",4716,4478
+"maschi","Molise",2017,"18-39 anni",8398,12360
+"maschi","Molise",2017,"40-64 anni",4520,4286
+"maschi","Molise",2018,"18-39 anni",9880,10410
+"maschi","Molise",2018,"40-64 anni",4992,4612
+"maschi","Molise",2019,"18-39 anni",11272,8812
+"maschi","Molise",2019,"40-64 anni",5320,5272
+"maschi","Molise",2020,"18-39 anni",9778,7538
+"maschi","Molise",2020,"40-64 anni",4932,4638
+"maschi","Molise",2021,"18-39 anni",10344,8846
+"maschi","Molise",2021,"40-64 anni",5270,4976
+"maschi","Piemonte",2002,"18-39 anni",140852,158768
+"maschi","Piemonte",2002,"40-64 anni",65994,67738
+"maschi","Piemonte",2003,"18-39 anni",135728,203676
+"maschi","Piemonte",2003,"40-64 anni",65288,74636
+"maschi","Piemonte",2004,"18-39 anni",152900,193170
+"maschi","Piemonte",2004,"40-64 anni",74792,80148
+"maschi","Piemonte",2005,"18-39 anni",143106,163122
+"maschi","Piemonte",2005,"40-64 anni",73476,74816
+"maschi","Piemonte",2006,"18-39 anni",145038,165948
+"maschi","Piemonte",2006,"40-64 anni",75556,77210
+"maschi","Piemonte",2007,"18-39 anni",148224,220928
+"maschi","Piemonte",2007,"40-64 anni",81414,91776
+"maschi","Piemonte",2008,"18-39 anni",143132,194132
+"maschi","Piemonte",2008,"40-64 anni",79662,88990
+"maschi","Piemonte",2009,"18-39 anni",137510,175114
+"maschi","Piemonte",2009,"40-64 anni",79256,84782
+"maschi","Piemonte",2010,"18-39 anni",135900,172070
+"maschi","Piemonte",2010,"40-64 anni",81210,85582
+"maschi","Piemonte",2011,"18-39 anni",133972,168034
+"maschi","Piemonte",2011,"40-64 anni",82804,87844
+"maschi","Piemonte",2012,"18-39 anni",151538,186804
+"maschi","Piemonte",2012,"40-64 anni",98778,100700
+"maschi","Piemonte",2013,"18-39 anni",133790,155254
+"maschi","Piemonte",2013,"40-64 anni",88250,87060
+"maschi","Piemonte",2014,"18-39 anni",128386,146964
+"maschi","Piemonte",2014,"40-64 anni",87052,84782
+"maschi","Piemonte",2015,"18-39 anni",124062,148888
+"maschi","Piemonte",2015,"40-64 anni",85964,83990
+"maschi","Piemonte",2016,"18-39 anni",127138,167116
+"maschi","Piemonte",2016,"40-64 anni",90228,89514
+"maschi","Piemonte",2017,"18-39 anni",128582,171178
+"maschi","Piemonte",2017,"40-64 anni",90514,92824
+"maschi","Piemonte",2018,"18-39 anni",129550,157624
+"maschi","Piemonte",2018,"40-64 anni",89594,90652
+"maschi","Piemonte",2019,"18-39 anni",145264,175260
+"maschi","Piemonte",2019,"40-64 anni",99020,104900
+"maschi","Piemonte",2020,"18-39 anni",130316,152788
+"maschi","Piemonte",2020,"40-64 anni",91296,94098
+"maschi","Piemonte",2021,"18-39 anni",136534,161506
+"maschi","Piemonte",2021,"40-64 anni",95298,98118
+"maschi","Puglia",2002,"18-39 anni",93212,63534
+"maschi","Puglia",2002,"40-64 anni",25426,24970
+"maschi","Puglia",2003,"18-39 anni",89718,72376
+"maschi","Puglia",2003,"40-64 anni",25398,26710
+"maschi","Puglia",2004,"18-39 anni",89728,66600
+"maschi","Puglia",2004,"40-64 anni",28088,27666
+"maschi","Puglia",2005,"18-39 anni",85644,61264
+"maschi","Puglia",2005,"40-64 anni",26612,27710
+"maschi","Puglia",2006,"18-39 anni",90744,61664
+"maschi","Puglia",2006,"40-64 anni",27260,27436
+"maschi","Puglia",2007,"18-39 anni",86846,70624
+"maschi","Puglia",2007,"40-64 anni",28298,31480
+"maschi","Puglia",2008,"18-39 anni",88454,68326
+"maschi","Puglia",2008,"40-64 anni",29650,32422
+"maschi","Puglia",2009,"18-39 anni",81436,65424
+"maschi","Puglia",2009,"40-64 anni",28468,30800
+"maschi","Puglia",2010,"18-39 anni",81070,70954
+"maschi","Puglia",2010,"40-64 anni",29772,34278
+"maschi","Puglia",2011,"18-39 anni",87318,66338
+"maschi","Puglia",2011,"40-64 anni",32498,34380
+"maschi","Puglia",2012,"18-39 anni",100506,74504
+"maschi","Puglia",2012,"40-64 anni",39250,40380
+"maschi","Puglia",2013,"18-39 anni",87136,65660
+"maschi","Puglia",2013,"40-64 anni",35578,37104
+"maschi","Puglia",2014,"18-39 anni",81548,65366
+"maschi","Puglia",2014,"40-64 anni",34844,35312
+"maschi","Puglia",2015,"18-39 anni",78626,66576
+"maschi","Puglia",2015,"40-64 anni",34920,35714
+"maschi","Puglia",2016,"18-39 anni",82338,68754
+"maschi","Puglia",2016,"40-64 anni",37008,37360
+"maschi","Puglia",2017,"18-39 anni",85054,74620
+"maschi","Puglia",2017,"40-64 anni",39412,40034
+"maschi","Puglia",2018,"18-39 anni",87732,74622
+"maschi","Puglia",2018,"40-64 anni",39464,39366
+"maschi","Puglia",2019,"18-39 anni",104394,74096
+"maschi","Puglia",2019,"40-64 anni",44930,46078
+"maschi","Puglia",2020,"18-39 anni",86622,67858
+"maschi","Puglia",2020,"40-64 anni",40952,43414
+"maschi","Puglia",2021,"18-39 anni",88056,76542
+"maschi","Puglia",2021,"40-64 anni",43308,48324
+"maschi","Sardegna",2002,"18-39 anni",39314,36158
+"maschi","Sardegna",2002,"40-64 anni",13598,16324
+"maschi","Sardegna",2003,"18-39 anni",39130,39938
+"maschi","Sardegna",2003,"40-64 anni",13526,17292
+"maschi","Sardegna",2004,"18-39 anni",39632,38890
+"maschi","Sardegna",2004,"40-64 anni",15358,18796
+"maschi","Sardegna",2005,"18-39 anni",37870,37152
+"maschi","Sardegna",2005,"40-64 anni",15268,19492
+"maschi","Sardegna",2006,"18-39 anni",38574,38304
+"maschi","Sardegna",2006,"40-64 anni",16132,20230
+"maschi","Sardegna",2007,"18-39 anni",38442,41104
+"maschi","Sardegna",2007,"40-64 anni",16488,22088
+"maschi","Sardegna",2008,"18-39 anni",39446,41018
+"maschi","Sardegna",2008,"40-64 anni",18510,22576
+"maschi","Sardegna",2009,"18-39 anni",38200,38026
+"maschi","Sardegna",2009,"40-64 anni",18246,21308
+"maschi","Sardegna",2010,"18-39 anni",36834,39152
+"maschi","Sardegna",2010,"40-64 anni",18434,22416
+"maschi","Sardegna",2011,"18-39 anni",37332,36870
+"maschi","Sardegna",2011,"40-64 anni",19592,21694
+"maschi","Sardegna",2012,"18-39 anni",41786,41264
+"maschi","Sardegna",2012,"40-64 anni",24450,26834
+"maschi","Sardegna",2013,"18-39 anni",36578,35816
+"maschi","Sardegna",2013,"40-64 anni",21922,24802
+"maschi","Sardegna",2014,"18-39 anni",34782,32476
+"maschi","Sardegna",2014,"40-64 anni",20764,22444
+"maschi","Sardegna",2015,"18-39 anni",33426,34446
+"maschi","Sardegna",2015,"40-64 anni",19932,21724
+"maschi","Sardegna",2016,"18-39 anni",35184,36608
+"maschi","Sardegna",2016,"40-64 anni",21364,22424
+"maschi","Sardegna",2017,"18-39 anni",35112,41028
+"maschi","Sardegna",2017,"40-64 anni",21804,23384
+"maschi","Sardegna",2018,"18-39 anni",36296,35900
+"maschi","Sardegna",2018,"40-64 anni",22566,23234
+"maschi","Sardegna",2019,"18-39 anni",40036,34124
+"maschi","Sardegna",2019,"40-64 anni",25276,26454
+"maschi","Sardegna",2020,"18-39 anni",35620,30356
+"maschi","Sardegna",2020,"40-64 anni",23230,25074
+"maschi","Sardegna",2021,"18-39 anni",34356,31958
+"maschi","Sardegna",2021,"40-64 anni",24552,27254
+"maschi","Sicilia",2002,"18-39 anni",126764,88880
+"maschi","Sicilia",2002,"40-64 anni",42570,38724
+"maschi","Sicilia",2003,"18-39 anni",121954,107220
+"maschi","Sicilia",2003,"40-64 anni",42574,41382
+"maschi","Sicilia",2004,"18-39 anni",133914,106124
+"maschi","Sicilia",2004,"40-64 anni",48252,46186
+"maschi","Sicilia",2005,"18-39 anni",121220,99036
+"maschi","Sicilia",2005,"40-64 anni",46062,45870
+"maschi","Sicilia",2006,"18-39 anni",125052,97336
+"maschi","Sicilia",2006,"40-64 anni",47148,46440
+"maschi","Sicilia",2007,"18-39 anni",123318,117500
+"maschi","Sicilia",2007,"40-64 anni",49362,52934
+"maschi","Sicilia",2008,"18-39 anni",124646,115896
+"maschi","Sicilia",2008,"40-64 anni",51780,55244
+"maschi","Sicilia",2009,"18-39 anni",113128,108440
+"maschi","Sicilia",2009,"40-64 anni",47420,52230
+"maschi","Sicilia",2010,"18-39 anni",113664,115310
+"maschi","Sicilia",2010,"40-64 anni",50598,56194
+"maschi","Sicilia",2011,"18-39 anni",112942,104432
+"maschi","Sicilia",2011,"40-64 anni",50040,53634
+"maschi","Sicilia",2012,"18-39 anni",135312,119288
+"maschi","Sicilia",2012,"40-64 anni",65372,66742
+"maschi","Sicilia",2013,"18-39 anni",117218,106026
+"maschi","Sicilia",2013,"40-64 anni",57634,58860
+"maschi","Sicilia",2014,"18-39 anni",112798,107800
+"maschi","Sicilia",2014,"40-64 anni",57374,57338
+"maschi","Sicilia",2015,"18-39 anni",111314,104864
+"maschi","Sicilia",2015,"40-64 anni",55194,53098
+"maschi","Sicilia",2016,"18-39 anni",120506,100286
+"maschi","Sicilia",2016,"40-64 anni",59400,55892
+"maschi","Sicilia",2017,"18-39 anni",123564,98304
+"maschi","Sicilia",2017,"40-64 anni",61116,56928
+"maschi","Sicilia",2018,"18-39 anni",132636,103780
+"maschi","Sicilia",2018,"40-64 anni",64514,58874
+"maschi","Sicilia",2019,"18-39 anni",148308,99152
+"maschi","Sicilia",2019,"40-64 anni",71960,66240
+"maschi","Sicilia",2020,"18-39 anni",129942,96092
+"maschi","Sicilia",2020,"40-64 anni",62724,60826
+"maschi","Sicilia",2021,"18-39 anni",125882,101530
+"maschi","Sicilia",2021,"40-64 anni",64422,64646
+"maschi","Toscana",2002,"18-39 anni",89080,117376
+"maschi","Toscana",2002,"40-64 anni",41514,50228
+"maschi","Toscana",2003,"18-39 anni",87910,145526
+"maschi","Toscana",2003,"40-64 anni",41084,54984
+"maschi","Toscana",2004,"18-39 anni",99392,150618
+"maschi","Toscana",2004,"40-64 anni",48168,61516
+"maschi","Toscana",2005,"18-39 anni",96622,132994
+"maschi","Toscana",2005,"40-64 anni",48412,57762
+"maschi","Toscana",2006,"18-39 anni",98386,131618
+"maschi","Toscana",2006,"40-64 anni",50842,60146
+"maschi","Toscana",2007,"18-39 anni",95796,151240
+"maschi","Toscana",2007,"40-64 anni",52670,66052
+"maschi","Toscana",2008,"18-39 anni",94106,139480
+"maschi","Toscana",2008,"40-64 anni",51768,64444
+"maschi","Toscana",2009,"18-39 anni",91638,133066
+"maschi","Toscana",2009,"40-64 anni",53590,62890
+"maschi","Toscana",2010,"18-39 anni",90638,134934
+"maschi","Toscana",2010,"40-64 anni",53740,64858
+"maschi","Toscana",2011,"18-39 anni",94028,130620
+"maschi","Toscana",2011,"40-64 anni",57116,66540
+"maschi","Toscana",2012,"18-39 anni",107234,144796
+"maschi","Toscana",2012,"40-64 anni",69354,77678
+"maschi","Toscana",2013,"18-39 anni",92556,119882
+"maschi","Toscana",2013,"40-64 anni",61976,67440
+"maschi","Toscana",2014,"18-39 anni",90284,112570
+"maschi","Toscana",2014,"40-64 anni",60034,65336
+"maschi","Toscana",2015,"18-39 anni",85492,108986
+"maschi","Toscana",2015,"40-64 anni",59652,65464
+"maschi","Toscana",2016,"18-39 anni",89840,128556
+"maschi","Toscana",2016,"40-64 anni",63816,68626
+"maschi","Toscana",2017,"18-39 anni",90434,131822
+"maschi","Toscana",2017,"40-64 anni",64126,69906
+"maschi","Toscana",2018,"18-39 anni",93360,118702
+"maschi","Toscana",2018,"40-64 anni",67490,73272
+"maschi","Toscana",2019,"18-39 anni",105634,133570
+"maschi","Toscana",2019,"40-64 anni",76252,87262
+"maschi","Toscana",2020,"18-39 anni",94828,112818
+"maschi","Toscana",2020,"40-64 anni",70808,78656
+"maschi","Toscana",2021,"18-39 anni",99396,123040
+"maschi","Toscana",2021,"40-64 anni",75248,83714
+"maschi","Trentino Alto Adige / Südtirol",2002,"18-39 anni",24352,33006
+"maschi","Trentino Alto Adige / Südtirol",2002,"40-64 anni",8788,10500
+"maschi","Trentino Alto Adige / Südtirol",2003,"18-39 anni",26174,37824
+"maschi","Trentino Alto Adige / Südtirol",2003,"40-64 anni",9766,11958
+"maschi","Trentino Alto Adige / Südtirol",2004,"18-39 anni",27896,41324
+"maschi","Trentino Alto Adige / Südtirol",2004,"40-64 anni",11978,14408
+"maschi","Trentino Alto Adige / Südtirol",2005,"18-39 anni",27580,38554
+"maschi","Trentino Alto Adige / Südtirol",2005,"40-64 anni",11258,13694
+"maschi","Trentino Alto Adige / Südtirol",2006,"18-39 anni",28778,40064
+"maschi","Trentino Alto Adige / Südtirol",2006,"40-64 anni",12562,14838
+"maschi","Trentino Alto Adige / Südtirol",2007,"18-39 anni",29688,42820
+"maschi","Trentino Alto Adige / Südtirol",2007,"40-64 anni",13512,16964
+"maschi","Trentino Alto Adige / Südtirol",2008,"18-39 anni",28540,39932
+"maschi","Trentino Alto Adige / Südtirol",2008,"40-64 anni",13224,16646
+"maschi","Trentino Alto Adige / Südtirol",2009,"18-39 anni",28438,37914
+"maschi","Trentino Alto Adige / Südtirol",2009,"40-64 anni",13406,15692
+"maschi","Trentino Alto Adige / Südtirol",2010,"18-39 anni",27604,38238
+"maschi","Trentino Alto Adige / Südtirol",2010,"40-64 anni",13744,16370
+"maschi","Trentino Alto Adige / Südtirol",2011,"18-39 anni",28938,38644
+"maschi","Trentino Alto Adige / Südtirol",2011,"40-64 anni",14750,17206
+"maschi","Trentino Alto Adige / Südtirol",2012,"18-39 anni",31192,40842
+"maschi","Trentino Alto Adige / Südtirol",2012,"40-64 anni",16798,18866
+"maschi","Trentino Alto Adige / Südtirol",2013,"18-39 anni",28822,37290
+"maschi","Trentino Alto Adige / Südtirol",2013,"40-64 anni",15626,17032
+"maschi","Trentino Alto Adige / Südtirol",2014,"18-39 anni",28932,35308
+"maschi","Trentino Alto Adige / Südtirol",2014,"40-64 anni",16056,16898
+"maschi","Trentino Alto Adige / Südtirol",2015,"18-39 anni",30362,36988
+"maschi","Trentino Alto Adige / Südtirol",2015,"40-64 anni",16292,17842
+"maschi","Trentino Alto Adige / Südtirol",2016,"18-39 anni",30056,37530
+"maschi","Trentino Alto Adige / Südtirol",2016,"40-64 anni",16904,18360
+"maschi","Trentino Alto Adige / Südtirol",2017,"18-39 anni",31942,41976
+"maschi","Trentino Alto Adige / Südtirol",2017,"40-64 anni",17782,19890
+"maschi","Trentino Alto Adige / Südtirol",2018,"18-39 anni",34016,42884
+"maschi","Trentino Alto Adige / Südtirol",2018,"40-64 anni",17692,20448
+"maschi","Trentino Alto Adige / Südtirol",2019,"18-39 anni",36872,42440
+"maschi","Trentino Alto Adige / Südtirol",2019,"40-64 anni",19936,22290
+"maschi","Trentino Alto Adige / Südtirol",2020,"18-39 anni",31600,37302
+"maschi","Trentino Alto Adige / Südtirol",2020,"40-64 anni",17980,20436
+"maschi","Trentino Alto Adige / Südtirol",2021,"18-39 anni",33932,40186
+"maschi","Trentino Alto Adige / Südtirol",2021,"40-64 anni",19270,20592
+"maschi","Trento",2002,"18-39 anni",12742,18452
+"maschi","Trento",2002,"40-64 anni",4754,6218
+"maschi","Trento",2003,"18-39 anni",13832,21404
+"maschi","Trento",2003,"40-64 anni",5424,7038
+"maschi","Trento",2004,"18-39 anni",14698,22984
+"maschi","Trento",2004,"40-64 anni",6316,8154
+"maschi","Trento",2005,"18-39 anni",14730,20470
+"maschi","Trento",2005,"40-64 anni",6236,7850
+"maschi","Trento",2006,"18-39 anni",15708,21926
+"maschi","Trento",2006,"40-64 anni",6968,8218
+"maschi","Trento",2007,"18-39 anni",15626,23478
+"maschi","Trento",2007,"40-64 anni",7400,9586
+"maschi","Trento",2008,"18-39 anni",15304,22580
+"maschi","Trento",2008,"40-64 anni",7336,9538
+"maschi","Trento",2009,"18-39 anni",15280,21072
+"maschi","Trento",2009,"40-64 anni",7304,8698
+"maschi","Trento",2010,"18-39 anni",14642,20686
+"maschi","Trento",2010,"40-64 anni",7470,9130
+"maschi","Trento",2011,"18-39 anni",15056,20540
+"maschi","Trento",2011,"40-64 anni",8058,9522
+"maschi","Trento",2012,"18-39 anni",16026,21784
+"maschi","Trento",2012,"40-64 anni",9006,10464
+"maschi","Trento",2013,"18-39 anni",15370,19912
+"maschi","Trento",2013,"40-64 anni",8438,9350
+"maschi","Trento",2014,"18-39 anni",14878,18410
+"maschi","Trento",2014,"40-64 anni",8590,9030
+"maschi","Trento",2015,"18-39 anni",15140,18636
+"maschi","Trento",2015,"40-64 anni",8398,9406
+"maschi","Trento",2016,"18-39 anni",15090,18350
+"maschi","Trento",2016,"40-64 anni",9270,9976
+"maschi","Trento",2017,"18-39 anni",15878,21252
+"maschi","Trento",2017,"40-64 anni",9572,10480
+"maschi","Trento",2018,"18-39 anni",16748,21066
+"maschi","Trento",2018,"40-64 anni",9574,10984
+"maschi","Trento",2019,"18-39 anni",17470,20766
+"maschi","Trento",2019,"40-64 anni",10312,12390
+"maschi","Trento",2020,"18-39 anni",15202,18888
+"maschi","Trento",2020,"40-64 anni",9462,11292
+"maschi","Trento",2021,"18-39 anni",16280,20292
+"maschi","Trento",2021,"40-64 anni",10018,11184
+"maschi","Umbria",2002,"18-39 anni",16108,24206
+"maschi","Umbria",2002,"40-64 anni",6498,9926
+"maschi","Umbria",2003,"18-39 anni",16692,29834
+"maschi","Umbria",2003,"40-64 anni",7178,11624
+"maschi","Umbria",2004,"18-39 anni",18736,30402
+"maschi","Umbria",2004,"40-64 anni",8302,12132
+"maschi","Umbria",2005,"18-39 anni",18158,27140
+"maschi","Umbria",2005,"40-64 anni",8196,12256
+"maschi","Umbria",2006,"18-39 anni",19200,26122
+"maschi","Umbria",2006,"40-64 anni",9138,11614
+"maschi","Umbria",2007,"18-39 anni",20072,35288
+"maschi","Umbria",2007,"40-64 anni",9892,14412
+"maschi","Umbria",2008,"18-39 anni",18914,31766
+"maschi","Umbria",2008,"40-64 anni",9516,14278
+"maschi","Umbria",2009,"18-39 anni",20002,29486
+"maschi","Umbria",2009,"40-64 anni",10430,14108
+"maschi","Umbria",2010,"18-39 anni",19640,29688
+"maschi","Umbria",2010,"40-64 anni",10608,13518
+"maschi","Umbria",2011,"18-39 anni",19672,26210
+"maschi","Umbria",2011,"40-64 anni",11116,13354
+"maschi","Umbria",2012,"18-39 anni",22600,28520
+"maschi","Umbria",2012,"40-64 anni",13302,15268
+"maschi","Umbria",2013,"18-39 anni",20364,21640
+"maschi","Umbria",2013,"40-64 anni",12796,12578
+"maschi","Umbria",2014,"18-39 anni",18910,19740
+"maschi","Umbria",2014,"40-64 anni",11772,11908
+"maschi","Umbria",2015,"18-39 anni",19108,20922
+"maschi","Umbria",2015,"40-64 anni",12330,12316
+"maschi","Umbria",2016,"18-39 anni",18984,21414
+"maschi","Umbria",2016,"40-64 anni",12412,12686
+"maschi","Umbria",2017,"18-39 anni",18972,23762
+"maschi","Umbria",2017,"40-64 anni",12434,13122
+"maschi","Umbria",2018,"18-39 anni",19540,23560
+"maschi","Umbria",2018,"40-64 anni",12728,13622
+"maschi","Umbria",2019,"18-39 anni",21564,24038
+"maschi","Umbria",2019,"40-64 anni",14956,16696
+"maschi","Umbria",2020,"18-39 anni",19866,21386
+"maschi","Umbria",2020,"40-64 anni",13674,14442
+"maschi","Umbria",2021,"18-39 anni",19606,23028
+"maschi","Umbria",2021,"40-64 anni",13792,14700
+"maschi","Valle d'Aosta / Vallée d'Aoste",2002,"18-39 anni",11060,12912
+"maschi","Valle d'Aosta / Vallée d'Aoste",2002,"40-64 anni",4240,4308
+"maschi","Valle d'Aosta / Vallée d'Aoste",2003,"18-39 anni",10568,14192
+"maschi","Valle d'Aosta / Vallée d'Aoste",2003,"40-64 anni",4328,5032
+"maschi","Valle d'Aosta / Vallée d'Aoste",2004,"18-39 anni",11540,14484
+"maschi","Valle d'Aosta / Vallée d'Aoste",2004,"40-64 anni",5324,6292
+"maschi","Valle d'Aosta / Vallée d'Aoste",2005,"18-39 anni",11352,14300
+"maschi","Valle d'Aosta / Vallée d'Aoste",2005,"40-64 anni",5576,6172
+"maschi","Valle d'Aosta / Vallée d'Aoste",2006,"18-39 anni",11840,13536
+"maschi","Valle d'Aosta / Vallée d'Aoste",2006,"40-64 anni",5288,5412
+"maschi","Valle d'Aosta / Vallée d'Aoste",2007,"18-39 anni",12404,14240
+"maschi","Valle d'Aosta / Vallée d'Aoste",2007,"40-64 anni",6132,6232
+"maschi","Valle d'Aosta / Vallée d'Aoste",2008,"18-39 anni",11968,13124
+"maschi","Valle d'Aosta / Vallée d'Aoste",2008,"40-64 anni",6408,6164
+"maschi","Valle d'Aosta / Vallée d'Aoste",2009,"18-39 anni",12100,13104
+"maschi","Valle d'Aosta / Vallée d'Aoste",2009,"40-64 anni",7264,6856
+"maschi","Valle d'Aosta / Vallée d'Aoste",2010,"18-39 anni",11760,13020
+"maschi","Valle d'Aosta / Vallée d'Aoste",2010,"40-64 anni",6252,6308
+"maschi","Valle d'Aosta / Vallée d'Aoste",2011,"18-39 anni",10776,12116
+"maschi","Valle d'Aosta / Vallée d'Aoste",2011,"40-64 anni",6348,6236
+"maschi","Valle d'Aosta / Vallée d'Aoste",2012,"18-39 anni",11012,13528
+"maschi","Valle d'Aosta / Vallée d'Aoste",2012,"40-64 anni",7376,7352
+"maschi","Valle d'Aosta / Vallée d'Aoste",2013,"18-39 anni",10616,12784
+"maschi","Valle d'Aosta / Vallée d'Aoste",2013,"40-64 anni",6440,6480
+"maschi","Valle d'Aosta / Vallée d'Aoste",2014,"18-39 anni",9848,10204
+"maschi","Valle d'Aosta / Vallée d'Aoste",2014,"40-64 anni",6824,6432
+"maschi","Valle d'Aosta / Vallée d'Aoste",2015,"18-39 anni",10096,10052
+"maschi","Valle d'Aosta / Vallée d'Aoste",2015,"40-64 anni",6384,5864
+"maschi","Valle d'Aosta / Vallée d'Aoste",2016,"18-39 anni",8952,11060
+"maschi","Valle d'Aosta / Vallée d'Aoste",2016,"40-64 anni",6740,6252
+"maschi","Valle d'Aosta / Vallée d'Aoste",2017,"18-39 anni",9212,10932
+"maschi","Valle d'Aosta / Vallée d'Aoste",2017,"40-64 anni",6396,6112
+"maschi","Valle d'Aosta / Vallée d'Aoste",2018,"18-39 anni",9704,11160
+"maschi","Valle d'Aosta / Vallée d'Aoste",2018,"40-64 anni",7196,6960
+"maschi","Valle d'Aosta / Vallée d'Aoste",2019,"18-39 anni",10140,11336
+"maschi","Valle d'Aosta / Vallée d'Aoste",2019,"40-64 anni",7216,7176
+"maschi","Valle d'Aosta / Vallée d'Aoste",2020,"18-39 anni",8996,9404
+"maschi","Valle d'Aosta / Vallée d'Aoste",2020,"40-64 anni",6652,6604
+"maschi","Valle d'Aosta / Vallée d'Aoste",2021,"18-39 anni",9524,9940
+"maschi","Valle d'Aosta / Vallée d'Aoste",2021,"40-64 anni",7128,7628
+"maschi","Veneto",2002,"18-39 anni",140614,186926
+"maschi","Veneto",2002,"40-64 anni",50630,60306
+"maschi","Veneto",2003,"18-39 anni",148364,233962
+"maschi","Veneto",2003,"40-64 anni",55262,71048
+"maschi","Veneto",2004,"18-39 anni",167596,241842
+"maschi","Veneto",2004,"40-64 anni",66068,79712
+"maschi","Veneto",2005,"18-39 anni",166598,210948
+"maschi","Veneto",2005,"40-64 anni",65326,73894
+"maschi","Veneto",2006,"18-39 anni",172012,209344
+"maschi","Veneto",2006,"40-64 anni",69842,77616
+"maschi","Veneto",2007,"18-39 anni",168178,244948
+"maschi","Veneto",2007,"40-64 anni",73138,87588
+"maschi","Veneto",2008,"18-39 anni",157890,225422
+"maschi","Veneto",2008,"40-64 anni",69962,83108
+"maschi","Veneto",2009,"18-39 anni",152246,192342
+"maschi","Veneto",2009,"40-64 anni",72164,79172
+"maschi","Veneto",2010,"18-39 anni",149730,186746
+"maschi","Veneto",2010,"40-64 anni",74176,79260
+"maschi","Veneto",2011,"18-39 anni",149600,184418
+"maschi","Veneto",2011,"40-64 anni",77700,82860
+"maschi","Veneto",2012,"18-39 anni",158878,181988
+"maschi","Veneto",2012,"40-64 anni",87966,88128
+"maschi","Veneto",2013,"18-39 anni",139774,153816
+"maschi","Veneto",2013,"40-64 anni",78674,76896
+"maschi","Veneto",2014,"18-39 anni",134744,149128
+"maschi","Veneto",2014,"40-64 anni",79510,78654
+"maschi","Veneto",2015,"18-39 anni",131734,146846
+"maschi","Veneto",2015,"40-64 anni",80266,78552
+"maschi","Veneto",2016,"18-39 anni",135242,158816
+"maschi","Veneto",2016,"40-64 anni",84630,85016
+"maschi","Veneto",2017,"18-39 anni",135798,171880
+"maschi","Veneto",2017,"40-64 anni",88616,91652
+"maschi","Veneto",2018,"18-39 anni",140924,187568
+"maschi","Veneto",2018,"40-64 anni",92648,97366
+"maschi","Veneto",2019,"18-39 anni",153924,185984
+"maschi","Veneto",2019,"40-64 anni",103318,110296
+"maschi","Veneto",2020,"18-39 anni",138962,162756
+"maschi","Veneto",2020,"40-64 anni",96410,100194
+"maschi","Veneto",2021,"18-39 anni",142918,173420
+"maschi","Veneto",2021,"40-64 anni",100708,108068
