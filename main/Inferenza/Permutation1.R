@@ -142,7 +142,7 @@ plot <- ggplot(norms_stand, aes(x = geo, y = norms)) +
        x = "Geographic position", y = "Norms") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 13)) +
-  scale_x_discrete(labels = geo_names)
+  scale_x_discrete(labels = geo_names) + geom_segment(aes(x = geo, xend = geo, y = 70, yend = norms), color =  color_pal(length(geo_lev)), linetype = "dashed", alpha = 0.7)
 print(plot)
 
 #### Now the differences in the years ###
@@ -164,6 +164,7 @@ B <- 1000
 T_stat <- numeric(B)
 pb=progress_bar$new(total=B)
 pb$tick(0)
+set.seed(2024)
 for(perm in 1:B){
   permutation <- sample(1:length(years_tot))
   years_perm <- years_tot[permutation]
@@ -226,6 +227,7 @@ print(plot)
 p_vals <- rep(0, length(years))
 pb=progress_bar$new(total=B*length(years))
 pb$tick(0)
+set.seed(2024)
 for (i in 1:length(years))
 {
   curves_year <- t(f_data$values[((length(prov)*(i-1))+1):(length(prov)*i) ,])
@@ -292,6 +294,7 @@ for (i in 1:length(levels(geo)))
   T0 <- fanova.tests(x = curves_geo, year_geo,  test = "L2N", parallel = TRUE)$L2N$statL2
   
   T_stat <- numeric(B)
+  set.seed(2024)
   for(perm in 1:B){
     permutation <- sample(1:length(year_geo))
     year_perm <- year_geo[permutation]
@@ -330,6 +333,7 @@ for(i in 1:length(levels(geo)))
    T0 <- fanova.tests(x = curves_temp, years_temp,  test = "L2N", parallel = TRUE)$L2N$statL2
    
    T_stat <- numeric(B)
+   set.seed(2024)
    for(perm in 1:B){
      permutation <- sample(1:length(years_temp))
      year_perm <- years_temp[permutation]
@@ -410,6 +414,7 @@ fit <- manova(as.matrix(data_max) ~ geo)
 T0 <- summary(fit)[[4]][1,3]
 T_stat <- numeric(B) 
 n <- dim(data_max)[1]
+set.seed(2024)
 for(perm in 1:B){
   # Permutation:
   permutation <- sample(1:n)
@@ -427,6 +432,7 @@ fit <- manova(as.matrix(data_max) ~ years_tot)
 T0 <- summary(fit)[[4]][1,3]
 T_stat <- numeric(B) 
 n <- dim(data_max)[1]
+set.seed(2024)
 for(perm in 1:B){
   # Permutation:
   permutation <- sample(1:n)
@@ -450,6 +456,7 @@ for (i in 1:length(levels(geo)))
   fit <- manova(as.matrix(temp) ~ years_temp)
   T0 <- summary(fit)[[4]][1,3]
   T_stat <- numeric(B) 
+  set.seed(2024)
   for(perm in 1:B){
     # Permutation:
     permutation <- sample(1:length(inx))
@@ -486,6 +493,7 @@ for(i in 1:length(levels(geo)))
     T0 <- summary.aov(manova(as.matrix(temp) ~ years_temp))[[2]][1,4]
     
     T_stat <- numeric(B)
+    set.seed(2024)
     for(perm in 1:B){
       permutation <- sample(1:length(years_temp))
       years_perm <- years_temp[permutation]
@@ -524,6 +532,7 @@ for (i in 1:length(geo_names))
   fitted <- model$fitted.values
   res <- model$resid
   boot <- rep(0, B)
+  set.seed(2024)
   for (j in 1:B)
   {
     res_boot <- sample(res, replace = T)
@@ -637,6 +646,7 @@ B <- 1000
 T_stat <- numeric(B)
 pb=progress_bar$new(total=B)
 pb$tick(0)
+set.seed(2024)
 for(perm in 1:B){
   permutation <- sample(1:length(year_tot_cut))
   year_perm <- year_tot_cut[permutation]
