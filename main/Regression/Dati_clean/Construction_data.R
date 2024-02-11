@@ -31,35 +31,6 @@ rm(iscritti, iscritti1, iscritti2, rinuncia, rinuncia1)
 # write.table(universita, "dati_uni.txt", row.names = FALSE)
 
 
-# tasso di occupazione
-to_prov <- read.csv("DS_covariate/TO (tasso di occupazione)/TO_dati_prov_04.csv", header = T)
-to_prov <- to_prov[which(to_prov$ITTER107!="ITC20"),]
-
-colnames(to_prov)
-
-# in to_prov tengo le colonne: Territorio (per regione), Sesso (in realta 
-# no perchè c'è solo totale), classe età, value, time
-to_prov1 <- to_prov[,c("Territorio", "Classe.di.età", "TIME", "Value")]
-unique(to_prov1$Territorio)
-unique(to_prov1$TIME)
-
-anni <- 2004:2021
-
-to_prov1 <- subset(to_prov1, (to_prov1$TIME %in% anni))
-to_prov1 <- subset(to_prov1, (to_prov1$Classe.di.età %in% c("15-24 anni", "25-34 anni", "35-44 anni", "45-54 anni", "55-64 anni")))
-
-regioni <- universita$Territorio
-to_prov2 <- subset(to_prov1, (to_prov1$Territorio %in% regioni))
-
-to_aree <- subset(to_prov1, (to_prov1$Territorio %in% c("Nord", "Mezzogiorno", "Centro")))
-to_tot <- to_prov1[which(to_prov1$Territorio == 'Italia'), ]
-# attenzione perchè mancano un po di dati, per mezzogiorno ma anche per quello totale
-rm(to_prov)
-
-# write.table(to_prov2, "dati_tasso_occupazione_regione.txt", row.names = FALSE)
-# write.table(to_aree, "dati_tasso_occupazione_aree.txt", row.names = FALSE)
-# write.table(to_tot, "dati_tasso_occupazione_totale.txt", row.names = FALSE)
-
 
 # popolazione
 emi <- read.csv("DS_covariate/popolazione e famiglie/emigrazioni_prov.csv", header = T)
@@ -71,6 +42,7 @@ unique(emi1$TIME)
 unique(emi1$Sesso)
 unique(emi1$Età)
 
+regioni <- universita$Territorio
 emi1 <- emi1[which(emi1$Sesso != 'totale'),]
 emi1 <- subset(emi1, (emi1$Età %in% c("40-64 anni","18-39 anni")))
 emi1 <- subset(emi1, (emi1$Territorio.di.origine %in% regioni))
@@ -124,3 +96,48 @@ names(interruzioni)[names(interruzioni) == "Età.e.classe.di.età"] <- "Età"
 
 # write.table(interruzioni, "dati_interruzioni_gravidanze.txt", row.names = FALSE)
 
+
+# tasso di occupazione e disoccupazione
+to <- read.csv("occupazioneistat.csv", header = T)
+to_pre <- read.csv("occupazionepre.csv", header = T)
+
+colnames(to_pre)
+
+length(unique(to_tot$Territorio))
+length(unique(to_tot$TIME))
+length(unique(to_tot$Classe.di.età))
+
+anni <- 2002:2020
+to_pre1 <- subset(to_pre, (to_pre$TIME %in% anni))
+to_pre1 <- to_pre1[,c("Territorio", "Sesso", "Classe.di.età", "TIME", "Value")]
+to_2021 <- to[which(to$TIME == 2021), c("Territorio", "Sesso", "Classe.di.età", "TIME", "Value")]
+
+rm(to_pre, to)
+to_tot <- rbind(to_pre1, to_2021)
+
+to_tot <- subset(to_tot, (to_tot$Classe.di.età %in% c("15-24 anni","25-34 anni","35-44 anni","45-54 anni","55-64 anni")))
+to_tot <- to_tot[which(to_tot$Sesso != 'totale'),]
+
+# disoccupazione
+dis <- read.csv("disoccupazioneistat.csv", header = T)
+dis2021 <- read.csv("dis2021.csv", header = T)
+colnames(dis)
+unique(dis$TIME)
+
+anni <- 2002:2020
+dis1 <- subset(dis, (dis$TIME %in% anni))
+dis1 <- dis1[,c("Territorio", "Sesso", "Classe.di.età", "TIME", "Value")]
+dis2021 <- dis2021[which(dis2021$TIME == 2021), c("Territorio", "Sesso", "Classe.di.età", "TIME", "Value")]
+
+dis_tot <- rbind(dis1, dis2021)
+
+dis_tot <- subset(dis_tot, (dis_tot$Classe.di.età %in% c("15-24 anni","25-34 anni","35-44 anni","45-54 anni","55-64 anni")))
+dis_tot <- dis_tot[which(dis_tot$Sesso != 'totale'),]
+dis_tot <- subset(dis_tot, !(dis_tot$Territorio %in% c("Italia", "Nord", "Nord-ovest", "Nord-est", "Centro", "Mezzogiorno")))
+names(dis_tot)[names(dis_tot) == "Value"] <- "Tasso disoccupazione" 
+names(to_tot)[names(to_tot) == "Value"] <- "Tasso occupazione" 
+
+occupazione <- merge(to_tot, dis_tot, by = c("Sesso", "Territorio", "TIME", "Classe.di.età"), all.x = TRUE)
+occupazione[which(is.na(occupazione), arr.ind = TRUE),] # c'è un na
+
+write.table(occupazione, "dati_inattivita_occupazione.txt", row.names = FALSE)
