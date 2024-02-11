@@ -38,12 +38,13 @@ geo <- case_when(
 )
 geo <- rep(geo, length(years))
 geo <- factor(geo)
-geo_names <- c("Nord", "Centro", "Sud")
+geo_names <- c("North", "Centre", "South")
 
 #Outlier detection#
 
 library(fdANOVA)
 f_data <- fData(17:50, t(total_curves))
+plot(f_data, col=color_pal(length(f_data)))
 
 out_mag <- roahd::fbplot(f_data)
 x11()
@@ -61,10 +62,10 @@ pre <- which(f_data[ID_out]$values[, 5]>20)
 prov_out_up <- match(names(total_curves)[ID_out[pre]], prov)
 prov_out_down <- match(names(total_curves)[ID_out[-pre]], prov)
 
-cbind(
+print(tibble(
   Outlier_Province_Up = names(total_curves)[ID_out[pre]],
   Outlier_Year_Up = years[((ID_out[pre] - prov_out[pre]) / length(prov))+1]
-) |> View()
+) )
 cbind(
   Outlier_Province_Up = names(total_curves)[ID_out[-pre]],
   Outlier_Year_Up = years[((ID_out[-pre] - prov_out[-pre]) / length(prov))+1]
@@ -353,6 +354,18 @@ row.names(res) <- geo_names
 res
 
 #### Quantity of interest - max of the curves ####
+prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
+prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
+prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
+geo <- case_when(
+  prov %in% prov_nord ~ "1",
+  prov %in% prov_centro ~ "2",
+  prov %in% prov_sud ~ "3",
+  TRUE ~ NA_character_
+)
+geo <- rep(geo, length(years))
+geo <- factor(geo)
+geo_names <- c("North", "Centre", "South")
 
 maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
 new <- data.frame(x=seq(17,50,length=1000))
@@ -395,7 +408,16 @@ geo <- case_when(
 )
 geo <- rep(geo, length(years))
 geo <- factor(geo)
-geo_names <- c("Nord", "Centro", "Sud")
+geo_names <- c("North", "Centre", "South")
+
+x11()
+plot(data_max, col=color_gray)
+for (i in 1:length(geo_names))
+{
+  fit <- ltsReg(y~x, data=data_max[which(geo==levels(geo)[i]) ,], alpha=.75, mcd=TRUE)
+  abline(fit, col=color_pal(length(levels(geo)))[i], lwd=3)
+}
+legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
 
 library(DepthProc)
 
@@ -519,47 +541,54 @@ res
 # the value of the maximum with its abscissa.
 # We use a robust method, knowing that there are outliers present
 
-CI <- matrix(0, nrow=3, ncol=3)
+CI <- matrix(0, nrow=9, ncol=3)
 alpha <- 0.05
-pb=progress_bar$new(total=B*length(geo_names))
+pb=progress_bar$new(total=B*9)
 pb$tick(0)
 for (i in 1:length(geo_names))
 {
-  #In ogni iterazione mi calcolo il confidence interval del lts
-  data_iter <- data_max[which(geo==levels(geo)[i]) ,]
-  model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
-  point_estimate <- model$coefficients[2][[1]]
-  fitted <- model$fitted.values
-  res <- model$resid
-  boot <- rep(0, B)
-  set.seed(2024)
-  for (j in 1:B)
+  for (k in 1:length(year_cut))
   {
-    res_boot <- sample(res, replace = T)
-    data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
-    model <- with(data_boot, ltsReg(x,y, alpha=.70, mcd=TRUE))
-    boot[j] <- model$coefficients[2][[1]]
-    pb$tick()
+    #In ogni iterazione mi calcolo il confidence interval del lts
+    data_iter <- data_max[which(geo==levels(geo)[i] & years_tot_cut==year_cut[k]) ,]
+    model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
+    point_estimate <- model$coefficients[2][[1]]
+    fitted <- model$fitted.values
+    res <- model$resid
+    boot <- rep(0, B)
+    set.seed(2024)
+    for (j in 1:B)
+    {
+      res_boot <- sample(res, replace = T)
+      data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
+      model <- with(data_boot, ltsReg(x,y, alpha=.70, mcd=TRUE))
+      boot[j] <- model$coefficients[2][[1]]
+      pb$tick()
+    }
+    right <- quantile(boot, 1 - alpha/2)
+    left <- quantile(boot, alpha/2)
+    inx <- ((as.numeric(levels(geo))[i]-1)*length(year_cut)) + k
+    CI[inx ,] <- c(point_estimate - (right - point_estimate),point_estimate, 
+                                          point_estimate - (left - point_estimate))
+    
   }
-  right <- quantile(boot, 1 - alpha/2)
-  left <- quantile(boot, alpha/2)
-  
-  CI[as.numeric(levels(geo)[i]) ,] <- c(point_estimate - (right - point_estimate),point_estimate, 
-               point_estimate - (left - point_estimate))
 }
+g <- as.factor(geo_names)
+y <- as.factor(year_cut)
+nam <- expand.grid(y,g)
 CI <- data.frame(CI)
 names(CI) <- c("left", "estimate", "right")
-rownames(CI) <- c("nord", "centro", "sud")
+rownames(CI) <- paste(nam[,1], nam[,2])
 CI
 
 df <- data.frame(
-  y = geo_names,
-  x = c(CI[1, 2], CI[2, 2], CI[3, 2]),
-  xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ),
-  xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  )
+  y = paste(nam[,1], nam[,2]),
+  x = c(CI[1, 2], CI[2, 2], CI[3, 2],CI[4,2], CI[5,2], CI[6,2],CI[7,2],CI[8,2],CI[9,2]),
+  xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ,CI[4,1], CI[5,1], CI[6,1],CI[7,1],CI[8,1],CI[9,1]),
+  xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  ,CI[4,3], CI[5,3], CI[6,3],CI[7,3],CI[8,3],CI[9,3])
 )
 ggplot(df, aes(x = x, y = factor(y)))+
-  geom_point(size=2, col=color_pal(2)[2]) + 
+  geom_point(size=2, col=color_pal(2)[2], group=factor(df$y)) + 
   geom_linerange(aes(xmin = xmin, xmax=xmax, y=y), size=1, col=color_pal(2)[1]) + 
   theme(axis.text.y = element_text(angle = 45, hjust = 1)) + 
   ylab("Region") + 
@@ -673,7 +702,7 @@ ggplot(data_max, aes(x = x, y = y)) +
   labs(title = "Maximum dynamics",
        x = "Maximum's abscissa",
        y = "Maximum") +
-  scale_color_manual(name = "Legend Title",
+  scale_color_manual(name = "Dynamics",
                      breaks = he,
                      labels = geo_names,
                      values = he) +

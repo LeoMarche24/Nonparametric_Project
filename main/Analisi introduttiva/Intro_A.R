@@ -45,7 +45,7 @@ for(p in 1:length(prov))
 nati <- birth/popolazione
 rm(list = c('birth', 'res', 'popolazione'))
 x11()
-matplot(t(nati), type='l', x = years, main = 'Plot intro A', 
+matplot(t(nati), type='l', x = years, main = 'Total newborns for province', 
         xlab = 'Year', ylab = 'Birth per person', col=color_pal(dim(nati)[1]))
 
 # Difference overall 2002/2019
@@ -151,8 +151,8 @@ for (i in 1:length(years)){
   
   p.value[i] <- sum(T_stat>=T0)/B
 }
-
-plot(years, p.value, type ='l', main = 'Plot intro A', lwd=2, xlab = 'Years', col=color_pal(2)[2])
+p.value <- p.adjust(p.value, method="BH")
+plot(years, p.value, type ='l', main = 'Adjusted p-value function', lwd=2, xlab = 'Years', col=color_pal(2)[2])
 abline(h=0.05, col ='darkred')
 
 ## PERMUTATON TEST ON 2002/2019 WITH GEO AS PERMUTATION
@@ -175,3 +175,4 @@ plot(data, main = 'Plot intro A [7]', xlab = 'Years', col=color_gray)
 lines(years, mn, col=color_pal(3)[1], lwd=3)
 lines(years, mc, col=color_pal(3)[2], lwd=3)
 lines(years, ms, col=color_pal(3)[3], lwd=3)
+

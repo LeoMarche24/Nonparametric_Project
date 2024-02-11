@@ -42,42 +42,46 @@ for (i in 1:length(prov))
 }
 
 # Plot one smoothed surface 
-p1 <- as.vector(prov_list[[3]])
+p1 <- as.matrix(prov_list[55][[1]])
 x <- 1:20
 y <- 1:34
 xyf <- expand.grid(x,y)
 names(xyf)=c('x','y')
-data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
+data <- data.frame(val=as.vector(p1), x=xyf$x, y=xyf$y)
 model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
 
 xgrid <- seq(1,20,length.out = 100)
 ygrid <- seq(1,34,length.out = 100)
+xygrid <- expand.grid(xgrid, ygrid)
 names(xygrid)=c('x','y')
 pred_tp = predict(model, newdata = data.frame(xygrid))
-persp3d(xgrid, ygrid, pred_tp, col = 'grey30', zlab = "rate",
+persp3d(xgrid, ygrid, pred_tp, col = 'grey20', zlab = "rate",
         xlab = "year" , ylab = "age" )
 with(data,points3d(x, y, p1, col = 'orange', size = 5))
 
 # Smooth every province
-
+dom <- expand.grid(1:20,1:34)
 surf_prov <- list()
 for(p in 1:length(prov_list)){
   p1 <- as.vector(prov_list[[p]])
   data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
   model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
-  surf_prov[[p]] = predict(model, newdata = data.frame(xygrid))
+  surf_prov[[p]] = predict(model, newdata = data.frame(x = dom[,1], y=dom[, 2]))
 }
+prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
+prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
+prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
+geo <- case_when(
+  prov %in% prov_nord ~ "1",
+  prov %in% prov_centro ~ "2",
+  prov %in% prov_sud ~ "3",
+  TRUE ~ NA_character_
+)
+geo <- rep(geo, length(years))
+geo <- factor(geo)
+geo_names <- c("Nord", "Centro", "Sud")
 
-prov_nord_ovest = c('Alessandria', 'Asti', 'Bergamo', 'Biella','Brescia', 'Como', 'Cremona', 'Cuneo', 'Genova', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano', 'Monza e della Brianza', 'Novara', 'Pavia', 'Savona', 'Sondrio', 'Torino', 'Varese',  "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli')
-prov_nord_est = c('Belluno', 'Bolzano / Bozen', 'Ferrara', 'Forlì-Cesena', 'Gorizia', 'Padova','Pordenone','Rovigo','Trento','Venezia','Treviso','Verona','Vicenza','Trieste', 'Udine')
-prov_centro_ovest = c('Arezzo',  'Bologna',  'Chieti',  'Firenze', 'Frosinone', 'Grosseto', 'Latina','Livorno','Lucca', 'Massa-Carrara', 'Modena','Parma', 'Perugia','Piacenza','Pisa', 'Pistoia', 'Prato','Ravenna',"Reggio nell'Emilia",'Rieti', 'Rimini','Roma', 'Siena', 'Viterbo')
-prov_centro_est = c('Ancona', 'Ascoli Piceno','Campobasso','Fermo', 'Isernia', "L'Aquila",'Macerata','Pesaro e Urbino', 'Pescara', 'Teramo', 'Terni')
-prov_sud = c( 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi',  'Caserta', 'Catanzaro', 'Cosenza', 'Foggia', 'Lecce', 'Matera', 'Napoli', 'Potenza', 'Reggio di Calabria', 'Salerno', 'Taranto', 'Vibo Valentia')
-prov_isole = c('Catania', 'Agrigento','Cagliari', 'Caltanissetta', 'Crotone', 'Enna', 'Messina', 'Nuoro', 'Oristano', 'Palermo', 'Ragusa', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Trapani')
-
-lab <- list(prov_nord_est, prov_nord_ovest, prov_centro_est, prov_centro_ovest, prov_sud, prov_isole)
-nomi <- c("prov_nord_est", "prov_nord_ovest", "prov_centro_est", "prov_centro_ovest", "prov_sud", "prov_isole")
-prov <- sort(unique(province$Territorio))
+lab <- list(prov_nord,prov_centro, prov_sud)
 df <- data.frame()
 
 # Exctract df from the list
@@ -92,16 +96,16 @@ for (i in 1:107)
   for (j in 1:length(lab))
   {
     if (prov[i] %in% lab[[j]])
-      geo[i] <- nomi[j]
+      geo[i] <- geo_names[j]
   }
 }
 
 # Now we run the permutational ANOVA
 # Takes about 30min, we will provide the output to be loaded
 
-pb=progress::progress_bar$new(total=680)
+pb=progress::progress_bar$new(total=1000)
 pb$tick(0)
-pval.fun=numeric(680)
+pval.fun=numeric(1000)
 for(i in 1:680){
   B <- 1000
   T_stat <- numeric(B)
@@ -130,8 +134,8 @@ pval = p.adjust(pval.fun,"BH")
 persp3d(x,y, pval, col = 'black', zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
 planes3d(a = 0, b = 0, c = 1, d = -0.1, color = "darkorange", alpha = .75)
 
-
-
+save(pval, file="Smoothing/pval.csv")
+    
 
 
 
