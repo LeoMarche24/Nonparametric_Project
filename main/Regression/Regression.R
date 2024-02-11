@@ -1,6 +1,8 @@
 # regression on maximum values of data
 load("Datasets/data")
 load("Datasets/env")
+library(mgcv)
+
 
 color_gray <- "gray80"
 color_pal <- colorRampPalette(colors = c("orange", "darkred"))
@@ -72,13 +74,57 @@ media.regione.maxdom <- aggregate(MaxDomain ~ Region + Year, data = maxima, FUN 
 maxima.region <- merge(media.regione.max, media.regione.maxdom, by = c('Year', 'Region'), all.x = T)
 
 plot(maxima.region$MaxDomain, maxima.region$Max, col = color_gray)
+# plot(maxima.region$MaxDomain, maxima.region$Max, col = factor(maxima.region$Region), pch=19)
+
 
 # load covariates 
 uni <- read.csv('Regression/Dati_clean/dati_uni.txt', header = T)
+excluded_categories <- c('Trento', 'Bolzano / Bozen')
+uni <- subset(uni, !(Territorio %in% excluded_categories)) # sistemare l'errore in construction_data
 pop <- read.csv('Regression/Dati_clean/dati_immigrazioni_emigrazioni.txt', header = T)
+pop <- pop[which(pop$Territorio != c('Trento', 'Bolzano / Bozen	')),]
 occ <- read.csv('Regression/Dati_clean/dati_inattivita_occupazione.txt', header = T)
 grav <- read.csv('Regression/Dati_clean/dati_interruzioni_gravidanze.txt', header = T)
 
+# maxima: 2002-2021 x regioni
+# uni: 2004- 2020 x regioni
+# inizierei considerando solamente le iscrizioni all'università delle donne
+uni_donna <- uni[which(uni$Sesso=='femmine'),]
 
-model = gam(maxima ~ education + s(income,bs='cr'),data = Prestige)
+# vedo due possibili modi di procedere:
+# -> fare una regressione dove maxima è cumulativo sulle regioni [20 righe -> un dato per regione]
+# -> fare una regressione dove maxima è cumulativo sugli anni [20 righe -> un dato per anno]
+# per poi trattare allo stesso modo il dato della covariata
+
+# una prima prova stupida
+# -> sommo tutti i dati degli stessi anni
+sum_max_by_year <- aggregate(Max ~ Year, data = maxima.region, FUN = sum)
+sum_max_by_year <- sum_max_by_year[3:19,]
+
+# -> stesso per uni
+sum_rinuncie_by_year <- aggregate(X..rinunce ~ TIME, data = uni_donna, FUN = sum)
+colnames(sum_rinuncie_by_year)[colnames(sum_rinuncie_by_year) == 'TIME'] <- 'Year'
+
+ds_reg <- merge(sum_max_by_year, sum_rinuncie_by_year, by=c("Year"), all.x = T)
+
+model_gam = gam(Max ~ 1 + s(X..rinunce,bs='cr'),data = ds_reg)
+summary(model_gam)
+
+attach(ds_reg)
+new_data_seq <- seq(min(X..rinunce),
+                    max(X..rinunce), length.out = 100)
+
+#                                               change X..rinunce with the name of the abscissa
+preds=predict(model_gam,newdata = list(X..rinunce=new_data_seq),se=T) 
+se.bands=cbind(preds$fit +2* preds$se.fit ,preds$fit -2* preds$se.fit)
+
+plot(X..rinunce , Max ,xlim=range(X..rinunce) ,cex =.5, col =" darkgrey " )
+lines(new_data_seq,preds$fit ,lwd =2, col =" blue")
+matlines(new_data_seq, se.bands ,lwd =1, col =" blue",lty =3)
+
+
+
+
+
+
 
