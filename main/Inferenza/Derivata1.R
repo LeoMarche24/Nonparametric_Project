@@ -56,13 +56,20 @@ prov_out <- match(names(total_curves)[num], prov)
 View(cbind(prov[prov_out], years[(num-prov_out)/107]))
 
 data_aux <- data[num]
-plot(data_aux, col = 'color_pal')
-pre <- which(data_aux$values[, 5]>20)
+plot(data_aux, col = color_pal(1))
+pre <- which(data_aux$values[, 10]>7)
 prov_out_up <- match(names(total_curves)[num[pre]], prov)
 prov_out_down <- match(names(total_curves)[num[-pre]], prov)
 
 View(cbind(names(total_curves)[num[pre]], years[(num[pre]-prov_out_up)/107]))
 View(cbind(names(total_curves)[num[-pre]], years[(num[-pre]-prov_out_down)/107]))
+
+data_aux1 <- data[num[pre]]
+data_aux2 <- data[num[-pre]]
+plot(data_aux1, col = color_pal(2)[1])
+lines(0:35, t(data_aux2$values))
+
+
 
 ##Prova con il fattore geografico su tre livelli##
 
