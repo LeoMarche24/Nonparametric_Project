@@ -202,6 +202,8 @@ abline(v = T0, col=color_pal(2)[1], lwd=5)
 # abline(h=0.05)
 
 ## l2 norm for medians#
+years_tot <- rep(years, each=length(prov))
+years_tot <- as.factor(years_tot)
 norms <- NULL
 for (i in 1:length(levels(years_tot)))
 {
@@ -223,7 +225,7 @@ plot <- ggplot(norms_stand, aes(x = years, y = norms)) +
 
 print(plot)
 
-## Which are the years in which there is a significant difference in the regions ##
+## Which are the years in which there is a significant difference in the regions ## -- no result
 
 p_vals <- rep(0, length(years))
 pb=progress_bar$new(total=B*length(years))
@@ -262,7 +264,7 @@ plot <- ggplot(df, aes(x = years, y = pvalue)) +
 print(plot)
 #All the years, not informative
 
-### In which geographic areas there is a significant difference in the years
+## In which geographic areas there is a significant difference in the years ## -- no result
 geo <- NULL
 prov_nord_ovest = c('Alessandria', 'Asti', 'Bergamo', 'Biella','Brescia', 'Como', 'Cremona', 'Cuneo', 'Genova', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano', 'Monza e della Brianza', 'Novara', 'Pavia', 'Savona', 'Sondrio', 'Torino', 'Varese',  "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli')
 prov_nord_est = c('Belluno', 'Bolzano / Bozen', 'Ferrara', 'Forlì-Cesena', 'Gorizia', 'Padova','Pordenone','Rovigo','Trento','Venezia','Treviso','Verona','Vicenza','Trieste', 'Udine')
@@ -312,10 +314,10 @@ plot(p_vals)
 # Flat line, not informative
 
 #### In the class of years are data similar? ####
-year_cut <- c("2002-2005","2006-2011","2012-2018")
-lev <- list(2002:2005, 2006:2011, 2012:2018)
+year_cut <- c("2002-2005","2006-2013","2014-2018")
+lev <- list(2002:2005, 2006:2013, 2014:2018)
 years_tot <- rep(years, each=length(prov))
-years_tot_cut <- ifelse(years_tot < 2006, year_cut[1], ifelse(years_tot > 2011, year_cut[3], year_cut[2]))
+years_tot_cut <- ifelse(years_tot < 2006, year_cut[1], ifelse(years_tot > 2013, year_cut[3], year_cut[2]))
 years_tot_cut <- as.factor(years_tot_cut)
 
 res <- matrix(0, nrow=length(levels(years_tot_cut)), ncol = length(levels(years_tot_cut)))
@@ -352,6 +354,7 @@ res <- data.frame(res)
 names(res) <- year_cut
 row.names(res) <- geo_names
 res
+#On the whole curves, the group are not uniform as the year change
 
 #### Quantity of interest - max of the curves ####
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
@@ -411,10 +414,10 @@ geo <- factor(geo)
 geo_names <- c("North", "Centre", "South")
 
 x11()
-plot(data_max, col=color_gray)
+plot(data_max, col=color_gray, main="Linear regression for the three different region")
 for (i in 1:length(geo_names))
 {
-  fit <- ltsReg(y~x, data=data_max[which(geo==levels(geo)[i]) ,], alpha=.75, mcd=TRUE)
+  fit <- lm(y~x, data=data_max[which(geo==levels(geo)[i]) ,])
   abline(fit, col=color_pal(length(levels(geo)))[i], lwd=3)
 }
 legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
@@ -468,7 +471,7 @@ for(perm in 1:B){
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=color_gray)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
-#Test the above thing for the three different regions
+# Between the class of years, are the difference significant??
 res <- matrix(0, length(levels(geo)))
 for (i in 1:length(levels(geo)))
 {
@@ -551,7 +554,7 @@ for (i in 1:length(geo_names))
   {
     #In ogni iterazione mi calcolo il confidence interval del lts
     data_iter <- data_max[which(geo==levels(geo)[i] & years_tot_cut==year_cut[k]) ,]
-    model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
+    model <- lm(y ~ x, data=data_iter)
     point_estimate <- model$coefficients[2][[1]]
     fitted <- model$fitted.values
     res <- model$resid
@@ -561,7 +564,7 @@ for (i in 1:length(geo_names))
     {
       res_boot <- sample(res, replace = T)
       data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
-      model <- with(data_boot, ltsReg(x,y, alpha=.70, mcd=TRUE))
+      model <- lm(y ~ x, data=data_boot)
       boot[j] <- model$coefficients[2][[1]]
       pb$tick()
     }
@@ -582,14 +585,15 @@ rownames(CI) <- paste(nam[,1], nam[,2])
 CI
 
 df <- data.frame(
+  ord = 1:9,
   y = paste(nam[,1], nam[,2]),
   x = c(CI[1, 2], CI[2, 2], CI[3, 2],CI[4,2], CI[5,2], CI[6,2],CI[7,2],CI[8,2],CI[9,2]),
   xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ,CI[4,1], CI[5,1], CI[6,1],CI[7,1],CI[8,1],CI[9,1]),
   xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  ,CI[4,3], CI[5,3], CI[6,3],CI[7,3],CI[8,3],CI[9,3])
 )
-ggplot(df, aes(x = x, y = factor(y)))+
-  geom_point(size=2, col=color_pal(2)[2], group=factor(df$y)) + 
-  geom_linerange(aes(xmin = xmin, xmax=xmax, y=y), size=1, col=color_pal(2)[1]) + 
+ggplot(df, aes(x = x, y = ord))+
+  geom_point(size=2, col=color_pal(2)[2], group=df$ord) + 
+  geom_linerange(aes(xmin = xmin, xmax=xmax, y=ord, group=ord), linewidth=1, col=color_pal(2)[1]) + 
   theme(axis.text.y = element_text(angle = 45, hjust = 1)) + 
   ylab("Region") + 
   labs(title = "Confidence Intervals with Central Points", ylab="Region")
@@ -639,7 +643,7 @@ for (i in 1:length(prov))
     interval1[((j-1)*107+i) ,] <- prov_list[[i]][j ,]
   }
 
-int2 <- 2012:2018
+int2 <- 2014:2018
 interval2 <- matrix(0, nrow=length(prov)*length(int2), ncol=length(eta))
 for (i in 1:length(prov))
   for (j in 1:length(int2))
@@ -669,7 +673,7 @@ for (i in 1:length(levels(years_tot_cut)))
 }
 legend("topright", fill=color_pal(length(levels(years_tot_cut))), legend=year_cut)
 
-T0 <- fanova.tests(x = total_curves, year_tot_cut,  test = "L2N", parallel = TRUE)$L2N$statL2
+T0 <- fanova.tests(x = total_curves, years_tot_cut,  test = "L2N", parallel = TRUE)$L2N$statL2
 
 B <- 1000
 T_stat <- numeric(B)
@@ -677,8 +681,8 @@ pb=progress_bar$new(total=B)
 pb$tick(0)
 set.seed(2024)
 for(perm in 1:B){
-  permutation <- sample(1:length(year_tot_cut))
-  year_perm <- year_tot_cut[permutation]
+  permutation <- sample(1:length(years_tot_cut))
+  year_perm <- years_tot_cut[permutation]
   
   T_stat[perm] <- fanova.tests(x = total_curves, year_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
   pb$tick()
