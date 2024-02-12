@@ -59,8 +59,7 @@ names(universita)[names(universita) == "Territorio"] <- "Region"
 names(universita)[names(universita) == "TIME"] <- "Year"
 names(universita)[names(universita) == "X..rinunce"] <- "Dropouts"
 
-rm(iscritti, iscritti1, iscritti2, rinuncia, rinuncia1)
-
+rm(iscritti, iscritti1, iscritti2, iscritti3, iscritti.tot, rinuncia, rinuncia1)
 # write.csv(universita, "dati_uni.txt", row.names = FALSE)
 
 
@@ -74,9 +73,6 @@ unique(emi1$Territorio.di.origine)
 unique(emi1$TIME) 
 unique(emi1$Sesso)
 unique(emi1$Età)
-
-regioni <- unique(universita$Territorio)
-regioni <-  subset(regioni, !(regioni %in% c("Trento","Bolzano / Bozen")))
 
 emi1 <- emi1[which(emi1$Sesso == 'totale'),]
 emi1 <- emi1[which(emi1$Età == 'totale'),]
@@ -125,6 +121,7 @@ dati_completi <- dati_completi %>%
 # create dataset
 popolazione.std <- dati_completi[,c('Region', 'Year', 'Emigrations', 'Imigrations')]
 
+rm(dati_completi, emi, emi1, emi2, imm, imm1, imm2, popolazione)
 # write.csv(popolazione.std, "dati_immigrazioni_emigrazioni.txt", row.names = FALSE)
 
 
@@ -144,6 +141,7 @@ names(interruzioni)[names(interruzioni) == "Value"] <- "Abortions" # % interruzi
 names(interruzioni)[names(interruzioni) == "Età.e.classe.di.età"] <- "Age"
 names(interruzioni)[names(interruzioni) == "TIME"] <- "Year"
 
+rm(interr_per_prov_eta_anno)
 # write.csv(interruzioni, "dati_interruzioni_gravidanze.txt", row.names = FALSE)
 
 
@@ -175,7 +173,6 @@ to_2021 <- subset(to_2021, (to_2021$Territorio %in% regioni))
 to_tot <- rbind(to_pre1, to_2021)
 rm(to_pre, to, to_pre1, to_2021)
 
-
 # unemployment rate
 dis <- read.csv("DS_covariate/TO (tasso di occupazione)/disoccupazioneistat.csv", header = T)
 dis2021 <- read.csv("DS_covariate/TO (tasso di occupazione)/dis2021.csv", header = T)
@@ -205,4 +202,5 @@ occupazione <- occupazione[, c('Territorio', 'TIME', "Employment rate", "Unemplo
 names(occupazione)[names(occupazione) == "Territorio"] <- "Region"
 names(occupazione)[names(occupazione) == "TIME"] <- "Year"
 
+rm(to_tot, dis_tot, res_tot)
 # write.csv(occupazione, "dati_inattivita_occupazione.txt", row.names = FALSE)
