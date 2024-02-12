@@ -104,7 +104,6 @@ colnames(uni)[colnames(uni) == 'Territorio'] <- 'Region'
 
 
 pop <- read.csv('Regression/Dati_clean/dati_immigrazioni_emigrazioni.txt', header = T)
-pop <- pop[which(pop$Territorio != c('Trento', 'Bolzano / Bozen	')),]
 occ <- read.csv('Regression/Dati_clean/dati_inattivita_occupazione.txt', header = T)
 grav <- read.csv('Regression/Dati_clean/dati_interruzioni_gravidanze.txt', header = T)
 
@@ -150,7 +149,7 @@ matlines(new_data_seq, se.bands ,lwd =1, col =" blue",lty =3)
 
 # Idea: creare 3 modelli, uno per zona
 
-ds_reg <- merge(maxima.04, uni_uomo,  by=c("Year", "Region"), all.x = T)
+ds_reg <- merge(maxima.region, uni_uomo,  by=c("Year", "Region"), all.x = T)
 ds_reg <- merge(ds_reg, uni_donna, by=c("Year", "Region"), all.x = T)
 # così non va le covariate devono essere prima aggregate
 
