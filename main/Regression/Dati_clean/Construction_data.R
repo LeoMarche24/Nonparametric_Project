@@ -83,14 +83,14 @@ emi2 <- emi1 %>%
   summarise(Emigrations = sum(Value))
 rm(emi, emi1)
 
-# imigrations
+# immigrations
 imm <- read.csv("DS_covariate/popolazione e famiglie/immigrazione_prov.csv", header = T)
 colnames(imm) # time, value, età, sesso, territorio di origine
 imm1 <- imm[,c("Territorio.di.di.destinazione", "Sesso", "Età", "TIME", "Value")]
 
 unique(imm1$Territorio.di.di.destinazione)
 unique(imm1$TIME) 
-unique(imm1$Sesso) # eliminiamo totale
+unique(imm1$Sesso) 
 unique(imm1$Età)
 
 imm1 <- imm1[which(imm1$Sesso == 'totale'),]
@@ -99,7 +99,7 @@ imm1 <- subset(imm1, (imm1$Territorio.di.di.destinazione %in% regioni))
 
 imm2 <- imm1 %>%
   group_by(TIME, Territorio.di.di.destinazione, Sesso, Età) %>%
-  summarise(Imigrations = sum(Value))
+  summarise(Immigrations = sum(Value))
 
 names(emi2)[names(emi2) == "Territorio.di.origine"] <- "Region"
 names(imm2)[names(imm2) == "Territorio.di.di.destinazione"] <- "Region"
@@ -116,13 +116,13 @@ dati_completi <- inner_join(popolazione, res_tot, by = c("Region", "Year"))
 dati_completi <- dati_completi %>%
   mutate(Emigrations = Emigrations / Value)
 dati_completi <- dati_completi %>%
-  mutate(Imigrations = Imigrations / Value)
+  mutate(Immigrations = Immigrations / Value)
 
 # create dataset
-popolazione.std <- dati_completi[,c('Region', 'Year', 'Emigrations', 'Imigrations')]
+popolazione.std <- dati_completi[,c('Region', 'Year', 'Emigrations', 'Immigrations')]
 
 rm(dati_completi, emi, emi1, emi2, imm, imm1, imm2, popolazione)
-# write.csv(popolazione.std, "dati_immigrazioni_emigrazioni.txt", row.names = FALSE)
+write.csv(popolazione.std, "dati_immigrazioni_emigrazioni.txt", row.names = FALSE)
 
 
 ## health
