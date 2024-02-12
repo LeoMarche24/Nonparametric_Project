@@ -2,7 +2,7 @@
 load("Datasets/data")
 load("Datasets/env")
 library(mgcv)
-
+library(splines)
 
 color_gray <- "gray80"
 color_pal <- colorRampPalette(colors = c("orange", "darkred"))
@@ -59,37 +59,125 @@ associa_regione <- function(provincia) {
       return(regione)
     }
   }
-  return(NA) # Se la provincia non è stata trovata
+  return(NA) 
 }
 
-maxima$Region <- sapply(maxima$Province, associa_regione)
+# create columns for regions in maxima
+associa_Area <- function(regione) {
+  zone <- list(
+    Nord = c('Friuli_Venezia_Giulia', 'Liguria', 'Lombardia', 'Piemonte', 'Trentino_Alto_Adige', 'Valle_d_Aosta', 'Veneto', "Friuli-Venezia Giulia", "Trentino Alto Adige / Südtirol", "Valle d'Aosta / Vallée d'Aoste"),
+    Centro = c('Emilia_Romagna', 'Lazio', 'Marche', 'Molise', 'Toscana', 'Umbria', "Emilia-Romagna"),
+    Sud = c('Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Puglia', 'Sardegna', 'Sicilia')
+  )
+  
+  for(Area in names(zone)) {
+    if(regione %in% zone[[Area]]) {
+      return(Area)
+    }
+  }
+  return(NA) 
+}
 
-# mean of max values per region
+
+maxima$Region <- sapply(maxima$Province, associa_regione)
+maxima$Area <- sapply(maxima$Region, associa_Area)
+
+# mean of max values per region and area
 maxima$MaxDomain <- as.numeric(maxima$MaxDomain)
 maxima$Max <- as.numeric(maxima$Max)
-media.regione.max <- aggregate(Max ~ Region + Year, data = maxima, FUN = mean)
-media.regione.maxdom <- aggregate(MaxDomain ~ Region + Year, data = maxima, FUN = mean)
+
+media.regione.max <- aggregate(Max ~ Region + Year, data = maxima, FUN = function(x) mean(x, trim = 0.1))
+media.regione.maxdom <- aggregate(MaxDomain ~ Region + Year, data = maxima, FUN = function(x) mean(x, trim = 0.1))
+
+media.area.max <- aggregate(Max ~ Area + Year, data = maxima, FUN = function(x) mean(x, trim = 0.1))
+media.area.maxdom <- aggregate(MaxDomain ~ Area + Year, data = maxima, FUN = mean)
 
 # dataset with maximum values for regions 
 maxima.region <- merge(media.regione.max, media.regione.maxdom, by = c('Year', 'Region'), all.x = T)
+maxima.area <- merge(media.area.max, media.area.maxdom, by = c('Year', 'Area'), all.x = T)
 
 plot(maxima.region$MaxDomain, maxima.region$Max, col = color_gray)
-# plot(maxima.region$MaxDomain, maxima.region$Max, col = factor(maxima.region$Region), pch=19)
+plot(maxima.area$MaxDomain, maxima.area$Max, col = factor(maxima.area$Area), pch=19)
 
 
 # load covariates 
 uni <- read.csv('Regression/Dati_clean/dati_uni.txt', header = T)
-excluded_categories <- c('Trento', 'Bolzano / Bozen')
-uni <- subset(uni, !(Territorio %in% excluded_categories)) # sistemare l'errore in construction_data
 pop <- read.csv('Regression/Dati_clean/dati_immigrazioni_emigrazioni.txt', header = T)
-pop <- pop[which(pop$Territorio != c('Trento', 'Bolzano / Bozen	')),]
 occ <- read.csv('Regression/Dati_clean/dati_inattivita_occupazione.txt', header = T)
 grav <- read.csv('Regression/Dati_clean/dati_interruzioni_gravidanze.txt', header = T)
 
-# maxima: 2002-2021 x regioni
+names(uni)[names(uni) == "Rinunce"] <- "Dropouts"
+
+grav.split <- split(grav, factor(grav$Età))
+
+grav <- cbind(grav.split$`25-29 anni`, grav.split$`30-34 anni`)[,c(1,2,4,8)]
+names(grav)[names(grav) == "Abortions"] <- "Abortions.2529"
+names(grav)[names(grav) == "Abortions.1"] <- "Abortions.3034"
+
+# aggregate covariate and response in one dataset
+ds_reg <- merge(pop, uni,  by = c("Year", "Region"), all.x = T)
+ds_reg <- merge(ds_reg, occ, by=c("Year", "Region"), all.x = T)
+ds_reg <- merge(ds_reg, grav, by=c("Year", "Region"), all.x = T)
+ds_reg$Area <- sapply(ds_reg$Region, associa_Area)
+
+ds_area1 <- aggregate(cbind(Emigrations, Immigrations, Employment.rate, Unemployment.rate) ~ Area + Year, data = ds_reg, FUN = function(x) mean(x, trim = 0.1))
+ds_area2 <- aggregate(cbind(Abortions.2529, Abortions.3034) ~ Area + Year, data = ds_reg, FUN = function(x) mean(x, trim = 0.1))
+ds_area3 <- aggregate(Dropouts ~ Area + Year, data = ds_reg, FUN = function(x) mean(x, trim = 0.1))
+ds_area4 <- aggregate(Women.enrolled ~ Area + Year, data = ds_reg, FUN = function(x) mean(x, trim = 0.1))
+ds_area <- merge(ds_area1, ds_area2, by=c("Year", "Area"), all.x = T)
+ds_area <- merge(ds_area, ds_area3, by=c("Year", "Area"), all.x = T)
+ds_area <- merge(ds_area, ds_area4, by=c("Year", "Area"), all.x = T)
+
+rm(uni, pop, occ, grav, ds_area1, ds_area2, ds_area3, ds_area4)
+
+ds_area <- merge(maxima.area, ds_area, by = c("Year", "Area"), all.x = T)
+ds_area[,c(5,6,12)] <- ds_area[,c(5,6,12)]*100
+  
+
+## regression on all italy
+
+# model1: we consider employment, unemployment, immigrations and emigrations 
+# as covariates x 2002:2021
+model1.bs <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+              + s(Immigrations, bs = 'cr')
+              + s(Employment.rate, bs = 'cr') 
+              + s(Unemployment.rate, bs = 'cr'), data = ds_area)
+summary(model1)
+
+model2 <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+              + s(Immigrations, bs = 'cr')
+              + s(Employment.rate, bs = 'cr') 
+              , data = ds_area)
+summary(model2)
+
+model3 <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+              + s(Employment.rate, bs = 'cr') 
+              , data = ds_area)
+summary(model3)
+
+model_gam <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+                 , data = ds_area)
+model_gam <- gam(MaxDomain ~ s(Employment.rate, bs = 'cr'),
+                 data = ds_area)
+
+summary(model_gam)
+# plot
+
+## regression on areas
+# split area
+ds.split <- split(ds_area, factor(ds_area$Area))
+# model1: we consider employment, unemployment, Immigrations and emigrations 
+# as covariates x 2002:2021 on areas
+model1 <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+              + s(Immigrations, bs = 'cr')
+              + s(Employment.rate, bs = 'cr') 
+              + s(Unemployment.rate, bs = 'cr'), data = ds_area)
+summary(model1)
+
+
+## maxima: 2002-2021 x regioni
 # uni: 2004- 2020 x regioni
 # inizierei considerando solamente le iscrizioni all'università delle donne
-uni_donna <- uni[which(uni$Sesso=='femmine'),]
 
 # vedo due possibili modi di procedere:
 # -> fare una regressione dove maxima è cumulativo sulle regioni [20 righe -> un dato per regione]
@@ -98,29 +186,15 @@ uni_donna <- uni[which(uni$Sesso=='femmine'),]
 
 # una prima prova stupida
 # -> sommo tutti i dati degli stessi anni
-sum_max_by_year <- aggregate(Max ~ Year, data = maxima.region, FUN = sum)
-sum_max_by_year <- sum_max_by_year[3:19,]
 
 # -> stesso per uni
-sum_rinuncie_by_year <- aggregate(X..rinunce ~ TIME, data = uni_donna, FUN = sum)
-colnames(sum_rinuncie_by_year)[colnames(sum_rinuncie_by_year) == 'TIME'] <- 'Year'
 
-ds_reg <- merge(sum_max_by_year, sum_rinuncie_by_year, by=c("Year"), all.x = T)
 
-model_gam = gam(Max ~ 1 + s(X..rinunce,bs='cr'),data = ds_reg)
-summary(model_gam)
+#split
 
-attach(ds_reg)
-new_data_seq <- seq(min(X..rinunce),
-                    max(X..rinunce), length.out = 100)
 
-#                                               change X..rinunce with the name of the abscissa
-preds=predict(model_gam,newdata = list(X..rinunce=new_data_seq),se=T) 
-se.bands=cbind(preds$fit +2* preds$se.fit ,preds$fit -2* preds$se.fit)
 
-plot(X..rinunce , Max ,xlim=range(X..rinunce) ,cex =.5, col =" darkgrey " )
-lines(new_data_seq,preds$fit ,lwd =2, col =" blue")
-matlines(new_data_seq, se.bands ,lwd =1, col =" blue",lty =3)
+
 
 
 
