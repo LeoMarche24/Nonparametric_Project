@@ -1,4 +1,4 @@
-# population per regions
+## population per regions
 res <- read.csv('DS_covariate/residenti.csv', header = T)
 res2020.21 <- read.csv('DS_covariate/residenti1.csv', header = T)
 
@@ -10,14 +10,15 @@ rm(res,res1,res2020.21)
 
 names(res_tot)[names(res_tot) == "Territorio"] <- "Region"
 names(res_tot)[names(res_tot) == "TIME"] <- "Year"
-universita <- read.csv('dati_uni.txt', header = T)
+
+regioni <- c("Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli-Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche", "Molise", "Piemonte", "Puglia", "Sardegna", "Sicilia", "Toscana", "Trentino Alto Adige / Südtirol", "Umbria", "Valle d'Aosta / Vallée d'Aoste", "Veneto")
 
 
 ## university
 rinuncia <- read.csv("DS_covariate/Iscritti all'università/rinunci_studi.csv", header = T)
 iscritti <- read.csv("DS_covariate/Iscritti all'università/Iscritti_uni_tot.csv", header = T)
-rinuncia1 <- rinuncia[, c("Territorio", "Sesso", "TIME", "Value")] # territorio indica la residenza non dove sta l'uni
-iscritti1 <- iscritti[, c("Regione.di.residenza", "Sesso", "TIME", "Value")]
+rinuncia1 <- rinuncia[which(rinuncia$Sesso == "femmine"), c("Territorio", "TIME", "Value")] # territorio indica la residenza non dove sta l'uni
+iscritti1 <- iscritti[which(iscritti$Gruppo.di.corsi.di.laurea == 'totale'), c("Regione.di.residenza", "Sesso", "TIME", "Value")]
 
 unique(iscritti1$TIME)
 unique(rinuncia1$TIME)
@@ -25,41 +26,38 @@ unique(rinuncia1$TIME)
 unique(iscritti1$Regione.di.residenza)
 unique(rinuncia1$Territorio)
 
-rinuncia1 <- subset(rinuncia1, !(rinuncia1$Territorio %in% c("Italia","Nord","Nord-ovest","Nord-est","Centro","Mezzogiorno")))
-rinuncia1 <- rinuncia1[which(rinuncia1$Sesso != "totale"), ]
+rinuncia1 <- subset(rinuncia1, (rinuncia1$Territorio %in% regioni))
 
-iscritti1 <- subset(iscritti1, !(iscritti1$Regione.di.residenza %in% c("Italia","Estero","Non indicato","Totale")))
-iscritti1 <- iscritti1[which(iscritti1$Sesso != "totale"), ]
+iscritti1 <- subset(iscritti1, (iscritti1$Regione.di.residenza %in% regioni))
+iscritti1 <- iscritti1[which(iscritti1$Sesso != "maschi"), ]
 
 names(iscritti1)[names(iscritti1) == "Regione.di.residenza"] <- "Territorio"
 names(iscritti1)[names(iscritti1) == "Value"] <- "Iscritti"
-names(rinuncia1)[names(rinuncia1) == "Value"] <- "% rinunce"
+names(rinuncia1)[names(rinuncia1) == "Value"] <- "Rinunce"
 
 iscritti2 <- iscritti1 %>%
   group_by(TIME, Territorio, Sesso) %>%
   summarise(iscritti_tot = sum(Iscritti))
 
-universita <- merge(rinuncia1, iscritti2, by = c("Sesso", "Territorio", "TIME"), all.x = TRUE)
+iscritti3 <- matrix(nrow = nrow(iscritti2)/2, ncol = 3)
+len <- nrow(iscritti2)/2
+for (i in 1:len) {
+  iscritti3[i,1] <- iscritti2$TIME[2*i]
+  iscritti3[i,2] <- iscritti2$Territorio[2*i]
+  iscritti3[i,3] <- as.numeric(iscritti2[2*i-1, 4])/as.numeric(iscritti2[2*i, 4])
+}
+
+iscritti.tot <- as.data.frame(iscritti3)
+names(iscritti.tot)[names(iscritti.tot) == "V2"] <- "Territorio"
+names(iscritti.tot)[names(iscritti.tot) == "V1"] <- "TIME"
+names(iscritti.tot)[names(iscritti.tot) == "V3"] <- "Women.enrolled"
+
+universita <- merge(rinuncia1, iscritti.tot, by = c("Territorio", "TIME"), all.x = TRUE)
 
 # changing names of columns
 names(universita)[names(universita) == "Territorio"] <- "Region"
-names(universita)[names(universita) == "Sesso"] <- "Sex"
 names(universita)[names(universita) == "TIME"] <- "Year"
 names(universita)[names(universita) == "X..rinunce"] <- "Dropouts"
-
-# normalize over popolation
-anni_comuni <- intersect(universita$Year, res_tot$Year)
-
-iscritti_comuni <- universita %>% filter(Year %in% anni_comuni)
-res_comuni <- res_tot %>% filter(Year %in% anni_comuni)
-
-dati_completi <- inner_join(iscritti_comuni, res_comuni, by = c("Region", "Year"))
-
-dati_completi <- dati_completi %>%
-  mutate_at(vars(iscritti_tot, Value), ~ replace(., is.na(.), 0))
-
-dati_completi <- dati_completi %>%
-  mutate(Enrolled = iscritti_tot / Value)
 
 rm(iscritti, iscritti1, iscritti2, rinuncia, rinuncia1)
 
