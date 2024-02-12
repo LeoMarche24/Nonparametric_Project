@@ -62,16 +62,34 @@ associa_regione <- function(provincia) {
   return(NA) # Se la provincia non è stata trovata
 }
 
+# create columns for regions in maxima
+associa_zona <- function(regione) {
+  zone <- list(
+    Nord = c('Friuli_Venezia_Giulia', 'Liguria', 'Lombardia', 'Piemonte', 'Trentino_Alto_Adige', 'Valle_d_Aosta', 'Veneto'),
+    Centro = c('Emilia_Romagna', 'Lazio', 'Marche', 'Molise', 'Toscana', 'Umbria'),
+    Sud = c('Abruzzo', 'Basilicata', 'Calabria', 'Campania', 'Puglia', 'Sardegna', 'Sicilia')
+  )
+  
+  for(zona in names(zone)) {
+    if(regione %in% zone[[zona]]) {
+      return(zona)
+    }
+  }
+  return(NA) # Se la provincia non è stata trovata
+}
+
+
 maxima$Region <- sapply(maxima$Province, associa_regione)
+maxima$Zona <- sapply(maxima$Region, associa_zona)
 
 # mean of max values per region
 maxima$MaxDomain <- as.numeric(maxima$MaxDomain)
 maxima$Max <- as.numeric(maxima$Max)
-media.regione.max <- aggregate(Max ~ Region + Year, data = maxima, FUN = mean)
-media.regione.maxdom <- aggregate(MaxDomain ~ Region + Year, data = maxima, FUN = mean)
+media.regione.max <- aggregate(Max ~ Region + Zona + Year, data = maxima, FUN = mean)
+media.regione.maxdom <- aggregate(MaxDomain ~ Region + Zona + Year, data = maxima, FUN = mean)
 
 # dataset with maximum values for regions 
-maxima.region <- merge(media.regione.max, media.regione.maxdom, by = c('Year', 'Region'), all.x = T)
+maxima.region <- merge(media.regione.max, media.regione.maxdom, by = c('Year', 'Region', 'Zona'), all.x = T)
 
 plot(maxima.region$MaxDomain, maxima.region$Max, col = color_gray)
 # plot(maxima.region$MaxDomain, maxima.region$Max, col = factor(maxima.region$Region), pch=19)
@@ -81,6 +99,10 @@ plot(maxima.region$MaxDomain, maxima.region$Max, col = color_gray)
 uni <- read.csv('Regression/Dati_clean/dati_uni.txt', header = T)
 excluded_categories <- c('Trento', 'Bolzano / Bozen')
 uni <- subset(uni, !(Territorio %in% excluded_categories)) # sistemare l'errore in construction_data
+colnames(uni)[colnames(uni) == 'TIME'] <- 'Year'
+colnames(uni)[colnames(uni) == 'Territorio'] <- 'Region'
+
+
 pop <- read.csv('Regression/Dati_clean/dati_immigrazioni_emigrazioni.txt', header = T)
 pop <- pop[which(pop$Territorio != c('Trento', 'Bolzano / Bozen	')),]
 occ <- read.csv('Regression/Dati_clean/dati_inattivita_occupazione.txt', header = T)
@@ -89,7 +111,9 @@ grav <- read.csv('Regression/Dati_clean/dati_interruzioni_gravidanze.txt', heade
 # maxima: 2002-2021 x regioni
 # uni: 2004- 2020 x regioni
 # inizierei considerando solamente le iscrizioni all'università delle donne
+maxima.04 <- subset(maxima.region, Year != 2002 & Year != 2003 & Year != 2021)
 uni_donna <- uni[which(uni$Sesso=='femmine'),]
+uni_uomo <- uni[which(uni$Sesso=='maschi'),]
 
 # vedo due possibili modi di procedere:
 # -> fare una regressione dove maxima è cumulativo sulle regioni [20 righe -> un dato per regione]
@@ -105,7 +129,8 @@ sum_max_by_year <- sum_max_by_year[3:19,]
 sum_rinuncie_by_year <- aggregate(X..rinunce ~ TIME, data = uni_donna, FUN = sum)
 colnames(sum_rinuncie_by_year)[colnames(sum_rinuncie_by_year) == 'TIME'] <- 'Year'
 
-ds_reg <- merge(sum_max_by_year, sum_rinuncie_by_year, by=c("Year"), all.x = T)
+
+ds_reg <- merge(sum_max_by_year, sum_rinuncie_by_year, by=c("Year"), all.x = T) #oppure prima merge e poi sum
 
 model_gam = gam(Max ~ 1 + s(X..rinunce,bs='cr'),data = ds_reg)
 summary(model_gam)
@@ -121,6 +146,25 @@ se.bands=cbind(preds$fit +2* preds$se.fit ,preds$fit -2* preds$se.fit)
 plot(X..rinunce , Max ,xlim=range(X..rinunce) ,cex =.5, col =" darkgrey " )
 lines(new_data_seq,preds$fit ,lwd =2, col =" blue")
 matlines(new_data_seq, se.bands ,lwd =1, col =" blue",lty =3)
+
+
+# Idea: creare 3 modelli, uno per zona
+
+ds_reg <- merge(maxima.04, uni_uomo,  by=c("Year", "Region"), all.x = T)
+ds_reg <- merge(ds_reg, uni_donna, by=c("Year", "Region"), all.x = T)
+# così non va le covariate devono essere prima aggregate
+
+#split
+
+ds.split <- split(ds_reg, factor(ds_reg$Zona))
+
+sum_centro <- aggregate(cbind(Max, X..rinunce.x, X..rinunce.y) ~ Year, data = ds.split$Centro, FUN = sum)
+model_gam = gam(Max ~ X..rinunce.x + s(X..rinunce.y,bs='cr'),data = sum_centro)
+summary(model_gam)
+
+help("aggregate")
+
+
 
 
 
