@@ -1,9 +1,13 @@
-#Test su derivate seconde
+#Test su derivate prime
 load("Datasets/data")
 load("Datasets/env")
 library(splines)
 library(roahd)
 library(fdANOVA)
+library(progress)
+library(tidyr)
+library(tidyverse)
+library(robustbase)
 
 color_pal <- colorRampPalette(colors = c("orange", "darkred"))
 col.3 <- color_pal(3)
@@ -47,10 +51,10 @@ geo <- as.factor(geo)
 
 Xobs0 <- prov_list[[1]][1,]
 NT <- 34
-abscissa <-1:35
+abscissa <-1:34
 rappinc <- Xobs0[2:NT]-Xobs0[1:(NT-1)]
-plot(data[1,],ylim=range(rappinc))
-points(abscissa[2:NT],rappinc,xlab="t",ylab="first differences x",type="l")
+plot(rappinc,ylim=range(rappinc), type = 'l')
+points(abscissa,total_curves[[1]],xlab="t",ylab="first differences x",type="l")
 
 #Outlier detection#
 
@@ -116,7 +120,7 @@ for(perm in 1:B){
   pb$tick()
   
 }
-hist(T_stat, xlim=range(c(0,T0)), col = 'grey80')
+hist(T_stat, xlim=range(c(0,T0)), col = colBG)
 abline(v = T0, col = color_pal(1)[1], lwd = 5)
 
 #p-value curve# - ci mette 10 min
@@ -139,27 +143,18 @@ for (i in 1:length(abscissa))
   p_val[i] <- sum(T_stat>T0)/length(T_stat)
 }
 
-# Si rifiuta da 0 a 30, accettiamo l'uguaglianza delle tre per 31:35
 # Procediamo con il calcolo dei p-value adjusted
 
 plot(p_val, type='l')
 abline(h=0.05)
 
-# Bonferroni corrections on pvalues:
-p.bonf <- p.adjust(p_val, 'bonf')
-# Indexes of the couples for which Bonf correction tells us that there is a 
-# significant difference at level alpha=5%:
-which(p.bonf<.05) 
-plot(p.bonf,main = 'permutation test - L2 norm BC - 1st derivative', type='l') # pval_BCI_1st_der_geo
-abline(h=0.05, col = 'red')
 
-# viene peggio del BCI, lasciato il codice per completezza
 # Benjamini-Hockberg corrections on pvalues:
-p.fdr <- p.adjust(p_val, 'fdr')
+p.bh <- p.adjust(p_val, 'BH')
 # Indexes of the couples for which BH correction tells us that there is a 
 # significant difference at level alpha=5%:
-which(p.fdr<.05)
-plot(p.fdr, type='l')
+which(p.bh<.05)
+plot(p.bh, type='l')
 abline(h=0.05)
 
 ####differenze negli anni####
@@ -218,25 +213,12 @@ for (i in 1:length(abscissa))
 plot(p_val, type='l')
 abline(h=0.05)
 
-# si rifiuta negli anni:
-# 1  2  3  4  5 12 14 15 16 17 18 19 20 22 23 24 25 26 27 28 29 30 31 32
-# quindi fra 6 e 11 (i.e. tra 23 e 28 anni) non c'è evidenza per rifiutare che il comportamento negli 
-# anni sia differente fra provincie
-# Bonferroni corrections on pvalues:
-p.bonf <- p.adjust(p_val, 'bonf')
-# Indexes of the couples for which Bonf correction tells us that there is a 
-# significant difference at level alpha=5%:
-which(p.bonf<.05) 
-plot(p.bonf,main = 'permutation test - L2 norm BC - 1st derivative', type='l') # pval_BCI_1st_der_geo
-abline(h=0.05, col = 'red')
-
-# viene peggio del BCI, lasciato il codice per completezza
 # Benjamini-Hockberg corrections on pvalues:
-p.fdr <- p.adjust(p_val, 'fdr')
+p.bh <- p.adjust(p_val, 'BH')
 # Indexes of the couples for which BH correction tells us that there is a 
 # significant difference at level alpha=5%:
-which(p.fdr<.05)
-plot(p.fdr, type='l')
+which(p.bh<.05)
+plot(p.bh, type='l')
 abline(h=0.05)
 
 # Maxima and minima analysis 
@@ -267,7 +249,6 @@ for (i in 1:length(years))
 maxima <- data.frame(maxima)
 names(maxima) <- c("Province", "Year", "Argmax", "Max")
 
-library(robustbase)
 
 data_max <- data.frame(x=as.numeric(maxima$Argmax),y=as.numeric(maxima$Max))
 
@@ -324,8 +305,8 @@ hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
 
-year_cut <- c("2002-2005","2006-2011","2012-2018")
-lev <- list(2002:2005, 2006:2011, 2012:2018)
+year_cut <- c("2002-2005","2006-2013","2014-2018")
+lev <- list(2002:2005, 2006:2013, 2014:2018)
 years_tot <- rep(years, each=length(prov))
 fit <- manova(as.matrix(data_max) ~ years_tot)
 T0 <- summary(fit)[[4]][1,3]
@@ -376,7 +357,7 @@ res
 # the region
 
 # Test if within the groups the distribution of the max do not depend on the year
-years_tot_cut <- ifelse(years_tot < 2006, year_cut[1], ifelse(years_tot > 2011, year_cut[3], year_cut[2]))
+years_tot_cut <- ifelse(years_tot < 2006, year_cut[1], ifelse(years_tot > 2013, year_cut[3], year_cut[2]))
 years_tot_cut <- as.factor(years_tot_cut)
 res <- matrix(0, nrow=length(levels(years_tot_cut)), ncol = length(levels(years_tot_cut)))
 pb=progress_bar$new(total=B*3*3)
@@ -420,44 +401,49 @@ res
 # the value of the maximum with its abscissa.
 # We use a robust method, knowing that there are outliers present
 
-CI <- matrix(0, nrow=3, ncol=3)
+
+CI <- matrix(0, nrow=9, ncol=3)
 alpha <- 0.05
-pb=progress_bar$new(total=B*length(geo_names))
-pb$tick(0)
+geo <- as.factor(geo)
 for (i in 1:length(geo_names))
 {
-  #In ogni iterazione mi calcolo il confidence interval del lts
-  data_iter <- data_max[which(geo==levels(geo)[i]) ,]
-  model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
-  point_estimate <- model$coefficients[2][[1]]
-  fitted <- model$fitted.values
-  res <- model$resid
-  boot <- rep(0, B)
-  set.seed(2024)
-  for (j in 1:B)
+  for (k in 1:length(year_cut))
   {
-    res_boot <- sample(res, replace = T)
-    data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
-    model <- with(data_boot, ltsReg(x,y, alpha=.70, mcd=TRUE))
-    boot[j] <- model$coefficients[2][[1]]
-    pb$tick()
+    #In ogni iterazione mi calcolo il confidence interval del lts
+    data_iter <- data_max[which(geo==levels(geo)[i] & years_tot_cut==year_cut[k]) ,]
+    model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
+    point_estimate <- model$coefficients[2][[1]]
+    fitted <- model$fitted.values
+    res <- model$resid
+    boot <- rep(0, B)
+    set.seed(2024)
+    for (j in 1:B)
+    {
+      res_boot <- sample(res, replace = T)
+      data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
+      model <- with(data_boot, ltsReg(x,y, alpha=.70, mcd=TRUE))
+      boot[j] <- model$coefficients[2][[1]]
+      pb$tick()
+    }
+    right <- quantile(boot, 1 - alpha/2)
+    left <- quantile(boot, alpha/2)
+    inx <- k + (as.numeric(levels(geo))[i]-1)*length(year_cut)
+    CI[inx ,] <- c(point_estimate - (right - point_estimate),point_estimate,
+                   point_estimate - (left - point_estimate))
   }
-  right <- quantile(boot, 1 - alpha/2)
-  left <- quantile(boot, alpha/2)
-  
-  CI[as.numeric(levels(geo)[i]) ,] <- c(point_estimate - (right - point_estimate),point_estimate, 
-                                        point_estimate - (left - point_estimate))
 }
+g <- as.factor(geo_names)
+y <- as.factor(year_cut)
+nam <- expand.grid(y,g)
 CI <- data.frame(CI)
 names(CI) <- c("left", "estimate", "right")
-rownames(CI) <- c("nord", "centro", "sud")
+rownames(CI) <- paste(nam[,1], nam[,2])
 CI
-
 df <- data.frame(
-  y = geo_names,
-  x = c(CI[1, 2], CI[2, 2], CI[3, 2]),
-  xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ),
-  xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  )
+  y = paste(nam[,1], nam[,2]),
+  x = c(CI[1, 2], CI[2, 2], CI[3, 2],CI[4,2], CI[5,2], CI[6,2],CI[7,2],CI[8,2],CI[9,2]),
+  xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ,CI[4,1], CI[5,1], CI[6,1],CI[7,1],CI[8,1],CI[9,1]),
+  xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  ,CI[4,3], CI[5,3], CI[6,3],CI[7,3],CI[8,3],CI[9,3])
 )
 ggplot(df, aes(x = x, y = factor(y)))+
   geom_point(size=2, col=color_pal(2)[2]) + 
@@ -484,6 +470,8 @@ for (i in 1:length(prov)){
     interval2[((j-1)*107+i) ,] <- prov_list[[i]][(10+j) ,]
   }
 }
+
+# farlo con le deriv
 
 matplot(t(interval1), type='l')
 matplot(t(interval2), type='l')
@@ -534,18 +522,6 @@ ggplot(data_max, aes(x = x, y = y)) +
                      labels = geo_names,
                      values = he) +
   theme_minimal()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -627,8 +603,8 @@ hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
 
-year_cut <- c("2002-2005","2006-2011","2012-2018")
-lev <- list(2002:2005, 2006:2011, 2012:2018)
+year_cut <- c("2002-2005","2006-2013","2014-2018")
+lev <- list(2002:2005, 2006:2013, 2014:2018)
 years_tot <- rep(years, each=length(prov))
 fit <- manova(as.matrix(data_max) ~ years_tot)
 T0 <- summary(fit)[[4]][1,3]
@@ -756,20 +732,7 @@ names(CI) <- c("left", "estimate", "right")
 rownames(CI) <- c("nord", "centro", "sud")
 CI
 
-df <- data.frame(
-  y = geo_names,
-  x = c(CI[1, 2], CI[2, 2], CI[3, 2]),
-  xmin = c(CI[1, 1] , CI[2, 1] , CI[3, 1] ),
-  xmax = c(CI[1, 3]  , CI[2, 3]  , CI[3, 3]  )
-)
-ggplot(df, aes(x = x, y = factor(y)))+
-  geom_point(size=2, col=color_pal(2)[2]) + 
-  geom_linerange(aes(xmin = xmin, xmax=xmax, y=y), linewidth=1, col=color_pal(2)[1]) + 
-  theme(axis.text.y = element_text(angle = 45, hjust = 1)) + 
-  ylab("Region") + 
-  labs(title = "Confidence Intervals with Central Points", ylab="Region")
-
-# not much to say, all coefficient are positive and 0 is not in CI
+#
 
 int1 <- 2002:2005
 interval1 <- matrix(0, nrow=length(prov)*length(int1), ncol=length(eta))
@@ -837,8 +800,6 @@ ggplot(data_max, aes(x = x, y = y)) +
                      labels = geo_names,
                      values = he) +
   theme_minimal()
-
-# North and center show the same behavior, may be worth to run a test?
 
 
 
