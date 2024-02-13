@@ -154,8 +154,11 @@ summary(model2.maxdom)
 
 # collinearity between Employment and Unemployment rates
 colors <- ifelse(ds_reg$Area == 'Nord', color_pal(3)[1], ifelse(ds_reg$Area == 'Centro', color_pal(3)[2], color_pal(3)[3]))
-plot(ds_reg$Unemployment.rate, ds_reg$Employment.rate, col = colors, pch = 19)
+plot(ds_reg$Unemployment.rate, ds_reg$Employment.rate, col = colors, pch = 19, xlab = 'Unemployment rate', ylab = 'Employment rate')
 legend("topright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
+
+plot(ds_reg$Immigrations, ds_reg$Emigrations, col = colors, pch = 19, xlab = 'Immigrations', ylab = 'Emigrations')
+legend("bottomright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
 # drop Unemployment rate
 model3.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
