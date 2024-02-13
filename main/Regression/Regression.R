@@ -400,8 +400,9 @@ summary(model.fin.max.lin) # R2 = 0.582
 ## outlier detection ##
 # visually we identify the following areas as possible outliers
 data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2021),]
+colors.05 <- ifelse(data_regression$Area == 'Nord', color_pal(3)[1], ifelse(data_regression$Area == 'Centro', color_pal(3)[2], color_pal(3)[3]))
 
-plot(data_regression$Employment.rate, data_regression$Immigrations, col = colors, pch = 19)
+plot(data_regression$Employment.rate, data_regression$Immigrations, col = colors.05, pch = 19)
 legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
 ds.no.outlier <- ds_reg[which(ds_reg$Immigrations < 25),] 
@@ -410,12 +411,13 @@ colors1 <- ifelse(ds.no.outlier$Area == 'Nord', color_pal(3)[1], ifelse(ds.no.ou
 plot(data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Women.enrolled, data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Immigrations,  col = colors1, pch = 19)
 legend("topright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
-visual.out <- data_regression[which(data_regression$Immigrations > 25 | data_regression$Women.enrolled > 60),c("Region","Emigrations", "Employment.rate")]
+#visual.out <- data_regression[which(data_regression$Immigrations > 25 | data_regression$Women.enrolled > 60),c("Region","Emigrations", "Employment.rate")]
+visual.out <- data_regression[which(data_regression$Immigrations > 25 ),c("Region","Emigrations", "Employment.rate")]
 
-visual.alpha <- 1 - nrow(visual.out)/nrow(data_regression) # 0.843
+visual.alpha <- 1 - nrow(visual.out)/nrow(data_regression) # 0.843 or 0.95
 # then we round our alpha to 0.85
 
-fit_MCD <- covMcd(x = data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")], alpha = 0.85, nsamp = 1000)
+fit_MCD <- covMcd(x = data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")], alpha = 0.95, nsamp = 1000)
 fit_MCD$raw.center
 fit_MCD$raw.cov
 
@@ -425,6 +427,7 @@ N <- nrow(data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")
 # outlier indeces
 ind_out_MCD <- setdiff(1:N,fit_MCD$best)
 data.no.out <- data_regression[-ind_out_MCD,]
+data_regression[ind_out_MCD,c("Year","Region")]
 
 
 ## models without outliers ##
