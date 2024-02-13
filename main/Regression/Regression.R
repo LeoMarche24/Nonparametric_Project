@@ -93,7 +93,6 @@ media.regione.maxdom <- aggregate(MaxDomain ~ Region + Year, data = maxima, FUN 
 
 # dataset with maximum values for regions 
 maxima.region <- merge(media.regione.max, media.regione.maxdom, by = c('Year', 'Region'), all.x = T)
-maxima.area <- merge(media.area.max, media.area.maxdom, by = c('Year', 'Area'), all.x = T)
 
 plot(maxima.region$MaxDomain, maxima.region$Max, col = color_gray)
 
@@ -167,18 +166,6 @@ summary(model3.maxdom)
 model5.maxdom <- gam(MaxDomain ~ Emigrations 
                      + s(Employment.rate, bs = 'cr'), data = ds_reg)
 summary(model5.maxdom)
-
-# considering only Employment rate
-model5.maxdom.no.out <- gam(MaxDomain ~ s(Employment.rate, bs = 'cr'), data = ds.no.outlier)
-summary(model5.maxdom.no.out)
-
-new_data_seq <- seq(min(ds.no.outlier$Employment.rate),
-                    max(ds.no.outlier$Employment.rate), length.out = 100)
-preds <- predict(model5.maxdom.no.out, newdata = list(Employment.rate = new_data_seq), se = T) 
-se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
-plot(ds.no.outlier$Employment.rate, ds.no.outlier$MaxDomain, col = color_gray)
-lines(new_data_seq,preds$fit, lwd = 2, col = color_pal(2)[2])
-matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 
 ## regression on MaxDomain in 2008:2017
@@ -355,6 +342,12 @@ model.fin.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + Area, data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
 summary(model.fin.maxdom) # R2 = 0.707
 
+model.fin.maxdom.lin <- gam(MaxDomain ~ Emigrations 
+                        + s(Employment.rate, bs = 'cr')
+                        + s(Women.enrolled, bs = 'cr')
+                        + Area, data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+summary(model.fin.maxdom.lin) # R2 = 0.695
+
 ## Max (2008:2017)
 model.fin.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
                    + s(Employment.rate, bs = 'cr') 
@@ -405,23 +398,99 @@ model.fin.max.no.out <- gam(Max ~ s(Emigrations, bs = 'cr')
                      + s(Women.enrolled, bs = 'cr'), data = data.no.out)
 summary(model.fin.max.no.out) # R2 = 0.701
 
-## plots ## 
+
+## plots MaxDomain ## 
 # plot 1
 new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment.rate), length.out = 100)
-new_data_seq1 <- rep(mean(data.no.out$Emigrations), length = 100)
-new_data_seq2 <- rep(mean(data.no.out$Women.enrolled), length = 100)
+new_data_seq1 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq, 
+                                                      Emigrations = new_data_seq1,
+                                                      Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out$Employment.rate, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Employment rate', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 2
+new_data_seq <- seq(min(data.no.out$Emigrations), max(data.no.out$Emigrations), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Emigrations = new_data_seq,
+                                                      Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out$Emigrations, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Emigrations', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 3
+new_data_seq <- seq(min(data.no.out$Women.enrolled), max(data.no.out$Women.enrolled), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Emigrations), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Emigrations = new_data_seq2,
+                                                      Women.enrolled = new_data_seq), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out$Women.enrolled, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Women enrolled', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+
+## plots Max ## 
+# plot 1
+new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment.rate), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
 preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq, 
                                                       Emigrations = new_data_seq1,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
-plot(data.no.out$Employment.rate, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray)
+plot(data.no.out$Employment.rate, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Employment rate', ylab = 'Max')
 lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
+# plot 2
+new_data_seq <- seq(min(data.no.out$Emigrations), max(data.no.out$Emigrations), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
+preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Emigrations = new_data_seq,
+                                                      Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
+plot(data.no.out$Emigrations, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Emigrations', ylab = 'Max')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 3
+new_data_seq <- seq(min(data.no.out$Women.enrolled), max(data.no.out$Women.enrolled), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Emigrations), length = 100)
+
+preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Emigrations = new_data_seq2,
+                                                      Women.enrolled = new_data_seq), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out$Women.enrolled, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Women enrolled', ylab = 'Max')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 
 ### models for prediction ### 
