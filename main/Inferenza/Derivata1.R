@@ -31,10 +31,15 @@ names(total_curves) <- rep(prov, 20)
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
 prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
 prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
-geo <- ifelse(prov %in% prov_nord, 'nord', NA)
-geo[which(is.na(geo))] <- ifelse(prov[which(is.na(geo))] %in% prov_sud, 'sud', 'centro')
-geo <- rep(geo, 20)
-geo <- as.factor(geo)
+geo <- case_when(
+  prov %in% prov_nord ~ "1",
+  prov %in% prov_centro ~ "2",
+  prov %in% prov_sud ~ "3",
+  TRUE ~ NA_character_
+)
+geo <- rep(geo, length(years))
+geo <- factor(geo)
+geo_names <- c("North", "Centre", "South")
 
 # trimm_total <- matrix(nrow = 107, ncol = 20)
 # 
@@ -49,46 +54,50 @@ geo <- as.factor(geo)
 # Visual comparison between FD derivative and smoothed derivative 
 # -> much better the smoothed one
 
-Xobs0 <- prov_list[[1]][1,]
+Xobs0 <- prov_list[[55]][1,]
 NT <- 34
-abscissa <-1:34
+abscissa <-17:50
 rappinc <- Xobs0[2:NT]-Xobs0[1:(NT-1)]
-plot(rappinc,ylim=range(rappinc), type = 'l')
-points(abscissa,total_curves[[1]],xlab="t",ylab="first differences x",type="l")
+x11()
+plot(abscissa,total_curves[[1]], ylim=range(rappinc), type = 'l', col=color_pal(2)[1], lwd=3,
+     xlab = "Age", ylab="Value", main="Computation of the first derivative")
+lines(17:49, rappinc, col=color_pal(2)[2], lwd=3)
+legend('bottomright', fill=color_pal(2), legend=c("Smoothed curves", "Finite differences"))
 
 #Outlier detection#
 
 library(fdANOVA)
-data <- fData(17:50, t(total_curves))
+f_data <- fData(17:50, t(total_curves))
 x11()
-out_mag <- roahd::fbplot(data) # no magnitude outliers
+out_mag <- roahd::fbplot(f_data) # no magnitude outliers
 
 x11()
-out_shape <- outliergram(data)
+out_shape <- outliergram(f_data)
 num <- out_shape$ID_outliers
 prov_out <- match(names(total_curves)[num], prov)
 
 View(cbind(prov[prov_out], years[(num-prov_out)/107]))
 
-data_aux <- data[num]
+data_aux <- f_data[num]
 plot(data_aux, col = color_pal(1))
-pre <- which(data_aux$values[, 10]>7)
+pre <- which(data_aux$values[, 33-17]>(-5))
 prov_out_up <- match(names(total_curves)[num[pre]], prov)
 prov_out_down <- match(names(total_curves)[num[-pre]], prov)
 
 View(cbind(names(total_curves)[num[pre]], years[(num[pre]-prov_out_up)/107]))
 View(cbind(names(total_curves)[num[-pre]], years[(num[-pre]-prov_out_down)/107]))
 
-data_aux1 <- data[num[pre]]
-data_aux2 <- data[num[-pre]]
-plot(data_aux1, col = color_pal(2)[1])
+data_aux1 <- f_data[num[pre]]
+data_aux2 <- f_data[num[-pre]]
+plot(data_aux1, col = color_pal(2)[1], ylim=c(-15,15), xlab="Age")
 for(i in 1:7){
   lines(17:50, data_aux2$values[i,],col = color_pal(2)[2])
 }
 
+
 ##Prova con il fattore geografico su tre livelli##
 x11()
-plot(data, col='grey80', main = 'First derivative')
+plot(f_data, col='grey80', main = 'First derivative')
 
 data_nord <- data$values[which(geo == 'nord') ,]
 data_centro <- data$values[which(geo == 'centro') ,]
@@ -124,7 +133,7 @@ hist(T_stat, xlim=range(c(0,T0)), col = colBG)
 abline(v = T0, col = color_pal(1)[1], lwd = 5)
 
 #p-value curve# - ci mette 10 min
-abscissa <- 1:34
+abscissa <- 17:50
 p_val <- rep(0, length(abscissa))
 pb=progress_bar$new(total=B*34)
 pb$tick(0)
@@ -157,21 +166,41 @@ which(p.bh<.05)
 plot(p.bh, type='l')
 abline(h=0.05)
 
-####differenze negli anni####
-anni <- 2002:2021
-anni_tot <- rep(anni, each=107)
-anni_tot <- as.factor(anni_tot)
-
-trim_total <- matrix(nrow = 20, ncol = 34)
-for (i in 1:length(years)) {
-  tm <- apply(total_curves[,(107*i - 107 + 1):(107*i)], MARGIN = 1, FUN = function(x){mean(x, trim = .4)} )
-  trim_total[i,] <- tm
+## l2 norm for medians as a measure for classify the difference ##
+norms <- NULL
+geo_lev <- levels(geo)
+for (i in 1:length(geo_lev))
+{
+  med <- median_fData(fData = f_data[which(geo==geo_lev[i])], type = "MBD")
+  norm_i <- norm(med$values, type = '2')
+  norms[i] <- norm_i
 }
+norms_stand <- data.frame(geo = levels(geo), 
+                          norms = norms/max(f_data$values)*34)
 
-data1 <- fData(1:34, trim_total)
-plot(data1)
+plot <- ggplot(norms_stand, aes(x = geo, y = norms)) +
+  geom_point(size = 4, col = color_pal(length(geo_lev))) +
+  labs(title = "Standardized norms of medians",
+       x = "Geographic position", y = "Norms") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 13)) +
+  scale_x_discrete(labels = geo_names) + geom_segment(aes(x = geo, xend = geo, y = 70, yend = norms), color =  color_pal(length(geo_lev)), linetype = "dashed", alpha = 0.7)
+print(plot)
 
-T0 <- fanova.tests(x = total_curves, anni_tot,  test = "L2N", parallel = TRUE)$L2N$statL2
+####differenze negli anni####
+years_tot <- rep(years, each=length(prov))
+years_tot <- as.factor(years_tot)
+
+x11()
+plot(f_data, col=colBG)
+for (i in 1:length(years))
+{
+  m <- median_fData(fData = f_data[which(years_tot==years[i])], type = "MBD")
+  lines(17:50, m$values, col=color_pal(length(years))[i], lwd=2)
+}
+legend(x = 'topright',fill=color_pal(length(years)), legend = years)
+
+T0 <- fanova.tests(x = total_curves, years_tot,  test = "L2N", parallel = TRUE)$L2N$statL2
 
 B <- 1000
 T_stat <- numeric(B)
@@ -179,48 +208,63 @@ pb=progress_bar$new(total=B)
 pb$tick(0)
 set.seed(2024)
 for(perm in 1:B){
-  permutation <- sample(1:length(anni_tot))
-  anni_perm <- anni_tot[permutation]
+  permutation <- sample(1:length(years_tot))
+  years_perm <- years_tot[permutation]
   
-  T_stat[perm] <- fanova.tests(x = total_curves, anni_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
+  T_stat[perm] <- fanova.tests(x = total_curves, years_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
   pb$tick()
 }
 
-hist(T_stat, xlim=range(c(0,T0)), col = 'grey80')
-abline(v = T0, col = color_pal(1)[1], lwd = 5)
+hist(T_stat, xlim=range(c(0, T0)), col=colBG)
+abline(v = T0, col=color_pal(2)[1], lwd=5)
 
+#Reject, there is a significant difference
 
-#p-value curve# - 
-abscissa <- 1:34
-p_val <- rep(0, length(abscissa))
-pb=progress_bar$new(total=B*34)
-pb$tick(0)
-for (i in 1:length(abscissa))
+# #p-value curve# - ci mette una vita, non runnare
+# abscissa <- 17:50
+# p_val <- rep(0, length(abscissa))
+# pb=progress_bar$new(total=B*length(abscissa))
+# pb$tick(0)
+# for (i in 1:length(abscissa))
+# {
+#   T0 <- summary(aov(t(as.matrix(total_curves[i ,])) ~ years_tot))[[1]][1,4]
+#   B <- 1000
+#   for(perm in 1:B){
+#     permutation <- sample(1:length(years_tot))
+#     years_perm <- years_tot[permutation]
+# 
+#     T_stat[perm] <- summary(aov(t(as.matrix(total_curves[i ,])) ~ years_perm))[[1]][1,4]
+#     pb$tick()
+#   }
+#   p_val[i] <- sum(T_stat>T0)/length(T_stat)
+# }
+# 
+# plot(p_val, type='l')
+# abline(h=0.05)
+
+## l2 norm for medians#
+years_tot <- rep(years, each=length(prov))
+years_tot <- as.factor(years_tot)
+norms <- NULL
+for (i in 1:length(levels(years_tot)))
 {
-  T0 <- summary(aov(t(as.matrix(total_curves[i ,])) ~ anni_tot))[[1]][1,4]
-  B <- 1000
-  set.seed(2024)
-  for(perm in 1:B){
-    permutation <- sample(1:length(geo))
-    anni_perm <- anni[permutation]
-    
-    T_stat[perm] <- summary(aov(t(as.matrix(total_curves[i ,])) ~ anni_perm))[[1]][1,4]
-    pb$tick()
-  }
-  p_val[i] <- sum(T_stat>T0)/length(T_stat)
+  med <- median_fData(fData = f_data[which(years_tot==levels(years_tot)[i])], type = "MBD")
+  norm_i <- norm(med$values, type = '2')
+  norms[i] <- norm_i
 }
+norms_stand <- data.frame(year = levels(years_tot), 
+                          norms = norms/max(f_data$values)*34)
 
-plot(p_val, type='l')
-abline(h=0.05)
+plot <- ggplot(norms_stand, aes(x = years, y = norms)) +
+  geom_line(color=color_pal(2)[2], linewidth=.5) + 
+  geom_point(color=color_pal(2)[2], size=2.5) + 
+  labs(title = "Standardized norms of medians",
+       x = "Years", y = "Norms") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  scale_color_viridis_c()  # You can choose a different color scale if needed
 
-# Benjamini-Hockberg corrections on pvalues:
-p.bh <- p.adjust(p_val, 'BH')
-# Indexes of the couples for which BH correction tells us that there is a 
-# significant difference at level alpha=5%:
-which(p.bh<.05)
-plot(p.bh, type='l')
-abline(h=0.05)
-
+print(plot)
 # Maxima and minima analysis 
 
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
@@ -249,7 +293,6 @@ for (i in 1:length(years))
 maxima <- data.frame(maxima)
 names(maxima) <- c("Province", "Year", "Argmax", "Max")
 
-
 data_max <- data.frame(x=as.numeric(maxima$Argmax),y=as.numeric(maxima$Max))
 
 fit_lts <- ltsReg(y~x, data=data_max, alpha=.75, mcd=TRUE)
@@ -272,6 +315,16 @@ geo <- case_when(
 geo <- rep(geo, length(years))
 geo <- factor(geo)
 geo_names <- c("Nord", "Centro", "Sud")
+x11()
+plot(data_max, col=colBG, main="Linear regression for the three different region", 
+     xlab="Max argoument in the domain", ylab="Maximum value")
+for (i in 1:length(geo_names))
+{
+  fit <- lm(y~x, data=data_max[which(geo==levels(geo)[i]) ,])
+  abline(fit, col=color_pal(length(levels(geo)))[i], lwd=3)
+}
+legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
+
 
 library(DepthProc)
 
@@ -304,7 +357,6 @@ for(perm in 1:B){
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
-
 year_cut <- c("2002-2005","2006-2013","2014-2018")
 lev <- list(2002:2005, 2006:2013, 2014:2018)
 years_tot <- rep(years, each=length(prov))
@@ -326,7 +378,7 @@ for(perm in 1:B){
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
-#Test the above thing for the three different regions
+# Test the above thing for the three different regions #
 res <- matrix(0, length(levels(geo)))
 for (i in 1:length(levels(geo)))
 {
@@ -399,20 +451,20 @@ res
 
 # Now we want to quantify the differences on the three coefficients of the linear model connecting
 # the value of the maximum with its abscissa.
-# We use a robust method, knowing that there are outliers present
-
 
 CI <- matrix(0, nrow=9, ncol=3)
 alpha <- 0.05
 geo <- as.factor(geo)
+pb=progress_bar$new(total=B*3*3)
+pb$tick(0)
 for (i in 1:length(geo_names))
 {
   for (k in 1:length(year_cut))
   {
     #In ogni iterazione mi calcolo il confidence interval del lts
     data_iter <- data_max[which(geo==levels(geo)[i] & years_tot_cut==year_cut[k]) ,]
-    model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
-    point_estimate <- model$coefficients[2][[1]]
+    model <- lm(y ~ x, data=data_iter)
+    point_estimate <- model$coefficients[2][[1]]  #################
     fitted <- model$fitted.values
     res <- model$resid
     boot <- rep(0, B)
@@ -452,38 +504,7 @@ ggplot(df, aes(x = x, y = factor(y)))+
   ylab("Region") + 
   labs(title = "Confidence Intervals with Central Points", ylab="Region")
 
-
-
-int1 <- 2002:2005
-interval1 <- matrix(0, nrow=length(prov)*length(int1), ncol=length(eta))
-for (i in 1:length(prov)){
-  for (j in 1:length(int1))
-  {
-    interval1[((j-1)*107+i) ,] <- prov_list[[i]][j ,]
-  }
-}
-int2 <- 2012:2018
-interval2 <- matrix(0, nrow=length(prov)*length(int2), ncol=length(eta))
-for (i in 1:length(prov)){
-  for (j in 1:length(int2))
-  {
-    interval2[((j-1)*107+i) ,] <- prov_list[[i]][(10+j) ,]
-  }
-}
-
-# farlo con le deriv
-
-matplot(t(interval1), type='l')
-matplot(t(interval2), type='l')
-
-df <- bind_rows(data.frame(interval1), data.frame(interval2))
-dd <- depthMedian(df, depth_params = list("Tukey"))
-
-ddPlot(x = interval1,y = interval2,depth_params = list(method='Tukey'),
-       title = "Pre 2006 vs 2012-2018")
-
-##Permutational test usando i tre intervalli di anni
-
+## Test the differences along the hree class of years ##
 
 T0 <- fanova.tests(x = total_curves, years_tot_cut,  test = "L2N", parallel = TRUE)$L2N$statL2
 
@@ -523,10 +544,7 @@ ggplot(data_max, aes(x = x, y = y)) +
                      values = he) +
   theme_minimal()
 
-
-
-
-# Minima
+#### Minima ####
 
 minima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
 new <- data.frame(x=seq(17,50,length=1000))
@@ -569,6 +587,15 @@ geo <- case_when(
 geo <- rep(geo, length(years))
 geo <- factor(geo)
 geo_names <- c("Nord", "Centro", "Sud")
+x11()
+plot(data_max, col=colBG, main="Linear regression for the three different region", 
+     xlab="Max argoument in the domain", ylab="Maximum value")
+for (i in 1:length(geo_names))
+{
+  fit <- lm(y~x, data=data_max[which(geo==levels(geo)[i]) ,])
+  abline(fit, col=color_pal(length(levels(geo)))[i], lwd=3)
+}
+legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
 
 ggplot(data_max, aes(x = x, y = y)) +
   geom_point(color = colBG, size = 1, shape = 16) +
@@ -624,7 +651,7 @@ for(perm in 1:B){
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
-#Test the above thing for the three different regions
+# Test the above thing for the three different regions
 res <- matrix(0, length(levels(geo)))
 for (i in 1:length(levels(geo)))
 {
@@ -707,8 +734,8 @@ for (i in 1:length(geo_names))
 {
   #In ogni iterazione mi calcolo il confidence interval del lts
   data_iter <- data_max[which(geo==levels(geo)[i]) ,]
-  model <- with(data_iter, ltsReg(x,y, alpha=.70, mcd=TRUE))
-  point_estimate <- model$coefficients[2][[1]]
+  model <- lm(y ~ x, data=data_iter)
+  point_estimate <- model$coefficients[2][[1]] #########
   fitted <- model$fitted.values
   res <- model$resid
   boot <- rep(0, B)
@@ -732,56 +759,6 @@ names(CI) <- c("left", "estimate", "right")
 rownames(CI) <- c("nord", "centro", "sud")
 CI
 
-#
-
-int1 <- 2002:2005
-interval1 <- matrix(0, nrow=length(prov)*length(int1), ncol=length(eta))
-for (i in 1:length(prov)){
-  for (j in 1:length(int1))
-  {
-    interval1[((j-1)*107+i) ,] <- prov_list[[i]][j ,]
-  }
-}
-int2 <- 2012:2018
-interval2 <- matrix(0, nrow=length(prov)*length(int2), ncol=length(eta))
-for (i in 1:length(prov)){
-  for (j in 1:length(int2))
-  {
-    interval2[((j-1)*107+i) ,] <- prov_list[[i]][(10+j) ,]
-  }
-}
-
-matplot(t(interval1), type='l')
-matplot(t(interval2), type='l')
-
-df <- bind_rows(data.frame(interval1), data.frame(interval2))
-dd <- depthMedian(df, depth_params = list("Tukey"))
-
-ddPlot(x = interval1,y = interval2,depth_params = list(method='Tukey'),
-       title = "Pre 2006 vs 2012-2018")
-
-##Permutational test usando i tre intervalli di anni
-
-
-T0 <- fanova.tests(x = total_curves, years_tot_cut,  test = "L2N", parallel = TRUE)$L2N$statL2
-
-B <- 1000
-T_stat <- numeric(B)
-pb=progress_bar$new(total=B)
-pb$tick(0)
-set.seed(2024)
-for(perm in 1:B){
-  permutation <- sample(1:length(years_tot_cut))
-  year_perm <- years_tot_cut[permutation]
-  
-  T_stat[perm] <- fanova.tests(x = total_curves, year_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
-  pb$tick()
-  
-}
-
-hist(T_stat, xlim=range(c(0,T0)), col=colBG)
-abline(v = T0, col=color_pal(2)[1], lwd=5)
-
 fac <- geo:as.factor(years_tot)
 medians <- aggregate(as.matrix(data_max) ~ as.factor(years_tot_cut) + geo, data = data.frame(data_max), FUN = median)
 
@@ -792,21 +769,11 @@ ggplot(data_max, aes(x = x, y = y)) +
   geom_point(data = medians, aes(x = x, y = y, color=rep(he,each=3)),group=rep(geo_names, each=3), 
              color = rep(he, each=3), size = 5) +
   geom_line(data=medians, aes(x=x, y=y, group=geo, color=rep(he, each=3)), linewidth=2) + 
-  labs(title = "Maximum dynamics",
-       x = "Maximum's abscissa",
-       y = "Maximum") +
+  labs(title = "Minimum dynamics",
+       x = "Minimum's abscissa",
+       y = "Minimum") +
   scale_color_manual(name = "Legend Title",
                      breaks = he,
                      labels = geo_names,
                      values = he) +
   theme_minimal()
-
-
-
-
-
-
-
-
-
-

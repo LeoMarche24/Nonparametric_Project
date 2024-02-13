@@ -414,7 +414,8 @@ geo <- factor(geo)
 geo_names <- c("North", "Centre", "South")
 
 x11()
-plot(data_max, col=color_gray, main="Linear regression for the three different region")
+plot(data_max, col=color_gray, main="Linear regression for the three different region", 
+     xlab="Max argoument in the domain", ylab="Maximum value")
 for (i in 1:length(geo_names))
 {
   fit <- lm(y~x, data=data_max[which(geo==levels(geo)[i]) ,])
@@ -548,6 +549,7 @@ CI <- matrix(0, nrow=9, ncol=3)
 alpha <- 0.05
 pb=progress_bar$new(total=B*9)
 pb$tick(0)
+set.seed(2024)
 for (i in 1:length(geo_names))
 {
   for (k in 1:length(year_cut))
@@ -598,38 +600,47 @@ ggplot(df, aes(x = x, y = ord))+
   ylab("Region") + 
   labs(title = "Confidence Intervals with Central Points", ylab="Region")
 
-# CI_param <- matrix(0, nrow=3, ncol=3)
+# CI <- matrix(0, nrow=9, ncol=3)
 # alpha <- 0.05
-# pb=progress_bar$new(total=B*3)
+# pb=progress_bar$new(total=B*9)
 # pb$tick(0)
-# for (i in 1:length(lev))
+# set.seed(2024)
+# for (i in 1:length(geo_names))
 # {
-#   #In ogni iterazione mi calcolo il confidence interval del lts
-#   data_iter <- data[which(geo==lev[i]) ,]
-#   model <- with(data_iter, ltsReg(x,y, alpha=.80, mcd=TRUE))
-#   point_estimate <- model$coefficients[2][[1]]
-#   fitted <- model$fitted.values
-#   res <- model$resid
-#   boot <- rep(0, B)
-#   for (j in 1:B)
+#   for (k in 1:length(year_cut))
 #   {
-#     res_boot <- sample(res, replace = T)
-#     res_boot <- rnorm(length(res), mean(res_boot),sd = sd(res_boot))
-#     data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
-#     model <- with(data_boot, ltsReg(x,y, alpha=.80, mcd=TRUE))
-#     boot[j] <- model$coefficients[2][[1]]
-#     pb$tick()
+#     #In ogni iterazione mi calcolo il confidence interval del lts
+#     data_iter <- data_max[which(geo==levels(geo)[i] & years_tot_cut==year_cut[k]) ,]
+#     model <- lm(y ~ x, data=data_iter)
+#     point_estimate <- model$coefficients[2][[1]]
+#     fitted <- model$fitted.values
+#     res_model <- model$resid
+#     boot <- rep(0, B)
+#     set.seed(2024)
+#     for (j in 1:B)
+#     {
+#       res <- sample(res_model, replace = T)
+#       res_boot <- rnorm(length(res), mean(res), sd(res))
+#       data_boot <- data.frame(x=data_iter$x, y=fitted+res_boot)
+#       model <- lm(y ~ x, data=data_boot)
+#       boot[j] <- model$coefficients[2][[1]]
+#       pb$tick()
+#     }
+#     right <- quantile(boot, 1 - alpha/2)
+#     left <- quantile(boot, alpha/2)
+#     inx <- ((as.numeric(levels(geo))[i]-1)*length(year_cut)) + k
+#     CI[inx ,] <- c(point_estimate - (right - point_estimate),point_estimate, 
+#                    point_estimate - (left - point_estimate))
+#     
 #   }
-#   right <- quantile(boot, 1 - alpha/2)
-#   left <- quantile(boot, alpha/2)
-#   
-#   CI_param[i ,] <- c(point_estimate - (right - point_estimate),point_estimate, 
-#                point_estimate - (left - point_estimate))
 # }
-# CI_param <- data.frame(CI_param)
-# names(CI_param) <- c("left", "estimate", "right")
-# rownames(CI_param) <- c("centro", "nord", "sud")
-# CI_param
+# g <- as.factor(geo_names)
+# y <- as.factor(year_cut)
+# nam <- expand.grid(y,g)
+# CI <- data.frame(CI)
+# names(CI) <- c("left", "estimate", "right")
+# rownames(CI) <- paste(nam[,1], nam[,2])
+# CI
 
 #### In the particular class of years, are there difference? ####
 

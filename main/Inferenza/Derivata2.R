@@ -63,7 +63,7 @@ plot(f_data, col=colBG)
 for (i in 1:length(levels(geo)))
 {
   m <- colMeans(f_data[which(geo == levels(geo)[i])]$values)
-  lines(grid, m, col=color_pal(length(levels(geo)))[i], lwd=2)
+  lines(20:46, m, col=color_pal(length(levels(geo)))[i], lwd=2)
 }
 legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
 
@@ -88,27 +88,27 @@ abline(v = T0, col = color_pal(2)[1], lwd=5)
 # region is significant
 
 #p-value curve# - very long, uncomment if necessary, flat line as result
-abscissa <- grid
-p_val <- rep(0, length(abscissa))
-set.seed(2024)
-pb=progress_bar$new(total=B*34)
-pb$tick(0)
-for (i in 1:length(abscissa))
-{
-  T0 <- summary(aov(t(as.matrix(total_curves[i ,])) ~ geo))[[1]][1,4]
-  B <- 1000
-  for(perm in 1:B){
-    permutation <- sample(1:length(geo))
-    geo_perm <- geo[permutation]
-
-    T_stat[perm] <- summary(aov(t(as.matrix(total_curves[i ,])) ~ geo_perm))[[1]][1,4]
-    pb$tick()
-  }
-  p_val[i] <- sum(T_stat>T0)/length(T_stat)
-}
-
-plot(p_val, type='l')
-abline(h=0.05)
+# abscissa <- grid
+# p_val <- rep(0, length(abscissa))
+# set.seed(2024)
+# pb=progress_bar$new(total=B*34)
+# pb$tick(0)
+# for (i in 1:length(abscissa))
+# {
+#   T0 <- summary(aov(t(as.matrix(total_curves[i ,])) ~ geo))[[1]][1,4]
+#   B <- 1000
+#   for(perm in 1:B){
+#     permutation <- sample(1:length(geo))
+#     geo_perm <- geo[permutation]
+# 
+#     T_stat[perm] <- summary(aov(t(as.matrix(total_curves[i ,])) ~ geo_perm))[[1]][1,4]
+#     pb$tick()
+#   }
+#   p_val[i] <- sum(T_stat>T0)/length(T_stat)
+# }
+# 
+# plot(p_val, type='l')
+# abline(h=0.05)
 
 norms <- NULL
 geo_lev <- levels(geo)
@@ -129,7 +129,6 @@ plot <- ggplot(norms_stand, aes(x = geo, y = norms)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 13)) +
   scale_x_discrete(labels = geo_names) + geom_segment(aes(x = geo, xend = geo, y = 50, yend = norms), color =  color_pal(length(geo_lev)), linetype = "dashed", alpha = 0.7)
 print(plot)
-
 
 years_tot <- rep(years, each=length(prov))
 years_tot <- as.factor(years_tot)
@@ -223,6 +222,7 @@ plot <- ggplot(df, aes(x = years, y = pvalue)) +
 
 print(plot)
 
+###Cutting in three years-levels
 year_cut <- c("2002-2005","2006-2013","2014-2018")
 lev <- list(2002:2005, 2006:2013, 2014:2018)
 years_tot <- rep(years, each=length(prov))
@@ -263,7 +263,6 @@ res <- data.frame(res)
 names(res) <- year_cut
 row.names(res) <- geo_names
 res
-
 
 #### VENA ARRIVATO QUA ####
 
@@ -324,7 +323,7 @@ geo <- factor(geo)
 geo_names <- c("North", "Centre", "South")
 
 x11()
-plot(data_max, col=color_gray, main="Linear regression for the three different region")
+plot(data_max, col=colBG, main="Linear regression for the three different region")
 for (i in 1:length(geo_names))
 {
   fit <- lm(y~x, data=data_max[which(geo==levels(geo)[i]) ,])
@@ -335,7 +334,7 @@ legend('topright', fill=color_pal(length(levels(geo))), legend=geo_names)
 library(DepthProc)
 
 ggplot(data_max, aes(x = x, y = y)) +
-  geom_point(color = color_gray, size = 1, shape = 16) +
+  geom_point(color = colBG, size = 1, shape = 16) +
   geom_point(data = aggregate(cbind(x, y) ~ geo, data = data_max, FUN = median), 
              aes(x = x, y = y, color = color_pal(length(geo_names))), size = 6, shape = 16) +
   scale_color_manual(name = "Legend Title",
@@ -378,7 +377,7 @@ for(perm in 1:B){
   T_stat[perm] <- summary(fit_perm)[[4]][1,3]
 }
 
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=color_gray)
+hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
 
 # Between the class of years, are the difference significant??
@@ -402,7 +401,7 @@ for (i in 1:length(levels(geo)))
     T_stat[perm] <- summary(fit_perm)[[4]][1,3]
   }
   
-  hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=color_gray)
+  hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
   abline(v=T0,lwd=5, col=color_pal(2)[1])
   res[i] <- sum(T_stat>T0)/B
 }
@@ -575,11 +574,11 @@ ddPlot(x = interval1,y = interval2,depth_params = list(method='Tukey'),
 ##Permutational test usando i tre intervalli di anni
 
 x11()
-plot(f_data, col=color_gray)
+plot(f_data, col=colBG)
 for (i in 1:length(levels(years_tot_cut)))
 {
   m <- colMeans(f_data[which(years_tot_cut==year_cut[i])]$values)
-  lines(17:50, m, col=color_pal(length(levels(years_tot_cut)))[i], lwd=2)
+  lines(20:46, m, col=color_pal(length(levels(years_tot_cut)))[i], lwd=2)
 }
 legend("topright", fill=color_pal(length(levels(years_tot_cut))), legend=year_cut)
 
@@ -599,7 +598,7 @@ for(perm in 1:B){
   
 }
 
-hist(T_stat, xlim=range(c(0,T0)), col=color_gray)
+hist(T_stat, xlim=range(c(0,T0)), col=colBG)
 abline(v = T0, col=color_pal(2)[1], lwd=5)
 
 fac <- geo:as.factor(years_tot)
@@ -609,7 +608,7 @@ medians <- aggregate(as.matrix(data_max) ~ as.factor(years_tot_cut) + geo, data 
 # Plot the scatter plot of all points in grey
 he <- color_pal(3)
 ggplot(data_max, aes(x = x, y = y)) +
-  geom_point(color = "grey") +
+  geom_point(color = colBG) +
   geom_point(data = medians, aes(x = x, y = y, color=rep(he,each=3)),group=rep(geo_names, each=3), 
              color = rep(he, each=3), size = 5) +
   geom_line(data=medians, aes(x=x, y=y, group=geo, color=rep(he, each=3)), linewidth=2) + 
@@ -621,58 +620,3 @@ ggplot(data_max, aes(x = x, y = y)) +
                      labels = geo_names,
                      values = he) +
   theme_minimal()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# MAXIMA MINIMA ANALYIS
-
-maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
-minima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
-
-for (i in 1:length(prov))
-{
-  for (j in 1:length(years))
-  {
-    Xsp <- smooth.basis(argvals=grid, y=prov_list[[i]][j ,], fdParobj=basis)
-    temp <-  eval.fd(grid, Xsp2$fd, Lfd=2)[lowercut:uppercut,]
-    maxima[((j-1)*length(prov)+i),1] <- prov[i]
-    maxima[((j-1)*length(prov)+i),2] <- years[j]
-    maxima[((j-1)*length(prov)+i),3] <- as.numeric(lowercut+which.max(temp))
-    maxima[((j-1)*length(prov)+i),4] <- as.numeric(max(temp))
-    minima[((j-1)*length(prov)+i),1] <- prov[i]
-    minima[((j-1)*length(prov)+i),2] <- years[j]
-    minima[((j-1)*length(prov)+i),3] <- as.numeric(lowercut+which.min(temp))
-    minima[((j-1)*length(prov)+i),4] <- as.numeric(min(temp))
-  }
-}
-grid <- grid[lowercut:uppercut]
-
-
-
-
-
-
