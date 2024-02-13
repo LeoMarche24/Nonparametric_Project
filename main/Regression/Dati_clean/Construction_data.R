@@ -59,8 +59,31 @@ names(universita)[names(universita) == "Territorio"] <- "Region"
 names(universita)[names(universita) == "TIME"] <- "Year"
 names(universita)[names(universita) == "X..rinunce"] <- "Dropouts"
 
-rm(iscritti, iscritti1, iscritti2, iscritti3, iscritti.tot, rinuncia, rinuncia1)
-# write.csv(universita, "dati_uni.txt", row.names = FALSE)
+# 
+uni2 <- read.csv("dati_uni_post.csv", header = T)
+library(reshape2)
+
+uni2$Year <- 2022:2012
+uni2$X <- NULL  
+
+melted_dataset2 <- melt(uni2, id.vars = "Year", variable.name = "Region", value.name = "Women.enrolled")
+subset_melted_dataset2 <- subset(melted_dataset2, Year >= 2012 & Year <= 2021)
+
+subset_melted_dataset2[] <- lapply(subset_melted_dataset2, function(x) gsub('Friuli.Venezia.Giulia',"Friuli-Venezia Giulia", x))
+subset_melted_dataset2[] <- lapply(subset_melted_dataset2, function(x) gsub('Emilia.Romagna', 'Emilia-Romagna', x))
+subset_melted_dataset2[] <- lapply(subset_melted_dataset2, function(x) gsub('Trentino.Alto.Adige', "Trentino Alto Adige / Südtirol", x))
+subset_melted_dataset2[] <- lapply(subset_melted_dataset2, function(x) gsub('Valle.d.Aosta', "Valle d'Aosta / Vallée d'Aoste", x))
+
+merged_dataset <- merge(subset_melted_dataset2, universita, by = c("Year", "Region"), all.x = T)
+merged_dataset[which(merged_dataset$Year %in% 2012:2021),'Women.enrolled.y'] <- merged_dataset[which(merged_dataset$Year %in% 2012:2021),'Women.enrolled.x']
+d1 <- merged_dataset[,c(1:4)]
+d2 <- universita[which(universita$Year %in% 2004:2011),]
+names(d1)[names(d1) == "Women.enrolled.x"] <- "Women.enrolled"
+
+universita.fin <- rbind(d1, d2)
+
+rm(iscritti, iscritti1, iscritti2, iscritti3, iscritti.tot, rinuncia, rinuncia1, merged_dataset, subset_melted_dataset2, melted_dataset2)
+write.csv(universita.fin, "dati_uni.txt", row.names = FALSE)
 
 
 ## population

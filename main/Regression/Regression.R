@@ -115,7 +115,7 @@ ds_reg <- merge(pop, uni,  by = c("Year", "Region"), all.x = T)
 ds_reg <- merge(ds_reg, occ, by=c("Year", "Region"), all.x = T)
 ds_reg <- merge(ds_reg, grav, by=c("Year", "Region"), all.x = T)
 
-ds_reg[,c(3,4,6)] <- ds_reg[,c(3,4,6)]*100
+ds_reg[,c(3,4,5)] <- ds_reg[,c(3,4,5)]*100
 
 # changing names
 ds_reg[] <- lapply(ds_reg, function(x) gsub("Friuli-Venezia Giulia", 'Friuli_Venezia_Giulia', x))
@@ -160,51 +160,52 @@ legend("topright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1]
 # drop Unemployment rate
 model3.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
                      + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model3.maxdom)
+summary(model3.maxdom) # R2 = 0.343 
 
 # linear effect on Emigrations
 model5.maxdom <- gam(MaxDomain ~ Emigrations 
                      + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model5.maxdom)
+summary(model5.maxdom) # R2 = 0.324
 
 
-## regression on MaxDomain in 2008:2017
+## regression on MaxDomain in 2008:2020
 # we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
 model11.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+                      + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
 summary(model11.maxdom)
-
-# drop Immigrations
-model12.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
-                      + s(Employment.rate, bs = 'cr') 
-                      + s(Unemployment.rate, bs = 'cr')
-                      + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model12.maxdom)
+# Dropouts is not significant, hence we drop it and extend the model til 2021
 
 # drop Dropouts
-model13.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+model12.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
-                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model12.maxdom)
+
+# drop Emigrations
+model13.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
 summary(model13.maxdom)
 
 # collinearity between Unemployment and Employment rates
-plot(ds_reg[which(ds_reg$Year %in% 2008:2017),]$Unemployment.rate, ds_reg[which(ds_reg$Year %in% 2008:2017),]$Employment.rate, col = colors, pch = 19)
+plot(ds_reg[which(ds_reg$Year %in% 2008:2021),]$Unemployment.rate, ds_reg[which(ds_reg$Year %in% 2008:2021),]$Employment.rate, col = colors, pch = 19)
 legend("bottomright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
 # drop Unemployment rate 
-model14.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+model14.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr')
-                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model14.maxdom)
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model14.maxdom) # R2 =  0.586
 
 
-## regression on MaxDomain in 2010:2017
+## regression on MaxDomain in 2010:2020
 # we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
 model21.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Immigrations, bs = 'cr')
@@ -213,37 +214,49 @@ model21.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
                       + s(Dropouts, bs = 'cr')
                       + s(Abortions.2529, bs = 'cr')
-                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
 summary(model21.maxdom)
+# Dropouts is not significant, hence we drop it and extend the model til 2021
 
-# drop Abortions.3034
+# drop Dropouts
 model22.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr')
-                      + s(Abortions.2529, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                      + s(Abortions.2529, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
 summary(model22.maxdom)
 
-# drop Immigrations
-model23.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+# drop Emigrations (collinearity)
+model23.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr')
-                      + s(Abortions.2529, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                      + s(Abortions.2529, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
 summary(model23.maxdom)
 
 # drop Abortions.2529
-model23.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+model23.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
 summary(model23.maxdom)
-# abortion is not significant in general, hence we can consider the previous
-# procedure for model selection
+
+# drop Unemployment.rate
+model24.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
+summary(model24.maxdom)
+
+# drop Women.enrolled
+model24.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
+summary(model24.maxdom) # R2 = 0.609
 
 
 ## regression on Max in 2002:2021
@@ -263,42 +276,43 @@ summary(model2.max)
 # drop Unemployment rate (due to collinearity with Employment)
 model3.max <- gam(Max ~ s(Immigrations, bs = 'cr') 
                   + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model3.max)
+summary(model3.max) # R2 = 0.439
 
 
-## regression on Max in in 2008:2017
+## regression on Max in in 2008:2020
 # we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
 model11.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
                   + s(Immigrations, bs = 'cr')
                   + s(Employment.rate, bs = 'cr') 
                   + s(Unemployment.rate, bs = 'cr')
                   + s(Women.enrolled, bs = 'cr')
-                  + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+                  + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
 summary(model11.max)
 
-# drop Dropouts
-model12.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
-                   + s(Immigrations, bs = 'cr')
+# drop Emigrations
+model12.max <- gam(Max ~ s(Immigrations, bs = 'cr')
                    + s(Employment.rate, bs = 'cr') 
                    + s(Unemployment.rate, bs = 'cr')
-                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+                   + s(Women.enrolled, bs = 'cr')
+                   + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
 summary(model12.max)
+# Dropouts is not significant, hence we drop it and extend the model til 2021
 
-# drop Unemployment rate (due to collinearity)
-model13.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
-                   + s(Immigrations, bs = 'cr')
+# drop Dropouts
+model13.max <- gam(Max ~ s(Immigrations, bs = 'cr')
                    + s(Employment.rate, bs = 'cr') 
-                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
+                   + s(Unemployment.rate, bs = 'cr')
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
 summary(model13.max)
 
-# drop Immigrations
-model14.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
+# drop Unemployment.rate
+model14.max <- gam(Max ~ s(Immigrations, bs = 'cr')
                    + s(Employment.rate, bs = 'cr') 
-                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model14.max)
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model14.max) # R2 = 0.62
 
 
-## regression on Max in 2010:2017
+## regression on Max in 2010:2020
 # we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
 model21.max <- gam(Max ~ s(Emigrations, bs = 'cr')
                       + s(Immigrations, bs = 'cr')
@@ -307,78 +321,103 @@ model21.max <- gam(Max ~ s(Emigrations, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
                       + s(Dropouts, bs = 'cr')
                       + s(Abortions.2529, bs = 'cr')
-                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
 summary(model21.max)
 
-# drop Abortions.3034
-model22.max <- gam(Max ~ s(Emigrations, bs = 'cr')
-                      + s(Immigrations, bs = 'cr')
-                      + s(Employment.rate, bs = 'cr') 
-                      + s(Unemployment.rate, bs = 'cr')
-                      + s(Women.enrolled, bs = 'cr')
-                      + s(Dropouts, bs = 'cr')
-                      + s(Abortions.2529, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
-summary(model22.max)
-
 # drop Abortions.2529
+model22.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                   + s(Immigrations, bs = 'cr')
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Unemployment.rate, bs = 'cr')
+                   + s(Women.enrolled, bs = 'cr')
+                   + s(Dropouts, bs = 'cr')
+                   + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model22.max)
+# Dropouts is not significant, hence we drop it and extend the model til 2021
+
+# drop Dropouts
 model23.max <- gam(Max ~ s(Emigrations, bs = 'cr')
                    + s(Immigrations, bs = 'cr')
                    + s(Employment.rate, bs = 'cr') 
                    + s(Unemployment.rate, bs = 'cr')
                    + s(Women.enrolled, bs = 'cr')
-                   + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2017),])
+                   + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
 summary(model23.max)
-# abortion is not significant in general, hence we can consider the previous
-# procedure for model selection
+
+# drop Emigrations
+model24.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Unemployment.rate, bs = 'cr')
+                   + s(Women.enrolled, bs = 'cr')
+                   + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
+summary(model24.max)
+
+# drop Unemployment.rate
+model25.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Women.enrolled, bs = 'cr')
+                   + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
+summary(model25.max)
+
+# drop Abortions.3034
+model26.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2021),])
+summary(model26.max) # R2 = 0.621
 
 
 ### final models ###
 
 ## models ##
-## MaxDomain (2008:2017)
-model.fin.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
+## MaxDomain (2008:2021)
+model.fin.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr')
-                      + s(Women.enrolled, bs = 'cr')
-                      + Area, data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model.fin.maxdom) # R2 = 0.707
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model.fin.maxdom) # R2 =  0.559
 
-model.fin.maxdom.lin <- gam(MaxDomain ~ Emigrations 
+
+model.fin.maxdom.lin <- gam(MaxDomain ~ Immigrations 
                         + s(Employment.rate, bs = 'cr')
-                        + s(Women.enrolled, bs = 'cr')
-                        + Area, data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model.fin.maxdom.lin) # R2 = 0.695
+                        + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model.fin.maxdom.lin) # R2 = 0.573
 
-## Max (2008:2017)
-model.fin.max <- gam(Max ~ s(Emigrations, bs = 'cr') 
-                   + s(Employment.rate, bs = 'cr') 
-                   + s(Women.enrolled, bs = 'cr')
-                   + Area, data = ds_reg[which(ds_reg$Year %in% 2008:2017),])
-summary(model.fin.max) # R2 = 0.728
+
+## Max (2008:2021)
+model.fin.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                     + s(Employment.rate, bs = 'cr') 
+                     + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model.fin.max) # R2 = 0.62
+
+model.fin.max.lin <- gam(Max ~ Immigrations
+                     + s(Employment.rate, bs = 'cr') 
+                     + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
+summary(model.fin.max.lin) # R2 = 0.582
 
 
 ## outlier detection ##
 # visually we identify the following areas as possible outliers
-data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2017),]
+data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2021),]
 
-plot(data_regression$Employment.rate, data_regression$Emigrations, col = colors, pch = 19)
+plot(data_regression$Employment.rate, data_regression$Immigrations, col = colors, pch = 19)
 legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
-ds.no.outlier <- ds_reg[which(ds_reg$Emigrations < 25),] 
+ds.no.outlier <- ds_reg[which(ds_reg$Immigrations < 25),] 
 colors1 <- ifelse(ds.no.outlier$Area == 'Nord', color_pal(3)[1], ifelse(ds.no.outlier$Area == 'Centro', color_pal(3)[2], color_pal(3)[3]))
-plot(data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Women.enrolled, data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Emigrations,  col = colors1, pch = 19)
+
+plot(data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Women.enrolled, data_regression[which(data_regression$Region != 'Valle_d_Aosta'),]$Immigrations,  col = colors1, pch = 19)
 legend("topright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
-visual.out <- data_regression[which(data_regression$Emigrations > 25 | data_regression$Women.enrolled > 60),c("Region","Emigrations", "Employment.rate")]
+visual.out <- data_regression[which(data_regression$Immigrations > 25 | data_regression$Women.enrolled > 60),c("Region","Emigrations", "Employment.rate")]
 
-visual.alpha <- 1 - nrow(visual.out)/nrow(data_regression) # 0.915
-# then we round our alpha to 0.9
+visual.alpha <- 1 - nrow(visual.out)/nrow(data_regression) # 0.843
+# then we round our alpha to 0.85
 
-fit_MCD <- covMcd(x = data_regression[,c("Emigrations", "Employment.rate","Women.enrolled")], alpha = 0.9, nsamp = 1000)
+fit_MCD <- covMcd(x = data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")], alpha = 0.85, nsamp = 1000)
 fit_MCD$raw.center
 fit_MCD$raw.cov
 
 ind_best_subset <- fit_MCD$best
-N <- nrow(data_regression[,c("Emigrations", "Employment.rate","Women.enrolled")])
+N <- nrow(data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")])
 
 # outlier indeces
 ind_out_MCD <- setdiff(1:N,fit_MCD$best)
@@ -386,27 +425,47 @@ data.no.out <- data_regression[-ind_out_MCD,]
 
 
 ## models without outliers ##
-## MaxDomain (2008:2017)
-model.fin.maxdom.no.out <- gam(MaxDomain ~ Emigrations
-                        + s(Employment.rate, bs = 'cr')
-                        + s(Women.enrolled, bs = 'cr'), data = data.no.out)
-summary(model.fin.maxdom.no.out) # R2 = 0.62
+## MaxDomain (2008:2021)
+model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
+                               + s(Employment.rate, bs = 'cr')
+                               + s(Women.enrolled, bs = 'cr'), data = data.no.out)
+summary(model.fin.maxdom.no.out.lin) # R2 = 0.628
 
-## Max (2008:2017)
-model.fin.max.no.out <- gam(Max ~ s(Emigrations, bs = 'cr') 
-                     + s(Employment.rate, bs = 'cr') 
-                     + s(Women.enrolled, bs = 'cr'), data = data.no.out)
-summary(model.fin.max.no.out) # R2 = 0.701
+# check for normality of residuals
+hist(model.fin.maxdom.no.out.lin$residuals)
+qqnorm(model.fin.maxdom.no.out.lin$residuals)
+qqline(model.fin.maxdom.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
+
+
+## Max (2008:2021)
+model.fin.max.no.out <- gam(Max ~ s(Immigrations, bs = 'cr')
+                            + s(Employment.rate, bs = 'cr')
+                            + s(Women.enrolled, bs = 'cr'), data = data.no.out)
+summary(model.fin.max.no.out) # R2 = 0.612
+
+model.fin.max.no.out.lin <- gam(Max ~ Immigrations
+                            + s(Employment.rate, bs = 'cr')
+                            + s(Women.enrolled, bs = 'cr'), data = data.no.out)
+summary(model.fin.max.no.out.lin) # R2 = 0.588
+
+# check for normality of residuals
+hist(model.fin.max.no.out$residuals)
+qqnorm(model.fin.max.no.out$residuals)
+qqline(model.fin.max.no.out$residuals, col = color_pal(2)[2], lwd = 2)
+
+hist(model.fin.max.no.out.lin$residuals)
+qqnorm(model.fin.max.no.out.lin$residuals)
+qqline(model.fin.max.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
 
 
 ## plots MaxDomain ## 
 # plot 1
 new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment.rate), length.out = 100)
-new_data_seq1 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq1 <- rep(median(data.no.out$Immigrations), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
-preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq, 
-                                                      Emigrations = new_data_seq1,
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq, 
+                                                      Immigrations = new_data_seq1,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
@@ -416,27 +475,27 @@ lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 # plot 2
-new_data_seq <- seq(min(data.no.out$Emigrations), max(data.no.out$Emigrations), length.out = 100)
+new_data_seq <- seq(min(data.no.out$Immigrations), max(data.no.out$Immigrations), length.out = 100)
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
-preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq1, 
-                                                      Emigrations = new_data_seq,
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Immigrations = new_data_seq,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
-plot(data.no.out$Emigrations, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
-     xlab = 'Emigrations', ylab = 'Max domain')
+plot(data.no.out$Immigrations, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Immigrations', ylab = 'Max domain')
 lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 # plot 3
 new_data_seq <- seq(min(data.no.out$Women.enrolled), max(data.no.out$Women.enrolled), length.out = 100)
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
-new_data_seq2 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Immigrations), length = 100)
 
-preds <- predict(model.fin.maxdom.no.out, newdata = list(Employment.rate = new_data_seq1, 
-                                                      Emigrations = new_data_seq2,
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                      Immigrations = new_data_seq2,
                                                       Women.enrolled = new_data_seq), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
@@ -449,11 +508,11 @@ matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 ## plots Max ## 
 # plot 1
 new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment.rate), length.out = 100)
-new_data_seq1 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq1 <- rep(median(data.no.out$Immigrations), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
 preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq, 
-                                                      Emigrations = new_data_seq1,
+                                                      Immigrations = new_data_seq1,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
@@ -463,27 +522,27 @@ lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 # plot 2
-new_data_seq <- seq(min(data.no.out$Emigrations), max(data.no.out$Emigrations), length.out = 100)
+new_data_seq <- seq(min(data.no.out$Immigrations), max(data.no.out$Immigrations), length.out = 100)
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
 preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
-                                                      Emigrations = new_data_seq,
+                                                      Immigrations = new_data_seq,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
-plot(data.no.out$Emigrations, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
-     xlab = 'Emigrations', ylab = 'Max')
+plot(data.no.out$Immigrations, data.no.out$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Immigrations', ylab = 'Max')
 lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
 # plot 3
 new_data_seq <- seq(min(data.no.out$Women.enrolled), max(data.no.out$Women.enrolled), length.out = 100)
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
-new_data_seq2 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out$Immigrations), length = 100)
 
 preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
-                                                      Emigrations = new_data_seq2,
+                                                      Immigrations = new_data_seq2,
                                                       Women.enrolled = new_data_seq), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
@@ -492,74 +551,4 @@ plot(data.no.out$Women.enrolled, data.no.out$Max, xlim = range(new_data_seq), ce
 lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
-
-### models for prediction ### 
-## MaxDomain (2002:2021)
-model.pred.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
-                     + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model.pred.maxdom)
-
-model5.maxdom <- gam(MaxDomain ~ Emigrations 
-                     + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model5.maxdom)
-
-## Max (2002:2021)
-model.pred.max <- gam(Max ~ s(Immigrations, bs = 'cr') 
-                  + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model.pred.max)
-
-
-## outlier detection ##
-## Emigrations / Employment
-plot(ds_reg$Employment.rate, ds_reg$Emigrations, col = colors, pch = 19)
-legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
-
-visual.out <- ds_reg[which(ds_reg$Emigrations > 25),c("Region","Emigrations", "Employment.rate")]
-visual.alpha <- 1 - nrow(visual.out)/nrow(ds_reg) # 0.95
-
-fit_MCD <- covMcd(x = ds_reg[,c("Emigrations", "Employment.rate")], alpha = 0.95, nsamp = 1000)
-fit_MCD$raw.center
-fit_MCD$raw.cov
-
-ind_best_subset <- fit_MCD$best
-N <- nrow(ds_reg[,c("Emigrations", "Employment.rate")])
-
-# outlier indeces
-ind_out_MCD <- setdiff(1:N,fit_MCD$best)
-data.no.out <- ds_reg[-ind_out_MCD,]
-
-
-## Immigrations / Employment
-plot(ds_reg$Employment.rate, ds_reg$Immigrations, col = colors, pch = 19)
-legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
-
-visual.out <- ds_reg[which(ds_reg$Immigrations > 25),c("Region","Immigrations", "Employment.rate")]
-visual.alpha <- 1 - nrow(visual.out)/nrow(ds_reg) # 0.95
-
-fit_MCD <- covMcd(x = ds_reg[,c("Immigrations", "Employment.rate")], alpha = 0.95, nsamp = 1000)
-fit_MCD$raw.center
-fit_MCD$raw.cov
-
-ind_best_subset <- fit_MCD$best
-N <- nrow(ds_reg[,c("Immigrations", "Employment.rate")])
-
-# outlier indeces
-ind_out_MCD <- setdiff(1:N,fit_MCD$best)
-data.no.out1 <- ds_reg[-ind_out_MCD,]
-
-## models without outliers ##
-## MaxDomain
-model.pred.maxdom.no.out <- gam(MaxDomain ~ s(Emigrations, bs = 'cr') 
-                                + s(Employment.rate, bs = 'cr'), data = data.no.out)
-summary(model.pred.maxdom.no.out)
-
-# linear effect on Emigrations
-model.gam.maxdom.no.out <- gam(MaxDomain ~ Emigrations 
-                               + s(Employment.rate, bs = 'cr'), data = data.no.out)
-summary(model.gam.maxdom.no.out)
-
-
-## Max
-model.pred.max.no.out <- gam(Max ~ s(Immigrations, bs = 'cr')
-                             + s(Employment.rate, bs = 'cr'), data = data.no.out1)
-summary(model.pred.max.no.out)
+# we use these models for conformal prediction
