@@ -10,31 +10,12 @@ library(tidyverse)
 library(robustbase)
 library(mgcv)
 library(fda)
-### covariates and QoI ###
-load("Datasets/data")
-load("Datasets/env")
-library(mgcv)
-library(splines)
 library(rgl)
-library(robustbase)
 
-total_curves <- matrix(0, nrow = length(17:50), ncol=length(prov)*length(years))
-basis <- create.bspline.basis(rangeval=c(17,50), nbasis=9, norder=5)
-lowercut <- 31
-uppercut <- 302
-for (i in 1:length(prov))
-{
-  for (j in 1:length(years))
-  {
-    Xsp <- smooth.basis(argvals=17:50, y=prov_list[[i]][j ,], fdParobj=basis)
-    temp <-  eval.fd(17:50, Xsp$fd, Lfd=2)
-    total_curves[, (j-1)*length(prov)+i] <- eval.fd(17:50, Xsp$fd, Lfd=2)
-  }
-}
-total_curves <- data.frame(total_curves)
+### covariates and QoI ###
 
 maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
-new <- data.frame(x=seq(17,50,length=1000))
+new <- data.frame(x=seq(20,30,length=1000))
 for (i in 1:length(years))
 {
   for (j in 1:length(prov))
@@ -52,25 +33,6 @@ names(maxima) <- c("Province", "Year", "MaxDomain", "Max")
 
 color_gray <- "gray80"
 color_pal <- colorRampPalette(colors = c("orange", "darkred"))
-
-# # define quantities of interest 
-# maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
-# new <- data.frame(x=seq(17,50,length=1000))
-# for (i in 1:length(years))
-# {
-#   for (j in 1:length(prov))
-#   {
-#     temp <- data.frame(x=17:50, y=prov_list[[j]][i ,])
-#     model <- with(temp, smooth.spline(x,y,df = 9))
-#     grid <- predict(model, new)$y
-#     maxima[((i-1)*length(prov)+j),1] <- prov[j]
-#     maxima[((i-1)*length(prov)+j),2] <- years[i]
-#     maxima[((i-1)*length(prov)+j),3] <- as.numeric(new$x[which.max(grid$x)])
-#     maxima[((i-1)*length(prov)+j),4] <- as.numeric(max(grid))
-#   }
-# }
-# maxima <- data.frame(maxima)
-# names(maxima) <- c("Province", "Year", "MaxDomain", "Max")
 
 data_max <- data.frame(x=as.numeric(maxima$MaxDomain),y=as.numeric(maxima$Max))
 plot(data_max, col = color_gray)
@@ -180,7 +142,9 @@ ds_reg$Area <- sapply(ds_reg$Region, associa_Area)
 rm(uni, pop, occ, grav)
 
 
-### regression ###
+### regression second derivative ###
+
+# MAX DOMAIN
 
 ## regression on MaxDomain in 2002:2021
 # we consider emigrations, immigrations, unemployment and employment
@@ -188,19 +152,19 @@ model1.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                      + s(Immigrations, bs = 'cr')
                      + s(Employment.rate, bs = 'cr') 
                      + s(Unemployment.rate, bs = 'cr'), data = ds_reg)
-summary(model1.maxdom)
+summary(model1.maxdom) # R-sq.(adj) =  0.283
 
 # drop immigration
 model2.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                      + s(Employment.rate, bs = 'cr') 
                      + s(Unemployment.rate, bs = 'cr'), data = ds_reg)
-summary(model2.maxdom)
+summary(model2.maxdom) # R-sq.(adj) =  0.283
 
 # drop unemployment
 model3.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                      + s(Employment.rate, bs = 'cr'), data = ds_reg)
-summary(model3.maxdom)
-
+summary(model3.maxdom) #R-sq.(adj) = 0.212
+ 
 
 ## regression on MaxDomain in 2008:2020
 # we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
@@ -210,7 +174,28 @@ model11.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr')
                       + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
-summary(model11.maxdom)
+summary(model11.maxdom) # R-sq.(adj) =  0.482
+
+# drop dropouts and moving to 2008:2021
+model12.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model12.maxdom) # R-sq.(adj) =  0.413
+
+# drop emigrations
+model13.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model13.maxdom) # R-sq.(adj) =   0.39
+
+# trying to drop unemployment
+model14.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model14.maxdom) # R-sq.(adj) =   0.324
 
 
 ## regression on MaxDomain in 2010:2020
@@ -223,5 +208,130 @@ model21.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
                       + s(Dropouts, bs = 'cr')
                       + s(Abortions.2529, bs = 'cr')
                       + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
-summary(model21.maxdom)
+summary(model21.maxdom) # R-sq.(adj) =  0.535
+
+# drop dropouts and move to 2010:2021
+model22.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.2529, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg)
+summary(model22.maxdom) # R-sq.(adj) =  0.454
+
+# drop abortion 3034 (make sense as 20 < MaxDom < 30) 
+model23.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.2529, bs = 'cr'), data = ds_reg)
+summary(model23.maxdom) # R-sq.(adj) =  0.456 <- in fact pvalue increases
+
+# drop Unemployment.rate
+model24.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.2529, bs = 'cr'), data = ds_reg)
+summary(model24.maxdom) # R-sq.(adj) =  0.43 
+
+# drop Abortions.2529
+model25.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model25.maxdom) # R-sq.(adj) =  0.354 
+
+# drop Emigrations
+model25.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model25.maxdom) # R-sq.(adj) =  0.354 
+
+
+# MAX 
+
+## regression on MaxDomain in 2002:2021
+# we consider emigrations, immigrations, unemployment and employment
+model1.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                     + s(Immigrations, bs = 'cr')
+                     + s(Employment.rate, bs = 'cr') 
+                     + s(Unemployment.rate, bs = 'cr'), data = ds_reg)
+summary(model1.max) # R-sq.(adj) =  0.388
+
+# drop unemployment.rate
+model1.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                     + s(Immigrations, bs = 'cr')
+                     + s(Employment.rate, bs = 'cr'), data = ds_reg)
+summary(model1.max) # R-sq.(adj) =  0.313
+
+
+## regression on MaxDomain in 2008:2020
+# we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
+model11.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Dropouts, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
+summary(model11.max) # R-sq.(adj) =  0.482
+
+# drop droputs and unemployment rate
+
+model12.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
+summary(model12.max) # R-sq.(adj) =  0.607
+
+# drop droputs and 
+model13.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2020),])
+summary(model13.max) # R-sq.(adj) =  0.527
+
+
+## regression on MaxDomain in 2010:2020
+# we consider emigrations, immigrations, unemployment, employment, women.enrolled and dropouts
+model21.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Dropouts, bs = 'cr')
+                      + s(Abortions.2529, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model21.max) # R-sq.(adj) =  0.696
+
+# drop Dropouts
+model22.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Unemployment.rate, bs = 'cr')
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.2529, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model22.max) # R-sq.(adj) =  0.683
+
+# drop Dropouts
+model23.max <- gam(Max ~ s(Emigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr')
+                      + s(Abortions.3034, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model23.max) # R-sq.(adj) =  0.555
+
+# drop abortion
+model24.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model24.max) # R-sq.(adj) =  0.544
+
+# linearizing
+
+model25.max <- gam(Max ~ Immigrations
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
+summary(model25.max) # R-sq.(adj) =  0.486
 
