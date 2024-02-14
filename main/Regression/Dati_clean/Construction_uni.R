@@ -1,4 +1,4 @@
-dati <- read_delim("Datasets/Serie_iscritti.csv", 
+dati <- read_delim("DS_covariate/Iscritti all'università/Serie_iscritti.csv", 
                   delim = ";", escape_double = FALSE, col_types = cols(AteneoCOD = col_skip(), 
                   AteneoNOME = col_skip(), AteneoAREAGEO = col_skip(), 
                  CorsoTIPO = col_skip(), COD_FoET2013 = col_skip(), 
