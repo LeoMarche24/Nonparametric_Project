@@ -40,14 +40,13 @@ summary(model.fin.maxdom.no.out.lin) # R2 = 0.576
 
 # plot
 
-plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(30, 34.5), ylab = "Conformal prediction", xlab = "Regions")
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(30, 34.5), ylab = "Conformal prediction", xlab = "Regions", xaxt = "n")
 pb=progress_bar$new(total=n.Reg)
 pb$tick(0)
 
 for( i in 1:n.Reg){
-  Area <- ifelse(Region.vec[i] %in% Nord, "Nord", ifelse(Region.vec[i] %in% Centro, "Centro", "Sud"))
-  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020 & data.no.out$Area == Area),c("Emigrations","Employment.rate","Women.enrolled")])
-  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020 & data.no.out$Area == Area),"MaxDomain"])
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Emigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"MaxDomain"])
   
   new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Emigrations","Employment.rate","Women.enrolled")])
   real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("MaxDomain")]
@@ -78,15 +77,14 @@ Region.vec <- as.vector(unique(data.no.out[which(data.no.out$Year == 2021),]$Reg
 n.Reg <- length(Region.vec)
 sigle.Reg <- c("ABR","BAS","CAL","CAM","EMR","FVG","LAZ","LIG","LOM","MAR","MOL","PIE","PUG","SAR","SIC","TOS","TRE","UMB","VEN")
 
-plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(65, 120), ylab = "Conformal prediction", xlab = "Regions")
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(60, 120), ylab = "Conformal prediction", xlab = "Regions", xaxt = "n")
 pb=progress_bar$new(total=n.Reg)
 pb$tick(0)
 
 for( i in 1:n.Reg){
-  Area <- ifelse(Region.vec[i] %in% Nord, "Nord", ifelse(Region.vec[i] %in% Centro, "Centro", "Sud"))
-  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020 & data.no.out$Area == Area),c("Immigrations","Employment.rate","Women.enrolled")])
-  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020 & data.no.out$Area == Area),"Max"])
-  
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"Max"])
+
   new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
   real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Max")]
   
@@ -99,7 +97,7 @@ for( i in 1:n.Reg){
   points(i,pred$lo, pch='_', cex = 2, col=color, lwd=3)
   points(i,pred$up, pch='_', cex = 2, col=color, lwd=3)
   points(x = i, y = real_MD, pch = 19, col = color)
-  text(i, 65, labels = sigle.Reg[i], pos = 3, col = color)
+  text(i, 60, labels = sigle.Reg[i], pos = 3, col = color)
   
   pb$tick()
 }
