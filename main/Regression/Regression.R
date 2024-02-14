@@ -191,7 +191,7 @@ model12.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
 summary(model12.maxdom)
 
 # drop Emigrations
-model13.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+model13.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Unemployment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
@@ -202,10 +202,10 @@ plot(ds_reg[which(ds_reg$Year %in% 2008:2021),]$Unemployment.rate, ds_reg[which(
 legend("bottomright", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
 # drop Unemployment rate 
-model14.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+model14.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr') 
                       + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
-summary(model14.maxdom) # R2 =  0.559
+summary(model14.maxdom) # R2 =  0.586
 
 
 ## regression on MaxDomain in 2010:2020
@@ -378,16 +378,25 @@ summary(model26.max) # R2 = 0.621
 
 ## models ##
 ## MaxDomain (2008:2021)
-model.fin.maxdom <- gam(MaxDomain ~ s(Emigrations, bs = 'cr')
+model.fin.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
                       + s(Employment.rate, bs = 'cr')
                       + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
-summary(model.fin.maxdom) # R2 =  0.559
+summary(model.fin.maxdom) # R2 =  0.586
 
 
-model.fin.maxdom.lin <- gam(MaxDomain ~ Emigrations 
+model.fin.maxdom.lin <- gam(MaxDomain ~ Immigrations 
                         + s(Employment.rate, bs = 'cr')
                         + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
-summary(model.fin.maxdom.lin) # R2 = 0.548
+summary(model.fin.maxdom.lin) # R2 = 0.573
+
+# comparing models
+qqnorm(model.fin.maxdom.lin$residuals, main = '')
+qqline(model.fin.maxdom.lin$residuals, col = color_pal(2)[2], lwd = 2)
+qqnorm(model.fin.maxdom$residuals, main = '')
+qqline(model.fin.maxdom$residuals, col = color_pal(2)[2], lwd = 2)
+
+anova(model.fin.maxdom.lin, model.fin.maxdom, test = "F") 
+# p-value = 0.01721 < alpha => the linear model is better
 
 
 ## Max (2008:2021)
@@ -401,13 +410,25 @@ model.fin.max.lin <- gam(Max ~ Immigrations
                      + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2008:2021),])
 summary(model.fin.max.lin) # R2 = 0.582
 
+# comparing models
+qqnorm(model.fin.max.lin$residuals, main = '')
+qqline(model.fin.max.lin$residuals, col = color_pal(2)[2], lwd = 2)
+qqnorm(model.fin.max$residuals, main = '')
+qqline(model.fin.max$residuals, col = color_pal(2)[2], lwd = 2)
+
+anova(model.fin.max.lin, model.fin.max, test = "F") 
+# p-value = 8.152e-05 < alpha => the reduced model is better
+
 
 ## outlier detection ##
 # visually we identify the following areas as possible outliers
 data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2021),]
 colors.05 <- ifelse(data_regression$Area == 'Nord', color_pal(3)[1], ifelse(data_regression$Area == 'Centro', color_pal(3)[2], color_pal(3)[3]))
 
-plot(data_regression$Employment.rate, data_regression$Immigrations, col = colors.05, pch = 19)
+plot(data_regression$Employment.rate, data_regression$Immigrations, col = colors.05, pch = 19, xlab = 'Employment rate', ylab = 'Immigrations')
+legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
+
+plot(data_regression$Employment.rate, data_regression$Emigrations, col = colors.05, pch = 19, xlab = 'Employment rate', ylab = 'Emigrations')
 legend("topleft", legend = c('Nord', 'Centro', 'Sud'), fill = c(color_pal(3)[1], color_pal(3)[2], color_pal(3)[3]))
 
 ds.no.outlier <- ds_reg[which(ds_reg$Immigrations < 25),] 
@@ -444,14 +465,14 @@ data_regression[ind_out_MCD1,c("Year","Region")]
 
 ## models without outliers ##
 ## MaxDomain (2008:2021)
-model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Emigrations
+model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
                                + s(Employment.rate, bs = 'cr')
                                + s(Women.enrolled, bs = 'cr'), data = data.no.out)
-summary(model.fin.maxdom.no.out.lin) # R2 = 0.531
+summary(model.fin.maxdom.no.out.lin) # R2 = 0.556
 
 # check for normality of residuals
 hist(model.fin.maxdom.no.out.lin$residuals)
-qqnorm(model.fin.maxdom.no.out.lin$residuals)
+qqnorm(model.fin.maxdom.no.out.lin$residuals, main = '')
 qqline(model.fin.maxdom.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
 
 
@@ -463,19 +484,19 @@ summary(model.fin.max.no.out.lin) # R2 = 0.56
 
 # check for normality of residuals
 hist(model.fin.max.no.out.lin$residuals)
-qqnorm(model.fin.max.no.out.lin$residuals)
+qqnorm(model.fin.max.no.out.lin$residuals, main = '')
 qqline(model.fin.max.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
 
 
 ## plots MaxDomain ## 
 # plot 1
 new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment.rate), length.out = 100)
-new_data_seq1 <- rep(median(data.no.out$Emigrations), length = 100)
+new_data_seq1 <- rep(median(data.no.out$Immigrations), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
-preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq, 
-                                                      Emigrations = new_data_seq1,
-                                                      Women.enrolled = new_data_seq2), se = T)
+preds <- predict(model.fin.maxdom.no.out.lin2, newdata = list(Employment.rate = new_data_seq,
+                                                              Immigration = new_data_seq1,
+                                                              Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
 
 plot(data.no.out$Employment.rate, data.no.out$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
@@ -520,7 +541,7 @@ new_data_seq <- seq(min(data.no.out$Employment.rate), max(data.no.out$Employment
 new_data_seq1 <- rep(median(data.no.out$Immigrations), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
-preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq, 
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq, 
                                                       Immigrations = new_data_seq1,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
@@ -535,7 +556,7 @@ new_data_seq <- seq(min(data.no.out$Immigrations), max(data.no.out$Immigrations)
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Women.enrolled), length = 100)
 
-preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
                                                       Immigrations = new_data_seq,
                                                       Women.enrolled = new_data_seq2), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
@@ -550,7 +571,7 @@ new_data_seq <- seq(min(data.no.out$Women.enrolled), max(data.no.out$Women.enrol
 new_data_seq1 <- rep(median(data.no.out$Employment.rate), length = 100)
 new_data_seq2 <- rep(median(data.no.out$Immigrations), length = 100)
 
-preds <- predict(model.fin.max.no.out, newdata = list(Employment.rate = new_data_seq1, 
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
                                                       Immigrations = new_data_seq2,
                                                       Women.enrolled = new_data_seq), se = T)
 se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
