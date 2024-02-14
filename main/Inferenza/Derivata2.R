@@ -285,19 +285,20 @@ for (i in 1:length(years))
 {
   for (j in 1:length(prov))
   {
-    temp <- data.frame(x=17:50, y=prov_list[[j]][i ,])
-    model <- with(temp, smooth.spline(x,y,df = 9))
-    grid <- predict(model, new)$y
+    Xsp <- smooth.basis(argvals=17:50, y=prov_list[[j]][i ,], fdParobj=basis)
+    temp <-  eval.fd(new$x, Xsp$fd, Lfd=2)
     maxima[((i-1)*length(prov)+j),1] <- prov[j]
     maxima[((i-1)*length(prov)+j),2] <- years[i]
-    maxima[((i-1)*length(prov)+j),3] <- as.numeric(new$x[which.max(grid$x)])
-    maxima[((i-1)*length(prov)+j),4] <- as.numeric(max(grid))
+    maxima[((i-1)*length(prov)+j),3] <- as.numeric(new$x[which.max(temp)])
+    maxima[((i-1)*length(prov)+j),4] <- as.numeric(max(temp))
   }
 }
 maxima <- data.frame(maxima)
 names(maxima) <- c("Province", "Year", "MaxDomain", "Max")
-
 library(robustbase)
+years_tot_cut <- years_tot_cut[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25)]
+geo <- geo[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25)]
+maxima <- maxima[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25),]
 
 data_max <- data.frame(x=as.numeric(maxima$MaxDomain),y=as.numeric(maxima$Max))
 
