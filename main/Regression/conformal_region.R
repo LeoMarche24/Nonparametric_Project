@@ -32,33 +32,33 @@ predict_ss=function(obj, new_x){
 
 
 # MODEL MAX DOMAIN
-model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Emigrations
+model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
                                    + s(Employment.rate, bs = 'cr')
                                    + s(Women.enrolled, bs = 'cr'), 
                                    data = data.no.out[which(data.no.out$Year %in% 2008:2020),])
-summary(model.fin.maxdom.no.out.lin) # R2 = 0.576
+summary(model.fin.maxdom.no.out.lin) # R2 = 0.605
 
 # plot
 
-plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(30, 34.5), ylab = "Conformal prediction", xlab = "Regions", xaxt = "n")
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(30, 34.5), ylab = "Max Domain", xlab = "Regions", xaxt = "n")
 pb=progress_bar$new(total=n.Reg)
 pb$tick(0)
 
 for( i in 1:n.Reg){
-  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Emigrations","Employment.rate","Women.enrolled")])
-  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"MaxDomain"])
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),"MaxDomain"])
   
-  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Emigrations","Employment.rate","Women.enrolled")])
-  real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("MaxDomain")]
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("MaxDomain")]
   
   pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
 
   # adding the CPI plot
   color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
   segments(x0 = i, y0 = pred$lo, x1 = i, y1 = pred$up, lwd = 2, col = color)
-  points(i,pred$lo, pch='_', cex = 2, col=color, lwd=3)
-  points(i,pred$up, pch='_', cex = 2, col=color, lwd=3)
-  points(x = i, y = real_MD, pch = 19, col = color)
+  points(i,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i, y = real_MD,  pch = 21, bg = color, col = 'white', cex =1.5)
   text(i, 30, labels = sigle.Reg[i], pos = 3, col = color)
   
   pb$tick()
@@ -73,20 +73,15 @@ model.fin.max.no.out.lin <- gam(Max ~ Immigrations
 summary(model.fin.max.no.out.lin) # R2 = 0.555
 
 # plot
-Region.vec <- as.vector(unique(data.no.out[which(data.no.out$Year == 2021),]$Region))
-n.Reg <- length(Region.vec)
-sigle.Reg <- c("ABR","BAS","CAL","CAM","EMR","FVG","LAZ","LIG","LOM","MAR","MOL","PIE","PUG","SAR","SIC","TOS","TRE","UMB","VEN")
 
-plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(60, 120), ylab = "Conformal prediction", xlab = "Regions", xaxt = "n")
-pb=progress_bar$new(total=n.Reg)
-pb$tick(0)
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,n.Reg), ylim = c(60, 120), ylab = "Max", xlab = "Regions", xaxt = "n")
 
 for( i in 1:n.Reg){
-  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Immigrations","Employment.rate","Women.enrolled")])
-  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"Max"])
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),"Max"])
 
-  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
-  real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Max")]
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Max")]
   
   pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
   #data.frame(lwr=pred$lo,pred=pred$pred,upr=pred$up)
@@ -94,14 +89,106 @@ for( i in 1:n.Reg){
   # adding the CPI plot
   color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
   segments(x0 = i, y0 = pred$lo, x1 = i, y1 = pred$up, lwd = 2, col = color)
-  points(i,pred$lo, pch='_', cex = 2, col=color, lwd=3)
-  points(i,pred$up, pch='_', cex = 2, col=color, lwd=3)
-  points(x = i, y = real_MD, pch = 19, col = color)
+  points(i,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i, y = real_MD,  pch = 21, bg = color, col = 'white', cex =1.5)
   text(i, 60, labels = sigle.Reg[i], pos = 3, col = color)
-  
-  pb$tick()
 }
 
+
+
+# plot a confronto: predizione max domain per 
+# -> 2019 (anno succ. al nostro studio) 
+# vs 
+# -> 2021 (effetti covid)
+
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,10*n.Reg), ylim = c(30, 34.5), ylab = "Max Domain", xlab = "Regions", xaxt = "n")
+
+for( i in 1:n.Reg){
+  i1 <- 10*i-9
+  i2 <- 10*i-7
+  
+  # 2020 pred
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),"MaxDomain"])
+  
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("MaxDomain")]
+  
+  pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
+  
+  # adding the CPI plot
+  color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
+  segments(x0 = i1, y0 = pred$lo, x1 = i1, y1 = pred$up, lwd = 2, col = color)
+  points(i1,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i1,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i1, y = real_MD, pch = 21, bg = color, col = 'white', cex =1.5)
+  text((i1+i2)/2, 30, labels = sigle.Reg[i], pos = 3, col = color)
+  
+  # 2021 pred
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"MaxDomain"])
+  
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("MaxDomain")]
+  
+  pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
+  
+  # adding the CPI plot
+  color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
+  segments(x0 = i2, y0 = pred$lo, x1 = i2, y1 = pred$up, lwd = 2, col = color)
+  points(i2,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i2,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i2, y = real_MD, pch = 21, bg = color, col = 'white', cex =1.5)
+
+}
+
+
+# plot a confronto: predizione max per 
+# -> 2019 (anno succ. al nostro studio) 
+# vs 
+# -> 2021 (effetti covid)
+
+plot(x = 0, y = 0, type = "p", pch = 16,xlim = c(0,10*n.Reg), ylim = c(60, 120), ylab = "Max", xlab = "Regions", xaxt = "n")
+
+for( i in 1:n.Reg){
+  i1 <- 10*i-9
+  i2 <- 10*i-7
+  
+  # 2020 pred
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2018),"Max"])
+  
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2019 & data.no.out$Region == Region.vec[i]),c("Max")]
+  
+  pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
+  
+  # adding the CPI plot
+  color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
+  segments(x0 = i1, y0 = pred$lo, x1 = i1, y1 = pred$up, lwd = 2, col = color)
+  points(i1,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i1,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i1, y = real_MD, pch = 21, bg = color, col = 'white', cex =1.5)
+  text((i1+i2)/2, 60, labels = sigle.Reg[i], pos = 3, col = color)
+  
+  # 2021 pred
+  feature.matrix <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),c("Immigrations","Employment.rate","Women.enrolled")])
+  resp.vect <- as.matrix(data.no.out[which(data.no.out$Year %in% 2008:2020),"Max"])
+  
+  new_obs <- as.matrix(data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Immigrations","Employment.rate","Women.enrolled")])
+  real_MD <- data.no.out[which(data.no.out$Year == 2021 & data.no.out$Region == Region.vec[i]),c("Max")]
+  
+  pred=conformal.pred(x = feature.matrix, y = resp.vect, x0 = new_obs, train.fun = train_ss, predict.fun = predict_ss, alpha=0.05)
+  
+  # adding the CPI plot
+  color <- ifelse(Region.vec[i] %in% Nord, colors[1], ifelse(Region.vec[i] %in% Centro, colors[2], colors[3]))
+  segments(x0 = i2, y0 = pred$lo, x1 = i2, y1 = pred$up, lwd = 2, col = color)
+  points(i2,pred$lo, pch=24, bg = color, cex = 1, col=color, lwd=3)
+  points(i2,pred$up, pch=25, bg = color, cex = 1, col=color, lwd=3)
+  points(x = i2, y = real_MD, pch = 21, bg = color, col = 'white', cex =1.5)
+  
+}
 
 
 
