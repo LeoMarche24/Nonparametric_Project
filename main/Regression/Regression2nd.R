@@ -335,3 +335,157 @@ model25.max <- gam(Max ~ Immigrations
                    + s(Women.enrolled, bs = 'cr'), data = ds_reg[which(ds_reg$Year %in% 2010:2020),])
 summary(model25.max) # R-sq.(adj) =  0.486
 
+
+
+# final models
+
+# MAX DOMAIN
+model25.maxdom <- gam(MaxDomain ~ s(Immigrations, bs = 'cr')
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model25.maxdom) # R-sq.(adj) =  0.324 
+
+model25.maxdom.lin <- gam(MaxDomain ~ Immigrations
+                      + s(Employment.rate, bs = 'cr') 
+                      + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model25.maxdom.lin) # R-sq.(adj) =  0.285
+
+anova(model25.maxdom.lin, model25.maxdom, test = "F") 
+# p-value = 0.01168 < alpha => the linear model is better
+
+# MAX
+model24.max <- gam(Max ~ s(Immigrations, bs = 'cr')
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model24.max) # R-sq.(adj) =  0.489
+
+model24.max.lin <- gam(Max ~ Immigrations
+                   + s(Employment.rate, bs = 'cr') 
+                   + s(Women.enrolled, bs = 'cr'), data = ds_reg)
+summary(model24.max.lin) # R-sq.(adj) =  0.434
+
+anova(model24.max, model24.max.lin, test = "F") 
+# p-value = 0.0001094 < alpha => the linear model is better
+
+# outlier
+data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2021),]
+fit_MCD <- covMcd(x = data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")], alpha = 0.95, nsamp = 1000)
+fit_MCD$raw.center
+fit_MCD$raw.cov
+ind_best_subset <- fit_MCD$best
+N <- nrow(data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")])
+
+# outlier indeces
+ind_out_MCD <- setdiff(1:N,fit_MCD$best)
+
+data.no.out.2nd.2nd <- data_regression[-ind_out_MCD,]
+data_regression[ind_out_MCD,c("Year","Region")] # tolgo solo la valle d'aosta
+
+# FINAL MODELS 4L
+
+# MAX
+model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
+                                   + s(Employment.rate, bs = 'cr') 
+                                   + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd.2nd)
+summary(model.fin.maxdom.no.out.lin) # R-sq.(adj) =  0.312
+
+# MAX DOMAIN
+model.fin.max.no.out.lin <- gam(Max ~ Immigrations
+                       + s(Employment.rate, bs = 'cr') 
+                       + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd.2nd)
+summary(model.fin.max.no.out.lin) # R-sq.(adj) =  0.479
+
+
+## plots MaxDomain ## 
+# plot 1
+new_data_seq <- seq(min(data.no.out.2nd$Employment.rate), max(data.no.out.2nd$Employment.rate), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Immigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq,
+                                                              Immigrations = new_data_seq1,
+                                                              Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Employment.rate, data.no.out.2nd$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Employment rate', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 2
+new_data_seq <- seq(min(data.no.out.2nd$Immigrations), max(data.no.out.2nd$Immigrations), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                             Immigrations = new_data_seq,
+                                                             Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Immigrations, data.no.out.2nd$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Immigrations', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 3
+new_data_seq <- seq(min(data.no.out.2nd$Women.enrolled), max(data.no.out.2nd$Women.enrolled), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Immigrations), length = 100)
+
+preds <- predict(model.fin.maxdom.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                             Immigrations = new_data_seq2,
+                                                             Women.enrolled = new_data_seq), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Women.enrolled, data.no.out.2nd$MaxDomain, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Women enrolled', ylab = 'Max domain')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+
+## plots Max ## 
+# plot 1
+new_data_seq <- seq(min(data.no.out.2nd$Employment.rate), max(data.no.out.2nd$Employment.rate), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Immigrations), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq, 
+                                                          Immigrations = new_data_seq1,
+                                                          Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Employment.rate, data.no.out.2nd$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Employment rate', ylab = 'Max')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 2
+new_data_seq <- seq(min(data.no.out.2nd$Immigrations), max(data.no.out.2nd$Immigrations), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Women.enrolled), length = 100)
+
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                          Immigrations = new_data_seq,
+                                                          Women.enrolled = new_data_seq2), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Immigrations, data.no.out.2nd$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Immigrations', ylab = 'Max')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
+# plot 3
+new_data_seq <- seq(min(data.no.out.2nd$Women.enrolled), max(data.no.out.2nd$Women.enrolled), length.out = 100)
+new_data_seq1 <- rep(median(data.no.out.2nd$Employment.rate), length = 100)
+new_data_seq2 <- rep(median(data.no.out.2nd$Immigrations), length = 100)
+
+preds <- predict(model.fin.max.no.out.lin, newdata = list(Employment.rate = new_data_seq1, 
+                                                          Immigrations = new_data_seq2,
+                                                          Women.enrolled = new_data_seq), se = T)
+se.bands <- cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)
+
+plot(data.no.out.2nd$Women.enrolled, data.no.out.2nd$Max, xlim = range(new_data_seq), cex = .5, col = color_gray,
+     xlab = 'Women enrolled', ylab = 'Max')
+lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
+matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
+
