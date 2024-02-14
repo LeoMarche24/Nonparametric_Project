@@ -378,21 +378,21 @@ N <- nrow(data_regression[,c("Immigrations", "Employment.rate","Women.enrolled")
 # outlier indeces
 ind_out_MCD <- setdiff(1:N,fit_MCD$best)
 
-data.no.out.2nd.2nd <- data_regression[-ind_out_MCD,]
+data.no.out.2nd <- data_regression[-ind_out_MCD,]
 data_regression[ind_out_MCD,c("Year","Region")] # tolgo solo la valle d'aosta
 
 # FINAL MODELS 4L
 
-# MAX
+# MAX DOMAIN
 model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
                                    + s(Employment.rate, bs = 'cr') 
-                                   + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd.2nd)
+                                   + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
 summary(model.fin.maxdom.no.out.lin) # R-sq.(adj) =  0.312
 
-# MAX DOMAIN
+# MAX 
 model.fin.max.no.out.lin <- gam(Max ~ Immigrations
                        + s(Employment.rate, bs = 'cr') 
-                       + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd.2nd)
+                       + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
 summary(model.fin.max.no.out.lin) # R-sq.(adj) =  0.479
 
 
@@ -489,3 +489,4 @@ plot(data.no.out.2nd$Women.enrolled, data.no.out.2nd$Max, xlim = range(new_data_
 lines(new_data_seq, preds$fit, lwd = 2, col = color_pal(2)[2])
 matlines(new_data_seq, se.bands, lwd = 1, col = color_pal(2)[2], lty = 3)
 
+# write.csv(data.no.out.2nd, 'data_no_out2nd.csv', row.names = F)
