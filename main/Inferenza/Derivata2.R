@@ -48,17 +48,17 @@ matplot(total_curves, type = 'l')
 
 library(fdANOVA)
 f_data <- fData(20:46, t(total_curves))
-x11()
+quartz()
 out_mag <- roahd::fbplot(f_data) # no magnitude outliers
 
-x11()
+quartz()
 out_shape <- outliergram(f_data)
 ID_out <- out_shape$ID_outliers
 prov_out <- match(names(total_curves)[num], prov)
 
 plot(f_data[ID_out], col=color_pal(length(ID_out)))
 
-x11()
+quartz()
 plot(f_data, col=colBG)
 for (i in 1:length(levels(geo)))
 {
@@ -133,7 +133,7 @@ print(plot)
 years_tot <- rep(years, each=length(prov))
 years_tot <- as.factor(years_tot)
 
-x11()
+quartz()
 plot(f_data, col=colBG)
 for (i in 1:length(years))
 {
@@ -264,7 +264,7 @@ names(res) <- year_cut
 row.names(res) <- geo_names
 res
 
-#### VENA ARRIVATO QUA ####
+#### Furioso. ####
 
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
 prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
@@ -280,7 +280,7 @@ geo <- factor(geo)
 geo_names <- c("North", "Centre", "South")
 
 maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
-new <- data.frame(x=seq(17,50,length=1000))
+new <- data.frame(x=seq(20,30,length=1000))
 for (i in 1:length(years))
 {
   for (j in 1:length(prov))
@@ -295,10 +295,15 @@ for (i in 1:length(years))
 }
 maxima <- data.frame(maxima)
 names(maxima) <- c("Province", "Year", "MaxDomain", "Max")
+
+plot(maxima$MaxDomain, maxima$Max)
+
 library(robustbase)
-years_tot_cut <- years_tot_cut[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25)]
-geo <- geo[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25)]
-maxima <- maxima[-which(maxima$MaxDomain==19 | maxima$MaxDomain==25),]
+
+years_tot_cut <- years_tot_cut[-which(maxima$MaxDomain==20)]
+geo <- geo[-which(maxima$MaxDomain==20)]
+maxima <- maxima[-which(maxima$MaxDomain==20),]
+#length(years_tot_cut) == length(geo) && length(geo) == nrow(maxima)
 
 data_max <- data.frame(x=as.numeric(maxima$MaxDomain),y=as.numeric(maxima$Max))
 
@@ -310,20 +315,8 @@ abline(fit, col=color_pal(2)[2], lwd=2)
 
 fit_lts
 
-prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
-prov_centro = c('Ancona', 'Arezzo', 'Ascoli Piceno', 'Campobasso', 'Chieti', 'Fermo', 'Firenze', 'Frosinone', 'Grosseto', 'Isernia', "L'Aquila", 'Latina','Livorno','Lucca', 'Macerata','Massa-Carrara', 'Perugia', 'Pesaro e Urbino', 'Pescara','Pisa', 'Pistoia', 'Prato','Rieti', 'Roma', 'Siena', 'Teramo', 'Terni', 'Viterbo')
-prov_sud = c('Agrigento', 'Avellino', 'Bari', 'Barletta-Andria-Trani', 'Benevento', 'Brindisi', 'Cagliari', 'Caltanissetta', 'Caserta', 'Catania', 'Catanzaro', 'Cosenza', 'Crotone', 'Enna', 'Foggia', 'Lecce', 'Matera', 'Messina', 'Napoli', 'Nuoro', 'Oristano', 'Palermo', 'Potenza', 'Ragusa', 'Reggio di Calabria', 'Salerno', 'Sassari', 'Siracusa', 'Sud Sardegna', 'Taranto', 'Trapani', 'Vibo Valentia')
-geo <- case_when(
-  prov %in% prov_nord ~ "1",
-  prov %in% prov_centro ~ "2",
-  prov %in% prov_sud ~ "3",
-  TRUE ~ NA_character_
-)
-geo <- rep(geo, length(years))
-geo <- factor(geo)
-geo_names <- c("North", "Centre", "South")
-
-x11()
+# plot to report
+quartz()
 plot(data_max, col=colBG, main="Linear regression for the three different region")
 for (i in 1:length(geo_names))
 {
@@ -347,6 +340,7 @@ ggplot(data_max, aes(x = x, y = y)) +
 
 fit <- manova(as.matrix(data_max) ~ geo)
 T0 <- summary(fit)[[4]][1,3]
+B <- 1000
 T_stat <- numeric(B) 
 n <- dim(data_max)[1]
 set.seed(2024)
@@ -360,26 +354,9 @@ for(perm in 1:B){
   T_stat[perm] <- summary(fit_perm)[[4]][1,3]
 }
 
-hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=color_gray)
-abline(v=T0,lwd=5, col=color_pal(2)[1])
-
-fit <- manova(as.matrix(data_max) ~ years_tot)
-T0 <- summary(fit)[[4]][1,3]
-T_stat <- numeric(B) 
-n <- dim(data_max)[1]
-set.seed(2024)
-for(perm in 1:B){
-  # Permutation:
-  permutation <- sample(1:n)
-  years_perm <- years_tot[permutation]
-  fit_perm <- manova(as.matrix(data_max) ~ years_perm)
-  
-  # Test statistic:
-  T_stat[perm] <- summary(fit_perm)[[4]][1,3]
-}
-
 hist(T_stat,xlim=range(c(T_stat,T0)),breaks=30, col=colBG)
 abline(v=T0,lwd=5, col=color_pal(2)[1])
+
 
 # Between the class of years, are the difference significant??
 res <- matrix(0, length(levels(geo)))
@@ -543,38 +520,10 @@ ggplot(df, aes(x = x, y = ord))+
 
 #### In the particular class of years, are there difference? ####
 
-#### Let's now highlights the differences between pre 2005 & 2012-2018 ####
-
-int1 <- 2002:2005
-interval1 <- matrix(0, nrow=length(prov)*length(int1), ncol=length(eta))
-for (i in 1:length(prov))
-  for (j in 1:length(int1))
-  {
-    interval1[((j-1)*107+i) ,] <- prov_list[[i]][j ,]
-  }
-
-int2 <- 2014:2018
-interval2 <- matrix(0, nrow=length(prov)*length(int2), ncol=length(eta))
-for (i in 1:length(prov))
-  for (j in 1:length(int2))
-  {
-    interval2[((j-1)*107+i) ,] <- prov_list[[i]][(10+j) ,]
-  }
-
-matplot(t(interval1), type='l')
-matplot(t(interval2), type='l')
-
-df <- bind_rows(data.frame(interval1), data.frame(interval2))
-dd <- depthMedian(df, depth_params = list("Tukey"))
-
-plot(dd[1:(length(int1)*length(prov))], dd[(length(int1)*length(prov)):length(dd)])
-
-ddPlot(x = interval1,y = interval2,depth_params = list(method='Tukey'),
-       title = "Pre 2006 vs 2012-2018")
 
 ##Permutational test usando i tre intervalli di anni
 
-x11()
+quartz()
 plot(f_data, col=colBG)
 for (i in 1:length(levels(years_tot_cut)))
 {
@@ -582,27 +531,6 @@ for (i in 1:length(levels(years_tot_cut)))
   lines(20:46, m, col=color_pal(length(levels(years_tot_cut)))[i], lwd=2)
 }
 legend("topright", fill=color_pal(length(levels(years_tot_cut))), legend=year_cut)
-
-T0 <- fanova.tests(x = total_curves, years_tot_cut,  test = "L2N", parallel = TRUE)$L2N$statL2
-
-B <- 1000
-T_stat <- numeric(B)
-pb=progress_bar$new(total=B)
-pb$tick(0)
-set.seed(2024)
-for(perm in 1:B){
-  permutation <- sample(1:length(years_tot_cut))
-  year_perm <- years_tot_cut[permutation]
-  
-  T_stat[perm] <- fanova.tests(x = total_curves, year_perm,  test = "L2N", parallel = TRUE)$L2N$statL2
-  pb$tick()
-  
-}
-
-hist(T_stat, xlim=range(c(0,T0)), col=colBG)
-abline(v = T0, col=color_pal(2)[1], lwd=5)
-
-fac <- geo:as.factor(years_tot)
 
 medians <- aggregate(as.matrix(data_max) ~ as.factor(years_tot_cut) + geo, data = data.frame(data_max), FUN = median)
 
