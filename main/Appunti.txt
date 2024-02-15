@@ -1,7 +1,0 @@
-Una volta avuti questi risultati, smontiamo il dato funzionale e andiamo a analizzare ai raggi x una particolare feature, che sia il massimo, il minimo, il picco o insomma, ovviamente a seconda dei precedenti test.
-
-L'idea generale è quella di capire dove si trova la variabilità, questo credo sia importante anche a livello della storia che dobbiamo costruire, capire che questo step dell'inferenza noi lo usiamo per andare a scovare dove nelle funzioni si trovi la variabilità che è presente nelle variabili territoriali e di anni diversi.
-
-Una volta decise quali sono le differenze più significative, ad esempio con la pvalue curve o semplicamente considerando che alcune features sono più importanti di altre, come il massimo della derivata seconda, si possono fare delle distrbuzioni bootstrap ad esempio per vedere bene le differenze anche in distribuzione di queste cose (depth versus depth per verificare due distribuzioni uguali),  rank test per vedere eventuali difformità nella distribuzione delle statistiche, e tutto quello che può venire in mente, influence function da ultimo e per forza.
-
-L'ultima parte del progetto riguarderà conformal prediction per un'idea su come si evolverà la situazione in futuro , idea di worst/best case scenario vedere cartella conformal
