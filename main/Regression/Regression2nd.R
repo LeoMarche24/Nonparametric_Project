@@ -14,6 +14,25 @@ library(rgl)
 
 ### covariates and QoI ###
 
+color_pal <- colorRampPalette(colors = c("orange", "darkred"))
+col.3 <- color_pal(3)
+colBG <- "grey80"
+
+total_curves <- matrix(0, nrow = length(17:50), ncol=length(prov)*length(years))
+basis <- create.bspline.basis(rangeval=c(17,50), nbasis=9, norder=5)
+lowercut <- 31
+uppercut <- 302
+for (i in 1:length(prov))
+{
+  for (j in 1:length(years))
+  {
+    Xsp <- smooth.basis(argvals=17:50, y=prov_list[[i]][j ,], fdParobj=basis)
+    temp <-  eval.fd(17:50, Xsp$fd, Lfd=2)
+    total_curves[, (j-1)*length(prov)+i] <- eval.fd(17:50, Xsp$fd, Lfd=2)
+  }
+}
+total_curves <- data.frame(total_curves)
+
 maxima <- matrix(NA, ncol = 4, nrow = length(years)*length(prov))
 new <- data.frame(x=seq(20,30,length=1000))
 for (i in 1:length(years))
@@ -389,11 +408,22 @@ model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
                                    + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
 summary(model.fin.maxdom.no.out.lin) # R-sq.(adj) =  0.312
 
+
+# check for normality of residuals
+hist(model.fin.maxdom.no.out.lin$residuals)
+qqnorm(model.fin.maxdom.no.out.lin$residuals, main = '')
+qqline(model.fin.maxdom.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
+
 # MAX 
 model.fin.max.no.out.lin <- gam(Max ~ Immigrations
                        + s(Employment.rate, bs = 'cr') 
                        + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
 summary(model.fin.max.no.out.lin) # R-sq.(adj) =  0.479
+
+# check for normality of residuals
+hist(model.fin.max.no.out.lin$residuals)
+qqnorm(model.fin.max.no.out.lin$residuals, main = '')
+qqline(model.fin.max.no.out.lin$residuals, col = color_pal(2)[2], lwd = 2)
 
 
 ## plots MaxDomain ## 
