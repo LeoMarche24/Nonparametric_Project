@@ -320,7 +320,8 @@ years_tot <- rep(years, each=length(prov))
 years_tot_cut <- ifelse(years_tot < 2006, year_cut[1], ifelse(years_tot > 2013, year_cut[3], year_cut[2]))
 years_tot_cut <- as.factor(years_tot_cut)
 
-res <- matrix(0, nrow=length(levels(years_tot_cut)), ncol = length(levels(years_tot_cut)))
+res <- matrix(0, nrow=length(levels(geo)), ncol = length(levels(years_tot_cut)))
+B <- 1000
 pb=progress_bar$new(total=B*3*3)
 pb$tick(0)
 for(i in 1:length(levels(geo)))
@@ -501,6 +502,42 @@ for (i in 1:length(levels(geo)))
 res
 # Reject, namely the distribution of the max is significantly different along the year even fixing
 # the region
+
+### Test if the multivariate new distribution depends on the year in the class of years
+res <- matrix(0, nrow=length(levels(years_tot_cut)), ncol = length(levels(years_tot_cut)))
+pb=progress_bar$new(total=B*3*3)
+pb$tick(0)
+for(i in 1:length(levels(geo)))
+{
+  for (j in 1:length(lev))
+  {
+    years_temp <- which(years_tot %in% lev[[j]])
+    geo_temp <- which(geo==levels(geo)[i])
+    inx <- intersect(years_temp, geo_temp)
+    temp <- data_max[inx ,]
+    years_temp <- years_tot[inx]
+    
+    T0 <- summary(manova(as.matrix(temp) ~ years_temp))[[4]][1,3]
+    
+    T_stat <- numeric(B)
+    set.seed(2024)
+    for(perm in 1:B){
+      permutation <- sample(1:length(years_temp))
+      years_perm <- years_temp[permutation]
+      
+      T_stat[perm] <-summary(manova(as.matrix(temp) ~ years_perm))[[4]][1,3]
+      pb$tick()
+      
+    }
+    hist(T_stat, xlim = range(c(T_stat, T0)))
+    abline(v=T0)
+    res[i,j] <- (sum(T_stat>T0)/B)
+  }
+}
+res <- data.frame(res)
+names(res) <- year_cut
+row.names(res) <- geo_names
+res
 
 # Test if within the groups the distribution of the max do not depend on the year
 res <- matrix(0, nrow=length(levels(years_tot_cut)), ncol = length(levels(years_tot_cut)))

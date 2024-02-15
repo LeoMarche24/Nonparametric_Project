@@ -2,13 +2,14 @@
 # Load the necessary libraries
 library(dplyr)
 library(readr)
-library(gam)
 library(splines)
 library(mgcv)
 library(rgl)
 library(plot3D)
 library(progress)
 # Import data 
+color_gray <- "gray80"
+color_pal <- colorRampPalette(colors = c("orange", "darkred"))
 
 province <- read_csv("./Datasets/Fecondita_Eta_province.csv", 
                      col_types = cols(ITTER107 = col_skip(), 
@@ -44,28 +45,28 @@ for (i in 1:length(prov))
 # Plot one smoothed surface 
 p1 <- as.matrix(prov_list[55][[1]])
 x <- 1:20
-y <- 1:34
+y <- 17:50
 xyf <- expand.grid(x,y)
 names(xyf)=c('x','y')
 data <- data.frame(val=as.vector(p1), x=xyf$x, y=xyf$y)
-model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
+model <- mgcv::gam(val ~ s(x, y, bs="tp", m = 2), data=data)
 
 xgrid <- seq(1,20,length.out = 100)
-ygrid <- seq(1,34,length.out = 100)
+ygrid <- seq(17,50,length.out = 100)
 xygrid <- expand.grid(xgrid, ygrid)
 names(xygrid)=c('x','y')
 pred_tp = predict(model, newdata = data.frame(xygrid))
-persp3d(xgrid, ygrid, pred_tp, col = 'grey20', zlab = "rate",
+persp3d(xgrid, ygrid, pred_tp, col = color_pal(2)[1], zlab = "rate",
         xlab = "year" , ylab = "age" )
-with(data,points3d(x, y, p1, col = 'orange', size = 5))
+with(data,points3d(x, y, p1, col = color_gray, size = 5))
 
 # Smooth every province
-dom <- expand.grid(1:20,1:34)
+dom <- expand.grid(1:20,17:50)
 surf_prov <- list()
 for(p in 1:length(prov_list)){
   p1 <- as.vector(prov_list[[p]])
-  data <- data.frame(val=p1, x=xyf$x, y=xyf$y)
-  model <- with(data, gam(val ~ s(x, y, bs="tp", m = 2)))
+  data_temp <- data.frame(val=p1, x=xyf$x, y=xyf$y)
+  model <- with(data_temp, mgcv::gam(val ~ s(x, y, bs="tp", m = 2)))
   surf_prov[[p]] = predict(model, newdata = data.frame(x = dom[,1], y=dom[, 2]))
 }
 prov_nord = c('Alessandria', 'Asti', 'Belluno', 'Bergamo', 'Biella', 'Bologna', 'Bolzano / Bozen','Brescia', 'Como', 'Cremona', 'Cuneo', 'Ferrara', 'Forlì-Cesena', 'Genova', 'Gorizia', 'Imperia', 'La Spezia', 'Lecco', 'Lodi', 'Mantova', 'Milano','Modena', 'Monza e della Brianza', 'Novara', 'Padova', 'Parma', 'Pavia', 'Piacenza', 'Pordenone', 'Ravenna', "Reggio nell'Emilia", 'Rimini', 'Rovigo', 'Savona', 'Sondrio', 'Torino','Trento', 'Treviso', 'Trieste', 'Udine', 'Varese', 'Venezia', "Valle d'Aosta / Vallée d'Aoste", 'Verbano-Cusio-Ossola', 'Vercelli', 'Verona','Vicenza')
@@ -103,9 +104,9 @@ for (i in 1:107)
 # Now we run the permutational ANOVA
 # Takes about 30min, we will provide the output to be loaded
 
-pb=progress::progress_bar$new(total=1000)
+pb=progress::progress_bar$new(total=680)
 pb$tick(0)
-pval.fun=numeric(1000)
+pval.fun=numeric(length(years)*length(eta))
 for(i in 1:680){
   B <- 1000
   T_stat <- numeric(B)
@@ -121,7 +122,7 @@ for(i in 1:680){
   pb$tick()
 }
 
-pval.fun <- read.table("./Datasets/p-val.txt")$x
+#pval.fun <- read.table("./Datasets/p-val.txt")$x
 
 # Plot the p-value function 
 x <- seq(2001,2021,length.out = 20)
@@ -129,17 +130,16 @@ y <- seq(17,50,length.out = 34)
 
 # Adjust the p-value using BH correction
 pval = p.adjust(pval.fun,"BH")
-
+pval <- matrix(pval, nrow=length(x), ncol=length(y), byrow = F)
 # and plot the p-value function
-persp3d(x,y, pval, col = 'black', zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
-planes3d(a = 0, b = 0, c = 1, d = -0.1, color = "darkorange", alpha = .75)
+persp3d(x,y, pval, col = color_gray, zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
+planes3d(a = 0, b = 0, c = 1, d = -0.1, color = color_pal(2)[2], alpha = .75)
 
-save(pval, file="Smoothing/pval.csv")
-    
-
-
-
-
-
-
+#save(pval, file="Smoothing/pval.csv")
+  
+pval = p.adjust(pval.fun,"bonferroni")
+pval <- matrix(pval, nrow=length(x), ncol=length(y), byrow = T)
+# and plot the p-value function
+persp3d(x,y, pval, col = color_gray, zlab = "p-value", xlab = "year", ylab = "age", zlim= c(0.001,1))
+planes3d(a = 0, b = 0, c = 1, d = -0.1, color = color_pal(2)[2], alpha = .75)
 
