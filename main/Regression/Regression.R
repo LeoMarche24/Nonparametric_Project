@@ -395,8 +395,6 @@ qqline(model.fin.maxdom.lin$residuals, col = color_pal(2)[2], lwd = 2)
 qqnorm(model.fin.maxdom$residuals, main = '')
 qqline(model.fin.maxdom$residuals, col = color_pal(2)[2], lwd = 2)
 
-anova(model.fin.maxdom.lin, model.fin.maxdom, test = "F") 
-# p-value = 0.01721 < alpha => the linear model is better
 
 
 ## Max (2008:2021)
@@ -416,8 +414,6 @@ qqline(model.fin.max.lin$residuals, col = color_pal(2)[2], lwd = 2)
 qqnorm(model.fin.max$residuals, main = '')
 qqline(model.fin.max$residuals, col = color_pal(2)[2], lwd = 2)
 
-anova(model.fin.max.lin, model.fin.max, test = "F") 
-# p-value = 8.152e-05 < alpha => the reduced model is better
 
 
 ## outlier detection ##

@@ -34,7 +34,7 @@ predict_ss=function(obj, new_x){
 # MAX DOMAIN
 model.fin.maxdom.no.out.lin <- gam(MaxDomain ~ Immigrations
                                    + s(Employment.rate, bs = 'cr') 
-                                   + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
+                                   + s(Women.enrolled, bs = 'cr'), data = data.no.out)
 summary(model.fin.maxdom.no.out.lin) # R-sq.(adj) =  0.312
 
 
@@ -68,7 +68,7 @@ for( i in 1:n.Reg){
 # MAX 
 model.fin.max.no.out.lin <- gam(Max ~ Immigrations
                                 + s(Employment.rate, bs = 'cr') 
-                                + s(Women.enrolled, bs = 'cr'), data = data.no.out.2nd)
+                                + s(Women.enrolled, bs = 'cr'), data = data.no.out)
 summary(model.fin.max.no.out.lin) # R-sq.(adj) =  0.479
 
 # plot
@@ -148,7 +148,7 @@ for( i in 1:n.Reg){
 # vs 
 # -> 2021 (effetti covid)
 
-plot(x = -1, y = -1, type = "p", pch = 16,xlim = c(0,10*n.Reg), ylim = c(-0.25, 2.75), ylab = "Max - second derivative", xlab = "Regions", xaxt = "n")
+plot(x = -1, y = -1, type = "p", pch = 16,xlim = c(0,10*n.Reg), ylim = c(-0.25, 3.25), ylab = "Max - second derivative", xlab = "Regions", xaxt = "n")
 
 for( i in 1:n.Reg){
   i1 <- 10*i-9

@@ -369,8 +369,6 @@ model25.maxdom.lin <- gam(MaxDomain ~ Immigrations
                       + s(Women.enrolled, bs = 'cr'), data = ds_reg)
 summary(model25.maxdom.lin) # R-sq.(adj) =  0.285
 
-anova(model25.maxdom.lin, model25.maxdom, test = "F") 
-# p-value = 0.01168 < alpha => the linear model is better
 
 # MAX
 model24.max <- gam(Max ~ s(Immigrations, bs = 'cr')
@@ -383,8 +381,6 @@ model24.max.lin <- gam(Max ~ Immigrations
                    + s(Women.enrolled, bs = 'cr'), data = ds_reg)
 summary(model24.max.lin) # R-sq.(adj) =  0.434
 
-anova(model24.max, model24.max.lin, test = "F") 
-# p-value = 0.0001094 < alpha => the linear model is better
 
 # outlier
 data_regression <- ds_reg[which(ds_reg$Year %in% 2008:2021),]
